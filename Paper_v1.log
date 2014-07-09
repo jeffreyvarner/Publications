@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  9 JUL 2014 07:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  9 JUL 2014 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -640,19 +640,11 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 114.
- [1] [1]
+ [1] [1] [2
 
-LaTeX Warning: Reference `fig-kinetics-simulations' on page 2 undefined on inpu
-t line 160.
-
-
-LaTeX Warning: Reference `fig-kinetics-simulations' on page 2 undefined on inpu
-t line 161.
-
-[2
-
-] [3] [4]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 204--206
+] [3]
+[4]
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 217--219
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
@@ -660,7 +652,7 @@ v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
 [5
 
 ] [6] [7]
-Overfull \hbox (7.69629pt too wide) in paragraph at lines 273--275
+Overfull \hbox (7.69629pt too wide) in paragraph at lines 287--289
 \OT1/phv/m/n/12 This study was sup-ported by the Na-tional Sci-ence Foun-da-tio
 n GK12 award (DGE-1045513)
  []
@@ -670,52 +662,56 @@ n GK12 award (DGE-1045513)
 File: ./figs/Figure-1-Networks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Networks.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 288.
+Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 302.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 290.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 304.
  [9 <./figs/Figure-1-Networks.pdf>]
 <./figs/Figure-2-ControlSchematic.pdf, id=76, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 297.
+e 311.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [10 <./figs/Figure-2-ControlSchematic.pdf>]
-<./figs/Figure-3-OnOffSimulations.pdf, id=260, 652.4375pt x 1419.3025pt>
-File: ./figs/Figure-3-OnOffSimulations.pdf Graphic file (type pdf)
+ [10 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-EnzymeKinetics.pd
+f, id=260, 794.97pt x 614.295pt>
+File: ./figs/Figure-3-EnzymeKinetics.pdf Graphic file (type pdf)
 
-<use ./figs/Figure-3-OnOffSimulations.pdf>
-Package pdftex.def Info: ./figs/Figure-3-OnOffSimulations.pdf used on input lin
-e 305.
+<use ./figs/Figure-3-EnzymeKinetics.pdf>
+Package pdftex.def Info: ./figs/Figure-3-EnzymeKinetics.pdf used on input line 
+319.
+(pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
+ [11 <./figs/Figure-3-EnzymeKinetics.pdf>] <./figs/Figure-4-OnOffSimulations.pd
+f, id=307, 652.4375pt x 1419.3025pt>
+File: ./figs/Figure-4-OnOffSimulations.pdf Graphic file (type pdf)
+
+<use ./figs/Figure-4-OnOffSimulations.pdf>
+Package pdftex.def Info: ./figs/Figure-4-OnOffSimulations.pdf used on input lin
+e 330.
 (pdftex.def)             Requested size: 258.36668pt x 562.05853pt.
- [11 <./figs/Figure-3-OnOffSimulations.pdf>] <./figs/Figure-4-ParameterFit.pdf,
- id=298, 794.97pt x 614.295pt>
-File: ./figs/Figure-4-ParameterFit.pdf Graphic file (type pdf)
+ [12 <./figs/Figure-4-OnOffSimulations.pdf>] <./figs/Figure-5-ParameterFit.pdf,
+ id=345, 794.97pt x 614.295pt>
+File: ./figs/Figure-5-ParameterFit.pdf Graphic file (type pdf)
 
-<use ./figs/Figure-4-ParameterFit.pdf>
-Package pdftex.def Info: ./figs/Figure-4-ParameterFit.pdf used on input line 31
-5.
+<use ./figs/Figure-5-ParameterFit.pdf>
+Package pdftex.def Info: ./figs/Figure-5-ParameterFit.pdf used on input line 34
+0.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [12 <./figs/Figure-4-ParameterFit.pdf>]
-(./Paper_v1.aux)
-
-LaTeX Warning: There were undefined references.
-
- )
+ [13 <./figs/Figure-5-ParameterFit.pdf>]
+(./Paper_v1.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5017 strings out of 493315
- 72484 string characters out of 6137904
- 143981 words of memory out of 5000000
- 8331 multiletter control sequences out of 15000+600000
+ 5023 strings out of 493315
+ 72686 string characters out of 6137904
+ 141999 words of memory out of 5000000
+ 8336 multiletter control sequences out of 15000+600000
  28842 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,38p,505b,1052s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,38p,517b,1051s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -740,10 +736,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (14 pages, 3165170 bytes).
+Output written on Paper_v1.pdf (15 pages, 3245908 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
+ 446 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -157,11 +157,23 @@ as well as multiple overlapping allosteric regulatory mechanisms.
 As such, developing our effective modeling approach using these problems gave us valuable insight into how to develop larger network models, 
 without the complication of network size. 
 
-The rule based regulatory strategy captured classic patterns of allosteric activation and inhibition of enzyme activity (Fig. \ref{fig-kinetics-simulations}).  
-The first case we explored was substrate activation of enzyme activity (positive cooperativity). 
-Classically, we expected a sigmoidal relationship substrate abundance and reaction rate for positive cooperativity. 
-
-
+The rule based regulatory strategy captured the kinetic behavior of classic allosteric activation and inhibition mechanisms (Fig. \ref{fig-kinetics-simulations}).  
+We first explored feed-forward substrate activation of enzyme activity (for both positive and negative cooperativity). 
+Consistent with classical data, the rule based strategy predicted a sigmoidal relationship between substrate abundance 
+and reaction rate as a function of the cooperativity parameter (Fig. \ref{fig-kinetics-simulations}A). 
+For cooperativity parameters less than unity, increased substrate abundance \textit{decreased} the reaction rate. This was consistent with the idea that
+substrate binding \textit{decreases} at regulatory sites negatively impacts the ability of the enzyme to bind substrate at the active site. 
+On the other hand, as the cooperativity parameter increased past unity, the rate of conversion of substrate $S$ to product $P$ by enzyme $E$ approached a step function.
+In the presence of an inhibitor, the rule based strategy predicted non-competitive like behavior as a function of the 
+cooperativity parameter (Fig. \ref{fig-kinetics-simulations}B). 
+When the control gain parameter, $\kappa_{ij}$ in Eqn. \eqref{eqn:control-factor}, was greater than unity, the inhibitory force was
+directly proportional to the cooperativity parameter, $\eta$ in Eqn. \eqref{eqn:control-factor}. 
+Thus, as the cooperativity parameter increased, the maximum reaction rate decreased (Fig. \ref{fig-kinetics-simulations}B, orange).
+However, when the gain parameter was less than unity, enzyme inhibition increased with \textit{decreasing} cooperativity, 
+i.e., smaller $\eta$ yielded increased inhibition (Fig. \ref{fig-kinetics-simulations}B).
+Interestingly, our rule based approach was not able to directly simulate competitive inhibition of enzyme activity. 
+Taken together, the rule based strategy captured classical regulatory patterns for both enzyme activation and inhibition. 
+    
 End product yield was controlled by feedback inhibition, while selectivity was controlled by branch point enzyme inhibition (Fig. \ref{fig-onoff-simulations}).
 A critical test of our modeling approach was to simulate networks with known behavior. If we cannot reproduce the expected behavior of simple networks, then our
 modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for large scale problems.
@@ -241,9 +253,10 @@ If an enzyme was activated by $m$ metabolites, we modeled this activation as:
 \end{eqnarray}where $j^{+}$ and $j^{-}$ denote the sets of activating, and inhibitory factors for enzyme $j$. 
 If an enzyme had no allosteric factors, we set $v_{j} = 1$.
 In this study, each individual factor had the form:
-\begin{equation}
+\begin{equation}\label{eqn:control-factor}
 	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}x_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}x_{j}^{\eta}}
 \end{equation}where $x_{j}$ denotes the abundance of metabolite $j$, and $\kappa_{ij}$ and $\eta$ are control parameters. 
+The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
 The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave [REFHERE].
 
 \subsection*{Estimation of model parameters from synthetic experimental data}
@@ -303,8 +316,19 @@ catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject t
 
 \begin{figure}
 \centering
-\includegraphics[width=0.55\textwidth]{./figs/Figure-3-OnOffSimulations.pdf}
-\caption{On/off control simulations for network A and network B for an ensemble of kinetic parameter sets. 
+\includegraphics[width=1.0\textwidth]{./figs/Figure-3-EnzymeKinetics.pdf}
+\caption{Kinetics of simple transformations in the presence of activation and inhibition. 
+A:The conversion of substrate $S$ to product $P$ by enzyme $E$ was activated by $S$. 
+B:The conversion of substrate $S$ to product $P$ by enzyme $E$ was inhibited by inhibitor $I$. 
+}\label{fig-kinetics-simulations}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{./figs/Figure-4-OnOffSimulations.pdf}
+\caption{On/off control simulations for network A and network B for an ensemble of kinetic parameter sets versus time. 
 For each case, N = 100 simulations were conducted using kinetic and initial conditions randomly generated from a hypothetical true parameter set. 
 The gray area represents $\pm$ one standard deviation surrounding the mean. Control parameters were fixed during the ensemble calculations.}\label{fig-onoff-simulations}
 \end{figure}
@@ -313,7 +337,7 @@ The gray area represents $\pm$ one standard deviation surrounding the mean. Cont
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/Figure-4-ParameterFit.pdf}
+\includegraphics[width=1.0\textwidth]{./figs/Figure-5-ParameterFit.pdf}
 \caption{Parameter estimation from synthetic data for the same and mismatched allosteric control logic. }\label{fig-parameter-fit}
 \end{figure}
 
