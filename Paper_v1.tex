@@ -278,7 +278,7 @@ Model parameters were estimated by minimizing the difference between simulations
 \end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
 value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes the experimental measurement variance for species $j$ at time $\tau$. The outer summation is respect to
 time, while the inner summation is with respect to state. We wanted to approximate a realistic model identification scenario, thus we assumed noisy experimental data, 
-limited sampling resolution (approximately 20 minutes per sample) and that only a subset of metabolites were measurable. 
+limited sampling resolution (approximately 20 minutes per sample) and a limited number of measurable metabolites. 
 
 We minimized Eqn. \eqref{eqn:objective-function} using Particle swarm optimization (PSO) \citep{PSO}.
 PSO is global optimization procedure which uses a swarming metaheuristic to explore parameter spaces. 
