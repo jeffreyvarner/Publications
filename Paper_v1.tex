@@ -272,8 +272,7 @@ The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a coope
 The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave \citep{Octave:2014}.
 
 \subsection*{Estimation of model parameters from synthetic experimental data}
-Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data using particle swarm optimization \citep{PSO}.
-In this study, the parameter estimation problem took the form:
+Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data:
 \begin{equation}\label{eqn:objective-function}
 	\min_{\mathbf{k}} \sum_{\tau=1}^{\mathcal{T}}\sum_{j=1}^{\mathcal{S}}\left(\frac{\hat{x}_{j}\left(\tau\right) - x_{j}\left(\tau,\mathbf{k}\right)}{\omega_{j}\left(\tau\right)}\right)^{2}
 \end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
@@ -281,7 +280,7 @@ value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes 
 time, while the inner summation is with respect to state. We wanted to approximate a realistic model identification scenario, thus we assumed noisy experimental data, 
 limited sampling resolution (approximately 20 minutes per sample) and that only a subset of metabolites were measurable. 
 
-We minimized Eqn. \eqref{eqn:objective-function} using Particle swarm optimization (PSO).
+We minimized Eqn. \eqref{eqn:objective-function} using Particle swarm optimization (PSO) \citep{PSO}.
 PSO is global optimization procedure which uses a swarming metaheuristic to explore parameter spaces. 
 A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
 error landscape experienced by each particle collectively to the swarm using the update rules:
