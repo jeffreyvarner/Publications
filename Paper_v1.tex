@@ -146,7 +146,7 @@ Several of these reactions involved cofactor dependence ($AH$ or $A$), and vario
 Network A included feedback inhibition of the initial pathway enzyme ($E_{1}$) by pathway end products $P_{1}$ and $P_{2}$ (Fig. \ref{fig-networks}A).
 On the other hand, network B involved feedback inhibition of $E_{1}$ by $P_{2}$ and $E_{6}$ by $P_{1}$ (Fig. \ref{fig-networks}B). 
 In both networks, branch point enzymes $E_{3}$ and $E_{6}$ were subject to feed-forward activation by cofactor $AH$.
-Lastly, in both cases pathway enzyme activity was assumed to decay according to a first-order rate law. 
+Lastly, enzyme activity was assumed to decay according to a first-order rate law in both cases. 
 Allosteric regulation of enzyme activity was represented using a novel rule-based strategy, similar in spirit to the 
 Constrained Fuzzy Logic (cFL) approach of Lauffenberger and coworkers \citep{Morris:2011aa}. 
 In this formulation, Hill-like transfer functions were used to calculate the influence of metabolite abundance upon target enzyme activity. 
@@ -154,10 +154,10 @@ When an enzyme was potentially sensitive to more than one regulatory influence, 
 activity at any given time (Fig. \ref{fig-control-schematic}).      
 Thus, our test networks involved important features such as cofactor recycling, enzyme activity and metabolite dynamics, 
 as well as multiple overlapping allosteric regulatory mechanisms.  
-As such, developing our effective modeling approach using these problems gave us valuable insight into how to develop larger network models, 
+As such, developing our effective modeling approach using these simple problems gave us valuable insight into the development of larger network models, 
 without the complication of network size. 
 
-The rule based regulatory strategy captured the kinetic behavior of classic allosteric activation and inhibition mechanisms (Fig. \ref{fig-kinetics-simulations}).  
+The rule based regulatory strategy approximated the behavior of classical allosteric activation and inhibition mechanisms (Fig. \ref{fig-kinetics-simulations}).  
 We first explored feed-forward substrate activation of enzyme activity (for both positive and negative cooperativity). 
 Consistent with classical data, the rule based strategy predicted a sigmoidal relationship between substrate abundance 
 and reaction rate as a function of the cooperativity parameter (Fig. \ref{fig-kinetics-simulations}A). 
@@ -171,8 +171,11 @@ directly proportional to the cooperativity parameter, $\eta$ in Eqn. \eqref{eqn:
 Thus, as the cooperativity parameter increased, the maximum reaction rate decreased (Fig. \ref{fig-kinetics-simulations}B, orange).
 However, when the gain parameter was less than unity, enzyme inhibition increased with \textit{decreasing} cooperativity, 
 i.e., smaller $\eta$ yielded increased inhibition (Fig. \ref{fig-kinetics-simulations}B).
-Interestingly, our rule based approach was not able to directly simulate competitive inhibition of enzyme activity. 
+Interestingly, our rule based approach was unable to directly simulate competitive inhibition of enzyme activity. 
+For competitive inhibitors, the kinetic component of our rate, $\bar{r}_{j}$ in \eqref{eqn:rate-factor}, could be modified to account 
+for the inhibition (data not shown). 
 Taken together, the rule based strategy captured classical regulatory patterns for both enzyme activation and inhibition. 
+Thus, we are able to model complex kinetic phenomena such as ultrasensitivity, despite an effective description of reaction kinetics. 
     
 End product yield was controlled by feedback inhibition, while selectivity was controlled by branch point enzyme inhibition (Fig. \ref{fig-onoff-simulations}).
 A critical test of our modeling approach was to simulate networks with known behavior. If we cannot reproduce the expected behavior of simple networks, then our
@@ -190,22 +193,30 @@ Again, the control on/off behavior was robust to the values of the kinetic param
 an ensemble of possible randomized kinetic parameters (N = 100). Taken together, these simulations suggested that the rule based allosteric control 
 concept could robustly capture expected feedback behavior.
 
-The estimation of kinetic parameters was sensitive to the choice of control structure (Fig. \ref{fig-parameter-fit}).
-A critical challenge for any dynamic model effort is the estimation of kinetic parameters. 
-However, beyond this challenge is the identification of model structure, i.e., the biological connectivity of the system you are exploring.
-Of course these two issues are not independent as any description of the control of enzyme activity will be a function of the system state, which
-in turn is a function of the kinetic parameters.
+The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
+A critical challenge for any dynamic model is the estimation of kinetic parameters. 
+For metabolic processes, there is also the added challenge of identifying the regulation and control structures that manage metabolism.  
+Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which
+in turn depends upon the kinetic parameters. For cell free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
+We explored this linkage by estimating model parameters from synthetic data using both network
+structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate $M_{5}$ and end-product $P_1$ approximately every 20 min using
+network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm
+optimization, starting from random initial guesses. 
+PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).
+However, when there was model mismatch (network B fit against network A data), PSO was not able to identify an ensemble, all else being the same (Fig. \ref{fig-parameter-fit}C and D).
 
-Discrimination between competing model formulations can be achieved by optimal experimental design (Fig. ZZ). [FINISH]
+Discrimination between competing regulatory formulations can be achieved by optimal experimental design (Fig. ZZ). [FINISH]
 
 
 
 \clearpage
 
 \section*{Discussion}
-In this study, we proposed a effective modeling strategy to simulate cell free metabolic networks. 
-We tested this strategy using two proof of concept metabolic networks 
-with the same enzymatic connectivity, but differing control structures. [FINISH]
+In this study, we proposed a effective modeling strategy to dynamically simulate cell free metabolic networks. 
+We tested this strategy using two proof of concept metabolic networks.
+In both networks, substrate $S$ was converted to the end-products $P_{1}$ and $P_{2}$ through a series of enzymatically catalyzed reactions, 
+including a branch point at hypothetical metabolite $M_{2}$. While both networks had the same enzymatic connectivity, that had differing control structures.
+[FINISH]
 
 Cybernetic models, other dynamic models of metabolism. 
 
@@ -228,7 +239,7 @@ The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i
 $\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates
 metabolite $i$ is not connected with reaction $j$. 
 Each reaction rate was written as the product of a reaction term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
-\begin{equation}
+\begin{equation}\label{eqn:rate-factor}
 	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
 \end{equation}We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:
 \begin{equation}\label{eqn:rate-bar}
