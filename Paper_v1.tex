@@ -226,7 +226,7 @@ While the results of this study were encouraging, there are several critical nex
 \section*{Materials and Methods}
 
 \subsection*{Formulation and solution of the model equations.}
-We used ordinary differential equations (ODEs) to model the time evolution of metabolite ($x_{i}$) and scaled enzyme ($\epsilon_{i}$) abundance in hypothetical cell free
+We used ordinary differential equations (ODEs) to model the time evolution of metabolite ($x_{i}$) and scaled enzyme abundance ($\epsilon_{i}$) in hypothetical cell free
 metabolic networks:
 \begin{eqnarray}
 	\frac{dx_{i}}{dt} & = & \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)\qquad{i=1,2,\hdots,\mathcal{M}}\\
@@ -237,8 +237,11 @@ denotes the rate of reaction $j$. Typically, reaction $j$ is a non-linear functi
 $\mathbf{k}$ ($\mathcal{K}\times{1}$).
 The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. If 
 $\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates
-metabolite $i$ is not connected with reaction $j$. 
-Each reaction rate was written as the product of a reaction term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
+metabolite $i$ is not connected with reaction $j$. Lastly, $\lambda_{i}$ denotes the scaled enzyme degradation constant. The system material balances are subject to the
+initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$ and $\mathbf{\epsilon}\left(t_{o}\right) = \mathbf{1}$ (initially we have 100\% cell-free enzyme abundance).
+
+
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
 \begin{equation}\label{eqn:rate-factor}
 	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
 \end{equation}We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:

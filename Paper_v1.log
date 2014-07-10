@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 JUL 2014 18:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 JUL 2014 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,14 +651,14 @@ v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
 
 [6
 
-] [7]
-Overfull \hbox (3.77243pt too wide) in paragraph at lines 283--287
+] [7] [8]
+Overfull \hbox (3.77243pt too wide) in paragraph at lines 286--290
 \OT1/phv/m/n/12 op-ti-miza-tion pro-ce-dure which uses a swarm-ing meta-heuris-
 tic to ex-plore pa-ram-e-ter spaces.
  []
 
-[8]
-Overfull \hbox (7.69629pt too wide) in paragraph at lines 298--300
+
+Overfull \hbox (7.69629pt too wide) in paragraph at lines 301--303
 \OT1/phv/m/n/12 This study was sup-ported by the Na-tional Sci-ence Foun-da-tio
 n GK12 award (DGE-1045513)
  []
@@ -670,17 +670,17 @@ n GK12 award (DGE-1045513)
 File: ./figs/Figure-1-Networks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Networks.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 313.
+Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 316.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 315.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 318.
  [11 <./figs/Figure-1-Networks.pdf>]
 <./figs/Figure-2-ControlSchematic.pdf, id=83, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 322.
+e 325.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [12 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-EnzymeKinetics.pd
 f, id=267, 794.97pt x 614.295pt>
@@ -688,7 +688,7 @@ File: ./figs/Figure-3-EnzymeKinetics.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-EnzymeKinetics.pdf>
 Package pdftex.def Info: ./figs/Figure-3-EnzymeKinetics.pdf used on input line 
-330.
+333.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [13 <./figs/Figure-3-EnzymeKinetics.pdf>] <./figs/Figure-4-OnOffSimulations.pd
 f, id=314, 652.4375pt x 1419.3025pt>
@@ -696,7 +696,7 @@ File: ./figs/Figure-4-OnOffSimulations.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-4-OnOffSimulations.pdf>
 Package pdftex.def Info: ./figs/Figure-4-OnOffSimulations.pdf used on input lin
-e 341.
+e 344.
 (pdftex.def)             Requested size: 258.36668pt x 562.05853pt.
  [14 <./figs/Figure-4-OnOffSimulations.pdf>] <./figs/Figure-5-ParameterFit.pdf,
  id=351, 794.97pt x 614.295pt>
@@ -704,7 +704,7 @@ File: ./figs/Figure-5-ParameterFit.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-5-ParameterFit.pdf>
 Package pdftex.def Info: ./figs/Figure-5-ParameterFit.pdf used on input line 35
-1.
+4.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [15 <./figs/Figure-5-ParameterFit.pdf>]
 (./Paper_v1.aux) )
@@ -744,7 +744,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (17 pages, 3248362 bytes).
+Output written on Paper_v1.pdf (17 pages, 3249126 bytes).
 PDF statistics:
  452 PDF objects out of 1000 (max. 8388607)
  338 compressed objects within 4 object streams
