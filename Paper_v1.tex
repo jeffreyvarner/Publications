@@ -77,6 +77,7 @@
 \setlength\bibsep{0pt}
 
 \renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 % Change the number format in the ref list -
 \renewcommand{\bibnumfmt}[1]{#1.}
@@ -89,7 +90,7 @@
 \begin{titlepage}
 {\par\centering\textbf{\Large Dynamic Modeling of Cell Free Metabolic Networks using Effective Kinetic Models}}
 \vspace{0.05in}
-{\par \centering \large{ Joseph A. Wayman and Jeffrey D. Varner$^{*}$}}
+{\par \centering \large{ Joseph A. Wayman, Adithya Sagar and Jeffrey D. Varner$^{*}$}}
 \vspace{0.10in}
 {\par \centering \large{School of Chemical and Biomolecular Engineering}}
 {\par \centering \large{Cornell University, Ithaca NY 14853}}
@@ -211,15 +212,21 @@ However, when there was network mismatch (network B fit against network A synthe
 Interestingly, the particle swarm generated a \textit{sloppy} parameter ensemble, in the absence of network mismatch (Fig. ZZZ). 
 Taken together, ... [FINISH].
 
-We modified our particle swarm identification strategy to simultaneously search over control structures and kinetic parameters (Fig. ZZZ). 
-We constructed five putative network models, each with the same enzymatic connectivity but different allosteric structures (Fig. ZZZ). 
-We then initialized a population of particles, each with one of the five putative regulatory programs, and randomized kinetic parameters.
-We biased the distribution of the particle population according to \textit{a~prior} belief of the correct regulatory program.
-To this end, we considered three different priors, a uniform distribution where each regulatory structure represented 20\% of the population, and
-two mixed distributions that were positively or negatively biased towards the correct structure (Table ZZ). 
-Taken together, ... [FINISH].
-
-Discrimination between competing regulatory formulations can be achieved by optimal experimental design (Fig. ZZ). [FINISH]
+We modified our particle swarm identification strategy to simultaneously search over both kinetic parameters and putative control structures.
+In addition to our initial networks, we constructed three additional presumptive network models, each with the same enzymatic connectivity but different allosteric 
+regulation of the initial pathway enzyme (Fig. \ref{fig-alternative-networks}). 
+We then initialized a population of particles, each with one of the five potential regulatory programs, and randomized kinetic parameters.
+Thus, we generated an initial population of particles that had \textit{both} different kinetic parameters as well as different control structures. 
+We biased the distribution of the particle population according to our \textit{a~prior} belief of the correct regulatory program.
+To this end, we considered three different priors, a uniform distribution where each putative regulatory structure represented 20\% of the population, and
+two mixed distributions that were positively or negatively biased towards the correct structure (network A).
+In both the positively biased, and uniform cases the particle swarm clearly differentiated between the true or closely related structures and those that were materially different (Fig. \ref{fig-control-search}). 
+As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially 
+identified (Fig. \ref{fig-control-search}A). 
+On the other hand, the uniform distribution identified a combination of network A (ZZ) and network C (YY) as the most likely control structures (Fig. \ref{fig-control-search}B).
+Network A and C differ by the regulatory connection between the end-product $P_2$ and enzyme $E_{1}$; in network A $P_{2}$ was assumed to inhibit $E_{1}$ while in network C $P_{2}$ was assumed to
+activate $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
+the particle swarm misidentified the correct structure (Fig. \ref{fig-control-search}C). [FINISH]
 
 \clearpage
 
@@ -234,6 +241,8 @@ Cybernetic models, other dynamic models of metabolism.
 
 While the results of this study were encouraging, there are several critical next steps that must be accomplished before we can model genome scale cell free metabolic networks.
 [FINISH]
+
+\clearpage
 
 \section*{Materials and Methods}
 
@@ -286,28 +295,41 @@ In this study, each individual factor had the form:
 The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
 The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave \citep{Octave:2014}.
 
-\subsection*{Estimation of model parameters from synthetic experimental data}
-Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data:
+\subsection*{Estimation of model parameters and structures from synthetic experimental data.}
+Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data (squared residual):
 \begin{equation}\label{eqn:objective-function}
 	\min_{\mathbf{k}} \sum_{\tau=1}^{\mathcal{T}}\sum_{j=1}^{\mathcal{S}}\left(\frac{\hat{x}_{j}\left(\tau\right) - x_{j}\left(\tau,\mathbf{k}\right)}{\omega_{j}\left(\tau\right)}\right)^{2}
 \end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
 value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes the experimental measurement variance for species $j$ at time $\tau$. The outer summation is respect to
-time, while the inner summation is with respect to state. We wanted to approximate a realistic model identification scenario, thus we assumed noisy experimental data, 
+time, while the inner summation is with respect to state. We approximated a realistic model identification scenario, assuming noisy experimental data, 
 limited sampling resolution (approximately 20 minutes per sample) and a limited number of measurable metabolites. 
 
-We minimized Eqn. \eqref{eqn:objective-function} using Particle swarm optimization (PSO) \citep{PSO}.
-PSO is global optimization procedure which uses a swarming metaheuristic to explore parameter spaces. 
+We minimized the model residual using Particle swarm optimization (PSO) \citep{PSO}.
+PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
 A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
-error landscape experienced by each particle collectively to the swarm using the update rules:
+error landscape experienced by each particle collectively to the swarm. Thus, PSO acts both as a local and a global search algorithm. 
+For each iteration, particles in the swarm compute their local error by evaluating the model equations using their specific parameter vector realization.
+From each of these local points, a globally best error is identified. Both the local and global error 
+are then used to update the parameter estimates of each particle using the rules:
 \begin{eqnarray}
 	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
 	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
-\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right) = (1.0,0.05564,0.02886)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
+\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
 $\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
-parameters ($\mathcal{K}\times{1}$). The PSO algorithm, and the objective function were encoded and solved in the Octave programming language \citep{Octave:2014}.
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$, which was taken from XXX. The quality of parameter
+estimates was measured using two criteria, goodness of fit (model residual) and angle between the estimated parameter vector $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$:
+\begin{equation}
+	\alpha_{j} = cos^{-1}\left(\frac{\mathbf{k}_{j}\cdot{\mathbf{k^{*}}}}{\norm{\mathbf{k}_{j}}\norm{\mathbf{k^{*}}}}\right)
+\end{equation}If the candidate parameter set $\mathbf{k}_{j}$ were perfect, the residual between the model and synthetic data 
+and the angle between $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$ would be equal to zero.
 
-\subsection*{Model discrimination}
-
+We modified our PSO implementation to simultaneously search over kinetic parameters and putative model control structures.
+In the combined case, each particle potentially carried a different model realization in addition to a different kinetic parameter vector. 
+We kept the update rules the same (along with the update parameters). 
+Thus, each particle competed on the basis of goodness of fit, which allowed different model structures to contribute to the overall behavior of the swarm. 
+We considered five possible model structures (A through E), where network A was the correct formulation (used to generate the synthetic data). 
+We considered a population N = 100 particles, where each particle in the swarm was assigned a model structure, and a random parameter vector.
+The PSO algorithm, model equations, and the objective function were encoded and solved in the Octave programming language \citep{Octave:2014}.
 
 \section*{Acknowledgements}
 This study was supported by the National Science Foundation GK12 award (DGE-1045513) 
@@ -365,6 +387,23 @@ The gray area represents $\pm$ one standard deviation surrounding the mean. Cont
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-5-ParameterFit.pdf}
 \caption{Parameter estimation from synthetic data for the same and mismatched allosteric control logic. }\label{fig-parameter-fit}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-6-AlternativeNetworks.pdf}
+\caption{Schematic of the alternative allosteric control programs used in the structural particle swarm computation. 
+Each network had the same enzymatic connectivity, initial conditions and kinetic parameters, but alternative feedback control structures for the first enzyme in the pathway.}\label{fig-alternative-networks}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{./figs/Figure-7-ControlSearch.pdf}
+\caption{Combined control structure and kinetic parameter search results. Think about this ...}\label{fig-control-search}
 \end{figure}
 
 \clearpage
