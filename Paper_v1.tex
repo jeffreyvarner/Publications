@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses  
+\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+\usepackage{lineno}
+
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\usepackage{geometry}
+\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+\bibliographystyle{plos2009}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+% Begin ...
+\begin{document}
+\begin{titlepage}
+{\par\centering\textbf{\Large Dynamically Dimensioned Particle Swarm Optimization}}
+\vspace{0.05in}
+{\par \centering \large{Adithya Sagar, Christine Shoemaker and Jeffrey D. Varner$^{*}$}}
+\vspace{0.10in}
+{\par \centering \large{School of Chemical and Biomolecular Engineering}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Modeling cell free metabolism}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{BMC~Systems~Biology}}
+\vspace{0.5in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Associate Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853} 
+{\par \centering Email: jdv27@cornell.edu} 
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abstract}
+
+{\noindent \textbf{Keywords:}~Parameter identification, Mathematical modeling}
+
+\pagebreak
+
+\setcounter{page}{1}
+
+\linenumbers
+
+\section*{Introduction}
+
+
+
+\clearpage
+
+\section*{Results}
+
+Coagulation is an archetype biochemical network that is highly interconnected and tightly regulated with multiple positive and negative feedback loops. 
+The biochemistry underlying coagulation has been well studied [REFHERE], and reliable experimental coagulation models have been developed [REFHERE]. 
+
+This makes it an ideal system for mathematical modeling and parameter estimation. Coagulation is regulated by a set of serine proteases also known as coagulation factors and blood platelets. The coagulation factors are generally in an inactive state and are known as zymogens. These zymogens are activated when through certain triggers. These trigger events like injury or trauma or sepsis exposure factors like collagen, tissue factor and von Willebrand factor (vWF) to blood. The exposure of these factors to blood kick-starts a series of convergent cascades that lead to conversion of zymogen prothrombinase to thrombin.   Luan et al. modeled coagulation using coupled non-linear ordinary differential equations with 301 reactions and 192 species. 
+
+\clearpage
+
+\section*{Discussion}
+
+\clearpage
+
+\section*{Materials and Methods}
+
+\subsection*{Formulation and solution of coagulation model equations.}
+\subsection*{Optimization methods.}
+
+\section*{Acknowledgements}
+This study was supported by the National Science Foundation GK12 award (DGE-1045513) 
+and by the National Science Foundation CAREER award (FILLMEIN).
+
+\clearpage
+
+\bibliography{References_v1}
+
+%\begin{comment}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S- 
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\end{document}
+
