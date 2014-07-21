@@ -1,0 +1,114 @@
+%! program = pdflatex
+
+%\documentclass[12pt]{article}
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+%\usepackage{supertabular}
+
+
+%*** extra packages ****
+%\usepackage{colortbl}
+%\usepackage{color}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+%\textwidth = 7.5 in
+%\textheight = 9.75 in
+%\oddsidemargin = 0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = 0.01 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\hoffset = -0.5 in
+%\begin{document}
+
+\begin{center}
+\tablefirsthead{
+\hline
+\rowcolor[gray]{0.8}\textbf{Prediction\#}  & \textbf{Species} & \textbf{Cell~Type} & \textbf{Stimulus} & \textbf{SS or D} & \textbf{Source} \\
+\hline}
+\topcaption{Blind Prediction list along with species measured, 
+  stimulus, cell-type, steady state (SS) vs dynamic (D) and the
+  corresponding literature reference.}
+\label{prediction_table}
+\begin{scriptsize}
+\begin{supertabular}{l l l l l l l l l }  
+\hline \\ 												
+
+P1 & HER2-p & C33 & DHT  & D & \cite{Meng2000} \\
+P2  & p27Kip1 & C33 & SHP Knockdown  & D & \cite{Rodriguez-Ubreva2010}\\
+P3  & ERK-p & C33 & PAcP Knockdown  & SS &  \cite{Chuang2010}\\
+P4  & AKT-p & C33 & PAcP Knockdown  & SS &  \cite{Chuang2010}\\
+P5  & Cyclin D1 & C33 & PAcP Knockdown  & SS &  \cite{Chuang2010}\\
+P6  & EGFR-p & C33 & EGF  & D & \cite{Chen2011}\\
+P7  & HER2-p & C33 & EGF  & D & \cite{Chen2011}\\
+P8  & EGFR-p & LNCaP-AI & EGF  & D & \cite{Chen2011}\\
+P9  & HER2-p & LNCaP-AI & EGF  & D & \cite{Chen2011}\\
+P10  & CyclinE & C33 & DHT  & D & \cite{Knudsen1998}\\
+P11  & CDK2 & C33 & DHT  & D & \cite{Knudsen1998}\\
+P12  & HER2-p & C33/C81 & 0  & SS & \cite{Chuang2010}\\
+P13  & AR & C33 & EGF  & D & \cite{Cai2009}\\
+P14  & AR & C33 & EGF  & D & \cite{Cinar2005}\\
+P15  & p27Kip1 & C33 & DHT  & D & \cite{Fang2012}\\
+P16  & Rb-p & C33 & DHT  & D & \cite{Knudsen1998}\\
+P17  & AR & C33 & DHT  & D & \cite{Cai2009}\\
+P18  & AKT-p & C33 & DHT  & D & \cite{Cai2009}\\
+P19  & PSA & C33 & EGF + DHT  & D & \cite{Cai2009}\\
+P20  & PSA & C33 & EGF  & D & \cite{Cai2009}\\
+P21  & Cyclin D1 & C33 & Sam68 Knockdown  & SS & \cite{Busa2007}\\
+P22  & Shc & C33 & DHT  & D & \cite{Veeramani2005Onc}\\
+P23  & Shc & C33 & EGF  & D & \cite{Veeramani2005Onc}\\
+P24  & Shc & C33/C81 & 0  & SS & \cite{Veeramani2005Onc}\\
+P25  & AR & C33 & AKT-p Knockdown  & SS & \cite{Ha2011}\\
+P26  & AR & LNCaP AI & AKT-p Knockdown  & SS & \cite{Ha2011}\\
+P27  & 4EBP1 bound eIF4E & C33/LNAI & 0  & SS & \cite{Graff2009}\\
+P28  & Shc-p & C33/C51/C81 & 0 & SS & \cite{Lee2004}\\
+P29  & Shc-p & C33 & EGF & D & \cite{Lee2004}\\
+P30  & PSA Response & CRPC Patients & enzalutamide & D & \cite{Scher2012}\\
+P31  & PSA Response & CRPC Patients & sorafenib & D & \cite{Dahut2008}\\
+P32  & PSA Response & CRPC Patients & lapatinib & D & \cite{Whang2013}\\
+P33  & PSA Response & ADPC Patients & lapatinib & D & \cite{Liu2013}\\
+
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+%\end{document}
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  
+ 
+  
+   
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

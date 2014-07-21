@@ -1,0 +1,642 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses  
+\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+\usepackage{lineno}
+
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\usepackage{geometry}
+\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+\bibliographystyle{msb}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+
+
+% Begin ...
+\begin{document}
+\begin{titlepage}
+{\par\centering\textbf{\Large Analysis of Hormone and Mitogenic Signal Integration in Prostate Cancer}}
+\vspace{0.05in}
+{\par \centering \large{ Katharine Rogers, Joseph Wayman, Ryan Tasseff, Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yallamraju, Gongcheng Lu, Matthew P. DeLisa, 
+and Jeffrey D. Varner$^{*}$}}
+\vspace{0.10in}
+{\par \centering \large{School of Chemical and Biomolecular Engineering}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Modeling signal transduction in prostate cancer}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{Molecular Systems Biology}}
+\vspace{0.5in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Associate Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853} 
+{\par \centering Email: jdv27@cornell.edu} 
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abstract}
+
+
+{\noindent \textbf{Keywords:}~}
+
+\pagebreak
+
+\setcounter{page}{1}
+
+\linenumbers
+
+\section*{Introduction}
+
+%
+%Sipuleucel-T is a first generation cancer vaccine \cite{Kantoff2010}, while radium-223 is a targeted alpha emitter for bone metastasis \cite{Parker2013}. 
+%Abiraterone is an inhibitor of cytochrome P450 17A1 (CYP17), a critical enzyme in androgen biosynthesis \cite{Sartor2013} while enzalutamide inhibits androgen receptor (AR) translocation to the nucleus, as well as DNA binding and coactivator recruitment \cite{Scher2012}.  
+%Unfortunately,
+%Thus, understanding the operation of the biological pathways which ultimately facilitate the transition to CRPC 
+%is vital to the discovery of new therapeutic strategies against this disease.
+
+Prostate cancer (PCa) is the most commonly diagnosed cancer and the second leading cause of cancer-related death in men in the United States \cite{Siegel2013}. 
+Initially, PCa cells depend on the activation of cytosolic androgen receptors (AR) by androgens, such as testosterone, for survival and growth. 
+Androgen ablation in combination with radiation or chemotherapy remains the primary non-surgical treatment for androgen-dependent prostate cancer (ADPC) \cite{Huggins1967}. 
+However, androgen ablation typically fails to permanently arrest cancer progression as malfunctioning cells eventually lose androgen sensitivity and proliferate without hormone. 
+The loss of androgen sensitivity results in castration resistant prostate cancer (CRPC), a phenotype with greatly reduced survival and few effective treatments \cite{Harris2009}.
+Currently, there are only six therapies approved by the United States Food and Drug Administration (USFDA) that demonstrate a survival advantage in patients with metastatic CRPC \cite{Sartor2013}.
+These therapies target diverse aspects of PCa. The taxane family members docetaxel and cabazitaxel interact with microtubule stability \cite{Tannock2004,Bono2010} while
+other molecules such as abiraterone \cite{Sartor2013} or enzalutamide \cite{Scher2012} interfere with androgen signaling by blocking androgen formation or nuclear translocation, respectively.
+Other approaches are non-specific to PCa. For example, both sipuleucel-T, a first generation cancer vaccine \cite{Kantoff2010}, and radium-223 
+an alpha emitter which targets bone metastasis \cite{Parker2013}, have been approved to treat CRPC.
+Unfortunately, irregardless of the specific therapeutic approach, these strategies all share similar outcomes.
+The survival advantage of these treatments is typically a few months, and there is limited data on combination therapies or the use of biomarkers to develop personalized treatment strategies. 
+
+Androgen induced proliferation and survival depends upon many coordinated signal transduction and gene expression events. 
+Androgen, typically in the form of 5$\alpha$-dihydrotestosterone (DHT), diffuses into prostate cells and interacts with androgen receptor (AR). 
+The interaction of DHT with AR promotes the dissociation of AR from chaperone proteins and its subsequent dimerization, phosphorylation and translocation to the nucleus (reviewed by Brinkmann et al., \cite{Brinkmann1999}). Activated nuclear AR drives a gene expression program broadly referred to as androgen action, that promotes both proliferation and survival.
+In addition to many genes including itself, activated nuclear AR promotes the expression and secretion of prostate specific antigen (PSA), arguably the best known PCa biomarker \cite{Feldman2001}.
+The level of PSA in patients' blood is commonly used as an indicator for prostate cancer, although its prognostic ability is controversial \cite{Hoffman2011,Moyer2012}. 
+In CRPC, AR signals in the absence of androgens. 
+Androgen dependent (AD) prostate cells become castration resistant (CR) through several mechanisms, including constitutively 
+amplified AR expression or altered AR sensitivity to testosterone or non-androgenic molecules \cite{Feldman2001}. 
+Of interest in this study is the aberrant activation of AR by kinase signaling cascades, sometimes called the outlaw pathway. 
+This mechanism is driven by over-activated receptor tyrosine kinases (RTKs), a common pathology associated with many cancer types including PCa \cite{Slamon1989,Craft1999}. 
+RTKs stimulate downstream kinase cascades, including the Akt and mitogen-activated protein kinase (MAPK) pathways, which promote AR phosphorylation and dimerization 
+in the absence of an extracellular androgen signal \cite{Craft1999,Yeh1999}. Thus, in CRPC the androgen program is initiated, resulting in aberrant 
+proliferation and survival, without the corresponding extracellular hormone cue.
+
+In this study, we rank-ordered the importance of the molecular components controlling the transition from ADPC to CRPC.
+Toward this, we developed and analyzed an ensemble of mechanistic mathematical models of the signal transduction processes governing the 
+transition from androgen dependent to castration resistant prostate cancer. This family of models was a significant advance over our previous
+prostate signaling model \cite{Tasseff2010}. 
+First, we greatly expanded the signaling architecture considered in the model. We added the regulated expression of ten additional proteins, 
+including key species involved in the restriction point such as cyclin D (including the differentially spliced variants cyclin D1a and cyclin D1b), 
+cyclin E, cyclin-dependent kinase inhibitor 1A (p21Cip1), and cyclin-dependent kinase inhibitor 1B (p27Kip1). 
+We also included the Rb/E2F pathway, expanded our description of the activation of the mammalian target of rapamycin (mTOR) protein and its role in translation initiation and
+included regulation of AR function by cyclin D1a and E2F. However, this upgraded architecture came at the price of unknown
+model parameters. To estimate these parameters, we used multiobjective optimization in combination with 43 dynamic and steady-state data sets generated 
+in AD, intermediate and CR LNCaP cell lines. Furthermore, we tested the model using an additional 27 LNCaP data sets not used in model training. 
+From these data, we identified a population of approximately N = 5000 models (from over a million probable models) which could describe both AD and CR data sets
+using a single model formulation. We analyzed this model population to uncover differentially important mechanisms between the two operating states. 
+Sensitivity analysis of this model population identified key species in AD versus CR cell lines. 
+In the presence of androgen, the sensitivity profile was similar between AD and CR cells, where components of the MAPK and PI3K pathways were highly fragile, 
+irrespective of the level of androgen dependence.
+However, in the absence of androgen, there were 611 statistically significant shifts in species sensitivity (323 more and 287 less sensitive) between AD and CR cells.
+Of these, 111 were larger than one standard deviation above the mean.
+In CR cells, HER2 activation of ERK and PI3K was more fragile, as was AR activation through the MAPK pathway. AD cells, shifted sensitivity to general translation and
+transcription of proteins.
+The results of this study suggest targeting the PI3K/MAPK pathway in combination with anti-androgen therapies as a treatment for CRPC. 
+
+%The objective of this study was to rank-order the importance of components in CRPC and ADPC using computational tools. 
+%We formulated and analyzed an ensemble of mechanistic mathematical models of the signal transduction processes in CRPC and ADPC 
+%that was an extension of our previous work .
+%In particular, we focused on the outlaw pathway and the possible crosstalk between RTK-dependent kinases and AR activation. 
+%First, we expanded the original model by adding ten  
+%Third, we added additional co-activators, such as Cyclin E, and inhibitors of AR, such as
+
+\section*{Results}
+
+\subsection*{Prostate model connectivity.} 
+
+The prostate cell model consisted of 780 protein, lipid or mRNA species and 1674 interactions (Fig. \ref{fg:NetworkSchematic}). 
+The model investigated the activation of AR through androgen binding or a ligand-independent, MAPK-driven mechanism. 
+The signaling architecture of the model was curated from literature sources
+and was a significant extension to an earlier model version published by Tasseff \textit{et al.} \cite{Tasseff2010}. 
+In both models we considered nuclear hormone (AR) and transmembrane growth factor receptor (EGFR) activation. 
+In addition to MAPK-dependent outlaw activation of AR, the model also included transcriptional activation via MAPK signaling \cite{Feldman2001,Yeh1999}. 
+The PI3K/Akt/mTOR pathway for translation initiation was also included in the model, as well as the regulated expression of PSA, Cyclin D, cellular and secreted prostatic acid phosphatase (cPAcP and sPAcP, respectively). 
+Both forms of PAcP were included because cPAcP downregulates HER2 activity, while sPAcP promotes modest HER2 activation \cite{Veeramani2005}. 
+The previous model only considered Cyclin D as a cell marker and did not include other cell cycle proteins or cell cycle interactions.
+Thus, cell cycle regulatory proteins p21Cip1, p27Kip1, and p16INK4 were added to the model for their importance in inhibiting G1 phase cell cycle progression \cite{Novak2004}. 
+With the addition of cell cycle proteins, we also included the Rb/E2F pathway as well as E2F inhibition of AR \cite{Davis2006}. 
+The model of Tasseff \textit{et al.} assumed a constant level of AR expression, consistent with the C-33, C-51, and C-81 LNCaP sublines \cite{Lee2003}. 
+Other prostate cancer cell lines vary in their AR expression \cite{Sobel2005}. 
+In order to capture more generally the role of androgen signaling in cancer cell behavior, we've included the detailed transcriptional and translational regulation of AR.
+Cyclin E and CDK6 were added to the model because of their importance in co-regulating AR transcription regulation activity in prostate cells \cite{Yamamoto2000,Lim2005}. 
+Additionally, expression of transcription factors AP-1 and ETS were also added to the model. 
+Another significant addition to the model was the inclusion of a nuclear compartment separate from the cytosol, membrane and extracellular environments. 
+
+The prostate model was developed to determine the shift in important signaling components between CR and AD prostate cancer cells. 
+We used a single network structure to capture differences in androgen independence, with only a few justified parameter changes. 
+The LNCaP clones, C-33, C-51, and C-81, were used as model systems for differing levels of androgen dependence \cite{Igawa2002,Horoszewicz1983}. 
+C-33 cells, having undergone fewer than 33 passages, are considered AD and C-51 cells, having between 34 and 80 passages, are considered an intermediate prostate cancer cell line. 
+C-81, those with passage numbers over 80, display an CR phenotype \cite{Lin2000}. 
+We also considered CR LNCaP sub-lines developed by other research groups, including LNCaP-Rf \cite{Murillo2001}, LNCaP-AI \cite{Chen2011} and LNAI \cite{Graff2009}. 
+To simulate the effective difference between LNCaP clones with varying androgen dependence, the effective gene expression of PAcP of more advanced, CR sub-lines was reduced. The alterations were chosen based on steady state PAcP data from the three LNCaP clones \cite{Lee2003}. 
+The gene expression of PAcP was scaled by 0.1 and 0.5, respectively, for the C-81 and C-51 cell-lines compared to C-33.
+Also the gene expression level of p16INK4 was scaled by the same values due to the inability to capture the effect of changes in DNA structure on protein levels \cite{Lu1997} . %http://endo.endojournals.org/content/140/11/5054.long or http://endo.endojournals.org/content/140/11/5054.long#ref-19
+
+\subsection*{Estimating an ensemble of prostate models.} 
+
+The prostate model was formulated as a set of coupled non-linear ordinary differential equations (ODEs) using mass-action kinetics. 
+Due to uncertainty in parameter estimation and to account for differences between individual cells and cell sublines, an ensemble of parameter sets was used to model the system. 
+The prostate model had 2454 unknown parameters (1674 kinetic parameters and 780 initial conditions), which were determined by model training. 
+Proteins that were not modeled at a gene regulatory level were generated using zeroth order reactions. 
+All protein and RNA species were degraded with first order reaction rates. 
+To obtain an ensemble of parameter sets, we used multiobjective optimization. 
+Starting from an initial hand fit best set, we estimated the parameters using 43 \textit{in vitro} data sets taken from literature (Table~\ref{objective_table}). 
+Relative concentration values were quantified from optical density profiles of western and northern blots. 
+Training data came from experiments on LNCaP sublines. 
+We used the Pareto Optimal Ensemble Techniques (POETs) algorithm, previously developed in the lab \cite{Song2010}, to determine a diverse ensemble of models. 
+POETs uses a combination of simulated annealing and local search optimization techniques coupled with Pareto optimality-based ranking to simultaneously optimize multiple objective functions. 
+We sampled 150,000 possible models and found 5000 rank zero, low error sets. 
+As a control, we also performed simulations for 100 random parameter sets to compare against our ensemble. 
+
+The ensemble of PCa cell models recapitulated diverse training data across CR and AD cell lines. 
+We captured increased PSA concentration through AR signaling due to a DHT stimulus in both C-33 and C-81 cell lines (Fig. \ref{fg:Training}A and Fig. \ref{fg:Training}B) \cite{Lee2003}. 
+Also of importance was the model's ability to capture non-ligand activation of AR through MAPK signaling (Fig. \ref{fg:Training}C) \cite{Lee2003}. 
+The positive feedback between HER2-induced MAPK activation and androgen action was also demonstrated in the model. 
+Increased activation of AR by androgens leads to decreased PAcP levels, increasing HER2 activity. 
+Figure \ref{fg:Training}D shows decreased PAcP mRNA expression due to an androgen stimulus \cite{Lin2000}. 
+The model was also able to recapitulate steady state protein levels between different cell lines. 
+The concentration of Cyclin D1 increased in CR compared to AD cell lines (Fig. \ref{fg:Training}E), while phosphorylated AKT levels also increased in higher passage number cell lines (Fig. \ref{fg:Training}G). 
+Higher basal AKT phosphorylation leads to increased activation of the PI3K/AKT pathway in PCa cells with less androgen dependence \cite{Lin2003}. 
+Two new additions to the model were the cell cycle protein p21Cip1 and transcriptional regulation of AR. 
+We were able to capture training data for both mechanisms. 
+Hormone activation of cell cycle proteins was captured for p21Cip1 (Fig. \ref{fg:Training}F.) \cite{Knudsen1998}. 
+AR transcriptionally upregulates its own expression \cite{Lin2003}. 
+We captured the increase in AR concentration due to AR activation, and thus increased transcriptional activity, upon DHT stimulus (Fig. \ref{fg:Training}H). 
+Conversely, the transcription factor E2F inhibits AR transcription in LNCaP cells (Fig. \ref{fg:Training}I) \cite{Davis2006}. 
+All previous graphs show ensemble average $\pm$ one standard deviation. 
+The color plots in Figure 3 compare model fit of ensemble members to experimental data (Fig. \ref{fg:ColorPlot}). 
+Training experiments are numbered 1 through 40 (some training experiments forced), while validation experiments are numbered 41 through 67. 
+The model fit 33 of the 40 training cases with a greater then 40\% ensemble members. 
+In the random case only 7 of the 40 training experiments had a greater then 40\% ensemble fit. %For the training data, (Percentage of ensemble members that fit)
+
+\subsection*{Validation studies revealed missing key elements in network structure.} 
+
+The model was validated by comparing simulations against 27 \textit{in vitro} experiments along with three \textit{in vivo} drug studies (Table~\ref{prediction_table}). 
+In Figure \ref{fg:ColorPlot}C, show model fit for each ensemble member for the 27 validation studies. 
+For 13 of the 27 \textit{in vitro} experiment cases over 40\% of our ensemble members were qualitatively consistent with experimental data. 
+This compared to only 3 of 27 for the set of 100 random members. 
+We captured additional data showing the positive feedback between HER2 and androgen action (Fig. \ref{fg:Validation}A and Fig. \ref{fg:Validation}B) \cite{Meng2000,Chuang2010}. 
+Also shown (Fig. \ref{fg:Validation}C) is the simulated AR concentration values due to increased DHT concentration \cite{Cai2009}. 
+An additional protein we considered in validation that was not used in training was phosphorylated Shc.
+Simulations predicted a similar increase in Shc phosphorylation after DHT stimulus (Fig. \ref{fg:Validation}D) \cite{Veeramani2005Onc}. 
+Validation experiments that the model failed to predict seem to be due to uncertainty of the biology and/or missing biology from the network. 
+For example, we initially chose not to consider the heterodimerization of HER2 with other ErbB family members in order to simplify the system. 
+Figure \ref{fg:Validation}E, which shows increased HER2 phosphorylation after EGF stimulus, seemed to suggest that HER2-EGFR heterodimerization was an important mechanism in EGF-driven activation of HER2. \cite{Chen2011}. 
+Thus, in attempt to improve model performance, we developed a new model with the addition of HER2 and EGFR heterodimerization. 
+Using the same ensemble members (i.e., rate constants and initial conditions), we set the rate constants of the HER2/EGFR dimer reactions equal to the similar reactions in the EGFR homodimer case. 
+This is a reasonable assumption since the affinity of HER2/EGFR heterodimerization and EGRF homodimerization is similar \cite{Hendriks2003}. 
+Figure \ref{fg:ColorPlot}A and C shows a color plot of experiment versus ensemble member for both the old and new model. 
+The only reactions affected involved EGF stimulus. 
+We were able to qualitatively fit the HER2 activation case, due to an EGF stimulus (Exp 47), by just adding the heterodimerization of HER2 with EGFR and assuming similar rate constants. 
+Interestingly, we were able to improve other experiments that involved an EGF stimulus: in this case Cyclin D protein and Cyclin D mRNA concentration due to an EGF stimulus in C-33 cells (Exp Num 18 and Exp Num 19).   
+
+In addition, three of the validation cases involved the effect of EGF on AR and AR-activated genes, i.e., PSA. 
+Cai \textit{et al.} showed decreased expression of endogenous AR as well as androgen-regulated PSA in AD LNCaP cells due to an EGF stimulus \cite{Cai2009}. 
+Cinar \textit{et al.} also showed decreased AR protein expression due to EGF, an effect reversed by the mTOR inhibitor, Rapamycin \cite{Cinar2005}. 
+Model simulations show either the opposite trend or no effect due to EGF stimulus (Fig. \ref{fg:Validation}F) \cite{Cinar2005}. 
+These results suggest missing network structure. 
+From additional literature searches, the inhibition of AR activation through EGF is still an open question, with many groups debating the biology involved, predominately in the PI3K/AKT pathway. 
+Lin \textit{et al.} found that in low passage number LNCaP cells (C-33), AKT negatively regulates AR by destabilizing it and marking it for ubiquitylation. 
+In high passage number LNCaP (C-81), AKT levels are high which contribute to AR stability and less degradation \cite{Lin2003}. 
+Wen \textit{et al.} showed that HER2 could induce AKT activation and LNCaP cell growth in the presence and absence of androgen \cite{Wen2000}. 
+Another study shows AKT phosphorylation of AR at S213 and S790 suppresses AR transactivation and AR-mediated apoptosis of LNCaP \cite{Lin2001PNAS}. 
+The study from Cai \textit{et al.} showed the reduction in AR was not due to degradation or PI3K/AKT signaling, but instead was due to decreased AR mRNA levels \cite{Cai2009}. 
+They found that AR protein levels in CR cells were not affected by EGF. 
+Others though have found that PSA expression, even in C-81 cells, is decreased by EGF \cite{Hakariya2006}. 
+In other prostate cell lines, EGF has been shown to increase AR transactivation \cite{Gregory2004,Ponguta2008}. 
+The MAPK pathway, which is downstream of EGFR, may also enhance AR responses to low levels of androgen \cite{Guo2006,Weber2004}. 
+Due to the discrepancies in the literature, experiments should be performed before adding additional network connectivity to the model.
+
+The model was also used to predict three potential drug studies. 
+The Prostate Cancer Working Group (PCWG) updated outcome measurements for castration resistant prostate cancer studies in 2008 \cite{Scher2008}. 
+The primary endpoint in prostate cancer studies is overall survival, while PSA response is often a secondary endpoint. 
+The three drugs we evaluated for their effect on castration resistant prostate cancer were enzalutamide, lapatinib, and sorafenib. 
+Enzalutamide acts on AR by inhibiting its nuclear translocation, DNA binding, and coactivator recruitment \cite{Scher2012}. 
+In this study PSA response was defined as reductions in PSA from baseline to lowest post-baseline PSA. 
+In the clinical trial, 54\% of patients that received enzalutamide showed a PSA response decline of $\geq$ 50\% and 25\% showed a decline $\geq$ 90\%. 
+The model simulated enzalutamide by changing the rate constants of activated AR binding to nuclear importer, CycE, and CDK6 to one percent of the initial non-drug value. 
+In the model, 62\% of ensemble members showed a $\geq$ 50\% decline in PSA levels, while 14\% showed a $\geq$ 90\% decline (Fig. \ref{fg:Validation}G). 
+Figure \ref{fg:Validation}I shows fold change of PSA of ensemble members due to the application of sorafenib. 
+Sorafenib is a multi-kinase inhibitor that has activity against Raf, vascular endothelial growth factor (VEGF) receptor, platelet-derived growth factor (PDGF) receptor, c-kit and c-Ret \cite{Dahut2008}. 
+We only considered effects of sorafenib on the protein kinase Raf, as VEGFR, PDGFR, c-kit and c-Ret are currently outside the scope of the model. 
+The study used only 22 patients and no patients showed a PSA decline of $>$ 50\%. In our model 55\% of ensemble members had a PSA decline of $\geq$ 50\%. 
+We also considered the drug lapatinib (also GW572016), a dual inhibitor of EGFR and HER2 tyrosine kinase activity (Fig. \ref{fg:Validation}H) \cite{Liu2013}. 
+Of the 35 patients enrolled in the study, no PSA response was observed. 
+Our model showed 26.5\% of ensemble members with a PSA response $\geq$ 50\%. 
+Although no response to lapatanib was seen in clinical trials, \textit{in vitro} experiments using LNCaP cells did show a decrease in PSA concentration in response to lapatanib, most notably with the addition of DHT \cite{Liu2005}. 
+The use of PSA as a biomarker for disease progression remains controversial \cite{Attard2009}. 
+Other biomarkers should be considered to model drug effects in prostate cancer cells. 
+
+\subsection*{Sensitivity analysis identified robust and fragile features of the prostate architecture.} 
+
+Sensitivity analysis identified interactions that were important in AD and CR cells in diverse environments (i.e., DHT, no DHT, drug) (Fig. \ref{fg:Sensitivity}). 
+First order sensitivity coefficients were calculated for 500 parameter sets selected from the ensemble (Materials and Methods). 
+Due to the size of the model and the time to compute each sensitivity coefficient, we calculated sensitivity coefficients at steady states with different stimuli. 
+Stimuli included the presence or absence of DHT, presence of therapeutics, and also EGF. 
+The sensitivity coefficients were rank-ordered for the 780 species in the model. 
+Important model species in an androgen environment, regardless of androgen dependence, included species from the MAPK and PI3K pathways. 
+Components of the MAPK pathway that were important included activated Raf, phosphorylated MEK, and  Ras. 
+We also found members of the PI3K/AKT pathway in the top 2\% of sensitive species irrespective of androgen status. 
+Important species included AKT bound to PIP3, phosphorylated AKT, and PI3K. 
+PIP3 recruits AKT and PDK1 to the membrane where PDK1 activates AKT \cite{Vivanco2002}. 
+Thus, the PIP3 and AKT interaction is required in the model for AKT phosphorylation to occur. 
+In an androgen environment, sensitive species between AD and CR cells were similar, with only a few small shifts (Fig. \ref{fg:Sensitivity}B). 
+In AD cells species involving PAcP and P16INK4 were more sensitive, which was expected since the level of gene expression in these two proteins were the only parameters changed between AD and CR cells in our model. 
+Other species that were more sensitive in AD cells include, E2F, CycE, and AR activated by DHT. 
+In CR cells, HER2-Grb2-Gab activation of PI3K, TOR activation, and PIP3 recruiting proteins to the membrane, were more sensitive. 
+
+In a non-androgen environment, important components shift with varying androgen dependence (Fig. \ref{fg:Sensitivity}A). 
+There were 611 statistically significant shifts in species (323 more and 287 less sensitive) between a CR and a AD cell in a non-androgen environment. 
+However, only 111 of those shifts were larger than one standard deviation above the mean. 
+In CR cells, HER2 activation of ERK and PI3K was more fragile, as was AR activation through the MAPK pathway. 
+This was expected, as the outlaw pathway is more active in castration resistant cells. 
+AD cells, shifted sensitivity to general translation and transcription of proteins. 
+The transcription factor, E2F was more fragile in AD cells, while the transcription factors ETS and AP1 were more robust. 
+ETS and AP1 are activated by phosphorylated ERK, and ETS is also activated by active PKC \cite{Wilkinson2000,Lindemann2003}. 
+E2F is deactivated through binding to Rb, which is deactivated by Cyclin D1 and CDK phosphorylation \cite{Lapenna2009}. 
+There was a large shift in sensitive species between an androgen and a non-androgen environment in both AD and CR cell lines (Fig. \ref{fg:Sensitivity}C and Fig. \ref{fg:Supp_Sensitivity}). 
+Of the 704 statistically significant shifts in species, 368 were more sensitive between an androgen environment and a non-androgen environment. 
+We only considered the 131 of those shifts that were larger than one standard deviation above the mean. 
+Unsurprisingly, AR activation with and without coactivators in a DHT environment was more sensitive, as was the AR down regulated gene PAcP. 
+Species further upstream, such as HER2 activation of the MAPK and PI3K/AKT pathway, were also more sensitive in a DHT environment. 
+In a non-androgen environment, basal transcription and translation were more fragile. 
+
+We also considered the sensitivity of a CR cell (C81) after the application of the drug enzalutamide, an AR inhibitor (Fig. \ref{fg:Sensitivity}D). 
+In an androgen environment with enzalutamide, species which were more fragile included cytosolic AR, PAcP, and p21Cip1. 
+As we would expect, AR species found in the nucleus and/or bound to coactivators, were more robust. 
+The top two percent of sensitive species with and without enzalutamide were conserved. 
+In a CR cell, enzalutamide had no effect on the sensitivity of PI3K/AKT species as well as many MAPK species (ERK, Raf, and MEK). 
+Next we looked at the effect of enzalutamide on a CR cell in both a non-androgen and DHT environment (Supplementary Figure). 
+More sensitive species in a non-androgen environment included dimerized HER2 and PAcP. 
+Species which were more robust in the non-androgen environment included, AR activated by DHT, PSA, and AR bound to HSP.  
+
+\subsection*{Robustness analysis identified key regulators of prostate cancer.} 
+
+Robustness analysis was conducted for 80 proteins in both AD and CR cells to quantify the effects of perturbing key species. The initial condition of the gene or the protein generation term was altered by 10, 0.5, and 0 for knock-in, knock-down, or knock-out perturbations, respectively. We calculated the effect of these perturbations on different protein markers, such as PSA, AR, and cyclin D. 
+A knock-out of Raf, MEK or ERK showed an overall increase in cyclin D levels in CR cells (Fig. \ref{fg:Supp_Robustness}). 
+This was unexpected and we saw a similar increase in cyclin D due to the knock-in of Raf, MEK or ERK. 
+We found that individual ensemble members showed different response to a Raf knock-out, in both cyclin D concentration and PSA concentration. 
+Of the 500 ensemble members, 126 members saw an increase in PSA concentration and 62 members saw an increase in cyclin D concentration due to the knock-out of Raf (Fig. \ref{fg:Robustness}). 
+We saw three distinct regions: (1) increase in PSA concentration, (2) increase in cyclin D concentration, and (3) a decrease in both PSA and cyclin D. 
+We explored the flux vectors of the outlying parameter sets to understand the mechanistic effect of Raf knock-out on PSA and cyclin D. Outlying parameter sets in region 1 displayed high activation of PI3K through HER2 signaling as well as high association of AP1 with AR. 
+AP1 binds and suppresses AR transcriptional activity in LNCaP cells \cite{Sato1997}. 
+Knocking out Raf lowered AP1 levels and, therefore, freed AR for increased transcription of PSA.
+In region 2, parameter sets also had high activation of PI3K through HER2. 
+They also had higher association of E2F with Rb and cyclin D1a with AR. Cyclin D levels in this region increase due to an increase in E2F levels caused by the Raf knock-out. 
+Parameters in region three have high association of TOR. 
+Interestingly, the drug sorafenib, a multi-kinase inhibitor that has activity against Raf, showed no measurable PSA decline in prostate cancer patients in clinical trials \cite{Dahut2008}. 
+The robustness analysis showed that network perturbation can result in unexpected responses due to cell-to-cell heterogeneity in gene expression. 
+These outlying cell types could be critical to understand when designing drug targets and combination therapies.
+ 
+\section*{Discussion}
+
+In this study, we developed and analyzed a population of mathematical models describing the integration of growth factor and hormone siganling in androgen dependent, intermediate and resistant prostate cancer cells.  
+These models described the regulation of androgen receptor expression and activation both through androgen binding as well as a ligand-independent, MAPK-driven mechanism referred to as the outlaw pathway.
+An ensemble of model parameters was estimated using 43 steady state and dynamic data sets taken from androgen dependent, intermediate and independent LNCaP cell lines using multiobjective optimization. 
+Further, we tested the predictive power of the model by comparing model predictions against 30 novel data sets (including three \textit{in vivo} drug studies) not used during model training.
+The model ensemble captured XX of the training data, and ZZ of the validation data relative to a random control population. Interestingly, during the the inital round of parameter estimation, we identified several 
+potentially missing structural components not present in the original connectivity. One such component, EGF-induced HER2/EGFR heterodimerization, was added to the current generation model. Inclusion of this structural component signficantly improved both training and validation performance using the same rate constants as the EGFR-homodimer case (no additional parameter fitting).  
+We then analyzed the population of siganling models, using both sensitivity and robustness analysis techniques, to identify the critical components controlling network performance in a variety of conditions.
+
+
+%Hendrick's \textit{et al.} hypothesized that HER2 heterodimerization amplified signals by allowing just one molecule of EGF to activate two receptors \cite{Hendriks2003}. 
+%In our case, we see an amplified Cyclin D concentration due to an equal amount of EGF stimulus. %
+%Model connectivity involving EGF and the downstream effect on AR and AR-regulated genes also came up as an open question. 
+%Whether EGF downregulates or upregulates AR activity is debatable and the biology is still unknown \cite{Cai2009,Cinar2005,Lin2003,Lin2001PNAS, Hakariya2006,Gregory2004,Ponguta2008,Guo2006,Weber2004}. 
+%The current model assumed no direct effect of EGF on AR, and instead we saw increased AR activity through increased HER2 activation. 
+%Further studies will need to be done to update this section of the model. 
+
+The population of PCa models was analyzed using sensitivity analysis to identify key siganling components and processes in both AD and CR cells. 
+There was very little difference between sensitive and robust components in AD versus CR cells in the presence of androgen. 
+MAPK and PI3K pathway components were consistently ranked in the top 2\% of sensitive species in the presence of androgen for both AD and CR cells.
+On the other hand, ZZZ species were consitently robust. However, this profile changed considerably in the absence of androgen.
+The activation of PI3K and ERK by HER2 dimerization and autophosphorylation was signficantly more important in CR versus AD cells.
+Interestingly, AR activation was also more sensitive in CR versus AD cells.
+Lastly, although AR-regulated transcriptional processes were equally sensitive between the cell types, general translational and transcriptional components were more robust in CR versus AD cells.
+This evidence supports the current theory that CR cells will still respond to androgen and, thus, AR is still an active target in therapeutic against CRPC \cite{Karantanos2013}. 
+Supporting the argument that AR can be activated in the absence of androgens by MAPK activation \cite{Feldman2001}. 
+Advanced prostate cancers often have higher levels of E2F and other transcription factors \cite{Davis2006}.
+Interestingly, E2F was more sensitive in AD cells, while other transcription factors (ETS and AP1) were more robust. 
+The drug enzalutamide had no effect on the top 2\% of sensitive species. 
+Species in the PI3K/AKT and MAPK pathways in the presence of enzalutamide were still highly sensitive. 
+The application of enzalutamide, increased sensitivity of AR species found outside of the nucleus as well as PAcP species.
+Robustness analysis indicated diverse effects of Raf knock-out on PSA and cyclin D concentrations. 
+Clinical studies of sorafenib, a multi-kinase inhibitor that has activity against Raf, showed increase PSA levels in patients \cite{Dahut2008}. 
+Our results indicate that cell-to cell heterogeneity in gene expression can play a significant role in determining cell response. 
+Thus, combination therapies need to be considered even in the case of a Raf knock-out. 
+
+The results of the model suggest that an inhibition of either the PI3K pathway or the MAPK pathway in combination with an AR inhibitor as a possible therapy for CRPC. 
+Sensitivity analysis revealed no change in the top sensitive species in the presence or absence of the AR inhibitor, enzalutamide. 
+PI3K/AKT and MAPK species continued to fall in the top two percent of sensitive species. 
+A study by Carver et al. looked at dual inhibition of AR and PI3K signaling in LNCaP cells and in a Pten-deficient murine prostate cancer model \cite{Parker2013}. 
+Using both the PI3K inhibitor, BEZ235, and the AR inhibitor, MDV3100 (enzalutamide), the group saw a drastic decrease in the total number of cells. 
+Each inhibitor on it’s own had a much smaller effect on total cell number. They saw an increase in the cell death marker, c-PARP, in the dual inhibition case. 
+The group hypothesized that AKT inhibition leads to increased AR signaling activity through increased protein concentrations of HER3. 
+On the other hand AR inhibition leads to increased AKT activity due to the down regulation of PHLPP, a protein phosphatase that regulates AKT. 
+For the simplicity of this model, the HER3 pathway and also cell death were not included in the model. 
+Dual knock-out studies of PI3K and AR in our model show no additive effect on any cell cycle proteins through the dual knock-out. 
+The pathways in our model appear to be uncoupled and therefore no synergy is shown in the dual knock-out case. 
+This could indicate that the combined decrease in cell population is entirely due to cell death. 
+The Carver et. al study did not consider cell cycle proteins or cell growth. 
+Our model does show a decrease in cell cycle proteins in the PI3K knock-out as well as in the dual knock-out case. 
+This result seems to be consistent with the decreased cell growth in the PI3K knock-out case which is not dependent on cell death, as c-PARP levels are low. 
+The decrease in cell cycle proteins is due to a decrease in general translation, including free eIF4E levels and activated 40S ribosome subunit. 
+The decrease in p70 (S6) activation due to inhibition of PI3K is shown in both the model and in the Carver et al. study (Supplementary Figure), indicating this result is due to the PI3K pathway. 
+It would be interesting to repeat the experiment looking at cell cycle proteins and also performing the experiment in CR LNCaP cells, instead of AD cells.  
+
+
+The connectivity of the model was assembled from an extensive literature review; however, both potentially important signaling mechanisms and additional cell lines were not included. 
+First, we should revisit the role of PI3K/AKT signaling on AR. 
+Currently in the model, phosphorylation of AR occurred at only one site, which we consider an activation site. 
+There have been 13 phosphorylation sites identified on AR, with six of the sites being androgen-induced \cite{Gioeli2012}. 
+AKT activation leads to phosphorylation of AR on Ser 213 and Ser 791 \cite{Lin2001PNAS}. 
+Whether these phosphorylation sites act in activation or repression of AR activity is controversial \cite{Lin2001PNAS,Wen2000,Taneja2005,Lin2003}. 
+AKT effects on AR may also be passage number-dependent, with AKT repressing AR transcription in low passage number cells and enhancing transcription in higher passage numbers \cite{Lin2003}. 
+EGF treatment leads to increased AR transcription activity and cell growth, through AR phosphorylation on MAPK consensus site Ser 515 and PKC consensus cite Ser 578 in the CR CWR-R1 prostate cell line \cite{Ponguta2008}. 
+The androgen-independent phosphorylation of AR by Src (not currently in model) at Tyr 534 also leads to AR activation \cite{Guo2006}. 
+Second, we need to include additional coregulators of AR, as currently we only considered Cyclin E and CDK6 \cite{Yamamoto2000,Lim2005}. 
+AP1, Cdc25A, and Cyclin D1a were included as corepressors of AR in the model \cite{Sato1997,Chiu2009,Petre-Draviam2003}. 
+There are 169 proteins that are classified as potential coregulators for AR \cite{Heemers2007}. 
+The AR coregulator Src-1, is shown to be elevated in some prostate cancers \cite{Gregory2001}. 
+Src-1 is phosphorylated by MAPK and interacts directly with AR to enhance AR-mediated transcription \cite{Heemers2007}. 
+Cdc25B, unlike Cdc25A, acts as a coactivator of the androgen receptor and enhances AR transcription activity \cite{Ngan2003}. 
+Rb was shown to be a coactivator for AR in an androgen-independent manner in DU145 cells \cite{Yeh1998}. 
+Though other groups have shown Rb decreased AR activation in multiple prostate cancer cell lines and xenografts \cite{Sharma2010}. Forkhead proteins have been shown to both activate and repress AR function. %\cite
+In prostate cancer, AKT suppresses AFX/Forkhead proteins, which diminishes expression of AFX target genes, such as p27Kip1 \cite{Graff2000, Brunet1999, Medema2000, Takaishi1999}. 
+The addition of HER2/EGFR heterodimerization increased the accuracy of the model. 
+Additional receptors of interest would include IGFR and IL-6R, which have both been implicated in prostate cancer \cite{Heinlein2004,Cardillo2003,Tam2007}. 
+Understanding the signaling pathways associated with these receptors and how they relate to the current model, may give us a more complete picture of CR prostate cancer. 
+Lastly, with an extended model, it would be beneficial to include possible biomarkers for drug outcomes, as currently there is no biomarker that is used to select treatments for patients  \cite{Sartor2013}. 
+                
+\clearpage
+
+\section*{Materials and Methods}
+
+\subsection*{Formulation and solution of the model equations.}
+The prostate model was formulated as a set of coupled non-linear ordinary differential equations (ODEs):
+\begin{equation}\label{asseassertain_massbalance}
+\frac{d\mathbf{x}}{dt}=\mathbf{S}\cdot\mathbf{r}\left(\mathbf{x},\mathbf{p}\right)\qquad\mathbf{x}\left(t_{o}\right)=\mathbf{x}_{o}
+\end{equation}
+The symbol  $\mathbf{S}$ denotes the stoichiometric matrix ($780\times 1674$). The quantity $\mathbf{x}$ denotes the concentration vector of proteins ($780\times 1$).
+The term  $\mathbf{r}\left(\mathbf{x},\mathbf{p}\right)$ denotes the vector of reaction rates ($1674\times{1}$).
+The $(i,j)$ element of matrix $\mathbf{S}$, denoted by $\sigma_{ij}$, described how species $i$ was involved in rate $j$. 
+If $\sigma_{ij}>0$, species $i$ was produced by $r_j$. Conversely, If $\sigma_{ij}<0$, then species $i$ was consumed in $r_j$. Lastly, if $\sigma_{ij}=0$, then species $i$ was not involved in rate $j$. We assumed mass-action kinetics for each interaction in the network.  
+The rate expression for interaction $q$ was given by:
+\begin{equation}\label{eq-mass-action}
+r_{q}\left(\mathbf{x},k_{q}\right)=k_{q}\prod_{j\in\left\{\mathbf{R}_{q}\right\}}x_{j}^{-\sigma_{jq}}
+\end{equation}
+The set $\left\{\mathbf{R}_{q}\right\}$ denotes reactants for reaction $q$ while $\sigma_{jq}$ denotes the stoichiometric coefficient governing species $j$ in reaction $q$. The ${k_q}$ term denotes the rate constant governing reaction $q$. All reversible interactions were split into two irreversible steps. Model equations were generated using UNIVERSAL from an SBML input file (available in supplemental materials). UNIVERSAL is an open source Objective-C/Java code generator, which is freely available as a Google Code project (http://code.google.com/p/universal-code-generator/). The model equations were solved using the CVODE /solver in SUNDIALS \cite{Hindmarsh2005} on an Apple workstation (Apple, Cupertino, CA; OS X v10.6.8).
+
+When calculating the response of the model to the addition of DHT or other growth factors, we first ran to steady-state and then issued the perturbation. The steady-state was estimated numerically by repeatedly solving the model equations and estimating the difference between subsequent time points:
+\begin{equation}
+\Vert\mathbf{x}\left(t+\Delta{t}\right) - \mathbf{x}\left(t\right)\Vert_{2}\leq\gamma
+\end{equation}
+The quantities $\mathbf{x}\left(t\right)$ and $\mathbf{x}\left(t+\Delta{t}\right)$ denote the simulated concentration vector at time $t$ and $t + \Delta{t}$, respectively.
+The $L_{2}$ vector-norm was used as the distance metric, where $\Delta{t} = 100$ hrs of simulated time and $\gamma$ = 0.001 for all simulations.
+
+We estimated the ensemble of model parameters using the Pareto Optimal Ensemble Techniques (POETs) multiobjective optimization routine \cite{Song2010}. We have used POETs in several previous studies to
+estimate ensembles of siganl transduction models [REFHERE]. In this study, POETs minimized the residual between model simulations
+and 43 seperate training objectives taken from siganling data generated in androgen dependent, intermediate and independent LNCaP cell lines. POETs generated $>$ 1e6 possible candidate models from which we selected N = 5000 rank-zero low correlation models for the ensemble used in this study. The set-to-set correlation between members of the ensemble was approximately 0.60, while XX of the model parameters had a coefficient of variation (CV) of less than 1.0. Details of the parameter estimation problem and POETs can be found in the supplemental materials. 
+
+\subsection*{Sensitivity and robustness analysis}
+
+Sensitivity coefficients were calculated for 500 models selected from the ensemble (rank-zero,low-correlation). First-order sensitivity coefficients at time $t_q$:
+
+\begin{equation}
+s_{ij}(t_q)= \left. \frac{\partial{x_i}}{\partial{k_j}} \right|_{t_q}
+\end{equation}
+were computed by solving the following kinetic-sensitivity equations \cite{Dickinson1976} at steady state:
+
+\begin{equation}
+	\begin{pmatrix}
+		d\mathbf{x}/dt \\
+		d\mathbf{s}_j/dt
+	\end{pmatrix}
+	= 
+	\begin{bmatrix}
+		\mathbf{S}\cdot\mathbf{r}(\mathbf{x},\mathbf{k}) \\
+		\mathbf{A}(t)\mathbf{s}_j + \mathbf{b}_j(t)
+	\end{bmatrix}
+	   \qquad j = 1,2,\dots,\mathcal{P}
+\end{equation}
+The quantity $j$ denotes the parameter index, $\mathbf{A}$ denotes the Jacobian matrix, and $\mathcal{P}$ denotes the number of parameters in the model. The vector $\mathbf{b}_j$ denotes the $j$th column of the matrix of first-derivatives of the mass balances with respect to the parameters. Sensitivity coefficients were calculated for each parameter using a steady state approximation:   
+\begin{equation}
+	\mathbf{A}(t_s)\mathbf{s}_j + \mathbf{b}_j(t_s) = 0
+\end{equation}
+Steady state was calculated as stated previously for different conditions, i.e. DHT, EGF, therapeutics, and no stimulus. In the steady state case the time-averaged sensitivity coefficients were $\mathcal{N}_{ij} \equiv s_{ij}$. The coefficients were organized into an array for each ensemble member: 
+
+\begin{equation}
+	\mathcal{N}^{\left(\epsilon\right)} = 
+	\begin{pmatrix}
+		\mathcal{N}_{11}^{\left(\epsilon\right)} & \mathcal{N}_{12}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{1j}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{1P}^{\left(\epsilon\right)} \\
+		\mathcal{N}_{21}^{\left(\epsilon\right)} & \mathcal{N}_{22}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{2j}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{2P}^{\left(\epsilon\right)} \\
+		\vdots & \vdots & & \vdots & & \vdots \\
+		\mathcal{N}_{M1}^{\left(\epsilon\right)} & \mathcal{N}_{M2}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{Mj}^{\left(\epsilon\right)} & \hdots & \mathcal{N}_{MP}^{\left(\epsilon\right)} \\
+	\end{pmatrix}\qquad\epsilon = 1,2,\hdots,N_{\epsilon}
+\end{equation}
+where $\epsilon$ denotes the index of the ensemble member, $P$ denotes the number of parameters, $N_{\epsilon}$ denotes the number of ensemble samples and $M$ denotes the number of model species. To estimate the relative fragility or robustness of species and reactions in the network, we decomposed the $\mathcal{N}^{\left(\epsilon\right)}$ matrix 
+using Singular Value Decomposition (SVD):
+
+\begin{equation}
+	\mathcal{N}^{\left(\epsilon\right)} = \mathbf{U}^{\left(\epsilon\right)}\Sigma^{\left(\epsilon\right)}\mathbf{V}^{T,{\left(\epsilon\right)}}
+\end{equation}
+Coefficients of the left singular vectors corresponding to largest $\theta$ $\leq$ 15 singular values of $\mathcal{N}^{\left(\epsilon\right)}$ 
+were rank-ordered to estimate important species combinations, while coefficients on the right correspond to reaction combinations. Only coefficients with magnitude greater than a threshold ($\delta$ = 0.001) were considered. 
+The fraction of the $\theta$ vectors in which a reaction or species index occurred was used to rank its importance (sensitivity ranking). We compared the sensitivity ranking between different conditions (i.e. DHT, therapeutics) to understand how control in the network shifted in different cellular environments.  
+
+Robustness coefficients were calculated as shown previously \cite{Tasseff2011}. The robustness coefficient (denoted by $\alpha\left(i,j,t_{o},t_{f}\right)$) is the ratio of the integrated concentration of a network marker 
+in the presence (numerator) and absence (denominator) of structural or operational perturbation. Here $t_0$ and $t_f$ denote the initial and final simulation time respectively, while
+$i$ and $j$ denote the indices for the marker and the perturbation respectively. A value of $\alpha\left(i,j,t_{o},t_{f}\right)>1$, portrays an increased protein concentration, while a value of $\alpha\left(i,j,t_{o},t_{f}\right)<1$ shows a decreased marker concentration due to the perturbation. If
+$\alpha\left(i,j,t_{o},t_{f}\right)\sim{1}$ the perturbation did not influence the marker concentration.
+Simulations were taken from steady state at $t_0$, with 10nM DHT added and $t_f$ was taken at 72 hours after the addition of DHT. 
+Robustness coefficients were calculated for the same 500 models selected for sensitivity analysis. 
+
+
+\section*{Acknowledgements}
+
+NSF GK12 award number DGE-1045513 to Cornell's ``Grass Roots: Advancing education in renewable energy and cleaner fuels through collaborative graduate fellow/teacher/grade-school student interactions.''
+
+\clearpage
+%\bibliographystyle{plain}
+%\bibliographystyle{IEEEbib}
+
+\bibliography{References_v1}
+
+%\begin{comment}
+
+\clearpage
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure1_LNCAPModel.pdf}
+\caption{Schematic overview of the prostate signaling network. The model describes hormone and growth factor induced expression of several proteins, including PSA. In the absence of outside hormones/growth factors, overactive HER2 can stimulate the MAPK and AKT pathways. AR can be activated directly by the MAPK pathway.
+%Addition of DHT leads to androgen receptor binding and ultimately increased transcription and proliferation. HER2 stimulate the MAPK and AKT pathway in the absence of DHT. EGF binding leads to EGFR dimerization and activation of the MAPK and AKT pathways. AR can be activated directly by the MAPK pathway.
+}
+\label{fg:NetworkSchematic}
+\end{figure}
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure2_Training.pdf}
+\caption{Ensemble performance against selected training objectives (N = 5000). A, B. Time course data for PSA concentration due to a stimulus of 10 nM DHT in LNCaP C33 cells and LNCaP C81 cells, respectively (O2, O3). C. PSA levels in the presence and absence of a HER2 inhibitor (LNCaP C81 cells, O7). D. PAcP mRNA levels at 72 hours in the presence and absence of DHT (LNCaP C51 cells, O14). E. Steady state Cyclin D levels in LNCaP C33 vs. C81 (O17). F. p21Cip1 levels at 48 hrs in the presence and absence of DHT (LNCaP C33, O25). G. Steady state AKT phosphorylation levels in LNCaP C33 vs. C51 (O30). H. AR levels at 24 hours in the presence and absence of DHT (LNCaP C51, O31). I. AR mRNA levels in the presence and absence of E2F over expression (LNCaP C33, O34).            
+}
+\label{fg:Training}
+\end{figure}
+
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure3_ColorPlot.pdf}
+\caption{Simulation results versus experimental results for training and validation data. Experiment numbers 1 through 40 were used for training, while experiments 41 through 67 were validation. Gray means the ensemble member qualitatively fit experimental data in both models. White means the the ensemble member only fit the data using the new model that included HER2 heterodimerization. Red means the ensemble member fit using only the old model. Black corresponds to an incorrect cellular response in both models.   $\bf{A.,C.}$ Training and validation results, respectively, for entire ensemble population using both the original model and an updated model including HER2 heterodimerization (N = 5000). $\bf{B.,D.}$ Simulation results for training and validation of a random set of 100 members using both models. 
+ }
+\label{fg:ColorPlot}
+\end{figure}
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure4_Validation.pdf}
+\caption{Blind model predictions for the ensemble (N = 5000). The model ensemble’s predictive ability was assessed by comparing simulation versus experimental data not used for training. A. Time course data for HER phosphorylation due to a stimulus of 10 nM DHT (LNCaP C33, P1). B. ERK phosphorylation levels in the presence and absence of a PAcP inhibitor (LNCaP C33 cells, P3). C. AR levels at 24 hrs in varying levels of DHT (LNCaP C33, P17). D. Shc phosphorylation levels at 24 hrs in the presence and absence of DHT (LNCaP C33, P22). E. Time course data for HER phosphorylation due to a stimulus of 1.6 nM EGF (LNCaP C33, P7). F. AR levels in varying levels of EGF (LNCaP C33, P14). G, H, I. Fold change in PSA concentration due to drug stimulus: enzalutamide, lapatanib, and sorafenib.}
+\label{fg:Validation}
+\end{figure}
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure5_Sensitivity.pdf}
+\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A,B.}$ Sensitivity ranking of network species in AD versus CR cells in the absence (presence) of DHT. $\bf{C.}$ Sensitivity ranking of network species in AD cells in the absence and presence of DHT. $\bf{D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of enzalutamide with a DHT stimulus.  
+ }
+\label{fg:Sensitivity}
+\end{figure}
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Figure6_RAF_K0_C81.pdf}
+\caption{Robustness analysis of a population of CR prostate models with Raf knock-out (N = 500). A log fold change of greater then zero implies that the concentration of the protein increased with the knock-out of Raf, while a log fold change of less then zero indicates that the concentration of protein decreased. A log of fold change equal to 0, shows no response due to Raf knock-out. Three distinct regions emerge in Raf knock-out case: (1) PSA increases, (2) Cyclin D concentration increases, and (3) PSA and Cyclin D concentration decrease. }
+\label{fg:Robustness}
+\end{figure}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S- 
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\section*{Supplementary materials}
+
+\input{Prostate_Obj_Table}
+\clearpage
+
+\input{Prostate_Pred_Table}
+\clearpage
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Supp_Figure_Sensitivity.pdf}
+\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A}$ Sensitivity ranking of network species in CR cells in the absence and presence of DHT. $\bf{B.}$ Sensitivity ranking of network species in CR cells in the presence and absence of enzalutamide in the absence of a DHT stimulus. $\bf{C.,D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of sorafenib and lapatanib, respectively, with a DHT stimulus.
+ }
+\label{fg:Supp_Sensitivity}
+\end{figure}
+
+\begin{figure}\centering
+%\includegraphics[width = 7in]{Supp_Figure_Robustness.pdf}
+\caption{Robustness analysis of protein markers. Expression level of key proteins was altered by a factor of 2, 0.1, or 0 (knock-in, knock-down, or knock-out) and robustness coefficients were calculated for five key protein markers. Simulations shown were from CR cells, with indicated perturbation. Mean of 500 ensemble members is shown. 
+ }
+\label{fg:Supp_Robustness}
+\end{figure}
+
+%\end{comment}
+
+
+\end{document}
+

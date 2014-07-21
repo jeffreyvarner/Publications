@@ -1,0 +1,124 @@
+%! program = pdflatex
+
+%\documentclass[12pt]{article}
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+%\usepackage{supertabular}
+
+
+%*** extra packages ****
+%\usepackage{colortbl}
+%\usepackage{color}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+%\textwidth = 7.5 in
+%\textheight = 9.75 in
+%\oddsidemargin = 0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = 0.01 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\hoffset = -0.5 in
+%\begin{document}
+
+\begin{center}
+\tablefirsthead{
+\hline
+\rowcolor[gray]{0.8}\textbf{O\#}  & \textbf{Species} & \textbf{Cell~Type} & \textbf{Stimulus} & \textbf{SS or D} & \textbf{Source} \\
+\hline}
+\topcaption{Objective function list along with species measured, 
+  stimulus, cell-type, steady state (SS) vs dynamic (D) and the
+  corresponding literature reference.}
+\label{objective_table}
+\begin{scriptsize}
+\begin{supertabular}{l l l l l l l l l }  
+\hline \\ 												
+O1  & PSA & C33/C81 & 0  & SS & \cite{Lee2003} \\
+O2  & PSA & C33 & DHT & D & \cite{Lee2003} \\
+O3  & PSA & C81 & DHT & D &  \cite{Lee2003} \\
+O4  & ERK-p & C33 & DHT & D &  \cite{Lee2003} \\
+O5  & ERK-p & C81 & DHT & D & \cite{Lee2003} \\
+O6  & PSA & C33 & HER2 Knockdown & SS & \cite{Lee2003} \\
+O7  & PSA & C81 & HER2 Knockdown & SS & \cite{Lee2003} \\
+O8  & PSA & C33 & MEK Up & SS & \cite{Lee2003} \\
+O9  & PSA & C81 & MEK Down & SS & \cite{Lee2003} \\
+O10  & PSA & C33 & HER2 Up & SS & \cite{Lee2003} \\
+O11  & ERK-p & C33 & HER2 Up & SS & \cite{Lee2003} \\
+O12  & AR & C33/C51/C81 & 0 & SS & \cite{Lin2000} \\
+O13  & PAcP mRNA & C33 & DHT & D & \cite{Lin2000} \\
+O14  & PAcP mRNA & C51 & DHT & D & \cite{Lin2000} \\
+O15  & PAcP mRNA & C81 & DHT & D & \cite{Lin2000} \\
+O16  & HER2-p & C33/C51/C81 & 0 & SS & \cite{Yuan2007} \\
+O17  & Cyclin D & C33/C81 & 0 & SS & CITE \\
+O18  & Cyclin D & C33 & EGF & D &  \cite{Perry1998}\\
+O19  & Cyclin D mRNA & C33 & EGF & D &  \cite{Perry1998}\\
+O20  & AKT-p & C51/LNCaP-Rf  & 0 & SS & \cite{Murillo2001}\\
+O21  & p27Kip1 & C51/LNCaP-Rf  & 0 & SS & \cite{Murillo2001}\\
+O22  & p21Cip1 & C51/LNCaP-Rf  & 0 & SS & \cite{Murillo2001}\\
+O23  & Rb-p & C33 & DHT & D & \cite{Xu2006}\\
+O24  & p70-p & C33 & DHT & D & \cite{Xu2006}\\
+O25  & p21Cip1 & C33 & DHT & D & \cite{Knudsen1998}\\
+O26  & p27Kip1 & C33 & DHT & D & \cite{Knudsen1998}\\
+O27  & PSA mRNA & C33 & Cyclin E Up + DHT & D & \cite{Yamamoto2000}\\
+O28  & AR mRNA & C33 & Cyclin E Up + DHT & D & \cite{Yamamoto2000}\\
+O29  & PSA mRNA & C33 & HER2 Up & SS & \cite{Yeh1999}\\
+O30  & AKT-p & C33/C51 & 0 & SS & \cite{Lin2003}\\
+O31  & AR & C51 & DHT & D & \cite{Lin2003}\\
+O32  & AR & C33 & DHT & D & \cite{Chen2009}\\
+O33  & Cyclin D1b mRNA & C33 & Sam68 Knockdown & SS & \cite{Paronetto2010}\\
+O34  & AR mRNA & C33 & E2F Up & SS & \cite{Davis2006}\\
+O35  & AR & C33 & E2F Up & SS & \cite{Davis2006}\\
+O36  & AR Cyclin E & C33 & E2F Up & SS & \cite{Davis2006}\\
+O37  & PSA & C33 & E2F Up & SS & \cite{Davis2006}\\
+O38  & cPAcP & C33 & DHT & D & \cite{Meng2000}\\
+O39  & Cyclin D & C33 & DHT & D &  \cite{Xu2006}\\
+O40  & 4EBP1-p & C33 & DHT & D &  \cite{Xu2006}\\
+O41*  & PAcP mRNA & C33/C51/C81 & 0 & SS & \cite{Lin2000} \\
+O42*  & p16INK4 & C51/C81 & 0 & SS & \cite{Murillo2001}\\
+O43*  & cPAcP & C33/C51/C81 & 0 & SS & \cite{Lin2001}\\
+
+
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+%\end{document}
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  
+ 
+  
+   
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

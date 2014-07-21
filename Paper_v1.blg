@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: msb.bst
+format.org.or.pub is an unknown function---line 862 of file msb.bst
+format.org.or.pub is an unknown function---line 870 of file msb.bst
+Database file #1: References_v1.bib
+You've used 98 entries,
+            2578 wiz_defined-function locations,
+            1229 strings with 28695 characters,
+and the built_in function-call counts, 79588 in all, are:
+= -- 7262
+> -- 6733
+< -- 22
++ -- 6686
+- -- 1863
+* -- 6951
+:= -- 12307
+add.period$ -- 98
+call.type$ -- 98
+change.case$ -- 1011
+chr.to.int$ -- 96
+cite$ -- 98
+duplicate$ -- 2329
+empty$ -- 3448
+format.name$ -- 2193
+if$ -- 15401
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 298
+num.names$ -- 392
+pop$ -- 2537
+preamble$ -- 1
+purify$ -- 1109
+quote$ -- 0
+skip$ -- 2858
+stack$ -- 0
+substring$ -- 2969
+swap$ -- 471
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 882
+warning$ -- 0
+while$ -- 391
+width$ -- 0
+write$ -- 1080
+(There were 2 error messages)
