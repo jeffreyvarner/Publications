@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+% Load packages
+%\usepackage{url}  % Formatting web addresses  
+%\usepackage{ifthen}  % Conditional 
+%\usepackage{multicol}   %Columns
+%\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{epsfig}
+%\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+\usepackage[sort&compress,comma]{natbib}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{setspace}
+%\usepackage{lineno}
+%\urlstyle{rm}
+%*** extra packages ****
+%\usepackage{colortbl}
+%\usepackage{color}
+
+\textwidth = 6.50 in
+\textheight = 9.5 in
+\oddsidemargin =  0.0 in
+\evensidemargin = 0.0 in
+\topmargin = -0.50 in
+\headheight = 0.0 in
+\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+\bibliographystyle{biophysj}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\normalsize\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+
+% Begin ...
+\begin{document}
+\setcounter{page}{1}
+
+\section*{Molecular basis of Eukaryotic Unfolded Protein Response (UPR).}
+Protein folding is strategically important to cellular function. Secreted, membrane-bound and organelle-targeted proteins are typically processed and folded in the endoplasmic reticulum (ER) in eukaryotes \citep{naidoo2009er,ron2002translational,kaufman2002unfolded}. Intracellular perturbations caused by a variety of stressors disturb the specialized environment of the ER leading to the accumulation of unfolded proteins \citep{ellgaard2003qce,Fonseca:2009fk}. Normally, cells ensure that proteins are correctly folded using a combination of molecular chaperones, foldases and lectins \citep{naidoo2009er}. However, when proper folding can not be restored, incorrectly folded proteins are targeted to ER Associated Degradation (ERAD) pathways for processing \citep{kaufman2002unfolded}. If unfolded or misfolded proteins continue to accumulate, eukaryotes induce the unfolded protein response (UPR).
+
+In mammalian cells, UPR is a complex signaling program mediated by three ER transmembrane receptors: activating transcription factor 6 (ATF6), inositol requiring kinase 1 (IRE1) and double-stranded RNA-activated protein kinase (PKR)-like endoplasmic reticulum kinase (PERK). UPR performs three functions, adaptation, alarm and apoptosis. During adaptation, the UPR tries to reestablish folding homeostasis by inducing the expression of chaperones that enhance protein folding. Simultaneously, translation is globally attenuated to reduce the ER folding load while the degradation of unfolded proteins is increased. If these steps fail, the UPR induces a cellular alarm and apoptosis program. The alarm phase involves several signal transduction events, ultimately leading to the removal of the translational block and the down-regulation of the expression and activity of pro-survival factors such as the B-cell lymphoma 2 (Bcl2) protein. After the alarm phase, cells can undergo apoptosis, although ER stress can also initiate autophagy \citep{ogata2006aac,yorimitsu2006ers,bernales2006ace,kamimoto2006iic,hoyerhansen2007cmc,kouroku2006esp,fujita2007ter}. Thus, ER folding homeostasis strongly influences physiology \citep{Fonseca:2009fk}. Aberrant protein folding and UPR have been implicated in a number of pathologies. For example, the onset of diabetes \citep{schnell2009model} as well as myocardial ischaemia, cardiac hypertrophy, atherosclerosis and heart failure \citep{glembotski2007ers} have all been linked with aberrant folding or UPR signaling. 
+
+\subsection*{The folding cycle, quality control and ER associated degradation (ERAD).} 
+Newly synthesized polypeptide chains enter the ER through a peptide translocon in the ER membrane composed of four proteins, Sec61$\alpha$,$\beta$,$\gamma$ and TRAM \citep{Matlack:1998kx}. 
+Upon entering the ER, these nascent chains begin to fold, often as they are being co-translationally modified \citep{Fedorov:1997ys}. The folding quality of proteins in the ER is maintained by an in-built quality control (QC) system which ensures proteins are in their native folded state before exiting the ER \citep{ellgaard1999ssq,ellgaard2003qce}. A protein is correctly folded, if it has attained its native conformation after required co- or post-translational modifications. On the other hand, exposed hydrophobic regions, unpaired cysteine residues, or aggregation are all markers of an unfolded or misfolded conformation \citep{ellgaard1999ssq}, which leads to subsequent retro-translocation to the cytosol. Once in the cytosol, these unfolded or misfolded proteins are degraded by the ubiquitin proteasome system \citep{Hershko:2000kl}. Hydrophobic unfolded or misfolded queues are recognized in the ER by molecular chaperones which bind these queues and increase the probability of correct folding \citep{fra1993qce,helenius1997cca,hellman1999vab}. For example, the HSP70 family of chaperones recognize, in an ATP-dependent manner, exposed hydrophobic patches on a broad spectrum of unfolded or misfolded proteins \citep{kaufman2002unfolded}. Repeated binding and release of HSP70 chaperones ensures that incorrectly folded proteins do not exit the ER \citep{kaufman2002unfolded}. One critical member of the HSP70 family is BiP or GRP78. BiP consists of an N-terminal ATPase domain and a C-terminal peptide binding domain \citep{GETHING1999}. BiP also regulates the activation of the three transmembrane ER stress transducers: PERK, ATF6 and IRE1. Normally, BiP is bound to these ER receptors, blocking their activation. However, in the presence of exposed hydrophobic residues BiP disassociates, allowing PERK, ATF6 and IRE1 activation. Overexpression of BiP leads to reduced activation of IRE1 and PERK \citep{bertolotti2000dib,kohno1993pry}. The PERK and ATF6 branches are thought to be activated before IRE1 \citep{szegezdi2006mediators}; this ordering is consistent with the signals that each branch transduces. The PERK and ATF6 pathways largely promote ER adaptation to misfolding, while IRE1 has a dual role, transmitting both survival and pro-apoptotic signals.
+
+\subsection*{Double-stranded RNA-activated protein kinase (PKR)-like endoplasmic reticulum kinase (PERK) pathway:} The PERK branch of UPR transduces both pro-survival as well as pro-apoptotic signals following the accumulation of unfolded or misfolded protein in the ER. PERK is a type I transmembrane protein, composed of a ER luminal stress sensor and a cytosolic protein kinase domain. Dissociation of BiP from the N-terminus of PERK initiates dimerization and autophosphorylation of the kinase domain at T981 \citep{Kebache:2004kx}. The eIF2$\alpha$ protein, which is composed of three subunits, is critical to translation initiation in eukaryotes, including GTP-dependent start-site recognition \citep{Merrick:2004lr}. Activated PERK can phosphorylate eIF2$\alpha$ at S51 \citep{harding1999pta,Raven:2008fu}, which leads to three downstream effects. First, phosphorylated eIF2$\alpha$ globally attenuates translation initiation (Not included in the current model). Decreased translation reduces the influx of protein into the ER, hence diminishing the folding load. Translation attenuation is followed by increased clearance of the accumulated proteins from the ER by ERAD and expression of pro-survival genes. For example, PERK activation induces of the expression of cellular inhibitor of apoptosis (cIAP) \citep{hamanaka2008pdr}. Interestingly, decreased protein translation is not universal; genes with internal ribosome entry site (IRES) sequences in the 5$^{\prime}$ untranslated regions bypass the eIF2$\alpha$ translational block \citep{Schroder:2005vn}. One of the most well-studied of these, \emph{ATF4}, encodes a cAMP response element-binding transcription factor (C/EBP) \citep{lu2004tra} ATF4 that drives the expression of pro-survival functions such as amino acid transport and synthesis, redox reactions and protein secretion \citep{harding2003isr}. Taken together, these effects seem to be largely pro-survival. However, ATF4 can also induce the expression of pro-apoptotic factors. For example, ATF4 induces the expression of the transcription factor C/EBP homologous protein (CHOP), which is associated with apoptotic cell-death. CHOP (also known as GADD153) is 29 kDa protein composed of an N-terminal transcriptional activation domain and a C-terminal basic-leucine zipper (bZIP) domain that is normally present at low levels in mammalian cells \citep{ron1992cnd}. The transcriptional activator domain is positively regulated by phosphorylation at S78 and S81 by p38 MAPK family members \citep{wang272sip,maytin2001sit} while the bZIP domain plays a key role in the homodimerization of the protein \citep{matsumoto1996eec,maytin2001sit}. CHOP activity promotes apoptosis primarily by repression of Bcl2 expression and the sensitization of cells to ER-stress inducing agents \citep{gotoh:hdc,mccullough2001gsc}. 
+
+\subsection*{Activating transcription factor 6 (ATF6) pathway:} ATF6 activation involves a complex series of translocation and irreversible proteolytic processing steps, ultimately leading to the up-regulation of a pro-survival transcriptional program, in the presence of unfolded or misfolded proteins. ATF6 is a 90 kDa ER transmembrane protein with two homologs: ATF6$\alpha$ \citep{silver1999mtf,hai1989tfa} and ATF6$\beta$ \citep{min1995ncf,khanna1996ggc,kyosuke2001igc}. In the current model, only ATF6$\alpha$ is included. Similar to IRE1 and PERK, ER stress leads to the dissociation of BIP from the N-terminus of ATF6, followed by translocation and activation. N-terminal golgi localization sequences (GLS1 and GLS2) seem to be involved with BiP regulation of ATF6. BiP binding to the N-terminal GLS1 promotes the retention of ATF6 in the ER \citep{shen2002esr}. On the other hand, the GLS2 domain was required to target ATF6 to the golgi body following BiP dissociation from GLS1 \citep{shen2002esr}. Unlike the previous two kinase pathways, ATF6 activation does not involve phosphorylation of a C-terminal kinase domain. Rather, after translocated to the golgi, ATF6 undergoes regulated intramembrane proteolysis (RIP); the luminal domain is first cleaved by serine protease site-1 protease (S1P) followed by metalloprotease site-2 protease (S2P) cleavage \citep{silver1999mtf,ye2000esi,chen2002lda,shen2004dsp}. Cleavage at the juxtamembrane site allows the 50 kDa transcriptional domain of ATF6 to be translocated to the nucleus where it regulates the expression of genes with ATF/cAMP response elements (CREs) \citep{wang2000aaa} and  ER stress response elements (ERSE) in their promoters \citep{yoshida1998ica, kokame2001iei}. Cleaved ATF6 induces a gene expression program, in conjunction with other bZIP transcription factors and required co-regulators, such as nuclear factor Y (NF-Y) \citep{kokame2001iei,yoshida2000aap}, that increases chaperone activity as well as the degradation of unfolded proteins \citep{yamamoto2007tim,wu2007aol}. For example, ATF6 upregulates BiP, protein disulfide isomerase (PDI) and ER degradation-enhancing alpha-mannosidase-like protein 1 (EDEM1) expression. Additionally, ATF6 induces the expression of the X box-binding protein 1 (XBP1) which, after processing by activated IRE1$\alpha$, induces the expression of chaperones. The ATF6-induced gene expression program is also cytoprotective. For example, ATF6 induces regulator of calcineurin 1 (RCAN1) expression \citep{belmont2008cga}. RCAN1 sequesters calcineurin \citep{belmont2008cga}, a calcium activated protein-phosphotase B, that dephosphorylates Bcl2-antagonist of cell death (BAD) at S75 or S99 \citep{wang1999cia}. This leads to sequestering of Bcl2 by Bad, which inhibits its downstream anti-apoptotic activity \citep{wang1999cia}.
+
+\subsection*{Inositol-requiring kinase 1 (IRE1) pathway:}
+IRE1 initiates a program with both pro-survival and pro-apoptotic components in the presence of misfolded or unfolded proteins. IRE1 is a 100 kDa type I ER transmembrane protein with both an endoribonuclease and a serine-threonine kinase domain \citep{kaufman2002unfolded}. IRE1 has two homologs, IRE1$\alpha$ and IRE1$\beta$; IRE1$\alpha$ is expressed in a variety of tissues \citep{tirasophon1998srp} while IRE1$\beta$ is found only in the intestinal epithelia \citep{tirasophon1998srp,wang1998cmi}. In the current model only IRE1$\alpha$ has been considered. The N-terminus of IRE1, located in the ER lumen, senses unfolded or misfolded proteins through its interaction with BiP \citep{cox1993tig,shamu1996oap,sidrauski1997tki}. Normally BiP is bound to the N-terminus of IRE1 \citep{bertolotti2000dib,okamura2000dkb,liu2003sai}. However, in the presence of unfolding queues BiP dissociates and is sequestered by the unfolded or misfolded proteins \citep{kimata2003ger}. Subsequently, IRE1 is activated by homooligomerization followed by autophosphorylation of the C-terminal kinase domain at S724 \citep{shamu1996oap,welihinda1996unfolded,weiss1998sso,papa2003bka}. IRE1 activation enables both its kinase and endoribonuclease activities to transduce signals simultaneously through two distinct signaling axes. The endoribonuclease activity cleaves a 26-nucleotide intron from the XBP1-mRNA \citep{shen2001csp,yoshida2001xmi,lee2002imu} which generates a 41 kDa frameshift variant (sXBP1) that acts as a potent transcription factor. sXBP1 homodimers, along with co-regulators such as nuclear factor Y (NF-Y), regulate the expression of a variety of ER chaperones and protein degradation related genes \citep{malhotra2007era,rao2004mpe}. Cytosolic IRE1$\alpha$ dimers interact with adaptors such as tumor necrosis factor receptor-associated factor 2 (TRAF2) to drive signal-regulating kinase (ASK1) activation and then subsequently cJUN NH$_{2}$-terminal kinase (JNK) and p38MAPK activation \citep{Urano:2000uq}. ASK1 activity is regulated by phosphorylation/de-phosphorylation at several sites as well as by physical interaction with other proteins. ASK1 phosphorylates and activates two downstream kinases, MMK4 and MMK3 which in turn activate JNK and p38 MAP kinase, respectively. JNK is activated by dual phosphorylation at T183 and Y185 by MMK4 \citep{Derijard:1995fk}. Activated JNK activates the proapoptotic Bcl-2 family member Bim by phosphorylation at S65 \citep{lei2003jpb,putcha2003jmb}. JNK activation also regulates the activity of anti-apoptotic protein Bcl2 \citep{yamamoto1999bpa, Wei:2008hc}. Active JNK1 inhibits Bcl2 via phosphorylation at sites T69, S70 and S87 \citep{Wei:2008hc}. Ultimately, inhibition of Bcl2 and the activation of Bim leads to BAX/BAK dependent apoptosis. Thus, signals initiated from the cytosolic kinase domain of IRE1$\alpha$ are largely pro-apoptotic. IRE1$\alpha$ activity is regulated by protein serine/threonine phosphatase (PTC2P).
+
+\subsection*{ER stress-induced apoptosis:} Ultimately, if UPR fails to restore ER homeostasis, cells initiate terminal programs such as apoptosis. A common biomarker of apoptosis is the activation of aspartate-specific proteases, collectively known as caspases \citep{alnemri1996hic}. Caspases rapidly dismantle cell cycle, cytoskeletal and organelle proteins by proteolytic cleavage. There are two pathways that result in caspase activation in response to apoptotic signals; the death-receptor and the stress mediated pathways. The death-receptor pathway is marked by ligand-mediated activation of death receptors on the plasma membrane. The alternative pathway for caspase activation is mediated by cellular stress e.g., ER stress. Caspases are activated from their zymogens (procaspases), in response to various death cues. First, the initiator caspases, caspase-8 and caspase-9, are activated in response to death cues \citep{muzio1998ipm}. This is followed by the activation of executioner caspases, such as caspase-3, caspase-6 and caspase-7. Activated executioner caspases proteolytically process several substrates, facilitating cell death. They also activate initiator caspases, forming a positive feedback loop. Activation of both the PERK and IRE1 pathways modulate stress-induced apoptosis through their regulation of Bcl2 expression and activity. Overall, stress induced apoptosis can occur through both mitochondrial-dependent and independent pathways. Stress signals cause oligomerization of pro-apoptotic proteins, such as Bax and Bak. These proteins are normally sequestered at the mitochondrial outer membrane by the survival protein Bcl2, under non-apoptotic conditions \citep{wei2001proapoptotic}. Once Bax and Bak oligomerize, they insert into the mitochondrial membrane and breach membrane integrity \citep{nechushtan1999conformation}. This results in a net efflux of cytochrome-c from the mitochondria to the cytosol and the initiation of the well-studied Apaf-1 mediated caspase-9 activation pathway. Stress induced mitochondrial-independent apoptotic pathways are not well understood. Currently, caspase 12 has been suggested as a possible ER-stress apoptotic mediator \citep{szegezdi2006mediators, yoneda2001ace, nakagawa2000caspase}. However, caspase 12 is not expressed in human. Moreover, there is considerable debate about its role in stress-induced apoptotic cell-death \citep{Saleh:2006ys}.  
+
+
+\clearpage
+% \bibliographystyle{plain}
+
+\bibliography{References}
+
+
+\end{document}

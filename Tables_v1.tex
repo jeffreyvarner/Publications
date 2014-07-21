@@ -1,0 +1,99 @@
+\begin{center}
+\tablefirsthead{%
+\hline
+\rowcolor[gray]{0.8}\textbf{Obj\#}  & \textbf{species} & \textbf{cell~type} & \textbf{nominal} & \textbf{training} & \textbf{prediction}  & \textbf{random} & \textbf{source} \\
+\hline}
+\tablehead{%
+\multicolumn{8}{l}{\small \emph{continued from previous page}} \\
+\hline
+\rowcolor[gray]{0.8}\textbf{Obj\#}  & \textbf{species} & \textbf{cell~type} & \textbf{nominal} & \textbf{training} & \textbf{prediction}  & \textbf{random} & \textbf{source} \\
+\hline}
+\tabletail{%
+\hline
+\multicolumn{8}{r}{\small\emph {continued on next page}}\\
+}
+\tablelasttail{\hline}
+\topcaption{Objective function list along with species, cell-type, nominal error, training error, prediction error, random error with a randomly generated parameter set and the corresponding literature reference.}\label{obj-table}
+\begin{scriptsize}
+\begin{supertabular}{l l l l l l l l l l}  
+\hline
+O1  & ATF6 free & HEK293 & 0.25 & 0.25 $\pm$ 0.04 & 0.26 $\pm$ 0.08 & 0.49 $\pm$ 0.05 & \cite{lin2007ire1} \\
+O2  & peIF2$\alpha$ & HEK293 & 0.14 & 0.23 $\pm$ 0.08 & 0.25 $\pm$ 0.11 & 0.51 $\pm$ 0.11 & \cite{lin2007ire1} \\
+O3  & BiP mRNA & HEK293 & 0.24 & 0.43 $\pm$ 0.17 & 0.49 $\pm$ 0.15 &  0.72 $\pm$ 0.13 & \cite{lin2007ire1} \\
+O4  & CHOP mRNA & HEK293 & 0.55 & 0.56 $\pm$ 0.07 & 0.57 $\pm$ 0.06 & 0.68 $\pm$ 0.20 & \cite{lin2007ire1} \\
+O5  & Cleaved PARP & HEK293 & 0.24 & 0.23 $\pm$ 0.14 & 0.23 $\pm$ 0.17 & 0.50 $\pm$ 0.19 & \cite{lin2009divergent} \\
+O6  & pIRE1$\alpha$ & AR42J & 0.37 & 0.36 $\pm$ 0.05 & 0.35 $\pm$ 0.07 & 0.63 $\pm$ 0.09 & \cite{bertolotti2000dib} \\
+O7  & PERK & AR42J & 0.19 & 0.36 $\pm$ 0.27 & 0.38 $\pm$ 0.29 & 0.46 $\pm$ 0.20  & \cite{bertolotti2000dib} \\
+O8  & pPERK & AR42J & 0.10 & 0.14 $\pm$ 0.09 & 0.15 $\pm$ 0.15 & 0.28 $\pm$ 0.08  & \cite{bertolotti2000dib} \\
+O9  & BIP mRNA & MEF & 0.19 & 0.30 $\pm$ 0.14 & 0.26 $\pm$ 0.07 & 0.66 $\pm$ 0.24 & \cite{yamamoto2004Differential} \\
+O10  & BIP Protein & P19 EC & 0.42 & 0.34 $\pm$ 0.15 & 0.35 $\pm$ 0.11 & 0.68 $\pm$ 0.15 & \cite{jimbo2003er} \\
+O11 & CHOP Protein & P19 EC & 0.24 & 0.42 $\pm$ 0.20 & 0.38 $\pm$ 0.18 & 0.59 $\pm$ 0.20 & \cite{jimbo2003er} \\
+O12 & sXBP1 protein & MEF & 0.34 & 0.29 $\pm$ 0.08 & 0.30 $\pm$ 0.06 & 0.40 $\pm$ 0.11  & \cite{calfon2002ire1} \\
+O13 & CHOP Protein & MEF & 0.46 & 0.43 $\pm$ 0.12 & 0.45 $\pm$ 0.13 & 0.56 $\pm$ 0.18  & \cite{calfon2002ire1} \\
+O14 & XBP1 mRNA & MEF &  0.57 & 0.48 $\pm$ 0.13 & 0.49 $\pm$ 0.13 & 0.47 $\pm$ 0.05  & \cite{calfon2002ire1} \\
+O15 & peIF2$\alpha$ & MEF  & 0.38 & 0.37 $\pm$ 0.08 & 0.38 $\pm$ 0.03 & 0.44 $\pm$ 0.11 & \cite{yamamoto2007tim} \\
+O16 & ATF4 nuclear & MEF & 0.63 & 0.67 $\pm$ 0.06 & 0.67 $\pm$ 0.07 & 0.68 $\pm$ 0.16  & \cite{yamamoto2007tim} \\
+O17 & CHOP Protein & MEF & 0.52 & 0.51 $\pm$ 0.12 & 0.53 $\pm$ 0.08 & 0.64 $\pm$ 0.19 & \cite{yamamoto2007tim} \\
+O18 & BIP Protein & MEF & 0.18 & 0.34 $\pm$ 0.18 & 0.34 $\pm$ 0.23 & 0.55 $\pm$ 0.16 & \cite{yamamoto2007tim} \\
+O19 & Spliced XBP1 & MEF & 0.49 & 0.49 $\pm$ 0.04 & 0.48 $\pm$ 0.04 & 0.50 $\pm$ 0.10 & \cite{lee2002imu} \\
+O20 & Cleaved ATF6 & MEF & 0.45 & 0.44 $\pm$ 0.06 & 0.44 $\pm$ 0.05 & 0.49 $\pm$ 0.11 & \cite{lee2002imu} \\
+O21 & cIAP Protein & NIH 3T3 & 0.36 & 0.25 $\pm$ 0.15 & 0.30 $\pm$ 0.10 & 0.52 $\pm$ 0.15 & \cite{hamanaka2008pdr} \\
+O22 & Caspase 12 Protein & Transfected HEK 293T & 0.44 & 0.57 $\pm$ 0.11 & 0.52 $\pm$ 0.11 & 0.75 $\pm$ 0.11 & \cite{Rao:2001fk} \\
+O23 & Phospho eIF2$\alpha$ & Liver of Mice & 0.50 & 0.51 $\pm$ 0.07 & 0.51 $\pm$ 0.04 & 0.50 $\pm$ 0.12  & \cite{hetz2006pba} \\
+O24 & Procaspase 12 & SAK2 & 0.28 & 0.46 $\pm$ 0.28 & 0.38 $\pm$ 0.26 & 0.78 $\pm$ 0.14 & \cite{rao2002cer} \\
+O25 & Caspase 12 & SAK2 & 0.12 & 0.22 $\pm$ 0.12 & 0.25 $\pm$ 0.13 & 0.73 $\pm$ 0.07 & \cite{rao2002cer} \\
+O26 & Procaspase 9 & SAK2 & 0.14 & 0.28 $\pm$ 0.22 & 0.33 $\pm$ 0.26 & 0.78 $\pm$ 0.13  & \cite{rao2002cer} \\
+O27 & Caspase 9 & SAK2 & 0.03 & 0.19 $\pm$ 0.16 & 0.24 $\pm$ 0.18 & 0.68 $\pm$ 0.14  & \cite{rao2002cer} \\
+O28 & Procaspase 7 & SAK2 &  0.31 & 0.44 $\pm$ 0.24 & 0.43 $\pm$ 0.23 & 0.74 $\pm$ 0.14 & \cite{rao2002cer} \\
+O29 & Caspase 7 & SAK2 & 0.64 & 0.61 $\pm$ 0.07 & 0.58 $\pm$ 0.11 & 0.75 $\pm$ 0.07 & \cite{rao2002cer} \\
+O30 & Procaspase 3 & SAK2 & 0.34 & 0.46 $\pm$ 0.19 & 0.46 $\pm$ 0.21 & 0.82 $\pm$ 0.13 & \cite{rao2002cer} \\
+O31 & Caspase 3 & SAK2 & 0.34 & 0.39 $\pm$ 0.09 & 0.42 $\pm$ 0.13 & 0.74 $\pm$ 0.10 & \cite{rao2002cer} \\
+O32 & PARP Protein & SAK2 & 0.37 & 0.51 $\pm$ 0.17 & 0.51 $\pm$ 0.14 & 0.85 $\pm$ 0.13 & \cite{rao2002cer} \\
+O33 & Cleaved PARP & SAK2 & 0.11 & 0.21 $\pm$ 0.17 & 0.31 $\pm$ 0.21 & 0.67 $\pm$ 0.15 & \cite{rao2002cer} \\
+
+
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+
+\clearpage
+
+\begin{center}
+\tablefirsthead{%
+\hline
+\rowcolor[gray]{0.8}\textbf{Increased marker levels}  & \textbf{Phenotype} & \textbf{G.O.S (\% of cases)} & \textbf{Example genes} & \textbf{G.K.S (\% of cases)} & \textbf{Example genes}   \\
+\hline}
+\tablehead{%
+\multicolumn{6}{l}{\small \emph{continued from previous page}} \\
+\hline
+\rowcolor[gray]{0.8}\textbf{Increased marker levels}  & \textbf{Phenotype} & \textbf{G.O.S (\% of cases)} & \textbf{Example genes} & \textbf{G.K.S (\% of cases)} & \textbf{Example genes}   \\
+\hline}
+\tabletail{%
+\hline
+\multicolumn{6}{r}{\small\emph {continued on next page}}\\
+}
+\tablelasttail{\hline}
+\topcaption{Phenotypic response of simulated Gene knockout/overexpression. (\textbf{G.O.S} - Gene Overexpression Studies, \textbf{G.K.S} - Gene Knockout Studies)}
+\label{KO-O-table}
+\begin{scriptsize}
+\begin{supertabular}{|p{2cm}| p{2cm}| p{1.5cm}| p{3cm}| p{1.5cm}| p{3cm}|}  
+\hline 
+
+BCL2 & Cell Survival & 16 & PERK, ATF4, cIAP, Bcl2, ATF6, RCAN1, Bad, UB & 24 & HSP40, BiP, PERK, eIF2$\alpha$, ATF4, NFY, JNK, Bad, CHOP, CREB, Procaspase 8  \\
+\hline
+CHOP & -- & 5 & eIF2$\alpha$, CHOP & 3.5 & CEBP, CREB  \\
+\hline
+Caspase 3 & Cell Death & 9 & Procaspase 9/8/3/6/7 & 0 & --  \\
+\hline
+XBP1 & -- & 12 & BiP, cIAP, XBP1, RCAN1 & 3.5 & NFY, TRAF2  \\
+\hline
+BiP & -- & 12 & PERK, IRE1, NFY, ATF6, CEBP, CREB, UB & 12 & HSP40, BiP, eIF2$\alpha$, ATF4, NFY, S1P, S2P  \\
+\hline
+PARP & DNA damage & 3.5 & Procaspase 9, PARP & 0 & -- \\
+\hline
+ATF4 & -- & 20 & HSP40, PERK, BiP, eIF2$\alpha$, ATF4, IRE1, BAK, TRAF2, ASK1, JNK, p38MAPK, Calcinuerin, CHOP, CREB & 5 & NFY, CEBP, CREB \\
+
+\end{supertabular}
+\end{scriptsize}
+\end{center}
+
