@@ -1,0 +1,350 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses  
+\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+\usepackage{lineno}
+
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\usepackage{geometry}
+\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+\bibliographystyle{plos2009}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+% Begin ...
+\begin{document}
+\begin{titlepage}
+{\par\centering\textbf{\Large An Effective Model of the Retinoic Acid induced HL-60 Differentiation Circuit}}
+\vspace{0.05in}
+{\par \centering \large{Ryan Tasseff$^{1}$, 
+Holly A. Jensen$^{1}$, 
+Johanna Congleton$^{2}$, Andrew Yen$^{2}$ and Jeffrey D. Varner$^{1,*}$}}
+\vspace{0.10in}
+{\par \centering \large{$^{1}$~School of Chemical and Biomolecular Engineering}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \large{$^{2}$~Department of Biomedical Sciences}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Effective HL60 differentiation circuit}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{Processes}}
+\vspace{0.5in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Associate Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853} 
+{\par \centering Email: jdv27@cornell.edu} 
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abstract}
+
+{\noindent \textbf{Keywords:}~Cell free metabolism, Mathematical modeling}
+
+\pagebreak
+
+\setcounter{page}{1}
+
+\linenumbers
+
+\section*{Introduction}
+
+Understanding differentiation, 
+the process by which precursor cells become more specialized cell types, 
+is an important challenge facing biology. 
+If differentiation programs could be rationally manipulated, 
+advanced therapies could be developed to treat a spectrum of cancers, spinal cord injuries and neurodegenerative disorders. 
+However, to rationally reprogram differentiation networks, 
+we must first understand their connectivity and regulation \cite{Young2011}. 
+Lessons learned in model systems, such as the lineage-uncommitted human myeloblastic cell line HL-60,
+could inform our analysis of more complex programs. 
+HL-60 has been a durable experimental model since the 1970's to study differentiation \cite{Breitman1980}.
+Depending upon the stimulus, HL-60 cells undergo G1/G0-arrest and myeloid or monocytic differentiation. 
+All-Trans Retinoic Acid (ATRA) induces G1/G0-arrest and myeloid differentiation in HL-60 cells, 
+whereas 1,25-dihydroxy vitamin D3 induces arrest with monocytic differentiation.
+Commitment to cell cycle arrest and terminal differentiation requires approximately 48 hr of treatment,
+during which HL-60 cells undergo approximately two division cycles.  
+Interestingly, cells treated with ATRA for time periods shorter than the commitment phase retain a limited inheritable memory, 
+which reduces the time required to reach commitment during subsequent ATRA exposure \cite{YEN1984}.
+
+Sustained Mitogen-Activated Protein Kinase (MAPK) cascade
+activation is a defining feature of ATRA-induced differentiation in HL-60 cells. 
+ATRA drives slow yet sustained MEK-dependent activation of the Raf/MEK/ERK pathway, 
+leading to arrest and functional differentiation \cite{Yen1998}.
+MEK inhibition results in the loss of both ERK and Raf phosphorylation, 
+as well as the failure to arrest and terminally differentiate \cite{Yen1998,Hong2001}.
+At the transcriptional level, 
+ATRA (and its metabolic products) are ligands for the hormone activated nuclear transcription factors Retinoic Acid Receptor (RAR) and Retinoid X Receptor (RXR) \cite{Mangelsdorf1990}.
+Activation of both RAR and RXR is necessary for ATRA-induced Raf phosphorylation and MAPK activation,
+suggesting that the initiation of MAPK signaling is partially transcriptionally regulated \cite{Hong2001}.
+ATRA, through activation of a transcription factor complex including RAR and RXR, induces the expression of many proteins.
+BLR1 also known as CXCR5, is a putative heterotrimeric Gq protein-coupled receptor 
+that is necessary for MAPK activation, growth arrest and functional differentiation \cite{YEN1990,LIPP1994,WANG2004}.
+BLR1 was identified as an early ATRA (or D3)-inducible gene in HL-60 cells using differential display \cite{YEN1990}. 
+Studies of the BLR1 promoter identified a 5' 17bp GT box approximately 1 kb upstream of the transcriptional start that conferred ATRA responsiveness \cite{WANG2004}.
+Additionally, members of the BLR1 transcriptional activator complex, e.g. NFATc3 and CREB, 
+can be phosphorylated by ERK, JNK or p38 MAPK family members \cite{Yang2002}.
+This suggests positive feedback between BLR1 expression and MAPK activation. 
+BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, 
+while BLR1 knock-out HL-60 cells failed to activate Raf or differentiate in the presence of ATRA \cite{Wang2008}.
+Interestingly, both the knockdown or inhibition of Raf, also reduced BLR1 expression and functional differentiation \cite{Wang2008}.
+A recent computational study of ATRA-induced differentiation in HL-60 cells suggested that the BLR1-MAPK positive feedback circuit was sufficient to explain ATRA-induced sustained MAPK activation and the expression of differentiation markers \cite{Tasseff2011}. 
+Model analysis also suggested that Raf was the most distinct of the MAPK proteins.
+
+A critical question is what other components of the MAPK positive feedback circuit are required to drive ATRA-induced functional differentiation of HL-60 cells. 
+Wang and Yen showed that ectopic expression of the constitutively active CR3 domain of Raf1 restored ATRA-induced G0 arrest and differentiation in BLR1 knock-out cells \cite{Wang2008}. 
+However, ectopic expression of Raf1 CR3 alone, in the absence of ATRA, failed to induce arrest or differentiation.
+Thus, additional ATRA-inducible components must exist, 
+which independently promote arrest and differentiation in the absence of BLR1.
+In this study, we explored this hypothesis using a combination of experimental and computational tools. 
+First, we explored the ATRA-inducible Raf interactome 
+by surveying a panel of 19 possible binding partners using immunoprecipitation (IP), 
+with and without ATRA and the Raf inhibitor GW5074.  
+Initially, we expected increased ATRA-dependent association between Raf and kinases linked to BLR1 activity; 
+however, this was not supported by data.
+Instead, we found that the interaction between the guanine nucleotide exchange factor Vav1 and Raf was both ATRA-inducible and simultaneously sensitive to Raf inhibition. 
+Next, we considered how MAPK activation and differentiation were affected by the inhibition of Raf kinase activity in the presence and absence of ATRA.
+We showed that Raf activity was directly proportional to ERK phosphorylation and to functional differentiation processes such as the generation of reactive oxygen species (ROS). 
+Moreover, interactions between Raf and kinase partners such as Akt or CK2, or the scaffolding protein 14-3-3 were largely insensitive to ATRA treatment. 
+These studies established the working hypothesis that Vav1 (or potentially other ATRA-inducible proteins) acted as limiting members of a constitutively assembled trigger complex that propelled sustained MAPK activation, arrest and differentiation.   
+We tested this hypothesis by constructing a mechanistic mathematical model of the Raf-Vav1 circuit, 
+based on the IP and Western blot data presented in this study, 
+and from previous literature. 
+The proposed model architecture was consistent with the ATRA-induced sustained MAPK activation observed experimentally. 
+Additionally, we found the Raf-Vav1 circuit possessed interesting dynamic features such as bistability, 
+that could explain ATRA-induction memory effects.
+
+\clearpage
+
+\section*{Results}
+
+\clearpage
+
+\section*{Discussion}
+
+\clearpage
+
+\section*{Materials and Methods}
+
+
+\subsection*{Cell Culture and Treatment.}
+Human myeloblastic leukemia cells (HL-60 cells) were grown in a humidified atmosphere of 5\% CO$_2$ at 37$^{o}$C and maintained in RPMI 1640 from Gibco (Carlsbad, CA) 
+supplemented with 5\% fetal bovine serum from Hyclone (Logan, UT) and 1x antibiotic/antimicotic (Sigma, St. Louis, MO).
+Cells were cultured in constant exponential growth as described previously \cite{Brooks1996}. 
+Experimental cultures were initiated at $0.1\times10^6$ cells/mL 24 hr prior to 1$\mu$M ATRA treatment;
+if indicated, cells were also treated with GW5074 (2$\mu$M) 18 hr before ATRA treatment.   
+For cell culture washout experiments HL-60 cells were treated with ATRA for 24 hr, 
+washed 3x with prewarmed serum supplemented culture medium to remove ATRA exposure, 
+and reseeded in ATRA-free media as described. 
+Western blot analysis was performed at incremental time points after removal of ATRA.
+
+\subsection*{Chemicals.}
+All-Trans Retinoic Acid from Sigma-Aldrich (St. Louis, MO) was dissolved in 100\% ethanol with a stock concentration of 5mM, 
+and used at a final concentration of 1$\mu$M.
+The Raf inhibitor GW5074 from Sigma-Aldrich (St. Louis, MO) was dissolved in DMSO with a stock concentration of 10mM, 
+and used at a final concentration of 2$\mu$M.
+HL-60 cells were treated with 2$\mu$M GW5074 with or without ATRA (1$\mu$M) at 0 hr.  
+This GW5074 dosage had a negligible effect on the cell cycle distribution, compared to ATRA treatment alone (Fig. \ref{F:MAPKGWWB}A). 
+
+\subsection*{CD11b expression studies by flow cytometry.}
+Approximately $1.0\times10^6$ HL-60 cells were harvested  by centrifugation. 
+Cells were resuspended in 200$\mu$L PBS containing 5$\mu$L of allophycocyanin (APC)–conjugated anti-CD11b antibody from BD Biosciences (San Jose, CA). 
+Following incubation for 1hr at 37$^{o}$C, cells were analyzed by flow cytometry (LSRII flow cytometer, BD Biosciences; San Jose, CA) using 633nm red laser excitation. 
+The threshold on experimental groups was set to exclude 95\% of control, the untreated sample. 
+
+\subsection*{Measurement of inducible oxidative metabolism.}
+Approximately $0.5\times10^6$ Cells were harvested by centrifugation.
+Cells were resuspended in 200$\mu$L 37$^{o}$C PBS containing 10$\mu$mol/L 
+5-(and-6)-chloromethyl-2,7-dichlorodihydro-fluorescein diacetate acetyl ester (DCF; Invitrogen Carlsbad, CA) 
+and 0.4$\mu$g/mL 12-O-tetradecanoylphorbol-13-acetate (TPA; Sigma-Aldrich St. Louis, MO)
+with incubation for 20 min in a humidified atmosphere of 5\% CO$_2$ at 37$^{o}$C. 
+Flow cytometric analysis was done as described previously \cite{Reiterer2007}.
+To determine TPA inducible ROS, the threshold on experimental groups was set to exclude 95\% of control,
+samples not treated with TPA.  
+
+\subsection*{Cell cycle analysis.}
+Approximately $1.0\times10^6$ cells were collected by centrifugation.
+Cells were resuspended in 500$\mu$L hypotonic staining solution containing 50$\mu$g/mL propidium iodine, 
+1$\mu$L/mL Triton X-100, and 1 mg/mL sodium citrate. 
+Cells were incubated at room temperature for 1 hr and analyzed by flow cytometry (BD LSRII) using 488-nm excitation.
+
+\subsection*{Immunoprecipitation and Western blot.}
+Approximately $1.2 \times 10^7$ cells were lysed using 400$\mu$L of M-Per lysis buffer from Thermo Scientific (Waltham, MA). 
+Lysates were cleared by centrifugation at 16,950 $\times$ g in a micro-centrifuge for 20 min at 4$^{o}$C.  
+Lysates were pre-cleared using 100$\mu$L protein A/G Plus agarose beads from Santa Cruz Biotechnology (Santa Cruz, CA) by 
+inverting overnight at 4$^{o}$C.  Beads were cleared by centrifugation and total protein concentration
+was determined by a BCA assay (Thermo Scientific, Waltham, MA).  Immunoprecipitations were setup by bringing 
+lysate to a concentration of 1.0g/L in a total volume of 300$\mu$L (M-Per buffer was used for dilution).     
+The anti-Raf antibody was added at 3 $\mu$L.
+A negative control with no bait protein was also used to exclude the direct interaction of proteins with the A/G beads.   
+After 1 hr of inversion at 4$^{o}$C, 20$\mu$L of agarose beads was added and samples were left 
+to invert overnight at 4$^{o}$C.  
+Samples were then washed three times with M-Per buffer by centrifugation.
+Finally proteins were eluted from agarose beads using a laemmli loading buffer.
+Eluted proteins were resolved by SDS-PAGE and Western blotting.  Total 
+lysate samples were normalized by total protein concentration (20$\mu$g per sample)
+and resolved by SDS-PAGE and Western blotting.  Secondary HRP bound antibody was used for visualization.
+All antibodies were purchased from Cell Signaling (Boston, MA) with the exception of anti-p621 Raf which was purchased from Biosource/Invitrogen  (Carlsbad, CA), and
+anti-pS338 Raf which was purchased from Santa Cruz Biotechnology (Santa Cruz, CA); anti-retinoblastoma from Zymed (South San Francisco, CA); and anti-CK2 from BD Biosciences (San Jose, CA).
+     
+\subsection*{Formulation and solution of the model equations.}
+We used ordinary differential equations (ODEs) to model the time evolution of metabolite ($x_{i}$) and scaled enzyme abundance ($\epsilon_{i}$) in hypothetical cell free
+metabolic networks:
+\begin{eqnarray}
+	\frac{dx_{i}}{dt} & = & \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)\qquad{i=1,2,\hdots,\mathcal{M}}\\
+	\frac{d\epsilon_{i}}{dt} & = & -\lambda_{i}\epsilon_{i}\qquad{i = 1,2,\hdots,\mathcal{E}}
+\end{eqnarray}where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of metabolites and $\mathcal{E}$ denotes the number of
+enzymes in the model. The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ 
+denotes the rate of reaction $j$. Typically, reaction $j$ is a non-linear function of metabolite and enzyme abundance, as well as unknown kinetic parameters 
+$\mathbf{k}$ ($\mathcal{K}\times{1}$).
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. If 
+$\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates
+metabolite $i$ is not connected with reaction $j$. Lastly, $\lambda_{i}$ denotes the scaled enzyme degradation constant. The system material balances were subject to the
+initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$ and $\mathbf{\epsilon}\left(t_{o}\right) = \mathbf{1}$ (initially we have 100\% cell-free enzyme abundance).
+
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
+\begin{equation}\label{eqn:rate-factor}
+	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
+\end{equation}We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:
+\begin{equation}\label{eqn:rate-bar}
+	\bar{r}_{j} = k_{j}^{max}\epsilon_{i}\left(\prod_{s\in{m_{j}^{-}}}\frac{x_{s}}{K_{js} + x_{s}}\right)
+\end{equation}where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\epsilon_{i}$ denotes the scaled enzyme activity which catalyzes reaction $j$, and
+$K_{js}$ denotes the saturation constant for species $s$ in reaction $j$. 
+The product in Eqn. \eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$). 
+
+The allosteric regulation term $v_{j}$ depended upon the combination of factors which influenced the activity of enzyme $i$.
+For each enzyme, we used a rule based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
+If an enzyme was activated by $m$ metabolites, we modeled this activation as:
+\begin{equation}
+	v_{j} = \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
+\end{equation}where $0\leq f_{ij}\left(x\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
+Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling this inhibition as:
+\begin{equation}
+	v_{j} = 1 - \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
+\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
+\begin{equation}
+	v_{j} = \min\left(u_{j},d_{j}\right)
+\end{equation}where:
+\begin{eqnarray}
+	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right) \\
+	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(x\right),\hdots,f_{nj}\left(x\right)\right)
+\end{eqnarray}The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating, and inhibitory factors for enzyme $j$. 
+If an enzyme had no allosteric factors, we set $v_{j} = 1$.
+There are many possible functional forms for $0\leq f_{ij}\left(x\right)\leq 1$. 
+However, in this study, each individual transfer function took the form:
+\begin{equation}\label{eqn:control-factor}
+	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}x_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}x_{j}^{\eta}}
+\end{equation}where $x_{j}$ denotes the abundance of metabolite $j$, and $\kappa_{ij}$ and $\eta$ are control parameters. 
+The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
+The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave \citep{Octave:2014}.
+
+\subsection*{Estimation of model parameters from experimental data.}
+
+
+\section*{Acknowledgements}
+This study was supported by the National Science Foundation GK12 award (DGE-1045513) 
+and by the National Science Foundation CAREER award (FILLMEIN).
+
+\clearpage
+%\bibliographystyle{plain}
+%\bibliographystyle{IEEEbib}
+
+\bibliography{References_v1}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S- 
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\end{document}
+

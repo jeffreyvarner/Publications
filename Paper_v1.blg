@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: plos2009.bst
+Database file #1: References_v1.bib
+Repeated entry---line 764 of file References_v1.bib
+ : @article{Breitman1980
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3517 of file References_v1.bib
+ : @article{HONG2001
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9878 of file References_v1.bib
+ : @article{Yen1990
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9968 of file References_v1.bib
+ : @article{Yen1984
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Octave:2014"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 14 entries,
+            2441 wiz_defined-function locations,
+            671 strings with 8000 characters,
+and the built_in function-call counts, 9885 in all, are:
+= -- 905
+> -- 168
+< -- 0
++ -- 84
+- -- 42
+* -- 804
+:= -- 1206
+add.period$ -- 28
+call.type$ -- 14
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 928
+empty$ -- 1014
+format.name$ -- 54
+if$ -- 2193
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 140
+newline$ -- 85
+num.names$ -- 14
+pop$ -- 165
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 69
+stack$ -- 0
+substring$ -- 1367
+swap$ -- 280
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 84
+width$ -- 16
+write$ -- 168
+(There were 4 error messages)

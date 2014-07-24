@@ -1,0 +1,104 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Young2011}
+Young RA (2011) Control of the embryonic stem cell state.
+\newblock Cell 144: 940--954.
+\bibAnnoteFile{Young2011}
+
+\bibitem{Breitman1980}
+Breitman TR, Selonick SE, Collins SJ (1980) {Introduction of differentiation of
+  the human promyelocytic leukemia cell line (HL-60) by retinoic acid}.
+\newblock Proc Natl Acad Sci USA 77: 2936 - 2940.
+\bibAnnoteFile{Breitman1980}
+
+\bibitem{YEN1984}
+Yen A, Reece SL, Albright KL (1984) {Dependence if HL-60 myeloid cell
+  differentiation on continuous and split retinoic acid exposures:
+  Pre-commitment memory associated with altered nuclear structure}.
+\newblock J Cell Physiol 118: 227 - 286.
+\bibAnnoteFile{YEN1984}
+
+\bibitem{Yen1998}
+Yen A, Roberson MS, Varvayanis S, Lee AT (1998) Retinoic acid induced
+  mitogen-activated protein (map)/extracellular signal-regulated kinase (erk)
+  kinase-dependent map kinase activation needed to elicit hl-60 cell
+  differentiation and growth arrest.
+\newblock Cancer Res 58: 3163--3172.
+\bibAnnoteFile{Yen1998}
+
+\bibitem{Hong2001}
+Hong HY, Varvayanis S, Yen A (2001) Retinoic acid causes mek-dependent raf
+  phosphorylation through raralpha plus rxr activation in hl-60 cells.
+\newblock Differentiation 68: 55--66.
+\bibAnnoteFile{Hong2001}
+
+\bibitem{Mangelsdorf1990}
+Mangelsdorf DJ, Ong ES, Dyck JA, Evans RM (1990) Nuclear receptor that
+  identifies a novel retinoic acid response pathway.
+\newblock Nature 345: 224--229.
+\bibAnnoteFile{Mangelsdorf1990}
+
+\bibitem{YEN1990}
+Yen A (1990) {HL-60 cells as a model of growth control and differentiation -
+  The significance of variant cells}.
+\newblock Hemat Rev 4: 5 - 46.
+\bibAnnoteFile{YEN1990}
+
+\bibitem{LIPP1994}
+Emrich T, Forster R, Lipp M (1994) {Transmembrane topology of the
+  lymphocyte-specific G protein-coupled receptor BLR1: analysis by flow
+  cytometry and immunocytochemistry.}
+\newblock Cell Mol Biol 40: 413 - 419.
+\bibAnnoteFile{LIPP1994}
+
+\bibitem{WANG2004}
+Wang J, Yen A (2004) {A novel retinoic acid-responsive element regulates
+  retinoic acid induced BLR1 expression}.
+\newblock Mol Cell Biol 24: 2423 - 2443.
+\bibAnnoteFile{WANG2004}
+
+\bibitem{Yang2002}
+Yang TTC, Xiong Q, Enslen H, Davis RJ, Chow CW (2002) Phosphorylation of nfatc4
+  by p38 mitogen-activated protein kinases.
+\newblock Mol Cell Biol 22: 3892--3904.
+\bibAnnoteFile{Yang2002}
+
+\bibitem{Wang2008}
+Wang J, Yen A (2008) A mapk-positive feedback mechanism for blr1 signaling
+  propels retinoic acid-triggered differentiation and cell cycle arrest.
+\newblock J Biol Chem 283: 4375--4386.
+\bibAnnoteFile{Wang2008}
+
+\bibitem{Tasseff2011}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol 3: 578 - 591.
+\bibAnnoteFile{Tasseff2011}
+
+\bibitem{Brooks1996}
+Brooks SC, Kazmer S, Levin AA, Yen A (1996) Myeloid differentiation and
+  retinoblastoma phosphorylation changes in hl-60 cells induced by retinoic
+  acid receptor- and retinoid x receptor-selective retinoic acid analogs.
+\newblock Blood 87: 227--237.
+\bibAnnoteFile{Brooks1996}
+
+\bibitem{Reiterer2007}
+Reiterer G, Yen A (2007) Platelet-derived growth factor receptor regulates
+  myeloid and monocytic differentiation of hl-60 cells.
+\newblock Cancer Res 67: 7765--7772.
+\bibAnnoteFile{Reiterer2007}
+
+\end{thebibliography}
