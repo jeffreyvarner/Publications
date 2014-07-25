@@ -215,15 +215,43 @@ that could explain ATRA-induction memory effects.
 
 \section*{Results}
 
+\subsection*{Mathematical modeling of ATRA-induced MAPK activation in HL-60 cells.}
+We constructed a mechanistic mathematical model of a putative Raf-Vav1 activation circuit (Fig. \ref{F:network}).  
+The immunoprecipitation and kinase inhibitor studies suggested that Raf kinase activity was required for ATRA-induced ERK phosphorylation and ROS response. 
+Furthermore, the phosphorylation, expression, and Vav1 binding of Raf itself decreased in response to Raf inhibition. 
+These results suggested a possible positive feedback loop between Raf kinase activity and increased Raf expression, 
+possibly through ppERK-dependent transcription factors such as Sp1 and STAT1 \cite{Kim2009,Zhang2004}.
+Both Sp1 and STAT1 have putative binding domains in the Raf promoter (TRANSFAC).
+However, this loop is not ATRA-responsive, without an ATRA-inducible trigger, which we hypothesize is Vav1.
+The Vav1 gene contains an upstream canonical Retinoic Acid Response Element (RARE) sequence motif (TRANSFAC) which could allow
+Vav1 expression to be at least partially regulated by ATRA. 
+By contrast, the Src promoter does not have a discernible canonical putative RARE.
+(Tables \ref{T:params}, \ref{T:species} and \ref{T:rxns} respectively).
+The levels of ATRA and GW5074 were introduced as user defined parameters depending on the experiment being simulated.
+In general Dilution due to growth was 
+More details on the model architecture including additional references can be found in Materials and Methods.
+
+To address parametric uncertainty, 
+an ensemble of models was estimated using the eight datasets taken from this study (38 total data points),
+and the previous study of Wang and Yen \cite{Wang2008}.
+Here ensemble refers to the use of different parametric sets for the same system of reactions.
+Cross-validation (data randomly split into 80\% training and 20\% validation) demonstrated that, 
+on average, the model identification scheme (described in Materials and Methods) decreased both training 
+and prediction error (Fig. \ref{F:parameters}) over successive iterations of the parameter selection procedure. 
+This is suggestive of the predictive ability of the model and also demonstrated that the nominal parameter set, 
+the set with the lowest training error, did not result in over-fitting. 
+Subsequently, we considered an ensemble of likely parameter sets (N = 99) with relative mean squared training errors within 20\% of the nominal set. 
+The model ensemble recapitulated both time-series data (including sustained MAPK activation) and the GW5074 results (Fig. \ref{F:Train}).
+
 \subsection*{Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers.}
-Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
+We considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
 For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{F:MAPKGWWB}A.
 ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control, 
 while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{F:GWdiff}A).
 Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
 while ATRA-induced phosphorylation of ERK was blocked by GW5074, consistent with the loss of Raf kinase activity (Fig. \ref{F:MAPKGWWB}B).
 Lastly, both the phosphorylation and expression of Raf was inhibited by GW5074.
-This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and ERK action on Raf transcription factors.
+This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and possible ERK action on Raf transcription factors.
 Surprisingly, the combination of GW5074 and ATRA statistically significantly increased the G1/G0 population (82 $\pm$ 1\%)
 compared with ATRA alone (61 $\pm$ 0.5\%).
 Increased G1/G0 arrest following the combined treatment with GW5074 and ATRA was unexpected, 
