@@ -215,7 +215,39 @@ that could explain ATRA-induction memory effects.
 
 \section*{Results}
 
+\subsection*{Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers.}
+Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
+For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{F:MAPKGWWB}A.
+ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control, 
+while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{F:GWdiff}A).
+Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
+while ATRA-induced phosphorylation of ERK was blocked by GW5074, consistent with the loss of Raf kinase activity (Fig. \ref{F:MAPKGWWB}B).
+Lastly, both the phosphorylation and expression of Raf was inhibited by GW5074.
+This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and ERK action on Raf transcription factors.
+Surprisingly, the combination of GW5074 and ATRA statistically significantly increased the G1/G0 population (82 $\pm$ 1\%)
+compared with ATRA alone (61 $\pm$ 0.5\%).
+Increased G1/G0 arrest following the combined treatment with GW5074 and ATRA was unexpected, 
+as the combination of ATRA and the MEK inhibitor (PD98059) has been shown previously to decrease ATRA-induced growth arrest \cite{Yen1998}.
+However, growth arrest is not the sole indication of functional differentiation.
+Expression of the cell surface marker CD11b has also been shown to coincide with HL-60 cells myeloid differentiation \cite{Hickstein1989}.  
+We measured CD11b expression, for the various treatment groups, using immuno-fluorescence flow cytometry 48 hr post-treatment.
+As with G1/G0 arrest, ATRA alone increased CD11b expression over the untreated control, 
+while GW5074 further enhanced ATRA-induced CD11b expression (Fig. \ref{F:GWdiff}B).
+GW5074 alone had no statistically significant effect on CD11b expression, 
+compared with the untreated control.
 
+The inducible reactive oxygen species (ROS) response was used as a functional marker of differentiated neutrophils \cite{Congleton2011}.
+We measured the ROS response induced by the phorbol ester 12-O-tetradecanoylphorbol-13-acetate (TPA) using flow cytometry.
+Untreated cells showed no discernible TPA response, 
+with only 7.0 $\pm$ 3.0\% ROS induction (Fig. \ref{F:GWdiff}C).
+Cells treated with ATRA had a significantly increased TPA response, 53 $\pm$ 7\% ROS induction 48 hr post-treatment.
+Treatment with both ATRA and GW5074 statistically significantly reduced ROS induction (22 $\pm$ 0.6\%) compared to ATRA alone. 
+Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47phox, 
+a required upstream component of the ROS response  (Fig. \ref{F:GWdiff}C, bottom).
+Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47phox expression.
+However, the ROS producing complex is MAPK dependent, 
+therefore it is also possible that GW5074 inhibited ROS production by interfering 
+with MAPK activation (in which case the p47phox marker might not accurately reflect phenotypic conversion and differentiation).
 
 \clearpage
 
@@ -378,6 +410,9 @@ are then used to update the parameter estimates of each particle using the rules
 \end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
 $\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
 parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$, which was taken from XXX. 
+
+
+
 
 \section*{Acknowledgements}
 The authors thank the anonymous reviewers for their helpful suggestions. 
