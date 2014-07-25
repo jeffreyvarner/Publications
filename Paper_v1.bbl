@@ -101,4 +101,16 @@ Reiterer G, Yen A (2007) Platelet-derived growth factor receptor regulates
 \newblock Cancer Res 67: 7765--7772.
 \bibAnnoteFile{Reiterer2007}
 
+\bibitem{Octave:2014}
+{Octave community} (2014).
+\newblock {GNU Octave 3.8.1}.
+\newblock \urlprefix\url{www.gnu.org/software/octave/}.
+\bibAnnoteFile{Octave:2014}
+
+\bibitem{PSO}
+Kennedy J, Eberhart R (1995) Particle swarm optimization.
+\newblock In: Proceedings of the International Conference on Neural Networks.
+  pp. 1942 - 1948.
+\bibAnnoteFile{PSO}
+
 \end{thebibliography}

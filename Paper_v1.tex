@@ -88,7 +88,7 @@
 % Begin ...
 \begin{document}
 \begin{titlepage}
-{\par\centering\textbf{\Large An Effective Model of the Retinoic Acid induced HL-60 Differentiation Circuit}}
+{\par\centering\textbf{\Large An Effective Model of the Core Retinoic Acid induced HL-60 Differentiation Circuit}}
 \vspace{0.05in}
 {\par \centering \large{Ryan Tasseff$^{1}$, 
 Holly A. Jensen$^{1}$, 
@@ -118,6 +118,23 @@ Johanna Congleton$^{2}$, Andrew Yen$^{2}$ and Jeffrey D. Varner$^{1,*}$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
+The complexity of human differentiation networks makes analysis of their architecture and function challenging.  
+Analysis of model systems, such as the lineage-uncommitted human myeloblastic leukemia cell line HL-60, 
+could inform the analysis of more complex programs. 
+HL-60 cells undergo myeloid differentiation along with G1/G0-arrest when exposed to All-Trans Retinoic Acid (ATRA). 
+One of the defining features of this program is slowly induced, persistent MAPK activation.
+The molecular mechanisms of ATRA-induced commitment, arrest and functional differentiation are only partially understood.
+In this study, we explored the ATRA-inducible c-Raf, also known as Raf1 (Raf), 
+interactome to determine the functional and regulatory architecture responsible for persistent MAPK activation in HL-60 cells. 
+To better understand the role of Raf in the ATRA-induced differentiation program, 
+we constructed an ensemble of mechanistic, mathematical models of the transcriptional and post-translational events driving ATRA-induced MAPK activation. 
+Bifurcation analysis of this model predicted bistability in ppERK levels as a function of ATRA forcing. 
+A functional consequence of this was the ability to lock the MAPK cascade into a self-sustaining activated state, even after ATRA removal.
+These simulations were then qualitatively validated with ATRA washout experiments. 
+Taken together, this study provided further details on sustained MAPK activation, mechanistic insight into cellular memory,
+and proof-of-concept that a
+combination of experimental and computational methods is an effective strategy for dissecting complex intracellular signaling programs.
+
 
 {\noindent \textbf{Keywords:}~Cell free metabolism, Mathematical modeling}
 
@@ -198,14 +215,27 @@ that could explain ATRA-induction memory effects.
 
 \section*{Results}
 
+
+
 \clearpage
 
 \section*{Discussion}
+In this study, we explored the functional and regulatory architecture responsible for ATRA-induced MAPK activation in HL-60 cells.
+Retinoic acid is an embryonic morphogen, a cancer chemotherapeutic agent, as well as potent regulator of cell differentiation and proliferation. 
+Using a human lineage-uncommitted myelo-monocytic precursor cell, 
+it has been shown that ATRA-induced phenotypic conversion and G0 arrest depend on eliciting a hyperactive prolonged signal along the Raf/MEK/ERK axis \cite{Yen1998}. 
+In particular, signaling involves two positive loops, which incorporates the BLR1 receptor and Raf kinase, putatively activated by S621 phosphorylation, 
+that is seminal to sustaining the signal needed for differentiation \cite{Wang2008}. 
+In genetically engineered BLR1 KO cells crippled for signaling and consequentially ability to differentiate, ectopic expression of Raf activity restores the cell's ability to differentiate. 
+While the canonical paradigm of MAPK signaling is a transient signal that is mitogenic, a prolonged signal elicits cell differentiation and G0 arrest. 
+Interest thus becomes focused on whether there is a Raf partner that is responsible for the prolonged signal in ATRA-treated cells. 
+Surveying known MAPK regulatory molecules using Western blotting and IP we found that ATRA increased the expression of Vav1 as well as its immunoprecipitation with Raf phosphorylated at S621. 
+A parsimonious effective mathematical model showed that a Raf-Siganlsome-mediated positive feedback loop accounted for sustained MAPK signaling and aspects of phenotypic conversion and G0 arrest. 
+The significant finding was thus that ATRA-regulated Vav1 expression and partnering with Raf could drive sustained signaling and phenotypic shift. The model also predicted the observed hysteresis effect of ATRA where the cell retains a memory of transient ATRA exposure, betrayed by activated signaling and by accelerated differentiation upon re-exposure to ATRA.
 
 \clearpage
 
 \section*{Materials and Methods}
-
 
 \subsection*{Cell Culture and Treatment.}
 Human myeloblastic leukemia cells (HL-60 cells) were grown in a humidified atmosphere of 5\% CO$_2$ at 37$^{o}$C and maintained in RPMI 1640 from Gibco (Carlsbad, CA) 
@@ -268,19 +298,17 @@ All antibodies were purchased from Cell Signaling (Boston, MA) with the exceptio
 anti-pS338 Raf which was purchased from Santa Cruz Biotechnology (Santa Cruz, CA); anti-retinoblastoma from Zymed (South San Francisco, CA); and anti-CK2 from BD Biosciences (San Jose, CA).
      
 \subsection*{Formulation and solution of the model equations.}
-We used ordinary differential equations (ODEs) to model the time evolution of metabolite ($x_{i}$) and scaled enzyme abundance ($\epsilon_{i}$) in hypothetical cell free
-metabolic networks:
-\begin{eqnarray}
-	\frac{dx_{i}}{dt} & = & \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)\qquad{i=1,2,\hdots,\mathcal{M}}\\
-	\frac{d\epsilon_{i}}{dt} & = & -\lambda_{i}\epsilon_{i}\qquad{i = 1,2,\hdots,\mathcal{E}}
-\end{eqnarray}where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of metabolites and $\mathcal{E}$ denotes the number of
-enzymes in the model. The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ 
-denotes the rate of reaction $j$. Typically, reaction $j$ is a non-linear function of metabolite and enzyme abundance, as well as unknown kinetic parameters 
-$\mathbf{k}$ ($\mathcal{K}\times{1}$).
+We used ordinary differential equations (ODEs) to model the time evolution of the circuit components:
+\begin{equation}
+	\frac{dx_{i}}{dt}  = \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) - \left(\mu + k_{d,i}\right)x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}\\
+\end{equation}where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of circuit components, $k_{d,i}$ denotes a first-order non-specific degradation constant
+for species i, and $\mu$ denotes the specific growth rate of HL-60 cells.
 The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. If 
 $\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates
-metabolite $i$ is not connected with reaction $j$. Lastly, $\lambda_{i}$ denotes the scaled enzyme degradation constant. The system material balances were subject to the
-initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$ and $\mathbf{\epsilon}\left(t_{o}\right) = \mathbf{1}$ (initially we have 100\% cell-free enzyme abundance).
+metabolite $i$ is not connected with reaction $j$. 
+The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$. 
+Typically, reaction $j$ is a non-linear function of network state, as well as unknown kinetic parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
+The system material balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$.
 
 Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
 \begin{equation}\label{eqn:rate-factor}
@@ -290,40 +318,74 @@ Each reaction rate was written as the product of two terms, a kinetic term ($\ba
 	\bar{r}_{j} = k_{j}^{max}\epsilon_{i}\left(\prod_{s\in{m_{j}^{-}}}\frac{x_{s}}{K_{js} + x_{s}}\right)
 \end{equation}where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\epsilon_{i}$ denotes the scaled enzyme activity which catalyzes reaction $j$, and
 $K_{js}$ denotes the saturation constant for species $s$ in reaction $j$. 
-The product in Eqn. \eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$). 
+The product in Eqn. \eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$).
 
-The allosteric regulation term $v_{j}$ depended upon the combination of factors which influenced the activity of enzyme $i$.
-For each enzyme, we used a rule based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
-If an enzyme was activated by $m$ metabolites, we modeled this activation as:
+The control term $v_{j}$ depended upon the combination of factors which influenced the abundance or activity of $x_{i}$.
+For each species, we used a rule based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
+We modeled species activation as:
 \begin{equation}
 	v_{j} = \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
-\end{equation}where $0\leq f_{ij}\left(x\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
-Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling this inhibition as:
+\end{equation}where $0\leq f_{ij}\left(x\right)\leq 1$ was a regulatory transfer function that calculated the influence of species $x_{i}$ on rate process $j$. 
+Conversely, we modeled the inhibition (or repression) of rate process $j$ as:
 \begin{equation}
 	v_{j} = 1 - \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
-\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
+\end{equation}Lastly, if rate process $j$ was subject to had both $m$ activating and $n$ inhibitory factors, we modeled the control term as:
 \begin{equation}
 	v_{j} = \min\left(u_{j},d_{j}\right)
 \end{equation}where:
 \begin{eqnarray}
 	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right) \\
 	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(x\right),\hdots,f_{nj}\left(x\right)\right)
-\end{eqnarray}The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating, and inhibitory factors for enzyme $j$. 
-If an enzyme had no allosteric factors, we set $v_{j} = 1$.
+\end{eqnarray}The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating, and inhibitory factors for process $j$. 
+If a process had no control factors, we set $v_{j} = 1$.
 There are many possible functional forms for $0\leq f_{ij}\left(x\right)\leq 1$. 
 However, in this study, each individual transfer function took the form:
 \begin{equation}\label{eqn:control-factor}
 	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}x_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}x_{j}^{\eta}}
-\end{equation}where $x_{j}$ denotes the abundance of metabolite $j$, and $\kappa_{ij}$ and $\eta$ are control parameters. 
+\end{equation}where $x_{j}$ denotes the abundance (or activity) of component $j$.  
 The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
 The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave \citep{Octave:2014}.
 
-\subsection*{Estimation of model parameters from experimental data.}
+\subsection*{Estimation of an ensemble of model parameters from experimental data.}
+Model parameters were estimated by minimizing the squared difference between simulations and experimental data taken from ATRA-induced HL-60 cells:
+\begin{equation}\label{eqn:objective-function}
+	E_{j}(\mathbf{k}) = \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \left(\frac{{\mathcal{M}^{\prime}_{ij}}-\max{y_{ij}}}{{\mathcal{M}^{\prime}_{ij}}}\right)^{2}
+\end{equation}
+The terms $\hat{\mathcal{M}}_{ij}$ and $\hat{y}_{ij}$ denote scaled experimental observations and simulation outputs from training set $j$. 
+The quantity $i$ denoted the sampled time-index and $\mathcal{T}_{j}$ denoted the number of time points for experiment j. 
+The first term in Eqn. \eqref{eqn:objective-function} quantified the relative error in the simulation. 
+We used only immunoblot measurements for model training. 
+Thus, we trained the model on the \emph{relative} change between bands within each training data set.
+The read-out from the training immunoblots was band intensity where we assumed intensity was only loosely proportional to concentration.
+Suppose we have the intensity for species $x$ at time $\{t_{1},t_{2},..,t_{n}\}$ in condition $j$. The scaled-value $\hat{\mathcal{M}}_{ij}$ would then be given by:
+\begin{equation}\label{norm_exp_data}
+\hat{\mathcal{M}}_{ij} = \frac{\mathcal{M}_{ij} - \min_{i}\mathcal{M}_{ij}}{\max_{i}{\mathcal{M}_{ij}}-\min_{i}{\mathcal{M}_{ij}}}
+\end{equation}
+Under this scaling $0\leq\hat{\mathcal{M}}_{ij}\leq{1}$ where $\hat{\mathcal{M}}_{ij}=0$ describes the lowest intensity band and $\hat{\mathcal{M}}_{ij}=1$ describes the highest intensity band. 
+A similar scaling was defined for the simulation output. The second-term in the objective function ensured the proper concentration scale was estimated by the model.
+In this study, we set the highest intensity band to $\mathcal{M}^{\prime}_{ij} = 10$ [AU] for all simulations. 
 
+We minimized the total model residual ($\sum{E_{j}}$) using Particle swarm optimization (PSO) \citep{PSO}.
+PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
+A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
+error landscape experienced by each particle collectively to the swarm. Thus, PSO acts both as a local and a global search algorithm. 
+For each iteration, particles in the swarm compute their local error by evaluating the model equations using their specific parameter vector realization.
+From each of these local points, a globally best error is identified. Both the local and global error 
+are then used to update the parameter estimates of each particle using the rules:
+\begin{eqnarray}
+	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
+	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
+\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
+$\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$, which was taken from XXX. 
 
 \section*{Acknowledgements}
-This study was supported by the National Science Foundation GK12 award (DGE-1045513) 
-and by the National Science Foundation CAREER award (FILLMEIN).
+The authors thank the anonymous reviewers for their helpful suggestions. 
+We acknowledge the gracious financial support to J.V. by the National Science Foundation CAREER (CBET-0846876) for the support of R.T. and H.J.
+In addition, we acknowledge support to A.Y. from the National Institutes of Health (CA 30555, CA152870) 
+and a grant from New York State Stem Cell Science.  Lastly, we acknowledge the financial support to J.V. and A.Y. 
+from the National Cancer Institute (\#U54CA143876). The content is solely the responsibility of the authors and does not necessarily 
+represent the official views of the National Cancer Institute or the National Institutes of Health.
 
 \clearpage
 %\bibliographystyle{plain}

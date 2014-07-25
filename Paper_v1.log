@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  21 JUL 2014 16:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  24 JUL 2014 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,16 +647,16 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 ]
 
-LaTeX Warning: Reference `F:MAPKGWWB' on page 6 undefined on input line 226.
+LaTeX Warning: Reference `F:MAPKGWWB' on page 6 undefined on input line 257.
 
 
-Overfull \hbox (20.10449pt too wide) in paragraph at lines 235--243
+Overfull \hbox (20.10449pt too wide) in paragraph at lines 266--274
 \OT1/phv/m/n/12 10$\OML/cmm/m/it/12 ^^V$\OT1/phv/m/n/12 mol/L 5-(and-6)-chlorom
 ethyl-2,7-dichlorodihydro-fluorescein di-ac-etate acetyl es-ter (DCF;
  []
 
 
-Overfull \hbox (13.46957pt too wide) in paragraph at lines 235--243
+Overfull \hbox (13.46957pt too wide) in paragraph at lines 266--274
 \OT1/phv/m/n/12 In-vit-ro-gen Carls-bad, CA) and 0.4$\OML/cmm/m/it/12 ^^V$\OT1/
 phv/m/n/12 g/mL 12-O-tetradecanoylphorbol-13-acetate (TPA; Sigma-
  []
@@ -664,7 +664,7 @@ phv/m/n/12 g/mL 12-O-tetradecanoylphorbol-13-acetate (TPA; Sigma-
 [6
 
 ] [7]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 270--272
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 301--302
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
@@ -672,26 +672,11 @@ v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
 [8]
 
 LaTeX Warning: Reference `fig-control-schematic' on page 9 undefined on input l
-ine 295.
+ine 324.
 
-[9]
+[9] [10] [11] [12] (./Paper_v1.bbl [13
 
-Package natbib Warning: Citation `Octave:2014' on page 10 undefined on input li
-ne 318.
-
-
-Overfull \hbox (7.69629pt too wide) in paragraph at lines 324--326
-\OT1/phv/m/n/12 This study was sup-ported by the Na-tional Sci-ence Foun-da-tio
-n GK12 award (DGE-1045513)
- []
-
-[10] (./Paper_v1.bbl [11
-
-]) [12]
-
-Package natbib Warning: There were undefined citations.
-
-(./Paper_v1.aux)
+]) [14] (./Paper_v1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -701,13 +686,13 @@ LaTeX Warning: There were undefined references.
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5035 strings out of 493315
- 72382 string characters out of 6137904
- 143183 words of memory out of 5000000
- 8347 multiletter control sequences out of 15000+600000
+ 5044 strings out of 493315
+ 72512 string characters out of 6137904
+ 143234 words of memory out of 5000000
+ 8354 multiletter control sequences out of 15000+600000
  23877 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,38p,323b,954s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,38p,378b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -725,10 +710,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 13/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (14 pages, 158153 bytes).
+Output written on Paper_v1.pdf (16 pages, 169999 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
