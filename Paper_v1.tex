@@ -88,14 +88,14 @@
 % Begin ...
 \begin{document}
 \begin{titlepage}
-{\par\centering\textbf{\Large Dynamic Modeling of Cell Free Metabolic Networks using Effective Kinetic Models}}
+{\par\centering\textbf{\Large Dynamic Modeling of Biochemical Networks using Effective Kinetic Models}}
 \vspace{0.05in}
-{\par \centering \large{ Joseph A. Wayman, Adithya Sagar and Jeffrey D. Varner$^{*}$}}
+{\par \centering \large{Joseph A. Wayman, Adithya Sagar and Jeffrey D. Varner$^{*}$}}
 \vspace{0.10in}
 {\par \centering \large{School of Chemical and Biomolecular Engineering}}
 {\par \centering \large{Cornell University, Ithaca NY 14853}}
 \vspace{0.1in}
-{\par \centering \textbf{Running Title:}~Modeling cell free metabolism}
+{\par \centering \textbf{Running Title:}~Effective models of metabolism}
 \vspace{0.1in}
 {\par \centering \textbf{To be submitted:}~\emph{Processes}}
 \vspace{0.5in}
@@ -123,7 +123,7 @@
 \linenumbers
 
 \section*{Introduction}
-Whole-cell bacterial processes are widely used in biotechnology to produce an array of products including high-value protein therapeutics.
+Biochemical processes are widely used in biotechnology to produce an array of products including commodity chemicals and protein therapeutics.
 However, whole-cell processes share the central limitation of requiring cell growth, 
 which redirects resources away from product synthesis, and cell walls, which complicate interrogation and control of intracellular metabolic processes.
 On the other hand, cell-free metabolic systems offer many advantages over traditional in vivo production methods. 
@@ -134,15 +134,15 @@ For modeling, this implies that we need only consider allosteric regulation of e
 Of course, modeling allosteric mechanisms is itself a difficult problem when the model is at a whole genome scale. To address this problem, we have developed a
 an approach based upon the constrained fuzzy logic framework of Morris and Lauffenburger [REFHERE].
 
-In this study, we present an effective cell free metabolic modeling framework, and test this framework using two proof of concept metabolic networks. 
-[FINISH].
+In this study, we present an effective biochemical network modeling framework that integrates classical kinetic modeling with rules based approaches.
+[FINISH ME]
 
 \clearpage
 
 \section*{Results}
 
 \subsection*{Formulation and properties of cell free effective models.}
-We developed two proof of concept metabolic networks to investigate the features of our effective cell free modeling approach (Fig. \ref{fig-networks}).
+We developed two proof-of-concept metabolic networks to investigate the features of our effective biochemical network modeling approach (Fig. \ref{fig-networks}).
 In both examples, substrate $S$ was converted to the end-products $P_{1}$ and $P_{2}$ through a series of enzymatically catalyzed reactions, 
 including a branch point at hypothetical metabolite $M_{2}$. 
 Several of these reactions involved cofactor dependence ($AH$ or $A$), and various allosteric regulation mechanisms. 
@@ -205,28 +205,24 @@ in turn depends upon the kinetic parameters. For cell free systems, regulated ge
 We explored this linkage by estimating model parameters from synthetic data using both network
 structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate $M_{5}$ and end-product $P_1$ approximately every 20 min using
 network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm
-optimization, starting from random initial guesses. 
-The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
-PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).
-However, when there was network mismatch (network B fit against network A synthetic data), PSO unable to identify an ensemble, all else being the same (Fig. \ref{fig-parameter-fit}C and D).
-Interestingly, the particle swarm generated a \textit{sloppy} parameter ensemble, in the absence of network mismatch (Fig. ZZZ). 
+optimization, starting from random initial guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
+PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).However, when there was network mismatch (network B fit against network A synthetic data), PSO unable to identify an ensemble, all else being the same (Fig. \ref{fig-parameter-fit}C and D). Interestingly, the particle swarm generated a \textit{sloppy} parameter ensemble, in the absence of network mismatch (Fig. ZZZ). 
 Taken together, ... [FINISH].
 
 We modified our particle swarm identification strategy to simultaneously search over both kinetic parameters and putative control structures.
 In addition to our initial networks, we constructed three additional presumptive network models, each with the same enzymatic connectivity but different allosteric 
-regulation of the initial pathway enzyme (Fig. \ref{fig-alternative-networks}). 
+regulation of the pathway enzymes (Fig. \ref{fig-alternative-networks}). 
 We then initialized a population of particles, each with one of the five potential regulatory programs, and randomized kinetic parameters.
 Thus, we generated an initial population of particles that had \textit{both} different kinetic parameters as well as different control structures. 
 We biased the distribution of the particle population according to our \textit{a~prior} belief of the correct regulatory program.
 To this end, we considered three different priors, a uniform distribution where each putative regulatory structure represented 20\% of the population, and
-two mixed distributions that were positively or negatively biased towards the correct structure (network A).
-In both the positively biased, and uniform cases the particle swarm clearly differentiated between the true or closely related structures and those that were materially different (Fig. \ref{fig-control-search}). 
-As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially 
-identified (Fig. \ref{fig-control-search}A). 
-On the other hand, the uniform distribution identified a combination of network A (ZZ) and network C (YY) as the most likely control structures (Fig. \ref{fig-control-search}B).
-Network A and C differ by the regulatory connection between the end-product $P_2$ and enzyme $E_{1}$; in network A $P_{2}$ was assumed to inhibit $E_{1}$ while in network C $P_{2}$ was assumed to
-activate $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
-the particle swarm misidentified the correct structure (Fig. \ref{fig-control-search}C). [FINISH]
+two mixed distributions that were either positively or negatively biased towards the correct structure (network A).
+In both the positively biased, and uniform cases the particle swarm clearly differentiated between the true or closely related structures and those that were materially different (Fig. \ref{fig-control-search}).  As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially identified (Fig. \ref{fig-control-search}A). 
+On the other hand, when given a uniform distribution, 
+the PSO approach identified a combination of network A (ZZ) and network C (YY) as the most likely control structures (Fig. \ref{fig-control-search}B).
+Network A and C differ by the regulatory connection between the end-product $P_2$ and enzyme $E_{1}$; in network A $P_{2}$ was assumed to inhibit $E_{1}$ while in network C $P_{2}$ was assumed to activate $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
+the particle swarm misidentified the correct structure (Fig. \ref{fig-control-search}C). 
+
 
 \clearpage
 
