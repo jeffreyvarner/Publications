@@ -221,7 +221,9 @@ In both the positively biased, and uniform cases the particle swarm clearly diff
 On the other hand, when given a uniform distribution, 
 the PSO approach identified a combination of network A (ZZ) and network C (YY) as the most likely control structures (Fig. \ref{fig-control-search}B).
 Network A and C differ by the regulatory connection between the end-product $P_2$ and enzyme $E_{1}$; in network A $P_{2}$ was assumed to inhibit $E_{1}$ while in network C $P_{2}$ was assumed to activate $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
-the particle swarm misidentified the correct structure (Fig. \ref{fig-control-search}C). 
+the particle swarm \textit{misidentified} the correct allosteric structure (Fig. \ref{fig-control-search}C). 
+
+
 
 
 \clearpage
@@ -402,6 +404,14 @@ Each network had the same enzymatic connectivity, initial conditions and kinetic
 \centering
 \includegraphics[width=0.6\textwidth]{./figs/Figure-7-ControlSearch.pdf}
 \caption{Combined control structure and kinetic parameter search results. Think about this ...}\label{fig-control-search}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth,height=0.6\textheight]{./figs/Figure-8-Flux.pdf}
+\caption{Flux and control pattern for estimated model parameters and structures. }\label{fig-flux-pattern}
 \end{figure}
 
 \clearpage
