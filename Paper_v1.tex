@@ -143,11 +143,11 @@ In this study, we present an effective biochemical network modeling framework th
 
 \subsection*{Formulation and properties of cell free effective models.}
 We developed two proof-of-concept metabolic networks to investigate the features of our effective biochemical network modeling approach (Fig. \ref{fig-networks}).
-In both examples, substrate $S$ was converted to the end-products $P_{1}$ and $P_{2}$ through a series of enzymatically catalyzed reactions, 
+In both examples, substrate S was converted to the end-products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, 
 including a branch point at hypothetical metabolite $M_{2}$. 
 Several of these reactions involved cofactor dependence ($AH$ or $A$), and various allosteric regulation mechanisms. 
-Network A included feedback inhibition of the initial pathway enzyme ($E_{1}$) by pathway end products $P_{1}$ and $P_{2}$ (Fig. \ref{fig-networks}A).
-On the other hand, network B involved feedback inhibition of $E_{1}$ by $P_{2}$ and $E_{6}$ by $P_{1}$ (Fig. \ref{fig-networks}B). 
+Network A included feedback inhibition of the initial pathway enzyme ($E_{1}$) by pathway end products P$_{1}$ and P$_{2}$ (Fig. \ref{fig-networks}A).
+On the other hand, network B involved feedback inhibition of $E_{1}$ by P$_{2}$ and $E_{6}$ by P$_{1}$ (Fig. \ref{fig-networks}B). 
 In both networks, branch point enzymes $E_{3}$ and $E_{6}$ were subject to feed-forward activation by cofactor $AH$.
 Lastly, enzyme activity was assumed to decay according to a first-order rate law in both cases. 
 Allosteric regulation of enzyme activity was represented using a novel rule-based strategy, similar in spirit to the 
@@ -186,14 +186,14 @@ effect modeling strategy, and particularly the rule-based approximation of allos
 We considered two cases,  control on/off, for each network configuration. 
 Each of these cases had identical kinetic parameters and initial conditions; 
 the \textit{only} differences between the cases was the allosteric regulation rules, and the control parameters associated with these rules. 
-As expected, end product accumulation was larger for network A when the control was off (no feedback inhibition of $E_{1}$ by $P_{1}$ and $P_{2}$),
+As expected, end product accumulation was larger for network A when the control was off (no feedback inhibition of $E_{1}$ by P$_{1}$ and P$_{2}$),
 as compared to the on case (Fig. \ref{fig-onoff-simulations}A). We found this behavior was robust to the choice of underlying kinetic parameters, 
 as we observed that same qualitative response across an ensemble of randomized parameter sets (N = 100). 
 The control on/off response of network B was more subtle. In the off case, the behavior was qualitatively similar to network A. 
-However, for the on case, flux was diverted away from $P_{2}$ formation by feedback inhibition of $E_{6}$ activity at the $M_{2}$ branch point by $P_{1}$ (Fig. \ref{fig-onoff-simulations}B).
-Lower $E_{6}$ activity at the $M_{2}$ branch point allowed more flux toward $P_{1}$ formation, hence the yield of $P_{1}$ also increased (Fig. \ref{fig-onoff-simulations}C).
-Again, the control on/off behavior was robust to the values of the kinetic parameters, as the same qualitative trend was conserved across 
-an ensemble of possible randomized kinetic parameters (N = 100). Taken together, these simulations suggested that the rule based allosteric control 
+However, for the on case, flux was diverted away from P$_{2}$ formation by feedback inhibition of $E_{6}$ activity at the M$_{2}$ branch point by P$_{1}$ (Fig. \ref{fig-onoff-simulations}B).
+Lower $E_{6}$ activity at the M$_{2}$ branch point allowed more flux toward P$_{1}$ formation, hence the yield of P$_{1}$ also increased (Fig. \ref{fig-onoff-simulations}C).
+Again, the control on/off behavior was robust to changes kinetic parameters, as the same qualitative trend was conserved across 
+an ensemble of randomized parameters (N = 100). Taken together, these simulations suggested that the rule based allosteric control 
 concept could robustly capture expected feedback behavior.
 
 
@@ -205,9 +205,11 @@ in turn depends upon the kinetic parameters. For cell free systems, regulated ge
 We explored this linkage by estimating model parameters from synthetic data using both network
 structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate $M_{5}$ and end-product $P_1$ approximately every 20 min using
 network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm
-optimization, starting from random initial guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
-PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).However, when there was network mismatch (network B fit against network A synthetic data), PSO unable to identify an ensemble, all else being the same (Fig. \ref{fig-parameter-fit}C and D). Interestingly, the particle swarm generated a \textit{sloppy} parameter ensemble, in the absence of network mismatch (Fig. ZZZ). 
-Taken together, ... [FINISH].
+optimization, starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
+PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations 
+when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).
+However, with control mismatch (network B simulated with network A parameters), the model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
+
 
 We modified our particle swarm identification strategy to simultaneously search over both kinetic parameters and putative control structures.
 In addition to our initial networks, we constructed three additional presumptive network models, each with the same enzymatic connectivity but different allosteric 
@@ -219,19 +221,33 @@ To this end, we considered three different priors, a uniform distribution where 
 two mixed distributions that were either positively or negatively biased towards the correct structure (network A).
 In both the positively biased, and uniform cases the particle swarm clearly differentiated between the true or closely related structures and those that were materially different (Fig. \ref{fig-control-search}).  As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially identified (Fig. \ref{fig-control-search}A). 
 On the other hand, when given a uniform distribution, 
-the PSO approach identified a combination of network A (ZZ) and network C (YY) as the most likely control structures (Fig. \ref{fig-control-search}B).
-Network A and C differ by the regulatory connection between the end-product $P_2$ and enzyme $E_{1}$; in network A $P_{2}$ was assumed to inhibit $E_{1}$ while in network C $P_{2}$ was assumed to activate $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
+the PSO approach identified a combination of network A and network C as the most likely control structures (Fig. \ref{fig-control-search}B).
+Network A and C differ by the regulatory connection between the end-product P$_2$ and enzyme $E_{1}$; in network A end-product P$_{2}$ was assumed to inhibit $E_{1}$ while in network C end-product P$_{2}$ activated $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
 the particle swarm \textit{misidentified} the correct allosteric structure (Fig. \ref{fig-control-search}C). 
+Interestingly, each particle swarm identified parameter sets and model structures that minimized the simulation error. 
+However, the estimated parameter values were not necessarily similar to the true parameters; the angle between the estimated and true parameters was not consistently small. 
+This suggested that the particle swarm approach identified a \textit{sloppy} ensemble, i.e., parameter estimates were individually incorrect but collectively exhibited the correct 
+model behavior.  
 
-
-
+We calculated control program output and scaled metabolic flux for the positively, uniformly and negatively biased particle swarms (Fig. \ref{fig-flux-pattern}).
+Network A and network C models from the positively (Fig. \ref{fig-flux-pattern}A) and uniformly (Fig. \ref{fig-flux-pattern}B) 
+biased particle swarms showed similar operational patterns, despite differences in the kinetic parameters and control structures. 
+In all cases, irregardless of network configuration or parameter values, the rate of enzyme decay was small compared to the other fluxes. 
+Consistent with the correct model structure, production of end-product P$_1$ was the preferred branch. 
+High flux through this branch resulted in significant end product inhibition of $E_{1}$ in both network A and network C, when compared to network B,D and E.
+Interestingly, the behavior of network A was degenerate in the presence of high P$_{1}$ production; 
+positive or negative feedback connections from P$_2$ to $E_{1}$ were ignored because of our choice of integration rule (max). 
+Thus, while theoretically distinct, network A and network C were operationally similar.
+On the other hand, networks B, D and E showed distinct behavior that was not consistent with the true network.  
+These architectures exhibited either limited inhibition (network B) or activation (network D and E) of $E_{1}$ activity, resulting a significantly different
+metabolic flux profile. Taken together ... [FINISH ME].
 
 \clearpage
 
 \section*{Discussion}
 In this study, we proposed a effective modeling strategy to dynamically simulate cell free metabolic networks. 
 We tested this strategy using two proof of concept metabolic networks.
-In both networks, substrate $S$ was converted to the end-products $P_{1}$ and $P_{2}$ through a series of enzymatically catalyzed reactions, 
+In both networks, substrate $S$ was converted to the end-products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, 
 including a branch point at hypothetical metabolite $M_{2}$. While both networks had the same enzymatic connectivity, that had differing control structures.
 [FINISH]
 
@@ -348,7 +364,7 @@ and by the National Science Foundation CAREER award (FILLMEIN).
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-1-Networks.pdf}
-\caption{Proof of concept cell-free metabolic networks considered in this study. Substrate $S$ is converted to products $P_{1}$ and $P_{2}$ through a series of chemical conversions
+\caption{Proof of concept cell-free metabolic networks considered in this study. Substrate $S$ is converted to products P$_{1}$ and P$_{2}$ through a series of chemical conversions
 catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject to both positive and negative allosteric regulation. }\label{fig-networks}
 \end{figure}
 
@@ -443,12 +459,16 @@ a large incorrect bias.
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth,height=0.6\textheight]{./figs/Figure-8-Flux.pdf}
-\caption{Metabolic flux and control program output as a function of network type and parameter estimate.
-The population of particles from the modified particle swarm optimization strategy were sorted based upon simulation error. 
-The scaled metabolic flux and control variables governing the activity of $E_{1},E_{3}$ and $E_{6}$ were plotted for each particle in the swarm.
-\textbf{A}: Model performance for the N = 100 positively biased particles.
-\textbf{B}: Model performance for the N = 100 uniformly biased particles.
-\textbf{C}: Model performance for the N = 100 negatively biased particles.
+\caption{Metabolic flux and control variables as a function of network type and particle index at t = 100 min.
+The control variables governing $E_{1},E_{3}$ and $E_{6}$ activity and the scaled metabolic flux and were calculated for the positively, 
+uniformly and negatively biased particle swarms (N = 100). The particles from each swarm were sorted based upon simulation error (low to high error). 
+\textbf{A}: Model performance for the positively biased particle swarm as a function of particle index.
+\textbf{B}: Model performance for the uniformly biased particle swarm as a function of particle index.
+\textbf{C}: Model performance for the negatively biased particle swarm as a function of particle index. 
+Models with significant control mismatch showed distinct control and flux patterns versus those models with the correct or closely related control policies.
+In particular, models with the correct control policy showed stronger inhibition of $E_{1}$ activity, leading to decreased flux from S$\rightarrow$P$_{1}$.
+Conversely, models with significant mismatch had increased $E_{1}$ activity, leading to an altered flux distribution. 
+This is especially apparent in the negatively biased particle swarm. 
 }\label{fig-flux-pattern}
 \end{figure}
 
