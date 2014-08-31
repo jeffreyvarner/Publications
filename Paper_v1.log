@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 AUG 2014 11:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 AUG 2014 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,12 +722,16 @@ File: ./figs/Figure-7-ControlSearch.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/Figure-7-ControlSearch.pdf used on input line 4
 28.
 (pdftex.def)             Requested size: 234.8775pt x 506.08195pt.
- [20 <./figs/Figure-7-ControlSearch.pdf>] <./figs/Figure-8-Flux.pdf, id=432, 79
-4.97pt x 614.295pt>
+
+
+LaTeX Warning: Float too large for page by 15.65195pt on input line 439.
+
+[20 <./figs/Figure-7-ControlSearch.pdf>]
+<./figs/Figure-8-Flux.pdf, id=432, 794.97pt x 614.295pt>
 File: ./figs/Figure-8-Flux.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-8-Flux.pdf>
-Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 436.
+Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 445.
 (pdftex.def)             Requested size: 469.76819pt x 372.26357pt.
  [21 <./figs/Figure-8-Flux.pdf>] (./Paper_v1.aux) )
 (\end occurred inside a group at level 1)
@@ -741,7 +745,7 @@ Here is how much of TeX's memory you used:
  8371 multiletter control sequences out of 15000+600000
  31126 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,38p,1170b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,38p,1189b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -766,7 +770,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (23 pages, 3571476 bytes).
+Output written on Paper_v1.pdf (23 pages, 3572895 bytes).
 PDF statistics:
  515 PDF objects out of 1000 (max. 8388607)
  398 compressed objects within 4 object streams

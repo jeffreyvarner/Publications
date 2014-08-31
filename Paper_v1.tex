@@ -88,7 +88,7 @@
 % Begin ...
 \begin{document}
 \begin{titlepage}
-{\par\centering\textbf{\Large Dynamic Modeling of Biochemical Networks using Effective Kinetic Models}}
+{\par\centering\textbf{\Large Dynamic Modeling of Cell-Free Biochemical Networks using Effective Kinetic Models}}
 \vspace{0.05in}
 {\par \centering \large{Joseph A. Wayman, Adithya Sagar and Jeffrey D. Varner$^{*}$}}
 \vspace{0.10in}
@@ -123,7 +123,7 @@
 \linenumbers
 
 \section*{Introduction}
-Biochemical processes are widely used in biotechnology to produce an array of products including commodity chemicals and protein therapeutics.
+Biological processes are widely used in industrially to produce an array of products from commodity chemicals and to high-value protein therapeutics.
 However, whole-cell processes share the central limitation of requiring cell growth, 
 which redirects resources away from product synthesis, and cell walls, which complicate interrogation and control of intracellular metabolic processes.
 On the other hand, cell-free metabolic systems offer many advantages over traditional in vivo production methods. 
@@ -426,7 +426,16 @@ but alternative feedback control structures for the first enzyme in the pathway.
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/Figure-7-ControlSearch.pdf}
-\caption{Combined control structure and kinetic parameter search results. Think about this ...}\label{fig-control-search}
+\caption{Combined control and kinetic parameter search using modified particle swarm optimization (PSO). 
+A population of N = 100 particles was initialized with randomized kinetic parameters and one of five possible control configurations (Network A - E).
+Simulation error was minimized for a synthetic data set 
+($S$, end-product P$_{1}$ and intermediate M$_5$ sampled approximately every 20 min) generated using Network A.
+\textbf{A}: Simulation error versus parameter set angle for N = 100 particles biased toward the correct regulatory program (A,B,C,D,E) = (40\%, 30\%, 10\%,10\% and 10\%).
+\textbf{B}: Simulation error versus parameter set angle for N = 100 uniformly distributed particles (A,B,C,D,E) = (20\%, 20\%, 20\%, 20\% and 20\%).
+\textbf{C}: Simulation error versus parameter set angle for N = 100 negatively biased particles (A,B,C,D,E) = (10\%, 10\%, 10\%, 30\% and 40\%).
+Network A (the correct structure) was preferentially identified for positively and uniform biased particle distributions, but misidentified in the presence of
+a large incorrect bias. 
+}\label{fig-control-search}
 \end{figure}
 
 \clearpage
@@ -434,7 +443,13 @@ but alternative feedback control structures for the first enzyme in the pathway.
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth,height=0.6\textheight]{./figs/Figure-8-Flux.pdf}
-\caption{Flux and control pattern for estimated model parameters and structures. }\label{fig-flux-pattern}
+\caption{Metabolic flux and control program output as a function of network type and parameter estimate.
+The population of particles from the modified particle swarm optimization strategy were sorted based upon simulation error. 
+The scaled metabolic flux and control variables governing the activity of $E_{1},E_{3}$ and $E_{6}$ were plotted for each particle in the swarm.
+\textbf{A}: Model performance for the N = 100 positively biased particles.
+\textbf{B}: Model performance for the N = 100 uniformly biased particles.
+\textbf{C}: Model performance for the N = 100 negatively biased particles.
+}\label{fig-flux-pattern}
 \end{figure}
 
 \clearpage
