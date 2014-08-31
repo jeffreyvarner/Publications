@@ -357,7 +357,11 @@ catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject t
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-2-ControlSchematic.pdf}
-\caption{Schematic of the rule based allosteric enzyme activity control laws. }\label{fig-control-schematic}
+\caption{Schematic of rule based allosteric enzyme activity control laws. 
+Traditional enzyme kinetic expressions e.g., Michaelis–Menten or multiple saturation kinetics are multiplied by an enzyme activity control variable $0 \leq v_{j} \leq 1 $. 
+Control variables are functions of many possible regulatory factors encoded by arbitrary functions of the form $0\leq f_{j}\left(\mathcal{Z}\right)\leq 1$.
+At each simulation time step, the $v_{j}$ variables are calculated by evaluating integration rules such as the max or min of the set of factors $f_{1},\hdots$ 
+influencing the activity of enzyme $E_{j}$. }\label{fig-control-schematic}
 \end{figure}
 
 \clearpage
@@ -366,8 +370,10 @@ catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject t
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-3-EnzymeKinetics.pdf}
 \caption{Kinetics of simple transformations in the presence of activation and inhibition. 
-A:The conversion of substrate $S$ to product $P$ by enzyme $E$ was activated by $S$. 
-B:The conversion of substrate $S$ to product $P$ by enzyme $E$ was inhibited by inhibitor $I$. 
+\textbf{A}:The conversion of substrate $S$ to product $P$ by enzyme $E$ was activated by $S$. 
+For a fixed control gain parameter $k_{control}$, the reaction rate approached a step for increasing control order $N$. 
+\textbf{B}:The conversion of substrate $S$ to product $P$ by enzyme $E$ with inhibitor $I$. 
+For a fixed control gain parameter $k_{control}$, the reaction rate approximated non-competitive inhibition for increasing control order $N$. 
 }\label{fig-kinetics-simulations}
 \end{figure}
 
@@ -375,10 +381,18 @@ B:The conversion of substrate $S$ to product $P$ by enzyme $E$ was inhibited by 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.55\textwidth]{./figs/Figure-4-OnOffSimulations.pdf}
-\caption{On/off control simulations for network A and network B for an ensemble of kinetic parameter sets versus time. 
-For each case, N = 100 simulations were conducted using kinetic and initial conditions randomly generated from a hypothetical true parameter set. 
-The gray area represents $\pm$ one standard deviation surrounding the mean. Control parameters were fixed during the ensemble calculations.}\label{fig-onoff-simulations}
+\includegraphics[width=0.50\textwidth]{./figs/Figure-4-OnOffSimulations.pdf}
+\caption{ON/OFF control simulations for network A and network B for an ensemble of kinetic parameter sets versus time (N = 100). 
+For each case, N = 100 simulations were conducted using kinetic and initial conditions generated randomly from a hypothetical true parameter set. 
+The gray area represents $\pm$ one standard deviation surrounding the mean. 
+Control parameters were fixed during the ensemble calculations.
+\textbf{A}: End-product P$_{1}$ abundance versus time for Network A. 
+The abundance of P$_{1}$ decreased with end-product inhibition of $E_{1}$ activity (Control-ON) versus the no inhibition case (Control-OFF). 
+\textbf{B}: End-product P$_{2}$ abundance versus time for Network B. Inhibition of branch point $E_{6}$ by end-product P$_{1}$ decreased P$_{2}$ abundance (Control-ON) versus the
+no inhibition case (Control-OFF).
+\textbf{C}: End-product P$_{1}$ abundance versus time for Network A. 
+Inhibition of branch point $E_{6}$ by end-product P$_{1}$ decreased P$_{1}$ abundance (Control-ON) versus the no inhibition case (Control-OFF).
+}\label{fig-onoff-simulations}
 \end{figure}
 
 \clearpage
@@ -386,7 +400,15 @@ The gray area represents $\pm$ one standard deviation surrounding the mean. Cont
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-5-ParameterFit.pdf}
-\caption{Parameter estimation from synthetic data for the same and mismatched allosteric control logic. }\label{fig-parameter-fit}
+\caption{Parameter estimation from synthetic data for the same and mismatched allosteric control logic using particle swarm optimization (PSO). 
+Synthetic experimental data was generated from a hypothetical parameter set using Network A, 
+where substrate $S$, end-product P$_{1}$ and intermediate M$_5$ were sampled approximately every 20 minutes. 
+For cases $\textbf{A,B}$ 20 particles were initialized with randomized parameters and allowed to search for 300 iterations. 
+\textbf{A,B}: PSO estimated an ensemble of parameters sets (N = 20) consistent with the synthetic experimental data assuming the correct
+enzymatic and control connectivity starting from randomized initial parameters.
+\textbf{C,D}: In the presence of control mismatch (Network B control policy simulated with Network A kinetic parameters) 
+the ensemble of models did not describe the synthetic data. 
+}\label{fig-parameter-fit}
 \end{figure}
 
 \clearpage
@@ -395,14 +417,15 @@ The gray area represents $\pm$ one standard deviation surrounding the mean. Cont
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-6-AlternativeNetworks.pdf}
 \caption{Schematic of the alternative allosteric control programs used in the structural particle swarm computation. 
-Each network had the same enzymatic connectivity, initial conditions and kinetic parameters, but alternative feedback control structures for the first enzyme in the pathway.}\label{fig-alternative-networks}
+Each network had the same enzymatic connectivity, initial conditions and kinetic parameters, 
+but alternative feedback control structures for the first enzyme in the pathway.}\label{fig-alternative-networks}
 \end{figure}
 
 \clearpage
 
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{./figs/Figure-7-ControlSearch.pdf}
+\includegraphics[width=0.5\textwidth]{./figs/Figure-7-ControlSearch.pdf}
 \caption{Combined control structure and kinetic parameter search results. Think about this ...}\label{fig-control-search}
 \end{figure}
 
