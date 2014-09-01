@@ -132,11 +132,13 @@ Shuler and coworkers generated many single cell kinetic models, including single
 Conversely, highly abstracted kinetic frameworks, such as the cybernetic framework, represented a paradigm shift, viewing cells as growth-optimizing strategists \citep{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}. 
 Cybernetic models have been highly successful at predicting metabolic choice behavior, e.g., diauxie behavior \citep{1986_kompala_ramkrishna_tsao_BiotechBioeng}, 
 steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, as well as the cellular response to metabolic engineering modifications \citep{1999_varner_ramkrishna_MetaEng}. 
+Unfortunately, cybernetic models also suffer from an identifiability challenge, as both the kinetic parameters and an abstracted model of cellular objectives must be estimated simultaneously. 
 
 In the post genomics world, large-scale stoichiometric reconstructions of microbial metabolism popularized by static, constraint-based modeling techniques such as flux balance analysis (FBA)
 have become standard tools \citep{2012_lewis_palsson_NatRevMicrobio}.
-The first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, 
-was quickly followed by many other organism models \citep{2009_feist_palsson_NatRevMicrobio}. 
+Since the first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, 
+well over 100 organisms, including industrially important prokaryotes such as \emph{E.~coli} \citep{Feist:2007aa} or \emph{B.~subtilis} \citep{Oh:2007aa}, 
+are now available \citep{2009_feist_palsson_NatRevMicrobio}.
 Stoichiometric models rely on a pseudo-steady-state assumption to reduce unidentifiable genome-scale kinetic models to an underdetermined linear algebraic system, 
 which can be solved efficiently even for large systems.  
 Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, 
@@ -144,10 +146,20 @@ instead opting to describe the choice of pathways by prescribing an objective fu
 Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \citep{2002_ibarra_edwards_palsson_Nat}, 
 although other metabolic objectives have also been estimated \citep{2007_schuetz_sauer_MolSysBio}. 
 Recent advances in constraints based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \citep{2013_hyduke_lewis_palsson_MolBioSys}.
-Thus, modern constraints based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
+Thus, modern constraints based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}. However, genome scale kinetic models of industrial important organisms such as \textit{E~coli} have yet to
+be constructed.
 
-Cell free systems offer unique advantages to study and model microbial metabolism when compared to traditional whole cell processes.
-[FINISH ME].
+Cell free systems offer many advantages for the study and modeling of metabolism when compared to traditional \textit{in~vivo} processes.
+Central amongst these advantages, is direct access to the microbial biosynthetic machinery without the interference of a cell wall. 
+This allows us to control as well as interrogate the chemical environment while the biosynthetic machinery is operating, potentially at a fine time resolution.
+Second, it also allows us to study biological processes without the complications of cell growth that would normally occur with \textit{in~vivo} processes.
+Cell free protein synthesis (CFPS) systems are arguably the most prominent examples of cell free biology in use today \citep{Jewett:2008aa}.
+However, CFPS is not a new idea; CFPS in crude \emph{E.~coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \citep{MATTHAEI:1961aa,NIRENBERG:1961aa}. 
+Today, cell free systems are used in a variety of applications ranging therapeutic protein production \citep{Lu:2014aa} to synthetic biology \citep{Hodgman:2012aa}. 
+Many of the challenges to whole-genome kinetic modeling are overcome in a cell-free system. 
+For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth. 
+In this case, whole cell dynamic metabolic models may be possible for important organisms such as \emph{E.~coli.} 
+Thus, cell-free operation holds several significant advantages for model development, identification and validation.
 
 In this study, we present an effective biochemical network modeling framework for building dynamic metabolic models.
 The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulation, with traditional kinetic pathway modeling.

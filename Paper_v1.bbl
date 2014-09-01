@@ -84,6 +84,20 @@ Edwards JS, Palsson BO (2000) The escherichia coli mg1655 in silico metabolic
 \newblock Proc Natl Acad Sci U S A 97: 5528-33.
 \bibAnnoteFile{2000_edwards_palsson_PNAS}
 
+\bibitem{Feist:2007aa}
+Feist AM, Henry CS, Reed JL, Krummenacker M, Joyce AR, et~al. (2007) A
+  genome-scale metabolic reconstruction for escherichia coli k-12 mg1655 that
+  accounts for 1260 orfs and thermodynamic information.
+\newblock Mol Syst Biol 3: 121.
+\bibAnnoteFile{Feist:2007aa}
+
+\bibitem{Oh:2007aa}
+Oh YK, Palsson BO, Park SM, Schilling CH, Mahadevan R (2007) Genome-scale
+  reconstruction of metabolic network in bacillus subtilis based on
+  high-throughput phenotyping and gene essentiality data.
+\newblock J Biol Chem 282: 28791-9.
+\bibAnnoteFile{Oh:2007aa}
+
 \bibitem{2009_feist_palsson_NatRevMicrobio}
 Feist AM, Herrg{\aa}rd MJ, Thiele I, Reed JL, Palsson B{\O} (2009)
   Reconstruction of biochemical networks in microorganisms.
@@ -119,6 +133,37 @@ Zomorrodi AR, Suthers PF, Ranganathan S, Maranas CD (2012) Mathematical
   optimization applications in metabolic networks.
 \newblock Metab Eng 14: 672-86.
 \bibAnnoteFile{2012_zomorrodi_maranas_MetaEng}
+
+\bibitem{Jewett:2008aa}
+Jewett MC, Calhoun KA, Voloshin A, Wuu JJ, Swartz JR (2008) An integrated
+  cell-free metabolic platform for protein production and synthetic biology.
+\newblock Mol Syst Biol 4: 220.
+\bibAnnoteFile{Jewett:2008aa}
+
+\bibitem{MATTHAEI:1961aa}
+MATTHAEI JH, NIRENBERG MW (1961) Characteristics and stabilization of
+  dnaase-sensitive protein synthesis in e. coli extracts.
+\newblock Proc Natl Acad Sci U S A 47: 1580-8.
+\bibAnnoteFile{MATTHAEI:1961aa}
+
+\bibitem{NIRENBERG:1961aa}
+NIRENBERG MW, MATTHAEI JH (1961) The dependence of cell-free protein synthesis
+  in e. coli upon naturally occurring or synthetic polyribonucleotides.
+\newblock Proc Natl Acad Sci U S A 47: 1588-602.
+\bibAnnoteFile{NIRENBERG:1961aa}
+
+\bibitem{Lu:2014aa}
+Lu Y, Welsh JP, Swartz JR (2014) Production and stabilization of the trimeric
+  influenza hemagglutinin stem domain for potentially broadly protective
+  influenza vaccines.
+\newblock Proc Natl Acad Sci U S A 111: 125-30.
+\bibAnnoteFile{Lu:2014aa}
+
+\bibitem{Hodgman:2012aa}
+Hodgman CE, Jewett MC (2012) Cell-free synthetic biology: thinking outside the
+  cell.
+\newblock Metab Eng 14: 261-9.
+\bibAnnoteFile{Hodgman:2012aa}
 
 \bibitem{Morris:2011aa}
 Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
