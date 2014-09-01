@@ -1,0 +1,10 @@
+Biological processes are widely used in industrially to produce an array of products from commodity chemicals and to high-value protein therapeutics.
+However, whole-cell processes share the central limitation of requiring cell growth, 
+which redirects resources away from product synthesis, and cell walls, which complicate interrogation and control of intracellular metabolic processes.
+On the other hand, cell-free metabolic systems offer many advantages over traditional in vivo production methods. 
+For example, cell-free systems can direct scarce metabolic resources exclusively towards a single product of interest. 
+Moreover, with no cell wall, cell free systems can more easily be interrogated, and substrates of the metabolite processes directly controlled.
+Cell free production offers the unique opportunity to study metabolism without the complication of cell growth and gene expression processes.
+For modeling, this implies that we need only consider allosteric regulation of enzyme activity when building and testing cell free metabolic models.
+Of course, modeling allosteric mechanisms is itself a difficult problem when the model is at a whole genome scale. To address this problem, we have developed a
+an approach based upon the constrained fuzzy logic framework of Morris and Lauffenburger [REFHERE].

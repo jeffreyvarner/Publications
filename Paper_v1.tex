@@ -123,19 +123,47 @@
 \linenumbers
 
 \section*{Introduction}
-Biological processes are widely used in industrially to produce an array of products from commodity chemicals and to high-value protein therapeutics.
-However, whole-cell processes share the central limitation of requiring cell growth, 
-which redirects resources away from product synthesis, and cell walls, which complicate interrogation and control of intracellular metabolic processes.
-On the other hand, cell-free metabolic systems offer many advantages over traditional in vivo production methods. 
-For example, cell-free systems can direct scarce metabolic resources exclusively towards a single product of interest. 
-Moreover, with no cell wall, cell free systems can more easily be interrogated, and substrates of the metabolite processes directly controlled.
-Cell free production offers the unique opportunity to study metabolism without the complication of cell growth and gene expression processes.
-For modeling, this implies that we need only consider allosteric regulation of enzyme activity when building and testing cell free metabolic models.
-Of course, modeling allosteric mechanisms is itself a difficult problem when the model is at a whole genome scale. To address this problem, we have developed a
-an approach based upon the constrained fuzzy logic framework of Morris and Lauffenburger [REFHERE].
+Mathematical modeling has long contributed to our understanding of metabolism. 
+Decades before the genomics revolution, mechanistically, structured metabolic models arose from the desire to predict microbial phenotypes resulting from 
+changes in intracellular or extracellular states \citep{1976_fredrickson_BiotechBioeng}. 
+The single cell \textit{E. coli} models of Shuler and coworkers pioneered the construction of large-scale, dynamic metabolic models that incorporated multiple, regulated catabolic and anabolic 
+pathways constrained by experimentally determined kinetic parameters \citep{1984_domach_shuler_BiotechBioeng_01}. 
+Shuler and coworkers generated many single cell kinetic models, including single cell models of eukaryotes \citep{1989_steinmeyer_shuler_ChemEngSci,1992_wu_shuler_AnnNYAcadSci}, minimal cell architectures \citep{2004_castellanos_shuler_PNAS}, as well as DNA sequence based whole-cell models of \textit{E. coli} \citep{2008_atlas_shuler_IETSysBio}.
+Conversely, highly abstracted kinetic frameworks, such as the cybernetic framework, represented a paradigm shift, viewing cells as growth-optimizing strategists \citep{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}. 
+Cybernetic models have been highly successful at predicting metabolic choice behavior, e.g., diauxie behavior \citep{1986_kompala_ramkrishna_tsao_BiotechBioeng}, 
+steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, as well as the cellular response to metabolic engineering modifications \citep{1999_varner_ramkrishna_MetaEng}. 
 
-In this study, we present an effective biochemical network modeling framework that integrates classical kinetic modeling with rules based approaches.
-[FINISH ME]
+In the post genomics world, large-scale stoichiometric reconstructions of microbial metabolism popularized by static, constraint-based modeling techniques such as flux balance analysis (FBA)
+have become standard tools \citep{2012_lewis_palsson_NatRevMicrobio}.
+The first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, 
+was quickly followed by many other organism models \citep{2009_feist_palsson_NatRevMicrobio}. 
+Stoichiometric models rely on a pseudo-steady-state assumption to reduce unidentifiable genome-scale kinetic models to an underdetermined linear algebraic system, 
+which can be solved efficiently even for large systems.  
+Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, 
+instead opting to describe the choice of pathways by prescribing an objective function on metabolism. 
+Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \citep{2002_ibarra_edwards_palsson_Nat}, 
+although other metabolic objectives have also been estimated \citep{2007_schuetz_sauer_MolSysBio}. 
+Recent advances in constraints based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \citep{2013_hyduke_lewis_palsson_MolBioSys}.
+Thus, modern constraints based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}.
+
+Cell free systems offer unique advantages to study and model microbial metabolism when compared to traditional whole cell processes.
+[FINISH ME].
+
+In this study, we present an effective biochemical network modeling framework for building dynamic metabolic models.
+The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulation, with traditional kinetic pathway modeling.
+This integration allows the description of complex regulatory interactions, such as time-dependent allosteric regulation of enzyme activity, in the absence of specific mechanistic information.
+Moreover, the rules are easy to understand, easy to formulate 
+and do not rely on overarching theoretical abstractions, or restrictive assumptions.
+We tested our approach by modeling the time evolution of hypothetical cell free metabolic networks. 
+In particular, we tested whether our effective modeling approach could describe classically expected behavior, 
+and second whether we could simultaneously estimate kinetic parameters and regulatory connectivity, in the absence of specific mechanistic knowledge, 
+from synthetic experimental data. Toward these questions, we explored five hypothetical cell-free networks. 
+Each network shared the same enzymatic connectivity, but had different allosteric regulatory connectivity. 
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions,
+captured complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of specific mechanistic information. 
+Moreover, when integrated into network models, these rules captured classical regulatory patterns such as product induced feedback inhibition. 
+Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a
+modified particle swarm approach. While only a proof-of-concept, [FINISH ME].
 
 \clearpage
 
@@ -203,13 +231,14 @@ For metabolic processes, there is also the added challenge of identifying the re
 Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which
 in turn depends upon the kinetic parameters. For cell free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
 We explored this linkage by estimating model parameters from synthetic data using both network
-structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate $M_{5}$ and end-product $P_1$ approximately every 20 min using
+structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate M$_{5}$ and end-product P$_1$ approximately every 20 min using
 network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm
-optimization, starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
+optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
 PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations 
 when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).
 However, with control mismatch (network B simulated with network A parameters), the model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
-
+Taken together, these results suggested that we could perhaps simultaneously estimate both parameters and network control architectures, as incorrect control structures 
+would be manifest as poor model fits.
 
 We modified our particle swarm identification strategy to simultaneously search over both kinetic parameters and putative control structures.
 In addition to our initial networks, we constructed three additional presumptive network models, each with the same enzymatic connectivity but different allosteric 
@@ -222,39 +251,54 @@ two mixed distributions that were either positively or negatively biased towards
 In both the positively biased, and uniform cases the particle swarm clearly differentiated between the true or closely related structures and those that were materially different (Fig. \ref{fig-control-search}).  As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially identified (Fig. \ref{fig-control-search}A). 
 On the other hand, when given a uniform distribution, 
 the PSO approach identified a combination of network A and network C as the most likely control structures (Fig. \ref{fig-control-search}B).
-Network A and C differ by the regulatory connection between the end-product P$_2$ and enzyme $E_{1}$; in network A end-product P$_{2}$ was assumed to inhibit $E_{1}$ while in network C end-product P$_{2}$ activated $E_{1}$.  Lastly, when the initial population was biased towards a completely incorrect structure (initial population seeded with 40\% network B), 
+Network A and C differ by the regulatory connection between the end-product P$_2$ and enzyme $E_{1}$; in network A end-product P$_{2}$ was assumed to inhibit $E_{1}$ while in network C end-product P$_{2}$ activated $E_{1}$.  Lastly, when the initial population was biased towards a incorrect structures (initial population seeded with 90\% incorrect structures), 
 the particle swarm \textit{misidentified} the correct allosteric structure (Fig. \ref{fig-control-search}C). 
-Interestingly, each particle swarm identified parameter sets and model structures that minimized the simulation error. 
-However, the estimated parameter values were not necessarily similar to the true parameters; the angle between the estimated and true parameters was not consistently small. 
-This suggested that the particle swarm approach identified a \textit{sloppy} ensemble, i.e., parameter estimates were individually incorrect but collectively exhibited the correct 
-model behavior.  
+Interestingly, while each particle swarm identified parameter sets that minimized the simulation error, the estimated parameter values were not necessarily similar to the true parameters. 
+The angle between the estimated and true parameters was not consistently small across the swarms (identical parameters would give an angle of zero). 
+This suggested that our particle swarm approach identified a \textit{sloppy} ensemble, i.e., 
+parameter estimates that were individually incorrect but collectively exhibited the correct model behavior.  
 
 We calculated control program output and scaled metabolic flux for the positively, uniformly and negatively biased particle swarms (Fig. \ref{fig-flux-pattern}).
 Network A and network C models from the positively (Fig. \ref{fig-flux-pattern}A) and uniformly (Fig. \ref{fig-flux-pattern}B) 
-biased particle swarms showed similar operational patterns, despite differences in the kinetic parameters and control structures. 
-In all cases, irregardless of network configuration or parameter values, the rate of enzyme decay was small compared to the other fluxes. 
-Consistent with the correct model structure, production of end-product P$_1$ was the preferred branch. 
-High flux through this branch resulted in significant end product inhibition of $E_{1}$ in both network A and network C, when compared to network B,D and E.
-Interestingly, the behavior of network A was degenerate in the presence of high P$_{1}$ production; 
-positive or negative feedback connections from P$_2$ to $E_{1}$ were ignored because of our choice of integration rule (max). 
-Thus, while theoretically distinct, network A and network C were operationally similar.
+biased particle swarms showed similar operational patterns, despite differences in kinetic parameters and control structures.
+While models from the negatively biased population had error values similar to the correct structures in the previous swarms,
+they have different flux and control profiles (Fig. \ref{fig-flux-pattern}C). 
+In all cases, irregardless of network configuration or parameter values, the rate of enzyme decay was small compared to the other fluxes,
+and all networks had qualitatively similar trends for $E_{3}$ and $E_{6}$ control.
+Moreover, consistent with the correct model structure, production of end-product P$_1$ was the preferred branch for all model configurations.
+However, there was variability in P$_{2}$ production flux across the population of models, especially for the uniform swarm when compared with the other cases.
+High P$_{1}$ branch flux resulted in end product inhibition of $E_{1}$ in both network A and network C, however in network D and E high P$_1$ flux induced $E_1$ activation. 
+These trends were manifested in different flux profiles, where the negatively biased population appeared more uniform across the population compared with the other swarms, and
+had higher $E_{1}$ specific activity. 
+Interestingly, the behavior of network A and network C highlighted an artifact of our integration rule; 
+both a positive or negative feedback connection from P$_2$ to $E_{1}$ were ignored because the P$_{1}$ inhibition of $E_{1}$ was dominate.  
+Thus, while theoretically distinct, network A and network C appeared operationally to the PSO algorithm to be that same network.
 On the other hand, networks B, D and E showed distinct behavior that was not consistent with the true network.  
-These architectures exhibited either limited inhibition (network B) or activation (network D and E) of $E_{1}$ activity, resulting a significantly different
-metabolic flux profile. Taken together ... [FINISH ME].
+These architectures exhibited either limited inhibition (network B) or activation (network D and E) of $E_{1}$ activity, resulting in significantly different
+metabolic flux profiles. However, the PSO was able to find low error parameter solutions, despite the mismatch in the control structures.
+Taken together, these results suggested that a uniform sampling approach could potentially yield an unbiassed estimate of both kinetic parameters control structures. 
 
 \clearpage
 
 \section*{Discussion}
-In this study, we proposed a effective modeling strategy to dynamically simulate cell free metabolic networks. 
-We tested this strategy using two proof of concept metabolic networks.
-In both networks, substrate $S$ was converted to the end-products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, 
-including a branch point at hypothetical metabolite $M_{2}$. While both networks had the same enzymatic connectivity, that had differing control structures.
-[FINISH]
+In this study, we presented an effective kinetic modeling strategy to dynamically simulate biochemical networks. 
+Our proposed strategy integrated traditional kinetic modeling with an effective rules based approach to dynamically describe metabolic regulation and control.
+We tested this approach by developing kinetic models of hypothetical cell free metabolic networks. 
+In particular, we tested whether our effective modeling approach could describe classically expected behavior, 
+and second whether we could simultaneously estimate kinetic parameters and regulatory connectivity, in the absence of specific mechanistic knowledge, 
+from synthetic experimental data. Toward these questions, we explored five hypothetical cell-free networks. In each network, a
+substrate S was converted to the end-products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, 
+including a branch point at a hypothetical metabolite M$_{2}$. Each network also included the same cofactors and cofactor recycle architecture. 
+However, while all five networks shared the same enzymatic connectivity, each had different allosteric regulatory connectivity. 
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions, could
+capture complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of specific mechanistic information. 
+Moreover, when integrated into network models, these rules captured classical regulatory patterns such as product induced feedback inhibition. 
+Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a
+modified particle swarm approach.
 
-Cybernetic models, other dynamic models of metabolism. 
+
 
 While the results of this study were encouraging, there are several critical next steps that must be accomplished before we can model genome scale cell free metabolic networks.
-[FINISH]
 
 \clearpage
 
@@ -446,9 +490,9 @@ but alternative feedback control structures for the first enzyme in the pathway.
 A population of N = 100 particles was initialized with randomized kinetic parameters and one of five possible control configurations (Network A - E).
 Simulation error was minimized for a synthetic data set 
 ($S$, end-product P$_{1}$ and intermediate M$_5$ sampled approximately every 20 min) generated using Network A.
-\textbf{A}: Simulation error versus parameter set angle for N = 100 particles biased toward the correct regulatory program (A,B,C,D,E) = (40\%, 30\%, 10\%,10\% and 10\%).
+\textbf{A}: Simulation error versus parameter set angle for N = 100 particles biased toward the correct regulatory program (A,B,C,D,E) = (40\%, 10\%, 20\%, 20\% and 10\%).
 \textbf{B}: Simulation error versus parameter set angle for N = 100 uniformly distributed particles (A,B,C,D,E) = (20\%, 20\%, 20\%, 20\% and 20\%).
-\textbf{C}: Simulation error versus parameter set angle for N = 100 negatively biased particles (A,B,C,D,E) = (10\%, 10\%, 10\%, 30\% and 40\%).
+\textbf{C}: Simulation error versus parameter set angle for N = 100 negatively biased particles (A,B,C,D,E) = (10\%, 40\%, 10\%, 20\% and 20\%).
 Network A (the correct structure) was preferentially identified for positively and uniform biased particle distributions, but misidentified in the presence of
 a large incorrect bias. 
 }\label{fig-control-search}
