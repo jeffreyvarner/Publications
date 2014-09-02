@@ -113,6 +113,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
+Cell free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in~vivo} processes.
+Many of the challenges confronting genome scale kinetic modeling can potentially be overcome in a cell free system. 
+For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth. 
+Thus, cell free operation holds several significant advantages for model development, identification and validation.
+Theoretically, genome scale cell free kinetic models may be possible for industrially important organisms such as \emph{E.~coli}, 
+if a simple, tractable framework for integrating allosteric regulation with enzyme kinetics can be formulated. 
+Toward this unmet need, we present an effective biochemical network modeling framework for building dynamic cell free metabolic models.
+The key innovation of our approach is the integration of simple effective rules encoding complex allosteric regulation, with traditional kinetic pathway modeling.
+We tested our approach by modeling the time evolution of several hypothetical cell free metabolic networks.
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions,
+captured complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of mechanistic information. 
+Second, when integrated into network models, these rules captured classic regulatory patterns such as product induced feedback inhibition. 
+Lastly, we showed, at least for the network architectures considered here, that we could 
+simultaneously estimate kinetic parameters and allosteric connectivity from synthetic data.
+While only an initial proof-of-concept, the framework presented here could be an important first step toward genome scale cell free kinetic modeling of the biosynthetic capacity 
+of industrially important organisms.
 
 {\noindent \textbf{Keywords:}~Cell free metabolism, Mathematical modeling}
 
@@ -149,93 +165,99 @@ Recent advances in constraints based modeling have overcome the early shortcomin
 Thus, modern constraints based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}. However, genome scale kinetic models of industrial important organisms such as \textit{E~coli} have yet to
 be constructed.
 
-Cell free systems offer many advantages for the study and modeling of metabolism when compared to traditional \textit{in~vivo} processes.
-Central amongst these advantages, is direct access to the microbial biosynthetic machinery without the interference of a cell wall. 
+Cell free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in~vivo} processes.
+Central amongst these advantages, is direct access to metabolites and the microbial biosynthetic machinery without the interference of a cell wall. 
 This allows us to control as well as interrogate the chemical environment while the biosynthetic machinery is operating, potentially at a fine time resolution.
-Second, it also allows us to study biological processes without the complications of cell growth that would normally occur with \textit{in~vivo} processes.
-Cell free protein synthesis (CFPS) systems are arguably the most prominent examples of cell free biology in use today \citep{Jewett:2008aa}.
-However, CFPS is not a new idea; CFPS in crude \emph{E.~coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \citep{MATTHAEI:1961aa,NIRENBERG:1961aa}. 
+Second, cell free systems also allow us to study biological processes without the complications associated with cell growth.
+Cell free protein synthesis (CFPS) systems are arguably the most prominent examples of cell free systems used today \citep{Jewett:2008aa}.
+However, CFPS is not new; CFPS in crude \emph{E.~coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \citep{MATTHAEI:1961aa,NIRENBERG:1961aa}. 
 Today, cell free systems are used in a variety of applications ranging therapeutic protein production \citep{Lu:2014aa} to synthetic biology \citep{Hodgman:2012aa}. 
-Many of the challenges to whole-genome kinetic modeling are overcome in a cell-free system. 
+Interestingly, many of the challenges confronting genome scale kinetic modeling can potentially be overcome in a cell free system. 
 For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth. 
-In this case, whole cell dynamic metabolic models may be possible for important organisms such as \emph{E.~coli.} 
-Thus, cell-free operation holds several significant advantages for model development, identification and validation.
+Thus, cell free operation holds several significant advantages for model development, identification and validation.
+Theoretically, genome scale cell free kinetic models may be possible for industrially important organisms such as \emph{E.~coli}, 
+if a simple, tractable framework for integrating allosteric regulation with enzyme kinetics can be formulated.   
 
-In this study, we present an effective biochemical network modeling framework for building dynamic metabolic models.
+In this study, we present an effective biochemical network modeling framework for building dynamic cell free metabolic models.
 The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulation, with traditional kinetic pathway modeling.
 This integration allows the description of complex regulatory interactions, such as time-dependent allosteric regulation of enzyme activity, in the absence of specific mechanistic information.
-Moreover, the rules are easy to understand, easy to formulate 
+The regulatory rules are easy to understand, easy to formulate 
 and do not rely on overarching theoretical abstractions, or restrictive assumptions.
-We tested our approach by modeling the time evolution of hypothetical cell free metabolic networks. 
-In particular, we tested whether our effective modeling approach could describe classically expected behavior, 
+We tested our approach by modeling the time evolution of several hypothetical cell free metabolic networks. 
+In particular, we tested whether our effective modeling approach could describe classically expected enzyme kinetic behavior, 
 and second whether we could simultaneously estimate kinetic parameters and regulatory connectivity, in the absence of specific mechanistic knowledge, 
 from synthetic experimental data. Toward these questions, we explored five hypothetical cell-free networks. 
 Each network shared the same enzymatic connectivity, but had different allosteric regulatory connectivity. 
 We found that simple effective rules, when integrated with traditional enzyme kinetic expressions,
-captured complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of specific mechanistic information. 
-Moreover, when integrated into network models, these rules captured classical regulatory patterns such as product induced feedback inhibition. 
-Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a
-modified particle swarm approach. While only a proof-of-concept, [FINISH ME].
+captured complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of mechanistic information. 
+Second, when integrated into network models, these rules captured classical regulatory patterns such as product induced feedback inhibition. 
+Lastly, we showed, at least for the network architectures considered here, that we could 
+simultaneously estimate kinetic parameters and allosteric connectivity from synthetic data.
+While only an initial proof-of-concept, the framework presented here could be an important first step toward genome scale cell free kinetic modeling of the biosynthetic capacity 
+of industrially important organisms such as \emph{E.~coli} or \emph{B.~subtilis}.
 
 \clearpage
 
 \section*{Results}
 
-\subsection*{Formulation and properties of cell free effective models.}
+\subsection*{Formulation and properties of effective cell free metabolic models.}
 We developed two proof-of-concept metabolic networks to investigate the features of our effective biochemical network modeling approach (Fig. \ref{fig-networks}).
 In both examples, substrate S was converted to the end-products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, 
-including a branch point at hypothetical metabolite $M_{2}$. 
-Several of these reactions involved cofactor dependence ($AH$ or $A$), and various allosteric regulation mechanisms. 
+including a branch point at hypothetical metabolite M$_{2}$. 
+Several of these reactions involved cofactor dependence (AH or A), and various allosteric regulatory mechanisms modified the activity of pathway enzymes. 
 Network A included feedback inhibition of the initial pathway enzyme ($E_{1}$) by pathway end products P$_{1}$ and P$_{2}$ (Fig. \ref{fig-networks}A).
 On the other hand, network B involved feedback inhibition of $E_{1}$ by P$_{2}$ and $E_{6}$ by P$_{1}$ (Fig. \ref{fig-networks}B). 
-In both networks, branch point enzymes $E_{3}$ and $E_{6}$ were subject to feed-forward activation by cofactor $AH$.
-Lastly, enzyme activity was assumed to decay according to a first-order rate law in both cases. 
-Allosteric regulation of enzyme activity was represented using a novel rule-based strategy, similar in spirit to the 
-Constrained Fuzzy Logic (cFL) approach of Lauffenberger and coworkers \citep{Morris:2011aa}. 
-In this formulation, Hill-like transfer functions were used to calculate the influence of metabolite abundance upon target enzyme activity. 
-When an enzyme was potentially sensitive to more than one regulatory influence, logical rules were used to select which transfer function regulated enzyme 
-activity at any given time (Fig. \ref{fig-control-schematic}).      
-Thus, our test networks involved important features such as cofactor recycling, enzyme activity and metabolite dynamics, 
+In both networks, branch point enzymes $E_{3}$ and $E_{6}$ were subject to feed-forward activation by reduced cofactor AH.
+Lastly, it is known experimentally that cell free systems have a finite 
+operational lifespan. Loss of biosynthetic capability could be a function of many factors e.g., cofactor or metabolite 
+limitations. However, we modeled the loss of biosynthetic capability as a non-specific first-order decay of enzyme activity.
+
+Allosteric regulation of enzyme activity was modeled by combining individual regulatory contributions to
+the activity of pathway enzymes into a control coefficient using an integration rule (Fig. \ref{fig-control-schematic}).  
+This strategy is similar in spirit to the Constrained Fuzzy Logic (cFL) approach of Lauffenburger 
+and coworkers which has been used to effectively model signal transduction pathways important in human health \citep{Morris:2011aa}.
+In our formulation, Hill-like transfer functions $0 \leq f\left(\mathcal{Z}\right) \leq 1$ were used to calculate the influence of factor abundance upon target enzyme activity. 
+In this context, factors can be individual metabolite levels, or some function e.g., the product of metabolite levels. However, more generally factors can also 
+correspond to non-modeled influences, categorial variables or other abstract quantities. 
+In the current study, we simply let $\mathcal{Z}$ correspond to the abundance of individual metabolites. 
+When an enzyme was potentially sensitive to more than one regulatory input, logical integration rules were used to select which regulatory transfer function influenced enzyme 
+activity at any given time. Thus, our test networks involved important features such as cofactor recycling, enzyme activity and metabolite dynamics, 
 as well as multiple overlapping allosteric regulatory mechanisms.  
-As such, developing our effective modeling approach using these simple problems gave us valuable insight into the development of larger network models, 
-without the complication of network size. 
 
 The rule based regulatory strategy approximated the behavior of classical allosteric activation and inhibition mechanisms (Fig. \ref{fig-kinetics-simulations}).  
+We considered the enzyme catalyzed conversion of substrate S to a product P, where the overall reaction rate was modeled as the product of a Michaelis-Menten term and an effective 
+allosteric control variable reflecting the particular regulatory interaction.
 We first explored feed-forward substrate activation of enzyme activity (for both positive and negative cooperativity). 
 Consistent with classical data, the rule based strategy predicted a sigmoidal relationship between substrate abundance 
 and reaction rate as a function of the cooperativity parameter (Fig. \ref{fig-kinetics-simulations}A). 
 For cooperativity parameters less than unity, increased substrate abundance \textit{decreased} the reaction rate. This was consistent with the idea that
-substrate binding \textit{decreases} at regulatory sites negatively impacts the ability of the enzyme to bind substrate at the active site. 
-On the other hand, as the cooperativity parameter increased past unity, the rate of conversion of substrate $S$ to product $P$ by enzyme $E$ approached a step function.
+substrate binding \textit{decreased} at regulatory sites, which negatively impacted substrate binding at the active site. 
+On the other hand, as the cooperativity parameter increased past unity, the rate of conversion of substrate S to product P by enzyme $E$ approached a step function.
 In the presence of an inhibitor, the rule based strategy predicted non-competitive like behavior as a function of the 
 cooperativity parameter (Fig. \ref{fig-kinetics-simulations}B). 
 When the control gain parameter, $\kappa_{ij}$ in Eqn. \eqref{eqn:control-factor}, was greater than unity, the inhibitory force was
 directly proportional to the cooperativity parameter, $\eta$ in Eqn. \eqref{eqn:control-factor}. 
-Thus, as the cooperativity parameter increased, the maximum reaction rate decreased (Fig. \ref{fig-kinetics-simulations}B, orange).
-However, when the gain parameter was less than unity, enzyme inhibition increased with \textit{decreasing} cooperativity, 
-i.e., smaller $\eta$ yielded increased inhibition (Fig. \ref{fig-kinetics-simulations}B).
+Thus, as the cooperativity parameter increased, the maximum reaction rate decreased (Fig. \ref{fig-kinetics-simulations}B).
 Interestingly, our rule based approach was unable to directly simulate competitive inhibition of enzyme activity. 
-For competitive inhibitors, the kinetic component of our rate, $\bar{r}_{j}$ in \eqref{eqn:rate-factor}, could be modified to account 
-for the inhibition (data not shown). 
 Taken together, the rule based strategy captured classical regulatory patterns for both enzyme activation and inhibition. 
 Thus, we are able to model complex kinetic phenomena such as ultrasensitivity, despite an effective description of reaction kinetics. 
     
-End product yield was controlled by feedback inhibition, while selectivity was controlled by branch point enzyme inhibition (Fig. \ref{fig-onoff-simulations}).
+End product yield was controlled by feedback inhibition, while product selectivity was controlled by branch point enzyme inhibition (Fig. \ref{fig-onoff-simulations}).
 A critical test of our modeling approach was to simulate networks with known behavior. If we cannot reproduce the expected behavior of simple networks, then our
-effect modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for large scale problems.
-We considered two cases,  control on/off, for each network configuration. 
+effective modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for genome scale cell free problems.
+We considered two cases,  control ON/OFF, for each network configuration. 
 Each of these cases had identical kinetic parameters and initial conditions; 
 the \textit{only} differences between the cases was the allosteric regulation rules, and the control parameters associated with these rules. 
-As expected, end product accumulation was larger for network A when the control was off (no feedback inhibition of $E_{1}$ by P$_{1}$ and P$_{2}$),
-as compared to the on case (Fig. \ref{fig-onoff-simulations}A). We found this behavior was robust to the choice of underlying kinetic parameters, 
-as we observed that same qualitative response across an ensemble of randomized parameter sets (N = 100). 
-The control on/off response of network B was more subtle. In the off case, the behavior was qualitatively similar to network A. 
-However, for the on case, flux was diverted away from P$_{2}$ formation by feedback inhibition of $E_{6}$ activity at the M$_{2}$ branch point by P$_{1}$ (Fig. \ref{fig-onoff-simulations}B).
+As expected, end product accumulation was larger for network A when the control was OFF (no feedback inhibition of $E_{1}$ by P$_{1}$ and P$_{2}$),
+as compared to the ON case (Fig. \ref{fig-onoff-simulations}A). We found this behavior was robust to the choice of underlying kinetic parameters, 
+as we observed that same qualitative response across an ensemble of randomized parameter sets (N = 100), for fixed control parameters.
+The control ON/OFF response of network B was more subtle. In the OFF case, the behavior was qualitatively similar to network A. 
+However, for the ON case, flux was diverted away from P$_{2}$ formation by feedback inhibition of $E_{6}$ activity at the M$_{2}$ branch point by P$_{1}$ (Fig. \ref{fig-onoff-simulations}B).
 Lower $E_{6}$ activity at the M$_{2}$ branch point allowed more flux toward P$_{1}$ formation, hence the yield of P$_{1}$ also increased (Fig. \ref{fig-onoff-simulations}C).
-Again, the control on/off behavior was robust to changes kinetic parameters, as the same qualitative trend was conserved across 
-an ensemble of randomized parameters (N = 100). Taken together, these simulations suggested that the rule based allosteric control 
-concept could robustly capture expected feedback behavior.
-
+Again, the control ON/OFF behavior of network B was robust to changes kinetic parameters, as the same qualitative trend was conserved across 
+an ensemble of randomized parameters (N = 100), for fixed control parameters. 
+Taken together, these simulations suggested that the rule based allosteric control concept could robustly capture expected feedback behavior for networks with uncertain
+kinetic parameters.
 
 \subsection*{Estimating parameters and effective allosteric regulatory structures.}
 A critical challenge for any dynamic model is the estimation of kinetic parameters. 
@@ -243,12 +265,12 @@ For metabolic processes, there is also the added challenge of identifying the re
 Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which
 in turn depends upon the kinetic parameters. For cell free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
 We explored this linkage by estimating model parameters from synthetic data using both network
-structures. We generated noise-corrupted synthetic measurements of the substrate $S$, intermediate M$_{5}$ and end-product P$_1$ approximately every 20 min using
+structures. We generated noise corrupted synthetic measurements of the substrate S, intermediate M$_{5}$ and end-product P$_1$ approximately every 20 min using
 network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm
 optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}).
 PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations 
 when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B).
-However, with control mismatch (network B simulated with network A parameters), the model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
+However, with control mismatch (network B simulated with network A parameters), model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
 Taken together, these results suggested that we could perhaps simultaneously estimate both parameters and network control architectures, as incorrect control structures 
 would be manifest as poor model fits.
 
@@ -293,7 +315,7 @@ Taken together, these results suggested that a uniform sampling approach could p
 \clearpage
 
 \section*{Discussion}
-In this study, we presented an effective kinetic modeling strategy to dynamically simulate biochemical networks. 
+In this study, we presented an effective kinetic modeling strategy to dynamically simulate cell free biochemical networks. 
 Our proposed strategy integrated traditional kinetic modeling with an effective rules based approach to dynamically describe metabolic regulation and control.
 We tested this approach by developing kinetic models of hypothetical cell free metabolic networks. 
 In particular, we tested whether our effective modeling approach could describe classically expected behavior, 
@@ -308,9 +330,10 @@ Moreover, when integrated into network models, these rules captured classical re
 Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a
 modified particle swarm approach.
 
-
+[CONTRAST WITH CYBERNETIC MODELS].
 
 While the results of this study were encouraging, there are several critical next steps that must be accomplished before we can model genome scale cell free metabolic networks.
+[FINISH ME]
 
 \clearpage
 

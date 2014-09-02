@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 SEP 2014 17:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 SEP 2014 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,7 +641,7 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 115.
  [1]
-Overfull \hbox (3.7954pt too wide) in paragraph at lines 126--136
+Overfull \hbox (3.7954pt too wide) in paragraph at lines 142--152
 \OT1/phv/m/n/12 Mathematical mod-el-ing has long con-tributed to our un-der-sta
 nd-ing of metabolism. Decades
  []
@@ -651,7 +651,7 @@ nd-ing of metabolism. Decades
 ] [5] [6] [7] [8] [9] [10
 
 ]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 320--322
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 343--345
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
@@ -659,7 +659,7 @@ v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
 [11
 
 ] [12] [13] [14]
-Overfull \hbox (7.69629pt too wide) in paragraph at lines 407--409
+Overfull \hbox (7.69629pt too wide) in paragraph at lines 430--432
 \OT1/phv/m/n/12 This study was sup-ported by the Na-tional Sci-ence Foun-da-tio
 n GK12 award (DGE-1045513)
  []
@@ -671,17 +671,17 @@ n GK12 award (DGE-1045513)
 File: ./figs/Figure-1-Networks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Networks.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 422.
+Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 445.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 424.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 447.
  [19 <./figs/Figure-1-Networks.pdf>]
 <./figs/Figure-2-ControlSchematic.pdf, id=108, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 431.
+e 454.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [20 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-EnzymeKinetics.pd
 f, id=248, 794.97pt x 614.295pt>
@@ -689,7 +689,7 @@ File: ./figs/Figure-3-EnzymeKinetics.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-EnzymeKinetics.pdf>
 Package pdftex.def Info: ./figs/Figure-3-EnzymeKinetics.pdf used on input line 
-443.
+466.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [21 <./figs/Figure-3-EnzymeKinetics.pdf>] <./figs/Figure-4-OnOffSimulations.pd
 f, id=294, 652.4375pt x 1419.3025pt>
@@ -697,19 +697,19 @@ File: ./figs/Figure-4-OnOffSimulations.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-4-OnOffSimulations.pdf>
 Package pdftex.def Info: ./figs/Figure-4-OnOffSimulations.pdf used on input lin
-e 456.
+e 479.
 (pdftex.def)             Requested size: 234.8775pt x 510.94852pt.
 
 
-LaTeX Warning: Float too large for page by 20.51851pt on input line 468.
+LaTeX Warning: Float too large for page by 20.51851pt on input line 491.
 
 [22 <./figs/Figure-4-OnOffSimulations.pdf>]
 <./figs/Figure-5-ParameterFit.pdf, id=332, 794.97pt x 614.295pt>
 File: ./figs/Figure-5-ParameterFit.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-5-ParameterFit.pdf>
-Package pdftex.def Info: ./figs/Figure-5-ParameterFit.pdf used on input line 47
-4.
+Package pdftex.def Info: ./figs/Figure-5-ParameterFit.pdf used on input line 49
+7.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [23 <./figs/Figure-5-ParameterFit.pdf>]
 <./figs/Figure-6-AlternativeNetworks.pdf, id=379, 794.97pt x 614.295pt>
@@ -717,7 +717,7 @@ File: ./figs/Figure-6-AlternativeNetworks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-6-AlternativeNetworks.pdf>
 Package pdftex.def Info: ./figs/Figure-6-AlternativeNetworks.pdf used on input 
-line 490.
+line 513.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [24 <./figs/Figure-6-AlternativeNetworks.pdf>]
 <./figs/Figure-7-ControlSearch.pdf, id=403, 629.35126pt x 1356.06625pt>
@@ -725,18 +725,18 @@ File: ./figs/Figure-7-ControlSearch.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-7-ControlSearch.pdf>
 Package pdftex.def Info: ./figs/Figure-7-ControlSearch.pdf used on input line 5
-00.
+23.
 (pdftex.def)             Requested size: 234.8775pt x 506.08195pt.
 
 
-LaTeX Warning: Float too large for page by 15.65195pt on input line 511.
+LaTeX Warning: Float too large for page by 15.65195pt on input line 534.
 
 [25 <./figs/Figure-7-ControlSearch.pdf>]
 <./figs/Figure-8-Flux.pdf, id=448, 794.97pt x 614.295pt>
 File: ./figs/Figure-8-Flux.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-8-Flux.pdf>
-Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 517.
+Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 540.
 (pdftex.def)             Requested size: 469.76819pt x 372.26357pt.
  [26 <./figs/Figure-8-Flux.pdf>] (./Paper_v1.aux) )
 (\end occurred inside a group at level 1)
@@ -746,7 +746,7 @@ Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 517.
 Here is how much of TeX's memory you used:
  5165 strings out of 493315
  76842 string characters out of 6137904
- 143517 words of memory out of 5000000
+ 145517 words of memory out of 5000000
  8447 multiletter control sequences out of 15000+600000
  31126 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -775,7 +775,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (28 pages, 3581540 bytes).
+Output written on Paper_v1.pdf (28 pages, 3582679 bytes).
 PDF statistics:
  532 PDF objects out of 1000 (max. 8388607)
  409 compressed objects within 5 object streams

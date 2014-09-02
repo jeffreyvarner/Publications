@@ -8,3 +8,9 @@ Cell free production offers the unique opportunity to study metabolism without t
 For modeling, this implies that we need only consider allosteric regulation of enzyme activity when building and testing cell free metabolic models.
 Of course, modeling allosteric mechanisms is itself a difficult problem when the model is at a whole genome scale. To address this problem, we have developed a
 an approach based upon the constrained fuzzy logic framework of Morris and Lauffenburger [REFHERE].
+
+As such, developing our effective modeling approach using these simple problems gave us valuable insight into the development of larger network models, 
+without the complication of network size.
+
+However, an easy workaround for competitive inhibitors, would be to modify the saturation coefficient in the kinetic component of our rate, $\bar{r}_{j}$ in \eqref{eqn:rate-factor} with
+a control function.
