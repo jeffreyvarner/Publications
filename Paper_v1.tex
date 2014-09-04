@@ -149,8 +149,7 @@ Stoichiometric models rely on a pseudo-steady-state assumption to reduce unident
 Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, instead opting to describe the choice of pathways by prescribing an objective function on metabolism. 
 Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \citep{2002_ibarra_edwards_palsson_Nat}, although other metabolic objectives have also been estimated \citep{2007_schuetz_sauer_MolSysBio}. 
 Recent advances in constraint-based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \citep{2013_hyduke_lewis_palsson_MolBioSys}. 
-Thus, modern constraint-based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}. 
-However, genome-scale kinetic models of industrial important organisms such as \textit{E. coli} have yet to be constructed. 
+Thus, modern constraint-based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}. However, genome-scale kinetic models of industrial important organisms such as \textit{E. coli} have yet to be constructed. 
 
 Cell-free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in vivo} processes.
 Central amongst these advantages is direct access to metabolites and the microbial biosynthetic machinery without the interference of a cell wall. 
@@ -217,8 +216,7 @@ Thus, we are able to model complex kinetic phenomena such as ultrasensitivity, d
     
 End product yield was controlled by feedback inhibition, while product selectivity was controlled by branch point enzyme inhibition (Fig. \ref{fig-onoff-simulations}). 
 A critical test of our modeling approach was to simulate networks with known behavior. 
-If we cannot reproduce the expected behavior of simple networks, then our effective modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for genome-scale cell-free problems. 
-We considered two cases, control ON/OFF, for each network configuration. 
+If we cannot reproduce the expected behavior of simple networks, then our effective modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for genome-scale cell-free problems. We considered two cases, control ON/OFF, for each network configuration. 
 Each of these cases had identical kinetic parameters and initial conditions; the \textit{only} differences between the cases were the allosteric regulation rules and the control parameters associated with these rules. 
 As expected, end product accumulation was larger for network A when the control was OFF (no feedback inhibition of $E_{1}$ by P$_{1}$ and P$_{2}$),
 as compared to the ON case (Fig. \ref{fig-onoff-simulations}A). 
@@ -237,9 +235,7 @@ Of course, these issues are not independent; any description of enzyme activity 
 For cell-free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
 We explored this linkage by estimating model parameters from synthetic data using both network structures. 
 We generated noise corrupted synthetic measurements of the substrate S, intermediate M$_{5}$ and end product P$_1$ approximately every 20 min using
-network A. 
-We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. 
-The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}). 
+network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}). 
 PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B). 
 However, with control mismatch (network B simulated with network A parameters), model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
 Taken together, these results suggested that we could perhaps simultaneously estimate both parameters and network control architectures, as incorrect control structures would be manifest as poor model fits.
@@ -267,12 +263,13 @@ Moreover, consistent with the correct model structure, production of end product
 However, there was variability in P$_{2}$ production flux across the population of models, especially for the uniform swarm when compared with the other cases. 
 High P$_{1}$ branch flux resulted in end product inhibition of $E_{1}$ in both network A and network C, however in network D and E, high P$_1$ flux induced $E_1$ activation. 
 These trends were manifested in different flux profiles, where the negatively biased population appeared more uniform across the population compared with the other swarms, and had higher $E_{1}$ specific activity. 
-Interestingly, the behavior of network A and network C highlighted an artifact of our integration rule; both a positive or negative feedback connection from P$_2$ to $E_{1}$ were ignored because the P$_{1}$ inhibition of $E_{1}$ was dominate. 
-Thus, while theoretically distinct, network A and network C appeared operationally to the PSO algorithm to be that same network. 
+Interestingly, the behavior of network A and network C highlighted an artifact of our integration rule; both a positive or negative feedback connection from P$_2$ to $E_{1}$ were ignored because the P$_{1}$ inhibition of $E_{1}$ was dominate. Thus, while theoretically distinct, network A and network C appeared operationally to the PSO algorithm to be that same network. 
 On the other hand, networks B, D and E showed distinct behavior that was not consistent with the true network. 
 These architectures exhibited either limited inhibition (network B) or activation (network D and E) of $E_{1}$ activity, resulting in significantly different metabolic flux profiles. 
-However, the PSO was able to find low error parameter solutions, despite the mismatch in the control structures. 
-Taken together, these results suggested that a uniform sampling approach could potentially yield an unbiassed estimate of both kinetic parameters control structures. 
+However, the PSO was able to find low error parameter solutions, despite the mismatch in the control structures (error values similar, but not better than the best network A and network C estimates). 
+Taken together, these results suggested that a uniform sampling approach could potentially yield an unbiassed estimate of both kinetic parameters and control structures. 
+However, the negatively biased particle swarm results illustrated a potential shortcoming of the approach, namely convergence to a local error minimum despite a significantly incorrect control structure. 
+This suggested that estimated model structures will need to be further evaluated, for example by generating falsifiable experimental designs which could distinguish between low error solutions.
 
 \clearpage
 
@@ -371,7 +368,7 @@ are then used to update the parameter estimates of each particle using the rules
 	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
 \end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
 $\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
-parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$, which was taken from XXX. The quality of parameter
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
 estimates was measured using two criteria, goodness of fit (model residual) and angle between the estimated parameter vector $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$:
 \begin{equation}
 	\alpha_{j} = cos^{-1}\left(\frac{\mathbf{k}_{j}\cdot{\mathbf{k^{*}}}}{\norm{\mathbf{k}_{j}}\norm{\mathbf{k^{*}}}}\right)
@@ -387,8 +384,8 @@ We considered a population N = 100 particles, where each particle in the swarm w
 The PSO algorithm, model equations, and the objective function were encoded and solved in the Octave programming language \citep{Octave:2014}.
 
 \section*{Acknowledgements}
-This study was supported by the National Science Foundation GK12 award (DGE-1045513) 
-and by the National Science Foundation CAREER award (FILLMEIN).
+This study was supported by an award from the National Science Foundation (MCB \#1411715) 
+and the Army Research Office (ARO \#59155-LS).
 
 \clearpage
 %\bibliographystyle{plain}
