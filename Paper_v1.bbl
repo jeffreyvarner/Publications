@@ -172,6 +172,41 @@ Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
 \newblock PLoS Comput Biol 7: e1001099.
 \bibAnnoteFile{Morris:2011aa}
 
+\bibitem{Covert:2001aa}
+Covert MW, Schilling CH, Palsson B (2001) Regulation of gene expression in flux
+  balance models of metabolism.
+\newblock J Theor Biol 213: 73-88.
+\bibAnnoteFile{Covert:2001aa}
+
+\bibitem{Covert:2004aa}
+Covert MW, Knight EM, Reed JL, Herrgard MJ, Palsson BO (2004) Integrating
+  high-throughput and computational data elucidates bacterial networks.
+\newblock Nature 429: 92-6.
+\bibAnnoteFile{Covert:2004aa}
+
+\bibitem{Varner:2000aa}
+Varner JD (2000) Large-scale prediction of phenotype: concept.
+\newblock Biotechnol Bioeng 69: 664-78.
+\bibAnnoteFile{Varner:2000aa}
+
+\bibitem{Song:2012aa}
+Song HS, Ramkrishna D (2012) Prediction of dynamic behavior of mutant strains
+  from limited wild-type data.
+\newblock Metab Eng 14: 69-80.
+\bibAnnoteFile{Song:2012aa}
+
+\bibitem{Song:2011aa}
+Song HS, Ramkrishna D (2011) Cybernetic models based on lumped elementary modes
+  accurately predict strain-specific metabolic function.
+\newblock Biotechnol Bioeng 108: 127-40.
+\bibAnnoteFile{Song:2011aa}
+
+\bibitem{Gadkar:2003aa}
+Gadkar KG, Doyle FJ 3rd, Crowley TJ, Varner JD (2003) Cybernetic model
+  predictive control of a continuous bioreactor with cell recycle.
+\newblock Biotechnol Prog 19: 1487-97.
+\bibAnnoteFile{Gadkar:2003aa}
+
 \bibitem{Octave:2014}
 {Octave community} (2014).
 \newblock {GNU Octave 3.8.1}.

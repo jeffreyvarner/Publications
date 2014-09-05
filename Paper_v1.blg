@@ -4,47 +4,47 @@ The top-level auxiliary file: Paper_v1.aux
 The style file: plos2009.bst
 Database file #1: References_v1.bib
 Warning--entry type for "Octave:2014" isn't style-file defined
---line 587 of file References_v1.bib
+--line 716 of file References_v1.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 28 entries,
+You've used 34 entries,
             2441 wiz_defined-function locations,
-            758 strings with 10913 characters,
-and the built_in function-call counts, 22074 in all, are:
-= -- 2034
-> -- 368
+            800 strings with 11943 characters,
+and the built_in function-call counts, 26299 in all, are:
+= -- 2423
+> -- 436
 < -- 1
-+ -- 184
-- -- 92
-* -- 1862
-:= -- 2653
-add.period$ -- 58
-call.type$ -- 28
-change.case$ -- 30
++ -- 218
+- -- 109
+* -- 2215
+:= -- 3167
+add.period$ -- 70
+call.type$ -- 34
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 2196
-empty$ -- 2285
-format.name$ -- 118
-if$ -- 4892
+cite$ -- 68
+duplicate$ -- 2618
+empty$ -- 2723
+format.name$ -- 140
+if$ -- 5829
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 287
-newline$ -- 156
-num.names$ -- 28
-pop$ -- 342
+int.to.str$ -- 34
+missing$ -- 346
+newline$ -- 186
+num.names$ -- 34
+pop$ -- 405
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 178
+skip$ -- 207
 stack$ -- 0
-substring$ -- 3086
-swap$ -- 584
+substring$ -- 3663
+swap$ -- 702
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 174
-width$ -- 30
-write$ -- 322
+while$ -- 209
+width$ -- 36
+write$ -- 388
 (There was 1 warning)

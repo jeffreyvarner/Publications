@@ -285,11 +285,34 @@ However, while all five networks shared the same enzymatic connectivity, each ha
 We found that simple effective rules, when integrated with traditional enzyme kinetic expressions, could capture complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of specific mechanistic information. 
 Moreover, when integrated into network models, these rules captured classical regulatory patterns such as product-induced feedback inhibition. 
 Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a modified particle swarm approach.
+If we considered all putative regulatory architectures to be equally likely, we were able to estimate a \textit{sloppy} ensemble of models with the correct architecture and kinetic parameters.
 
-[CONTRAST WITH CYBERNETIC MODELS].
+The proposed modeling strategy shares features with other popular techniques, but has also has several key differences. 
+At its core, our effective modeling approach is similar to regulatory constraints based methods, and to the cybernetic modeling paradigm developed by Ramkrishna and colleagues.
+Covert, Palsson and coworkers drastically improved the predictability of constraints based approaches by integrating boolean rules into the calculation of metabolic fluxes \citep{Covert:2001aa}.
+If the regulated intracellular flux problem is coupled with time-dependent extracellular balances, these models can predict complex behavior such as diauxie growth or the switch between 
+aerobic and anaerobic metabolism. Another important features of this approach is that it scales with biological complexity. 
+For example, Covert \emph{et al.,} showed that a genome scale model of \emph{E.~coli} augmented with a boolean rule layer, 
+correctly predicted 80\% of the outcomes for high-throughput growth phenotyping experiments in \emph{E. coli}.
+Further, they showed that we could learn new biology by iteratively refining the model and its associated rules \citep{Covert:2004aa}. 
+However, while regulated flux balance analysis is a powerful technique, it does not easily allow the calculation of time-resolved metabolite abundance. 
+Additionally, the boolean rules which populate the regulatory layer are limited to ON/OFF decisions; for qualitative predictions of gene expression this is a reasonable limitation. 
+However, boolean rules will likely be less effective at capturing dynamic allosteric regulation in a cell free metabolic system. 
+On the other hand, the strength of cybernetic models is the integration of optimal metabolic control heuristics with traditional kinetic pathway modeling. 
+Cybernetic models are highly predictive; they have successfully predicted mutant behavior from limited wild-type data \citep{1999_varner_ramkrishna_MetaEng,Varner:2000aa,Song:2012aa}, 
+steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, strain specific metabolic function \citep{Song:2011aa} and have been used in bioprocess control applications \citep{Gadkar:2003aa}.
+However, cybernetic control heuristics are not mechanistic, instead they are the output of an optimal decision with respect to a set of hypothetical physiological objectives. 
+Thus, they are abstractions which are difficult to translate into a specific biological mechanism. 
+Our approach addresses the shortcomings of both regulatory constraints based models and cybernetic models. 
+First, similar to cybernetic models, the core of our approach is a kinetic model. Thus, we are able to directly calculate the time evolution of metabolism, for example the dynamic abundance of 
+network metabolites. Second, similar to regulatory flux balance analysis, our control laws describe specific mechanistic motifs such a activation or inhibition of enzyme activity. 
+However, our rules are continuous, thus they potentially allow a finer grained description metabolic regulation and control mechanisms.
+Lastly, we can naturally incorporate non modeled factors and categorical factors or factor combinations into our control law formulations.
 
 While the results of this study were encouraging, there are several critical next steps that must be accomplished before we can model genome-scale cell-free metabolic networks.
-[FINISH ME]
+First, it is unclear how this approach can be scaled to a genome scale cell free network. The central challenges to scaling up our approach will be the estimation of network parameters, 
+and the identification of allosteric regulatory connectivity. The particle swarm approach presented here quickly identified a \emph{sloppy} ensemble of model parameters. 
+
 
 \clearpage
 
