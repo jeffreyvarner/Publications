@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 SEP 2014 15:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  5 SEP 2014 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,7 +651,7 @@ nd-ing of metabolism. Decades
 ] [5] [6] [7] [8] [9] [10
 
 ] [11] [12]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 320--321
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 324--325
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
@@ -665,17 +665,17 @@ v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
 File: ./figs/Figure-1-Networks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Networks.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 423.
+Package pdftex.def Info: ./figs/Figure-1-Networks.pdf used on input line 427.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 425.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 429.
  [22 <./figs/Figure-1-Networks.pdf>]
 <./figs/Figure-2-ControlSchematic.pdf, id=117, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 432.
+e 436.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [23 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-EnzymeKinetics.pd
 f, id=258, 794.97pt x 614.295pt>
@@ -683,7 +683,7 @@ File: ./figs/Figure-3-EnzymeKinetics.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-EnzymeKinetics.pdf>
 Package pdftex.def Info: ./figs/Figure-3-EnzymeKinetics.pdf used on input line 
-444.
+448.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [24 <./figs/Figure-3-EnzymeKinetics.pdf>] <./figs/Figure-4-OnOffSimulations.pd
 f, id=305, 652.4375pt x 1419.3025pt>
@@ -691,11 +691,11 @@ File: ./figs/Figure-4-OnOffSimulations.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-4-OnOffSimulations.pdf>
 Package pdftex.def Info: ./figs/Figure-4-OnOffSimulations.pdf used on input lin
-e 457.
+e 461.
 (pdftex.def)             Requested size: 234.8775pt x 510.94852pt.
 
 
-LaTeX Warning: Float too large for page by 20.51851pt on input line 469.
+LaTeX Warning: Float too large for page by 20.51851pt on input line 473.
 
 [25 <./figs/Figure-4-OnOffSimulations.pdf>]
 <./figs/Figure-5-ParameterFit.pdf, id=342, 794.97pt x 614.295pt>
@@ -703,7 +703,7 @@ File: ./figs/Figure-5-ParameterFit.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-5-ParameterFit.pdf>
 Package pdftex.def Info: ./figs/Figure-5-ParameterFit.pdf used on input line 47
-5.
+9.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [26 <./figs/Figure-5-ParameterFit.pdf>]
 <./figs/Figure-6-AlternativeNetworks.pdf, id=388, 794.97pt x 614.295pt>
@@ -711,7 +711,7 @@ File: ./figs/Figure-6-AlternativeNetworks.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-6-AlternativeNetworks.pdf>
 Package pdftex.def Info: ./figs/Figure-6-AlternativeNetworks.pdf used on input 
-line 491.
+line 495.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
  [27 <./figs/Figure-6-AlternativeNetworks.pdf>]
 <./figs/Figure-7-ControlSearch.pdf, id=412, 629.35126pt x 1356.06625pt>
@@ -719,18 +719,18 @@ File: ./figs/Figure-7-ControlSearch.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-7-ControlSearch.pdf>
 Package pdftex.def Info: ./figs/Figure-7-ControlSearch.pdf used on input line 5
-01.
+05.
 (pdftex.def)             Requested size: 234.8775pt x 506.08195pt.
 
 
-LaTeX Warning: Float too large for page by 15.65195pt on input line 512.
+LaTeX Warning: Float too large for page by 15.65195pt on input line 516.
 
 [28 <./figs/Figure-7-ControlSearch.pdf>]
 <./figs/Figure-8-Flux.pdf, id=457, 794.97pt x 614.295pt>
 File: ./figs/Figure-8-Flux.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-8-Flux.pdf>
-Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 518.
+Package pdftex.def Info: ./figs/Figure-8-Flux.pdf used on input line 522.
 (pdftex.def)             Requested size: 469.76819pt x 372.26357pt.
  [29 <./figs/Figure-8-Flux.pdf>] (./Paper_v1.aux) )
 (\end occurred inside a group at level 1)
@@ -769,7 +769,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (31 pages, 3587748 bytes).
+Output written on Paper_v1.pdf (31 pages, 3588248 bytes).
 PDF statistics:
  542 PDF objects out of 1000 (max. 8388607)
  416 compressed objects within 5 object streams

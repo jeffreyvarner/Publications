@@ -293,8 +293,8 @@ Covert, Palsson and coworkers drastically improved the predictability of constra
 If the regulated intracellular flux problem is coupled with time-dependent extracellular balances, these models can predict complex behavior such as diauxie growth or the switch between 
 aerobic and anaerobic metabolism. Another important features of this approach is that it scales with biological complexity. 
 For example, Covert \emph{et al.,} showed that a genome scale model of \emph{E.~coli} augmented with a boolean rule layer, 
-correctly predicted 80\% of the outcomes for high-throughput growth phenotyping experiments in \emph{E. coli}.
-Further, they showed that we could learn new biology by iteratively refining the model and its associated rules \citep{Covert:2004aa}. 
+correctly predicted approximately 80\% of the outcomes of a high-throughput growth phenotyping experiment in \emph{E. coli}.
+Further, they showed that they could learn new biology by iteratively refining the model and its associated rules \citep{Covert:2004aa}. 
 However, while regulated flux balance analysis is a powerful technique, it does not easily allow the calculation of time-resolved metabolite abundance. 
 Additionally, the boolean rules which populate the regulatory layer are limited to ON/OFF decisions; for qualitative predictions of gene expression this is a reasonable limitation. 
 However, boolean rules will likely be less effective at capturing dynamic allosteric regulation in a cell free metabolic system. 
@@ -309,9 +309,18 @@ network metabolites. Second, similar to regulatory flux balance analysis, our co
 However, our rules are continuous, thus they potentially allow a finer grained description metabolic regulation and control mechanisms.
 Lastly, we can naturally incorporate non modeled factors and categorical factors or factor combinations into our control law formulations.
 
-While the results of this study were encouraging, there are several critical next steps that must be accomplished before we can model genome-scale cell-free metabolic networks.
-First, it is unclear how this approach can be scaled to a genome scale cell free network. The central challenges to scaling up our approach will be the estimation of network parameters, 
-and the identification of allosteric regulatory connectivity. The particle swarm approach presented here quickly identified a \emph{sloppy} ensemble of model parameters. 
+While the results of this proof of concept study were encouraging, there are several critical questions that should be explored.
+First, it is unclear how this approach will scale to genome scale networks, and second it is unclear how we will design the appropriate experiments 
+to identify model parameters and allosteric connectivity. 
+We showed that particle swarm optimization quickly identified an ensemble of model parameters, at least for proof-of-concept metabolic networks using synthetic data.
+This suggested that we could expect reasonable model predictions, despite only partial knowledge of model parameters. 
+Brown and Sethna showed that good predictions were possible despite only order of magnitude estimates of parameter values in a model of signal transduction \citep{Brown:2003aa}.
+Sethna and coworkers further showed that model behavior is often controlled by only a few parameter combinations, 
+a characteristic seemingly universal to multi-parameter models referred to as ``sloppiness'' \citep{Machta:2013aa}.
+We have also seen \textit{sloppy} behavior in a wide class of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa,Lequieu:2011aa}.
+Thus, we expect good model predictions despite uncertainty in the estimated parameter values.
+Perhaps more critical will be our ability to estimate allosteric connectivity.
+
 
 
 \clearpage
