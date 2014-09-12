@@ -1,0 +1,278 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{ROBERTS1998}
+Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
+  blood coagulation.
+\newblock Haemophilia 4: 331-334.
+\bibAnnoteFile{ROBERTS1998}
+
+\bibitem{MANN1999}
+Mann K (1999) Biochemistry and physiology of blood coagulation.
+\newblock Thromb Haemost 82: 165-174.
+\bibAnnoteFile{MANN1999}
+
+\bibitem{BUTENAS2002}
+Butenas S, Mann K (2002) Blood coagulation.
+\newblock Biochemistry (Moscow) 67: 3-12.
+\bibAnnoteFile{BUTENAS2002}
+
+\bibitem{FURIE2004}
+Schenone M, Furie BC, Furie B (2004) {The blood coagulation cascade}.
+\newblock Curr Opin Hematol 11: 272 - 277.
+\bibAnnoteFile{FURIE2004}
+
+\bibitem{GIESEN1999}
+Giesen P, Rauch U, Bohrmann B, Kling D, Roque M, et~al. (1999) {Blood-borne
+  tissue factor: another view of thrombosis.}
+\newblock Proc Natl Acad Sci USA 96: 2311 - 2315.
+\bibAnnoteFile{GIESEN1999}
+
+\bibitem{MANN1990}
+Mann K, Nesheim M, Church W, Haley P, Krishnaswamy S (1990) Surface-dependent
+  reactions of vitamin k-dependent enzyme complexes.
+\newblock Blood 76: 1-16.
+\bibAnnoteFile{MANN1990}
+
+\bibitem{GOLDHABER2006}
+Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
+  Basic Principles and Clinical Practice}.
+\newblock Lippincott Williams and Wilkins.
+\bibAnnoteFile{GOLDHABER2006}
+
+\bibitem{BRUMMEL2002}
+Brummel KE, Paradis SG, Butenas S, Mann KG (2002) Thrombin functions during
+  tissue factor-induced blood coagulation.
+\newblock Blood 100: 148-152.
+\bibAnnoteFile{BRUMMEL2002}
+
+\bibitem{BUTENAS2002a}
+Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
+  factor {VIIa}-dependent coagulation in hemophilia blood.
+\newblock Blood 99: 923-930.
+\bibAnnoteFile{BUTENAS2002a}
+
+\bibitem{HANSSON2005}
+GKHansson (2005) {Inflammation, Atherosclerosis and Coronary Artery Disease}.
+\newblock N Engl J Med 352: 1685 - 1695.
+\bibAnnoteFile{HANSSON2005}
+
+\bibitem{Tanaka:2009wo}
+Tanaka KA, Key NS, Levy JH (2009) Blood coagulation: hemostasis and thrombin
+  regulation.
+\newblock Anesth Analg 108: 1433-46.
+\bibAnnoteFile{Tanaka:2009wo}
+
+\bibitem{COOPER1994}
+Tuddenham E, Cooper D (1994) {The molecular genetics of haemostasis and its
+  inherited disorders.}, volume~25 of \emph{Oxford monographs in medical
+  genetics}.
+\newblock Oxford University Press.
+\bibAnnoteFile{COOPER1994}
+
+\bibitem{MANNUCCI2001}
+Mannucci MP, Tuddenham EGD (2001) The hemophilias - from royal genes to gene
+  therapy.
+\newblock N Engl J Med 344: 1773 - 1780.
+\bibAnnoteFile{MANNUCCI2001}
+
+\bibitem{MITCHELL2008}
+Mitchell J, Phillott A (2008) Haemophilia and inhibitors 1: diagnosis and
+  treatment.
+\newblock Nursing Times 104: 26--27.
+\bibAnnoteFile{MITCHELL2008}
+
+\bibitem{TOMOKIYO2003}
+Tomokiyo K, Nakatomi Y, Araki T, Teshima K, Nakano H, et~al. (2003) A novel
+  therapeutic approach combining human plasma-derived factors viia and x for
+  haemophiliacs with inhibitors: evidence of a higher thrombin generation rate
+  in vitro and more sustained haemostatic activity in vivo than obtained with
+  factor viia alone.
+\newblock Vox Sanguinis 85: 290-299.
+\bibAnnoteFile{TOMOKIYO2003}
+
+\bibitem{CHAVIN1988}
+Chavin SI, Siegel DM, Rocco TA, Olson JP (1988) Acute mycardial infarction
+  during treatment with an activated prothrombin complex concentrate in a
+  patient with factor viii deficiency and a factor viii inhibitor.
+\newblock Am J Med 85: 245-249.
+\bibAnnoteFile{CHAVIN1988}
+
+\bibitem{ALLEN2006}
+Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
+  concentration improves response to high-dose factor {VIIa} in a cell-based
+  model of haemophilia.
+\newblock Br J Haematology 134: 314 - 319.
+\bibAnnoteFile{ALLEN2006}
+
+\bibitem{SCHNEIDERMAN2007}
+Schneiderman J, Rubin E, Nugent DJ, Young G (2007) Sequential therapy with
+  activated prothrombin complex concentrates and recombinant {FVIIa} in
+  patients with severe haemophilia and inhibitors: update of our previous
+  experience.
+\newblock Haemophilia 13: 244-248.
+\bibAnnoteFile{SCHNEIDERMAN2007}
+
+\bibitem{Hedner:2008rm}
+Hedner U (2008) Factor viia and its potential therapeutic use in
+  bleeding-associated pathologies.
+\newblock Thromb Haemost 100: 557--562.
+\bibAnnoteFile{Hedner:2008rm}
+
+\bibitem{Talbot:2009kk}
+Talbot M, Tien HC (2009) The use of recombinant factor viia in trauma patients.
+\newblock J Am Acad Orthop Surg 17: 477-81.
+\bibAnnoteFile{Talbot:2009kk}
+
+\bibitem{Lusher:1998bs}
+Lusher JM, Roberts HR, Davignon G, Joist JH, Smith H, et~al. (1998) A
+  randomized, double-blind comparison of two dosage levels of recombinant
+  factor viia in the treatment of joint, muscle and mucocutaneous haemorrhages
+  in persons with haemophilia a and b, with and without inhibitors. rfviia
+  study group.
+\newblock Haemophilia 4: 790--798.
+\bibAnnoteFile{Lusher:1998bs}
+
+\bibitem{Shapiro:1998sh}
+Shapiro AD, Gilchrist GS, Hoots WK, Cooper HA, Gastineau DA (1998) Prospective,
+  randomised trial of two doses of rfviia (novoseven) in haemophilia patients
+  with inhibitors undergoing surgery.
+\newblock Thromb Haemost 80: 773--778.
+\bibAnnoteFile{Shapiro:1998sh}
+
+\bibitem{Shapiro:2000pr}
+Shapiro AD (2000) Recombinant factor viia in the treatment of bleeding in
+  hemophilic children with inhibitors.
+\newblock Semin Thromb Hemost 26: 413--419.
+\bibAnnoteFile{Shapiro:2000pr}
+
+\bibitem{Shapiro:2008px}
+Shapiro AD (2008) Single-dose recombinant activated factor vii for the
+  treatment of joint bleeds in hemophilia patients with inhibitors.
+\newblock Clin Adv Hematol Oncol 6: 579--586.
+\bibAnnoteFile{Shapiro:2008px}
+
+\bibitem{KOMIYAMA1990}
+Komiyama Y, Pedersen AH, Kisiel W (1990) Proteolytic activation of human
+  factors ix and x by recombinant human factor viia: Effects of calcium,
+  phospholipids and tissure factor.
+\newblock Biochemistry 29: 9418-9425.
+\bibAnnoteFile{KOMIYAMA1990}
+
+\bibitem{PAYNE1996}
+Payne MA, Neuenschwander PF, Johnson AE, Morrissey JH (1996) Effect of soluble
+  tissue factor on the kinetic mechanism of factor viia: Enhancement of
+  p-guanidinobenzoate substrate hydrolysis.
+\newblock Biochemistry 35: 7100-7106.
+\bibAnnoteFile{PAYNE1996}
+
+\bibitem{MONROE1997}
+Monroe DM, Hoffman M, Oliver JA, Roberts HR (1997) Platelet activity of
+  high-dose factor viia is independent of tissure factor.
+\newblock Br J Haematol 99: 542-547.
+\bibAnnoteFile{MONROE1997}
+
+\bibitem{HOFFMAN1998}
+Hoffman M, {Monroe III} DM, Roberts HR (1998) Activated factor {VII} activates
+  factors {IX} and {X} on the surface of activated platelets: thoughts on the
+  mechanism of action of high-dose activated factor {VII}.
+\newblock Blood Coag Fibrin 9: S61-S65.
+\bibAnnoteFile{HOFFMAN1998}
+
+\bibitem{2012_kholodenko_kolch_SciSig}
+Kholodenko B, Yaffe MB, Kolch W (2012) Computational approaches for analyzing
+  information flow in biological networks.
+\newblock Sci Signal 5: re1.
+\bibAnnoteFile{2012_kholodenko_kolch_SciSig}
+
+\bibitem{Gadkar:2005ad}
+Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
+  transduction networks from data using a state regulator problem.}
+\newblock Syst Biol (Stevenage) 2: 17--30.
+\bibAnnoteFile{Gadkar:2005ad}
+
+\bibitem{Apgar:2010fk}
+Apgar JF, Witmer DK, White FM, Tidor B (2010) Sloppy models, parameter
+  uncertainty, and the role of experimental design.
+\newblock Mol Biosyst 6: 1890-900.
+\bibAnnoteFile{Apgar:2010fk}
+
+\bibitem{2001_bailey_NatBiotech}
+Bailey JE (2001) Complex biology with no parameters.
+\newblock Nat Biotechnol 19: 503-4.
+\bibAnnoteFile{2001_bailey_NatBiotech}
+
+\bibitem{Machta:2013aa}
+Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
+  compression underlies emergent theories and predictive models.
+\newblock Science 342: 604-7.
+\bibAnnoteFile{Machta:2013aa}
+
+\bibitem{2010_song_varner_BiotechJ}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{2010_song_varner_BiotechJ}
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{2010_luan_varner_MolBioSys}
+
+\bibitem{2011_kalita_brasier_JBC}
+Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, et~al. (2011)
+  Sources of cell-to-cell variability in canonical nuclear factor-kb (nf-kb)
+  signaling pathway inferred from single cell dynamic images.
+\newblock J Biol Chem 286: 37741-57.
+\bibAnnoteFile{2011_kalita_brasier_JBC}
+
+\bibitem{2011_hasenauer_allgower_BMCBioinfo}
+Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, et~al. (2011)
+  Identification of models of heterogeneous cell populations from population
+  snapshot data.
+\newblock BMC Bioinformatics 12: 125.
+\bibAnnoteFile{2011_hasenauer_allgower_BMCBioinfo}
+
+\bibitem{2012_creixell_linding_NatBiotech}
+Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
+  attractors for tumor-specific therapy.
+\newblock Nat Biotechnol 30: 842-8.
+\bibAnnoteFile{2012_creixell_linding_NatBiotech}
+
+\bibitem{SCIPY}
+Jones E, Oliphant T, Peterson P (2001--).
+\newblock {SciPy}: Open source scientific tools for {Python}.
+\newblock http://www.scipy.org/.
+\bibAnnoteFile{SCIPY}
+
+\bibitem{PSO}
+Kennedy J, Eberhart R (1995) Particle swarm optimization.
+\newblock In: Proceedings of the International Conference on Neural Networks.
+  pp. 1942 - 1948.
+\bibAnnoteFile{PSO}
+
+\bibitem{Matplotlib}
+Hunter JD (2007) Matplotlib: A 2d graphics environment.
+\newblock Computing in Science and Engineering 9: 90 - 95.
+\bibAnnoteFile{Matplotlib}
+
+\bibitem{Butenas:1999aa}
+Butenas S, van't Veer C, Mann KG (1999) "normal" thrombin generation.
+\newblock Blood 94: 2169-78.
+\bibAnnoteFile{Butenas:1999aa}
+
+\end{thebibliography}

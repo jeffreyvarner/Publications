@@ -1,0 +1,26 @@
+The current model includes an enhanced description of platelet activation and the intrinsic pathway. 
+The modified network described 193 proteins and protein complexes and 301 interactions (Fig. \ref{F:Network} and Table \ref{tbl-network-table}).
+Deterministic model equations were formulated as a system of non-linear Ordinary Differential Equations (ODEs). 
+We assumed spatial homogeneity. However, we differentiated between fluid phase, endothelial and platelet localized species and processes.
+We used mass-action kinetics to describe the rate of each molecular interaction. 
+The model had 467 unknown parameters (301 kinetic parameters and 166 initial conditions).
+The 301 kinetic parameters were either association, dissociation or catalytic rate constants.
+Model parameters were taken from literature or estimated using the cell-based \emph{in-vitro} coagulation study of Allen \emph{et al.} \cite{ALLEN2006}.
+In the Allen \emph{et al.} study, time-series thrombin measurements were collected following the addition of exogenous 
+rFVIIa and prothrombin in the absence of fVIII and fIX.
+These data were in addition to the 21 training sets used previously in the Luan \emph{et al.} study.
+To compensate for parameter uncertainty,  
+we estimated an \emph{ensemble} of parameters consistent with the thrombin measurements.
+We validated the model ensemble using multiple independent test data sets.
+First, we compared model simulations with \emph{in-vitro} measurements taken from Butenas \emph{et al.} \cite{BUTENAS2002a}.
+Second, we compared simulated thrombin trajectories with thrombin generation in plasma taken from patients with coronary artery diseases (this study).
+We analyzed the model ensemble using sensitivity analysis under different conditions to understand which architectural features were important in normal versus hemophilic coagulation.
+We found that the sensitivity of fluid phase fX/FXa interactions was indirectly proportional to fVIII/fIX level. The addition of rFVIIa and prothrombin did not alter the qualitative properties of the coagulation architecture. Rather, rFVIIa treatment restored normal thrombin formation by taking advantage of enhanced fX/FXa sensitivity induced by low fVIII/fIX levels. 
+
+Alternative, less mechanistic modeling methods which attempt to capture salient features of signaling systems in simpler frameworks have also become popular, especially in human health related applications such as immune system models and cancer. In the simplest case, logic-based Boolean models allow biochemical species to toggle between one of two discrete states where transitions between states are condition- or time-dependent. 
+For example, recently, Choi \textit{et al.} used dynamic Boolean modeling of the p53 network to characterize the phenotypic landscape of diseased cell states, including identifying interactions that were critical to DNA damage response \citep{2012_choi_cho_SciSig}. 
+Often, simple Boolean states are too restrictive, thus other logic techniques such as fuzzy logic have been applied to model signaling networks. 
+Fuzzy logic models define species states in a more granular way, allowing signaling proteins to take on a range of discrete values \citep{2009_aldridge_saez-rodriguez_sorger_lauffenburger_PLoSCompBio}. 
+In the constrained fuzzy logic (cFL) approach of Lauffenburger and coworkers, parameterized transfer functions are used to describe the propagation of signals through logical gates. 
+The cFL method also allows the training and discrimination between alternative logic-based models, identifying network topologies most consistent with experimental data \citep{2011_morris_saez-rodriguez_lauffenburger_PLoSCompBio,2012_mitsos_saez-rodriguez_lauffenburger_alexopoulos_PLoSOne}.
+While these and other alternative modeling techniques are not as popular as ODE strategies, they offer significant advantages in low information environments or in situations where a detailed understanding of signaling dynamics is not needed. 

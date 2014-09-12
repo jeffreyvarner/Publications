@@ -1,0 +1,485 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses  
+\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort&compress,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+\usepackage{lineno}
+
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\usepackage{geometry}
+\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+\bibliographystyle{plos2009}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+% Begin ...
+\begin{document}
+\begin{titlepage}
+{\par\centering\textbf{\Large Dynamic Modeling of the Human Coagulation Cascade using Reduced Order Effective Kinetic Models}}
+\vspace{0.05in}
+{\par \centering \large{Adithya Sagar and Jeffrey D. Varner$^{*}$}}
+\vspace{0.10in}
+{\par \centering \large{School of Chemical and Biomolecular Engineering}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Modeling blood coagulation}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{Processes}}
+\vspace{0.5in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Associate Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853} 
+{\par \centering Email: jdv27@cornell.edu} 
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abstract}
+
+{\noindent \textbf{Keywords:}~Coagulation, Mathematical modeling, Systems Biology}
+
+\pagebreak
+
+\setcounter{page}{1}
+
+\linenumbers
+
+%Developing computational tools to understand the molecular basis of human disease is a grand challenge facing systems biology.
+%Many have suggested that the integration of experimental and computational research is required to unravel
+%critical questions facing molecular medicine \cite{KITANO2002,ASSMUS2006,ARNAUD2006}. 
+%Despite this, mechanistic network modeling has not played a significant role in the development of new therapies for cancer, cardiovascular diseases or for acute events  
+%like thrombosis during surgery.
+%A critical limiting issue often cited has been model uncertainty \cite{BAILEY2001}. 
+%Development and validation of detailed network models requires a significant investment of time and material resources. 
+%Alternatively, development of tools using toy models often fails to demonstrate relevance to biologists or physicians.  
+%What is needed is a model system, that is simultaneously tractable and directly applicable to the study of disease.
+%Human blood is perhaps such an ideal model system \cite{Diamond:2009yf}. 
+%Blood is a complex mixture of proteins and cells which collectively carry out many functions.
+%However, one well studied facet of blood, which could serve as a valuable model system, is the coagulation cascade. 
+%Understanding the mechanism of rFVIIa might provide insight into the therapeutic dose under different physiological conditions.
+%More generally, rFVIIa treatment could also serve an ideal test case to develop strategies which retrospectively estimate operational perturbations associated with drugs.
+%For example, the effect of rFVIIa is directly observable in coagulation outputs such as thrombin concentration.
+%Thus, by analyzing these outputs in a normal versus a perturbed network, it might be possible to reverse engineer the molecular influence associated with a therapeutic intervention. 
+
+\section*{Introduction}
+The human coagulation system is an archetype proteolytic cascade regulated by both positive and negative feedback loops.
+The biology of coagulation is well studied \cite{ROBERTS1998,MANN1999,BUTENAS2002,FURIE2004}. 
+Coagulation is mediated by a family serine proteases, called factors and a key group of blood cells, called platelets. 
+The activation of coagulation factors and platelets, which are normally inactive in the circulation, requires a trigger event.
+Trigger events such as vessel injury expose procoagulant materials like collagen, fibronectin, von Willebrand factor (vWF) or tissue factor (TF).
+These materials drive platelet localization and activation, coagulation factor activation and ultimately clot formation \cite{GIESEN1999}.  
+Once coagulation has been activated, two converging pathways activate the master protease thrombin. 
+The extrinsic cascade is generally believed to be the main mechanism of thrombinogenesis in the blood \cite{MANN1990,ROBERTS1998,MANN1999}.
+Thrombin generation consists of three phases, initiation, propagation and termination \cite{GOLDHABER2006, BRUMMEL2002}.  
+Initially thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa) \cite{BUTENAS2002a}. 
+Picomolar amounts of thrombin can then activate the cofactors factors V and VIII (fV and fVIII) and platelets, 
+resulting in the formation of the \emph{tenase} and \emph{prothrombinase} complexes on the surface of activated platelets.
+These complexes amplify the early coagulation signal by activating downstream and upstream coagulation factors.  
+Termination occurs after prothrombin is consumed or activated thrombin is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
+
+Malfunctions in coagulation can have serious or potentially even fatal consequences.
+For example, aggressive clotting is involved with Coronary Artery Diseases (CADs), which collectively account for 38\% of all deaths in North America \cite{HANSSON2005}.
+Coagulation management during surgery can also be challenging, particularly because of the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
+Insufficient coagulation due to genetic disorders such as hemophilia can also result in recurrent bleeding. 
+The coagulation factors VIII (fVIII) and IX (fIX) are deficient in Hemophilia A and B, respectively \cite{COOPER1994,MANNUCCI2001,MITCHELL2008}.
+People with mild hemophilia have 5-40\% of the normal clotting factor levels while severe hemophiliacs have $<$1\% \cite{MITCHELL2008}.
+Hemophilia can be controlled with regular infusions of the deficient clotting factors. 
+However, clotting factor replacement sometimes leads to the formation of \emph{in-vivo} fVIII and fIX inhibitors \cite{TOMOKIYO2003}.
+Activated Prothrombin Complex Concentrates (aPCCs) from pooled plasma have been used to treat hemophilia. 
+However, aPCCs can have safety issues \cite{CHAVIN1988,ALLEN2006,SCHNEIDERMAN2007}. 
+Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
+hemophilia with and without factor VIII/IX inhibitors \cite{Lusher:1998bs,Shapiro:1998sh,Shapiro:2000pr,Shapiro:2008px}.
+However, rFVIIa requires frequent administration (every 2-3 hr) because of its short half-life in the circulation. 
+Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONROE1997,HOFFMAN1998,BUTENAS2002a,ROBERTS2004,ROBERTS2006,ALLEN2007}
+and effective dose range \cite{TOMOKIYO2003}.
+Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
+
+Modeling approaches differ in their degree of mechanistic detail, and the choice of approach is often determined by prior system knowledge \citep{2012_kholodenko_kolch_SciSig}. 
+The ability of ODE modeling to capture dynamics has made it one of the most common tools for studying signaling systems. 
+However, dynamics and ODEs come at the expense of difficult (and often impossible) to solve model parameter identification problems. 
+For example, Gadkar et al., showed that even with near-perfect information and high frequency sampling, 
+it was often impossible to identify (to within a specified uncertainty) all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
+This reality highlights the perhaps under-appreciated role that experimental design could play in generating the best training and validation data sets for model identification \citep{Apgar:2010fk}.
+Moreover, detailed ODE models require significant mechanistic knowledge of the underlying biology. 
+However, as Bailey suggested more than a decade ago, achieving qualitative and quantitative understanding of complex biological systems should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
+Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model behavior and predictive ability were sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter signaling models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+Thus, reasonable model predictions could be possible with limited parameter information. 
+Taking advantage of this property of model behavior, we developed sloppy techniques for parameter identification using ensembles of deterministic models. 
+Pareto optimal ensemble techniques (POETs) incorporate principles of competing objectives into a multi-objective optimization framework, enabling the exploration of kinetic parameter space while accounting for uncertainty and potential conflicts in the experimental training data \citep{2010_song_varner_BiotechJ}. 
+We have proposed that the sloppy behavior of biological networks may also be a source of cell-to-cell \citep{2011_lequieu_chakrabarti_nayak_varner_PLoSCompBio} or even patient-to-patient heterogeneity \citep{2010_luan_varner_MolBioSys}. 
+Recently, Bayesian techniques of parameter identification have also been used to explore cell-to-cell heterogeneity  \citep{2011_kalita_brasier_JBC,2011_hasenauer_allgower_BMCBioinfo}. 
+Thus, a population of cells could be viewed as a dynamic ensemble of networks as the operational biochemical pathways are often context-specific \citep{2012_creixell_linding_NatBiotech}. 
+
+In this study, we constructed a reduced order effective model of thrombin generation in normal and hemophilic blood.
+We used this model to understand how physiological coagulation was altered by prothrombin levels, the activated protein C pathway and the level of ATIII.  
+Previous models of coagulation have been formulated as systems of nonlinear ordinary differential equations, often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE]. 
+While this approach has proven highly effective, it does require significant experimental data for model identification and validation.    
+For example, a previous coagulation model from our laboratory, which described 193 proteins and protein complexes interconnected by 301 biochemical interactions, 
+contained 467 unknown parameters (301 kinetic parameters and 166 initial conditions) [REFHERE]. 
+The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulatory motifs with traditional kinetic pathway modeling. 
+This integration allows the description of complex regulatory interactions, such as time-dependent allosteric regulation of enzyme activity, in the absence of specific mechanistic information. 
+The regulatory rules are easy to understand, easy to formulate and do not rely on overarching theoretical abstractions or restrictive assumptions. 
+We tested our approach by modeling the time evolution of the human coagulation cascade.
+
+\clearpage
+
+\section*{Results}
+
+\subsection*{Formulation and properties of reduced order effective models.}
+Reduced order effective models are [FINISH ME].
+
+\clearpage
+
+\subsection*{Identification of reduced order coagulation model parameters using particle swarm optimization.}
+A critical challenge for any dynamic model is the estimation of kinetic parameters. 
+We estimated kinetic and control parameters simultaneously from \emph{in vitro} coagulation data sets with and without the protein C pathway. 
+The residual between model simulations and experimental measurements was minimized using particle swarm optimization (PSO). 
+A population of particles (N = 20) was initialized with randomized kinetic and control parameters and allowed to search for parameter vectors that minimized
+the residual. However, not all parameters were varied simultaneously. 
+We partitioned the parameter estimation problem into two subproblems based upon the biological organization of the training data; 
+(i) estimation of parameters associated with thrombin formation in the absence of the protein C pathway and (ii) estimation of parameters associated with the protein C pathway.
+Only those parameters associated with each subproblem were varied during the optimization procedure for that subproblem e.g., thrombin parameters were \textit{not} varied during the protein C subproblem.
+The PSO procedure was run for 20 generations for each subproblem, where each generation was 1200 iterations. The best particle from each generation was used to generate the particle population
+for the next generation. We rotated the subproblems, starting with subproblem 1 in the first generation.
+
+The reduced order coagulation model captured the role of initial prothrombin abundance, and the decay of the thrombin signal following from ATIII activity (Fig. \ref{fig-diff_fII_NO_APC}).
+However, we systematically under-predicted the thrombin peak and the strength of ATIII inhibition in this training data set.
+On the other hand, with fixed thrombin parameters, we captured peak thrombin values and the decay of the thrombin signal (at least for the 150\% fII case) in the presence
+of both ATIII and the protein C pathway (Fig. \ref{fig-diff_fII_APC}). Lastly, we were unable to capture global differences in initiation time \textit{across} separate data 
+sets with a single ensemble of model parameters. These differences likely result from normal experimental variability.
+For example different thrombin generation experiments within our 
+training data (at the same physiological factor levels) have significantly different initiation times (supplemental results). 
+However, this also highlights a potential shortcoming of the initiation module within the model. 
+To capture the variability in initiation time \textit{across} training data sets, we included a constant time-delay parameter ($T_{D}$) for each data group.
+The delay parameter was constant within a data set, but allowed to vary \textit{across} training data sets. Introduction of the delay parameter allowed the model
+to simulate multiple training data sets using a single ensemble of model parameters.
+Taken together, the model identification results suggested 
+that our kinetic-rules based approach could reproduce a panel of thrombin generation data sets conducted at physiological factor and inhibitors concentrations.
+However, it was unclear if the reduced order model could predict new data sets, without changing kinetic or control parameters.
+
+We tested the predictive power of the reduced order coagulation model with data sets not used for model training. 
+Two data sets were used from validation, thrombin generation for different initial prothrombin and ATIII concentrations in the absence of the protein C pathway, 
+and normal versus hemophilia thrombin generation in the presence of the protein C pathway. 
+The hemophilia data was an especially difficult test as it was taken from a different laboratory and a completely different
+\textit{in~vitro} assay method involving unmodeled factors such as platelets. 
+All kinetic and control parameters were fixed for the validation simulations. 
+The only globally adjustable parameter $T_{D}$, was fixed within each validation data set but allowed to vary between data sets.
+The reduced order model predicted the thrombin generation profile for ratios of prothrombin and ATIII in the absence of the protein C pathway (Fig. \ref{fig-fII_ATIII}).
+Model predictions for factors levels outside of the physiological range (fII,ATIII) = (50\%, 150\%) or (150\%, 50\%) were only qualitatively consistent with measured thrombin values.
+However, simulations closer to the physiological range (fII,ATIII) = (100\%, 100\%) or (125\%,75\%) tracked the measured thrombin values. 
+Likewise, simulations of thrombin generation in normal versus hemophilia (missing both fVIII and fIX) were consistent with measured thrombin values (Fig. \ref{fig-hemophilia}).
+
+
+\subsection*{Global sensitivity analysis of the reduced order coagulation model.}
+We conducted a variance based global sensitivity analysis to better understand which parameters were controlling the performance of the coagulation model. 
+In particular, we calculated the sensitivity of two performance metrics, the time to maximum thrombin and the thrombin exposure (area under the thrombin curve) to
+changes in the model parameters (Fig. ZZ).  
+
+
+\clearpage
+
+\section*{Discussion}
+Controlling hemophilia and more generally hemorrhage has been a driving force to understand the molecular basis of blood coagulation.
+Replacement therapy improves bleeding times for most hemophilia patients. However, repeated fVIII/fIX administration can lead to neutralizing inhibitors. 
+Alternatively, rFVIIa has been used as a universal hemostatic agent to initiate clotting with and without fVIII or fIX inhibitors \cite{Hedner:2008rm}.
+Despite its wide adoption, the mechanism and the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}. 
+In this study, we formulated a model of the human coagulation cascade and studied thrombin formation in normal and rFVIIa treated and untreated
+hemophilic plasma. The model described 193 proteins or protein complexes connected by 301 interactions. 
+The coagulation network architecture was based on literature and a previous mathematical model from our laboratory \cite{VARNER2007}.
+Simulations of thrombin dynamics were independently validated using blood drawn from patients with coronary artery disease (reported here) and previous TF/FVIIa and FVIIa 
+\emph{in-vitro} studies \cite{BUTENAS2002}.
+While the human coagulation cascade is perhaps an ideal model system to develop network analysis tools, not all the model parameters were identifiable given the current training data.
+Instead, an \emph{ensemble} of models (N = 437) was estimated using nine cell-based coagulation training sets \cite{ALLEN2007}.
+We used this family of consistent coagulation models in all simulations instead of a single best-fit but uncertain model.
+Additionally, using sensitivity analysis on the ensemble of models, we identified 
+structurally sensitive components of the coagulation architecture as a function of condition.
+We also demonstrated that the ensemble robustly constrained model predictions of independent validation sets, despite having many poorly constrained parameters.
+Thus, the model ensemble displayed \emph{sloppy} behavior similar to that observed by Sethna and coworkers for other signal transduction networks \cite{Gutenkunst2007}.  
+By studying a family of models, we perhaps partially addressed the uncertainty stemming from the many poorly characterized model parameters.
+However, many other factors could influence our results. For example, missing structural interactions or biophysical factors such as blood flow could play a large role.
+Thus, while the results presented here may be a valuable first step, more studies are required.
+
+\clearpage
+
+\section*{Materials and Methods}
+
+\subsection*{Formulation and solution of the model equations.}
+We used ordinary differential equations (ODEs) to model the time evolution of proteins ($x_{i}$) in our reduced order coagulation model:
+\begin{equation}
+	\frac{dx_{i}}{dt}  =  \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)\qquad{i=1,2,\hdots,\mathcal{M}}\\
+\end{equation}
+where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of protein species in the model. 
+The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$. 
+Typically, reaction $j$ is a non-linear function of biochemical species abundance, as well as unknown kinetic parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$). 
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. 
+If $\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. 
+Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates metabolite $i$ is not connected with reaction $j$. 
+Lastly, $\lambda_{i}$ denotes the scaled enzyme degradation constant. 
+The system material balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$. 
+
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
+\begin{equation}\label{eqn:rate-factor}
+	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
+\end{equation}
+We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:
+\begin{equation}\label{eqn:rate-bar}
+	\bar{r}_{j} = k_{j}^{max}\epsilon_{i}\left(\prod_{s\in{m_{j}^{-}}}\frac{x_{s}}{K_{js} + x_{s}}\right)
+\end{equation}where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\epsilon_{i}$ denotes the scaled enzyme activity which catalyzes reaction $j$, and
+$K_{js}$ denotes the saturation constant for species $s$ in reaction $j$. 
+The product in Eqn. \eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$). 
+
+The control term $v_{j}$ depended upon the combination of factors which influenced the activity of enzyme $i$.
+For each enzyme, we used a rule-based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
+If an enzyme was activated by $m$ metabolites, we modeled this activation as:
+\begin{equation}
+	v_{j} = \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
+\end{equation}where $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
+Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling this inhibition as:
+\begin{equation}
+	v_{j} = 1 - \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
+\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
+\begin{equation}
+	v_{j} = \min\left(u_{j},d_{j}\right)
+\end{equation}where:
+\begin{eqnarray}
+	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right) \\
+	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{nj}\left(\mathcal{Z}\right)\right)
+\end{eqnarray}
+The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating and inhibitory factors for enzyme $j$. 
+If an enzyme had no allosteric factors, we set $v_{j} = 1$.
+There are many possible functional forms for $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$. 
+However, in this study, each individual transfer function took the form:
+\begin{equation}\label{eqn:control-factor}
+	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
+\end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $\kappa_{ij}$ and $\eta$ are control parameters. 
+The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
+The model equations were encoded using the Python programming language and solved using the ODEINT routine of the SciPy module \citep{SCIPY}.
+
+\subsection*{Estimation of model parameters from experimental data.}
+Model parameters were estimated by minimizing the difference between simulations and experimental thrombin measurements (squared residual):
+\begin{equation}\label{eqn:objective-function}
+	\min_{\mathbf{k}} \sum_{\tau=1}^{\mathcal{T}}\sum_{j=1}^{\mathcal{S}}\left(\frac{\hat{x}_{j}\left(\tau\right) - x_{j}\left(\tau,\mathbf{k}\right)}{\omega_{j}\left(\tau\right)}\right)^{2}
+\end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
+value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes the experimental measurement variance for species $j$ at time $\tau$. The outer summation is respect to
+time, while the inner summation is with respect to state. We minimized the model residual using Particle swarm optimization (PSO) \citep{PSO}.
+PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
+A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
+error landscape experienced by each particle collectively to the swarm. Thus, PSO acts both as a local and a global search algorithm. 
+For each iteration, particles in the swarm compute their local error by evaluating the model equations using their specific parameter vector realization.
+From each of these local points, a globally best error is identified. Both the local and global error 
+are then used to update the parameter estimates of each particle using the rules:
+\begin{eqnarray}
+	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
+	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
+\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
+$\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
+estimates was measured using two criteria, goodness of fit (model residual) and angle between the estimated parameter vector $\mathbf{k}_{j}$ and the best parameter set $\mathbf{k}^{*}$:
+\begin{equation}
+	\alpha_{j} = cos^{-1}\left(\frac{\mathbf{k}_{j}\cdot{\mathbf{k^{*}}}}{\norm{\mathbf{k}_{j}}\norm{\mathbf{k^{*}}}}\right)
+\end{equation}If the candidate parameter set $\mathbf{k}_{j}$ were perfect, the residual between the model and synthetic data 
+and the angle between $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$ would be equal to zero.
+The particle swarm optimization routine was implemented in the Python programming language. 
+All plots were made using the Matplotlib module of Python \citep{Matplotlib}.
+
+\section*{Acknowledgements}
+This study was supported by an award from the Army Research Office (ARO \#59155-LS).
+
+\clearpage
+%\bibliographystyle{plain}
+%\bibliographystyle{IEEEbib}
+
+\bibliography{References_v1}
+
+%\begin{comment}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-1-Network.pdf}
+\caption{Proof of concept cell-free metabolic networks considered in this study. Substrate $S$ is converted to products $P_{1}$ and $P_{2}$ through a series of chemical conversions
+catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject to both positive and negative allosteric regulation. }\label{fig-networks}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-2-ControlSchematic.pdf}
+\caption{Schematic of rule based effective control laws. 
+Traditional enzyme kinetic expressions e.g., Michaelis–Menten or multiple saturation kinetics are multiplied by an enzyme activity control variable $0 \leq v_{j} \leq 1 $. 
+Control variables are functions of many possible regulatory factors encoded by arbitrary functions of the form $0\leq f_{j}\left(\mathcal{Z}\right)\leq 1$.
+At each simulation time step, the $v_{j}$ variables are calculated by evaluating integration rules such as the max or min of the set of factors $f_{1},\hdots$ 
+influencing the activity of enzyme $E_{j}$. }\label{fig-control-schematic}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-3-DIFF_FII_NO_APC.pdf}
+\caption{Reduced order coagulation model training simulations.
+Reduced order coagulation model parameters were estimated using particle swarm optimization (PSO) with and without the protein C pathway as a function of prothrombin. 
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data. 
+The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation).
+(A,B,C) training results for 150\%, 100\% and 50\% of physiological prothrombin levels in the absence of the protein C pathway.
+Thrombin generation was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
+All factors and control proteins were at their physiological concentration unless others denoted. 
+The experimental training data was reproduced from the study of Butenas et al. \citep{Butenas:1999aa}.}\label{fig-diff_fII_NO_APC}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-4-DIFF_FII_APC.pdf}
+\caption{Reduced order coagulation model training simulations.
+Reduced order coagulation model parameters were estimated using particle swarm optimization (PSO) with and without the protein C pathway as a function of prothrombin. 
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data.
+The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation).
+(A,B,C) training results for 150\%, 100\% and 50\% of physiological prothrombin levels in the presence of the protein C pathway. 
+Only APC pathway parameters were allowed to vary in the simulations on the right.
+Thrombin generation was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
+All factors and control proteins were at their physiological concentration unless others denoted.
+The experimental training data was reproduced from the study of Butenas et al. \citep{Butenas:1999aa}.}\label{fig-diff_fII_APC}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-5-FII_ATIII.pdf}
+\caption{Reduced order coagulation model predictions versus experimental data for normal coagulation. 
+The reduced order coagulation model parameter estimates were tested against data not used during model training.
+Simulations of different levels of prothrombin and ATIII were compared with experimental data in the absence of the protein C pathway. 
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data.
+The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
+(A,B,C,D) prediction results for (FII,ATIII): (50\%,150\%), (100\%, 100\%), (125\%, 75\%) and (150\%, 50\%) of physiological prothrombin and ATIII levels in the absence of the protein C pathway. 
+Thrombin generation was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
+All factors and control proteins were at their physiological concentration unless others denoted.
+The experimental validation data was reproduced from the study of Butenas et al. \citep{Butenas:1999aa}}\label{fig-fII_ATIII}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-6-Hemophilia.pdf}
+\caption{Reduced order coagulation model predictions versus experimental data with and without FVIII and FIX.
+The reduced order coagulation model parameter estimates were tested against data not used during model training. 
+Simulations of normal thrombin formation with ATIII and the protein C pathway were compared with thrombin formation in the absence of fVIII and fIX.
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data.
+The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
+(A,B) prediction results for normal thrombin generation and thrombin generation in hemophilia. 
+All factors and control proteins were at their physiological concentration unless others noted.
+The experimental validation data was reproduced from the study of Allen et al. \citep{ALLEN2006}.}\label{fig-hemophilia}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-7-rFVIIa-Trigger.pdf}
+\caption{Reduced order coagulation model predictions of rFVIIa administration. 
+Simulations of thrombin formation in the presence of ATIII and the protein C pathway were conducted for a range of trigger values (1x - 50x) in the absence of fVIII and fIX.
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles.
+The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
+All factors and control proteins were at their physiological concentration unless others noted.}\label{fig-rFVII}
+\end{figure}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S- 
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\end{document}
+
