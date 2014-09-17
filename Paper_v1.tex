@@ -233,23 +233,59 @@ The delay parameter was constant within a data set, but allowed to vary \textit{
 to simulate multiple training data sets using a single ensemble of model parameters.
 Taken together, the model identification results suggested 
 that our kinetic-rules based approach could reproduce a panel of thrombin generation data sets conducted at physiological factor and inhibitors concentrations.
-However, it was unclear if the reduced order model could predict new data sets, without changing kinetic or control parameters.
+However, it was unclear whether the reduced order model could predict new data, without updating the model parameters.
 
-We tested the predictive power of the reduced order coagulation model with data sets not used for model training. 
-Two data sets were used from validation, thrombin generation for different initial prothrombin and ATIII concentrations in the absence of the protein C pathway, 
-and normal versus hemophilia thrombin generation in the presence of the protein C pathway. 
-The hemophilia data was an especially difficult test as it was taken from a different laboratory and a completely different
-\textit{in~vitro} assay method involving unmodeled factors such as platelets. 
+\subsection*{Validation of the reduced order coagulation model.}
+We tested the predictive power of the reduced order coagulation model with validation data sets not used during model training. 
+Two validation data sets were used, thrombin generation for various prothrombin and ATIII concentrations with the protein C pathway, 
+and thrombin generation in normal versus hemophilic plasma in the presence of the protein C pathway. 
+Lastly, we compared the qualitative output of the model to rFVIIa addition in the presence of hemophilia.
+The hemophilia case was an especially difficult test as it was taken from a different study which used a plasma-based
+\textit{in~vitro} assay involving platelets instead of phospholipid vesicles (PCPS). 
 All kinetic and control parameters were fixed for the validation simulations. 
 The only globally adjustable parameter $T_{D}$, was fixed within each validation data set but allowed to vary between data sets.
 The reduced order model predicted the thrombin generation profile for ratios of prothrombin and ATIII in the absence of the protein C pathway (Fig. \ref{fig-fII_ATIII}).
-Model predictions for factors levels outside of the physiological range (fII,ATIII) = (50\%, 150\%) or (150\%, 50\%) were only qualitatively consistent with measured thrombin values.
-However, simulations closer to the physiological range (fII,ATIII) = (100\%, 100\%) or (125\%,75\%) tracked the measured thrombin values. 
+Simulations near the physiological range (fII,ATIII) = (100\%, 100\%) or (125\%,75\%) tracked the measured thrombin values (Fig. \ref{fig-fII_ATIII}B and C).
+On the other hand, predictions for factors levels outside of the physiological range (fII,ATIII) = (50\%, 150\%) or (150\%, 50\%), while qualitatively consistent with measured thrombin values, did show significant 
+deviation from the measurements (Fig. \ref{fig-fII_ATIII}A and D).
 Likewise, simulations of thrombin generation in normal versus hemophilia (missing both fVIII and fIX) were consistent with measured thrombin values (Fig. \ref{fig-hemophilia}).
+We modeled the dependence of thrombin amplification on factor levels using a product rule ($\mathcal{Z} = fV\times fX\times fVIII\times fIX$), 
+which was then was integrated using a $\min$ integration rule into the control variable governing amplification. 
+Thus, in the absence of fVIII or fIX, the amplification control variable evaluated to zero, and the only thrombin produced was from initiation (Fig. \ref{fig-hemophilia}B).
+However, the decay of the thrombin signal was underpredicted in the normal case (Fig. \ref{fig-hemophilia}A), while the activated thrombin level was overpredicted 
+in hemophilia simulations, although thrombin generation was far less than normal (Fig. \ref{fig-hemophilia}B). 
+Taken together, the reduced order model performed well in the physiological range of factors, even with
+unmodeled components such as platelet activation in the hemophilia data set. Thus, our kinetic-rules framework predicted 
+the output of a physiologically important cascades such as coagulation, despite significant unmodeled components.
+
+The model ensemble predicted a direct correlation between thrombin generation and rFVIIa addition in hemophilia (Fig. \ref{fig-rFVII}).
+In the current proof of concept model, we cannot distinguish between different initiation sources, e.g., TF/FVIIa and rFVIIa, as we have only a single lumped initiation source (trigger).
+Thus, we simulated the addition of rFVIIa in hemophilia by removing fVIII and fIX from the model, and modulating the level of trigger.
+The baseline level of trigger is consistent with the previous hemophilia simulations, where the only thrombin being produced is from initiation mechanisms  (Fig. \ref{fig-rFVII}, 1$\times$~trigger).
+As we increased the strength of the trigger event, the thrombin peak time and the maximum value of thrombin increased (Fig. \ref{fig-rFVII}, 50$\times$~trigger). 
+However, as the trigger strength increased, the thrombin generated quickly decayed.
+For example, for the highest trigger strength simulated (50$\times$trigger), 95\% of the thrombin was gone by 20 min after initiation. 
 
 
-\subsection*{Global sensitivity analysis of the reduced order coagulation model.}
-We conducted a variance based global sensitivity analysis to better understand which parameters were controlling the performance of the coagulation model. 
+We performed flux analysis to understand how the reduced order coagulation model balanced initiation, amplification and inhibition of thrombin formation for normal coagulation and hemophilia.
+Analysis of the reaction flux through the reduced order network for thrombin generation in normal, hemophilia and rFVIIa-treated hemophilia identified three distinct operational modes (Fig. \ref{fig-flux-analysis}).
+The reduced order network includes four lumped reactions, initiation, amplification, thrombin-induced APC generation and total thrombin inhibition (including both APC and ATIII action).
+Directly after the addition of a trigger (e.g., TF/FVIIa or rFVIIa), the lumped initiation flux was the largest for all three cases.
+However, within a few minutes enough thrombin was generated by the initiation mechanism to induce the amplification stage. 
+During amplification, thrombin catalyzes its own formation and inhibition by generating activated protein C (APC), a potent inhibitor of the coagulation cascade.
+For normal coagulation, amplification and thrombin inhibition are the dominate reactions by 6 min after initiation (Fig. \ref{fig-flux-analysis}, left). 
+After 10 min, the dominate reaction has shifted to thrombin inhibition (both ATIII and APC action). In the current proof-of-principle model, 
+APC inhibits upstream of amplification thus APC activity will slow the rate of thrombin formation directly from the initiation trigger. 
+On the other hand, ATIII inhibits thrombin directly, as well as upstream coagulation factors.
+In hemophilia (missing both fVIII and fIX), the amplification reaction does not occur and the only thrombin produced is from initiation (Fig. \ref{fig-flux-analysis}, center).
+Initiation is quickly inhibited by APC, and the thrombin level stabilizes and eventually decays because of ATIII activity. 
+Lastly, when 50$\times$rFVIIa is used to induce thrombin formation in hemophilia (absence of fVIII/fIX), 
+initiation mechanisms dominate for up to 6 min following initiation (Fig. \ref{fig-flux-analysis}, right). 
+However, similar to hemophilia alone, without amplification the thrombin signal is quickly extinguished by the combined action of ATIII and APC generated by thrombin.   
+
+
+\subsection*{Sensitivity analysis of the ensemble of reduced order coagulation models.}
+We conducted a variance based global sensitivity analysis to better understand which parameters were controlling the performance of the reduced order coagulation model. 
 In particular, we calculated the sensitivity of two performance metrics, the time to maximum thrombin and the thrombin exposure (area under the thrombin curve) to
 changes in the model parameters (Fig. ZZ).  
 
@@ -464,6 +500,16 @@ Simulations of thrombin formation in the presence of ATIII and the protein C pat
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles.
 The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
 All factors and control proteins were at their physiological concentration unless others noted.}\label{fig-rFVII}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-8-Flux-rFVIIa-Trigger.pdf}
+\caption{Reaction flux distribution as a function of time for thrombin generation under normal (left), hemophilia (center) and rFVIIa treated hemophilia (right).
+Reaction flux was calculated for each particle at $T = 0,4,6,8,10,12,14$ min after the initiation of coagulation. 
+Blue colors denote low flux values red colors denote high flux values. }\label{fig-flux-analysis}
 \end{figure}
 
 \clearpage
