@@ -13,6 +13,68 @@
   \textsc{Annotation:}\ #2\end{quotation}}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{2012_kholodenko_kolch_SciSig}
+Kholodenko B, Yaffe MB, Kolch W (2012) Computational approaches for analyzing
+  information flow in biological networks.
+\newblock Sci Signal 5: re1.
+\bibAnnoteFile{2012_kholodenko_kolch_SciSig}
+
+\bibitem{Gadkar:2005ad}
+Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
+  transduction networks from data using a state regulator problem.}
+\newblock Syst Biol (Stevenage) 2: 17--30.
+\bibAnnoteFile{Gadkar:2005ad}
+
+\bibitem{Apgar:2010fk}
+Apgar JF, Witmer DK, White FM, Tidor B (2010) Sloppy models, parameter
+  uncertainty, and the role of experimental design.
+\newblock Mol Biosyst 6: 1890-900.
+\bibAnnoteFile{Apgar:2010fk}
+
+\bibitem{2001_bailey_NatBiotech}
+Bailey JE (2001) Complex biology with no parameters.
+\newblock Nat Biotechnol 19: 503-4.
+\bibAnnoteFile{2001_bailey_NatBiotech}
+
+\bibitem{Machta:2013aa}
+Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
+  compression underlies emergent theories and predictive models.
+\newblock Science 342: 604-7.
+\bibAnnoteFile{Machta:2013aa}
+
+\bibitem{2010_song_varner_BiotechJ}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{2010_song_varner_BiotechJ}
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{2010_luan_varner_MolBioSys}
+
+\bibitem{2011_kalita_brasier_JBC}
+Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, et~al. (2011)
+  Sources of cell-to-cell variability in canonical nuclear factor-kb (nf-kb)
+  signaling pathway inferred from single cell dynamic images.
+\newblock J Biol Chem 286: 37741-57.
+\bibAnnoteFile{2011_kalita_brasier_JBC}
+
+\bibitem{2011_hasenauer_allgower_BMCBioinfo}
+Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, et~al. (2011)
+  Identification of models of heterogeneous cell populations from population
+  snapshot data.
+\newblock BMC Bioinformatics 12: 125.
+\bibAnnoteFile{2011_hasenauer_allgower_BMCBioinfo}
+
+\bibitem{2012_creixell_linding_NatBiotech}
+Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
+  attractors for tumor-specific therapy.
+\newblock Nat Biotechnol 30: 842-8.
+\bibAnnoteFile{2012_creixell_linding_NatBiotech}
+
 \bibitem{ROBERTS1998}
 Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
   blood coagulation.
@@ -190,68 +252,6 @@ Hoffman M, {Monroe III} DM, Roberts HR (1998) Activated factor {VII} activates
   mechanism of action of high-dose activated factor {VII}.
 \newblock Blood Coag Fibrin 9: S61-S65.
 \bibAnnoteFile{HOFFMAN1998}
-
-\bibitem{2012_kholodenko_kolch_SciSig}
-Kholodenko B, Yaffe MB, Kolch W (2012) Computational approaches for analyzing
-  information flow in biological networks.
-\newblock Sci Signal 5: re1.
-\bibAnnoteFile{2012_kholodenko_kolch_SciSig}
-
-\bibitem{Gadkar:2005ad}
-Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
-  transduction networks from data using a state regulator problem.}
-\newblock Syst Biol (Stevenage) 2: 17--30.
-\bibAnnoteFile{Gadkar:2005ad}
-
-\bibitem{Apgar:2010fk}
-Apgar JF, Witmer DK, White FM, Tidor B (2010) Sloppy models, parameter
-  uncertainty, and the role of experimental design.
-\newblock Mol Biosyst 6: 1890-900.
-\bibAnnoteFile{Apgar:2010fk}
-
-\bibitem{2001_bailey_NatBiotech}
-Bailey JE (2001) Complex biology with no parameters.
-\newblock Nat Biotechnol 19: 503-4.
-\bibAnnoteFile{2001_bailey_NatBiotech}
-
-\bibitem{Machta:2013aa}
-Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
-  compression underlies emergent theories and predictive models.
-\newblock Science 342: 604-7.
-\bibAnnoteFile{Machta:2013aa}
-
-\bibitem{2010_song_varner_BiotechJ}
-Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
-  models using pareto optimal ensemble techniques (poets).
-\newblock Biotechnol J 5: 768-80.
-\bibAnnoteFile{2010_song_varner_BiotechJ}
-
-\bibitem{2010_luan_varner_MolBioSys}
-Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
-  mathematical models can identify network response to therapeutic
-  interventions.
-\newblock Mol Biosyst 6: 2272-86.
-\bibAnnoteFile{2010_luan_varner_MolBioSys}
-
-\bibitem{2011_kalita_brasier_JBC}
-Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, et~al. (2011)
-  Sources of cell-to-cell variability in canonical nuclear factor-kb (nf-kb)
-  signaling pathway inferred from single cell dynamic images.
-\newblock J Biol Chem 286: 37741-57.
-\bibAnnoteFile{2011_kalita_brasier_JBC}
-
-\bibitem{2011_hasenauer_allgower_BMCBioinfo}
-Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, et~al. (2011)
-  Identification of models of heterogeneous cell populations from population
-  snapshot data.
-\newblock BMC Bioinformatics 12: 125.
-\bibAnnoteFile{2011_hasenauer_allgower_BMCBioinfo}
-
-\bibitem{2012_creixell_linding_NatBiotech}
-Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
-  attractors for tumor-specific therapy.
-\newblock Nat Biotechnol 30: 842-8.
-\bibAnnoteFile{2012_creixell_linding_NatBiotech}
 
 \bibitem{SCIPY}
 Jones E, Oliphant T, Peterson P (2001--).
