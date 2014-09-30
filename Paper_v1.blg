@@ -3,53 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: plos2009.bst
 Database file #1: References_v1.bib
-Warning--I didn't find a database entry for "2011_lequieu_chakrabarti_nayak_varner_PLoSCompBio"
-Warning--I didn't find a database entry for "ROBERTS2004"
-Warning--I didn't find a database entry for "ROBERTS2006"
-Warning--I didn't find a database entry for "ALLEN2007"
 Warning--I didn't find a database entry for "Duchesne:2008hw"
 Warning--I didn't find a database entry for "VARNER2007"
+Warning--I didn't find a database entry for "ALLEN2007"
 Warning--I didn't find a database entry for "Gutenkunst2007"
+Warning--I didn't find a database entry for "ROBERTS2004"
+Warning--I didn't find a database entry for "ROBERTS2006"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 42 entries,
+You've used 39 entries,
             2441 wiz_defined-function locations,
-            872 strings with 13600 characters,
-and the built_in function-call counts, 32601 in all, are:
-= -- 2982
-> -- 561
+            847 strings with 12650 characters,
+and the built_in function-call counts, 29473 in all, are:
+= -- 2697
+> -- 493
 < -- 2
-+ -- 280
-- -- 140
-* -- 2709
-:= -- 3916
-add.period$ -- 86
-call.type$ -- 42
-change.case$ -- 42
++ -- 246
+- -- 123
+* -- 2434
+:= -- 3540
+add.period$ -- 80
+call.type$ -- 39
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 84
-duplicate$ -- 3203
-empty$ -- 3382
-format.name$ -- 175
-if$ -- 7242
+cite$ -- 78
+duplicate$ -- 2893
+empty$ -- 3065
+format.name$ -- 155
+if$ -- 6551
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 438
-newline$ -- 226
-num.names$ -- 43
-pop$ -- 538
+int.to.str$ -- 39
+missing$ -- 400
+newline$ -- 211
+num.names$ -- 40
+pop$ -- 499
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 279
+skip$ -- 248
 stack$ -- 0
-substring$ -- 4527
-swap$ -- 880
+substring$ -- 4077
+swap$ -- 804
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 260
-width$ -- 44
-write$ -- 475
-(There were 7 warnings)
+while$ -- 234
+width$ -- 41
+write$ -- 442
+(There were 6 warnings)

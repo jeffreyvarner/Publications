@@ -42,38 +42,19 @@ Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
 \newblock Science 342: 604-7.
 \bibAnnoteFile{Machta:2013aa}
 
-\bibitem{2010_song_varner_BiotechJ}
-Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
-  models using pareto optimal ensemble techniques (poets).
-\newblock Biotechnol J 5: 768-80.
-\bibAnnoteFile{2010_song_varner_BiotechJ}
+\bibitem{Cirit:2012kx}
+Cirit M, Haugh JM (2012) Data-driven modelling of receptor tyrosine kinase
+  signalling networks quantifies receptor-specific potencies of pi3k- and
+  ras-dependent erk activation.
+\newblock Biochem J 441: 77-85.
+\bibAnnoteFile{Cirit:2012kx}
 
-\bibitem{2010_luan_varner_MolBioSys}
-Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
-  mathematical models can identify network response to therapeutic
-  interventions.
-\newblock Mol Biosyst 6: 2272-86.
-\bibAnnoteFile{2010_luan_varner_MolBioSys}
-
-\bibitem{2011_kalita_brasier_JBC}
-Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, et~al. (2011)
-  Sources of cell-to-cell variability in canonical nuclear factor-kb (nf-kb)
-  signaling pathway inferred from single cell dynamic images.
-\newblock J Biol Chem 286: 37741-57.
-\bibAnnoteFile{2011_kalita_brasier_JBC}
-
-\bibitem{2011_hasenauer_allgower_BMCBioinfo}
-Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, et~al. (2011)
-  Identification of models of heterogeneous cell populations from population
-  snapshot data.
-\newblock BMC Bioinformatics 12: 125.
-\bibAnnoteFile{2011_hasenauer_allgower_BMCBioinfo}
-
-\bibitem{2012_creixell_linding_NatBiotech}
-Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
-  attractors for tumor-specific therapy.
-\newblock Nat Biotechnol 30: 842-8.
-\bibAnnoteFile{2012_creixell_linding_NatBiotech}
+\bibitem{Morris:2011ys}
+Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
+  Training signaling pathway maps to biochemical data with constrained fuzzy
+  logic: quantitative analysis of liver cell responses to inflammatory stimuli.
+\newblock PLoS Comput Biol 7: e1001099.
+\bibAnnoteFile{Morris:2011ys}
 
 \bibitem{ROBERTS1998}
 Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
@@ -125,6 +106,12 @@ Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
   factor {VIIa}-dependent coagulation in hemophilia blood.
 \newblock Blood 99: 923-930.
 \bibAnnoteFile{BUTENAS2002a}
+
+\bibitem{Hedner:2008rm}
+Hedner U (2008) Factor viia and its potential therapeutic use in
+  bleeding-associated pathologies.
+\newblock Thromb Haemost 100: 557--562.
+\bibAnnoteFile{Hedner:2008rm}
 
 \bibitem{HANSSON2005}
 GKHansson (2005) {Inflammation, Atherosclerosis and Coronary Artery Disease}.
@@ -186,12 +173,6 @@ Schneiderman J, Rubin E, Nugent DJ, Young G (2007) Sequential therapy with
   experience.
 \newblock Haemophilia 13: 244-248.
 \bibAnnoteFile{SCHNEIDERMAN2007}
-
-\bibitem{Hedner:2008rm}
-Hedner U (2008) Factor viia and its potential therapeutic use in
-  bleeding-associated pathologies.
-\newblock Thromb Haemost 100: 557--562.
-\bibAnnoteFile{Hedner:2008rm}
 
 \bibitem{Talbot:2009kk}
 Talbot M, Tien HC (2009) The use of recombinant factor viia in trauma patients.

@@ -140,22 +140,23 @@
 %Thus, by analyzing these outputs in a normal versus a perturbed network, it might be possible to reverse engineer the molecular influence associated with a therapeutic intervention. 
 
 \section*{Introduction}
-Developing mathematical models of the biochemical networks important in human disease is a significant facet of systems biology.
-Modeling approaches differ in their degree of mechanistic detail, and the choice of approach is often determined by prior system knowledge \citep{2012_kholodenko_kolch_SciSig}. 
-The ability of ordinary differential equation (ODE) modeling to capture dynamics has made it one of the most common tools for studying signaling systems. 
-However, ODEs come with difficult (and sometimes impossible) to solve parameter identification problems. 
+Developing mathematical models of biochemical networks is a significant facet of systems biology.
+Modeling approaches differ in their degree of detail, and the choice of approach is often determined by prior system knowledge \citep{2012_kholodenko_kolch_SciSig}. 
+The ability of ordinary differential equations (ODEs) to capture dynamics has made it one of the most common tools for studying signaling systems. 
+However, ODEs come with difficult (and sometimes impossible) parameter identification problems. 
 For example, Gadkar et al., showed that even with near-perfect information and high frequency sampling, 
 it was often impossible to identify (to within a specified uncertainty) all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
-This results highlights the perhaps under-appreciated role that experimental design plays in generating the best training and validation data sets for model identification \citep{Apgar:2010fk}.
-Detailed ODE models also require significant mechanistic knowledge of the underlying biology. 
-However, as Bailey suggested more than a decade ago, achieving qualitative and quantitative understanding of complex biological systems should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
-Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model behavior and predictive ability were sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter signaling models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
-Thus, reasonable model predictions could be possible with limited parameter information. 
-Taking advantage of this property of model behavior, we developed sloppy techniques for parameter identification using ensembles of deterministic models. 
-Pareto optimal ensemble techniques (POETs) incorporate principles of competing objectives into a multi-objective optimization framework, enabling the exploration of kinetic parameter space while accounting for uncertainty and potential conflicts in the experimental training data \citep{2010_song_varner_BiotechJ}. 
-We have proposed that the sloppy behavior of biological networks may also be a source of cell-to-cell \citep{2011_lequieu_chakrabarti_nayak_varner_PLoSCompBio} or even patient-to-patient heterogeneity \citep{2010_luan_varner_MolBioSys}. 
-Recently, Bayesian techniques of parameter identification have also been used to explore cell-to-cell heterogeneity  \citep{2011_kalita_brasier_JBC,2011_hasenauer_allgower_BMCBioinfo}. 
-Thus, a population of cells could be viewed as a dynamic ensemble of networks as the operational biochemical pathways are often context-specific \citep{2012_creixell_linding_NatBiotech}. 
+This result highlights the perhaps under-appreciated role that experimental design could play in generating the best training and validation data sets for model identification \citep{Apgar:2010fk}.
+ODE models also require significant mechanistic knowledge of the underlying biology. 
+However, Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
+should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
+Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model behavior and predictive ability are typically 
+sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter signaling models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+Alternatively, data-driven approaches \citep{Cirit:2012kx} or logical model formulations \citep{Morris:2011ys} 
+are emerging paradigms that constrain model structure (and hence the identifiability challenge) by the availability of training and validation data. 
+These are interesting techniques because the data naturally informs model structure, which can be expanded as more data becomes available. 
+Thus, while there are many possible strategies to simulate biochemical networks, ODE models remain a common choice despite
+significant identification challenges.
 
 The human coagulation system is an archetype proteolytic cascade regulated by both positive and negative feedback loops.
 The biology of coagulation is well studied \cite{ROBERTS1998,MANN1999,BUTENAS2002,FURIE2004}. 
@@ -169,25 +170,13 @@ Thrombin generation consists of three phases, initiation, propagation and termin
 Initially thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa) \cite{BUTENAS2002a}. 
 Picomolar amounts of thrombin can then activate the cofactors factors V and VIII (fV and fVIII) and platelets, 
 resulting in the formation of the \emph{tenase} and \emph{prothrombinase} complexes on the surface of activated platelets.
-These complexes amplify the early coagulation signal by activating downstream and upstream coagulation factors.  
-Termination occurs after prothrombin is consumed or activated thrombin is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
-
-Malfunctions in coagulation can have serious or potentially even fatal consequences.
-For example, aggressive clotting is involved with Coronary Artery Diseases (CADs), which collectively account for 38\% of all deaths in North America \cite{HANSSON2005}.
-Coagulation management during surgery can also be challenging, particularly because of the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
-Insufficient coagulation due to genetic disorders such as hemophilia can also result in recurrent bleeding. 
-The coagulation factors VIII (fVIII) and IX (fIX) are deficient in Hemophilia A and B, respectively \cite{COOPER1994,MANNUCCI2001,MITCHELL2008}.
-People with mild hemophilia have 5-40\% of the normal clotting factor levels while severe hemophiliacs have $<$1\% \cite{MITCHELL2008}.
-Hemophilia can be controlled with regular infusions of the deficient clotting factors. 
-However, clotting factor replacement sometimes leads to the formation of \emph{in-vivo} fVIII and fIX inhibitors \cite{TOMOKIYO2003}.
-Activated Prothrombin Complex Concentrates (aPCCs) from pooled plasma have been used to treat hemophilia. 
-However, aPCCs can have safety issues \cite{CHAVIN1988,ALLEN2006,SCHNEIDERMAN2007}. 
-Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
-hemophilia with and without factor VIII/IX inhibitors \cite{Lusher:1998bs,Shapiro:1998sh,Shapiro:2000pr,Shapiro:2008px}.
-However, rFVIIa requires frequent administration (every 2-3 hr) because of its short half-life in the circulation. 
-Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONROE1997,HOFFMAN1998,BUTENAS2002a,ROBERTS2004,ROBERTS2006,ALLEN2007}
-and effective dose range \cite{TOMOKIYO2003}.
-Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
+Tenese amplifies the early coagulation signal by activating FXa, while prothrombinase, a complex of FVa-FXa, 
+directly converts prothrombin to thrombin. There are several control points in the cascade that promote 
+or inhibit thrombin formation. Tissue Factor Pathway Inhibitor (TFPI) downregulates FXa formation catalyzed by TF/FVIIa, while antithrombin III (ATIII) neutralizes 
+several of the serine proteases generated during coagulation.  
+Thrombin itself also inadvertently plays a role in its own inhibition; thrombin, through interaction with thrombomodulin and endothelial cell protein C receptor (EPCR),
+converts protein C to activated protein C (APC) which attenuates the coagulation response by the proteolytic cleavage of fV/FVa and fVIII/FVIIIa. 
+Thus, termination occurs after prothrombin is consumed or activated thrombin is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
 
 In this study, we constructed a reduced order effective model of thrombin generation in normal and hemophilic blood.
 We used this model to understand how physiological coagulation was altered by prothrombin levels, the activated protein C pathway and the level of ATIII.  
@@ -212,7 +201,7 @@ We developed a reduced order coagulation model to test our hybrid kinetic modeli
 A trigger event initiates thrombin formation (FIIa) from prothrombin (fII) through a lumped initiation step.
 This step loosely represents the initial fluid phase activation of thrombin by activated FXa.
 Once activated, thrombin catalyzes its own formation (amplification step), and inhibition via the conversion of protein C to activated protein C (APC).
-APC and tissue factor pathway inhibitor (TFPI) inhibit initiation, while antithrombin III (ATIII) directly inhibits amplification. 
+APC and tissue factor pathway inhibitor (TFPI) inhibit initiation, while antithrombin III (ATIII) inhibits amplification. 
 All initiation and inhibition processes, as well as the dependence of amplification upon other coagulation factors, was approximated using our rule-based approach (Fig. \ref{fig-control-schematic}). 
 Individual regulatory contributions to the activity of pathway enzymes were integrated into control coefficients using an integration rule.  
 These control coefficients then modified the rates of model processes at each time step.
@@ -299,11 +288,13 @@ Lastly, when 50$\times$rFVIIa is used to induce thrombin formation in hemophilia
 initiation mechanisms dominate for up to 6 min following initiation (Fig. \ref{fig-flux-analysis}, right). 
 However, similar to hemophilia alone, without amplification the thrombin signal is quickly extinguished by the combined action of ATIII and APC generated by thrombin.   
 
-\subsection*{Sensitivity analysis of the ensemble of reduced order coagulation models.}
-We conducted a global sensitivity analysis to estimate which parameters controlled the performance of the reduced order coagulation model. 
+\clearpage
+
+\subsection*{Sensitivity analysis of the reduced order coagulation model.}
+We conducted a global sensitivity analysis to estimate which parameters controlled the performance of the reduced order model. 
 We calculated the sensitivity of the time to maximum thrombin (peak time) and the thrombin exposure (area under the thrombin curve) 
 for different levels of prothrombin, and protein C (Fig. \ref{fig-sensitivity}). 
-Globally, 41\% of the model parameters shifted in importance between the $(\%fII,\%PC) = (50\%, 0\%)$ and $(150\%,100\%)$ cases for the peak thrombin time (Fig. \ref{fig-sensitivity}A). 
+Globally, 41\% of the parameters shifted in importance between the (fII,PC) = (50\%, 0\%) and (150\%,100\%) cases for the peak thrombin time (Fig. \ref{fig-sensitivity}A). 
 The majority of these shifts were involved increased prothrombin and the protein C pathway, while only
 5\% were directly associated with increased prothrombin alone. The rate constant for thrombin amplification was the most important parameter controlling the
 peak thrombin time. While this parameter was differentially important for different prothrombin levels, and in the presence or absence of 
@@ -313,7 +304,7 @@ activated protein C formation, as well as the rate constant controlling ATIII in
 On the other hand, only 27\% of the model parameters were differentially sensitive between the (\%fII,\%PC) (50\%, 0\%) and (150\%,100\%) cases 
 for the thrombin exposure (Fig. \ref{fig-sensitivity}B). Of these parameters, all of the shifts were associated the interplay between thrombin formation and the protein C pathway. 
 The rate constant controlling ATIII inhibition was the most important parameter controlling the thrombin exposure.
-While this parameter was less important in the presence of the protein C pathway for 150\% prothrombin levels, it was significantly above all other parameters. 
+While this parameter was less important in the presence of protein C for 150\% prothrombin levels, it was significantly above all other parameters. 
 Similar to the peak time, for 150\% prothrombin, the control gain for activated protein C formation was differentially important along with the rate constant controlling
 amplification. However, the influence of the amplification parameter was much less in the thrombin exposure case versus peak time. 
 
@@ -339,6 +330,24 @@ Thus, the model ensemble displayed \emph{sloppy} behavior similar to that observ
 By studying a family of models, we perhaps partially addressed the uncertainty stemming from the many poorly characterized model parameters.
 However, many other factors could influence our results. For example, missing structural interactions or biophysical factors such as blood flow could play a large role.
 Thus, while the results presented here may be a valuable first step, more studies are required.
+
+Malfunctions in coagulation can have serious or potentially even fatal consequences.
+For example, aggressive clotting is involved with Coronary Artery Diseases (CADs), which collectively account for 38\% of all deaths in North America \cite{HANSSON2005}.
+Coagulation management during surgery can also be challenging, particularly because of the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
+Insufficient coagulation due to genetic disorders such as hemophilia can also result in recurrent bleeding. 
+The coagulation factors VIII (fVIII) and IX (fIX) are deficient in Hemophilia A and B, respectively \cite{COOPER1994,MANNUCCI2001,MITCHELL2008}.
+People with mild hemophilia have 5-40\% of the normal clotting factor levels while severe hemophiliacs have $<$1\% \cite{MITCHELL2008}.
+Hemophilia can be controlled with regular infusions of the deficient clotting factors. 
+However, clotting factor replacement sometimes leads to the formation of \emph{in-vivo} fVIII and fIX inhibitors \cite{TOMOKIYO2003}.
+Activated Prothrombin Complex Concentrates (aPCCs) from pooled plasma have been used to treat hemophilia. 
+However, aPCCs can have safety issues \cite{CHAVIN1988,ALLEN2006,SCHNEIDERMAN2007}. 
+Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
+hemophilia with and without factor VIII/IX inhibitors \cite{Lusher:1998bs,Shapiro:1998sh,Shapiro:2000pr,Shapiro:2008px}.
+However, rFVIIa requires frequent administration (every 2-3 hr) because of its short half-life in the circulation. 
+Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONROE1997,HOFFMAN1998,BUTENAS2002a,ROBERTS2004,ROBERTS2006,ALLEN2007}
+and effective dose range \cite{TOMOKIYO2003}.
+Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
+
 
 While the performance of the proof of principle reduced order model was impressive, there are several questions that should be explored further.
 [FINISH]
