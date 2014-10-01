@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  30 SEP 2014 12:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 OCT 2014 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -648,122 +648,122 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 ]
 
 Package natbib Warning: Citation `Duchesne:2008hw' on page 10 undefined on inpu
-t line 317.
+t line 316.
 
 
 Package natbib Warning: Citation `VARNER2007' on page 10 undefined on input lin
-e 320.
+e 319.
 
 
 Package natbib Warning: Citation `ALLEN2007' on page 10 undefined on input line
- 324.
+ 323.
 
 
 Package natbib Warning: Citation `Gutenkunst2007' on page 10 undefined on input
- line 329.
+ line 328.
 
 [10
 
 ]
 
 Package natbib Warning: Citation `ROBERTS2004' on page 11 undefined on input li
-ne 347.
+ne 346.
 
 
 Package natbib Warning: Citation `ROBERTS2006' on page 11 undefined on input li
-ne 347.
+ne 346.
 
 
 Package natbib Warning: Citation `ALLEN2007' on page 11 undefined on input line
- 347.
+ 346.
 
 
 Package natbib Warning: Citation `Duchesne:2008hw' on page 11 undefined on inpu
-t line 349.
+t line 348.
 
 [11]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 360--361
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 359--360
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
 
 [12
 
-] [13] [14] [15] (./Paper_v1.bbl [16
+] [13] [14] [15] [16] (./Paper_v1.bbl [17
 
-] [17] [18]) [19]
-<./figs/Figure-1-Network.pdf, id=84, 794.97pt x 614.295pt>
+] [18] [19]) [20]
+<./figs/Figure-1-Network.pdf, id=87, 794.97pt x 614.295pt>
 File: ./figs/Figure-1-Network.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Network.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Network.pdf used on input line 453.
+Package pdftex.def Info: ./figs/Figure-1-Network.pdf used on input line 460.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 458.
- [20 <./figs/Figure-1-Network.pdf>]
-<./figs/Figure-2-ControlSchematic.pdf, id=148, 794.97pt x 614.295pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 465.
+ [21 <./figs/Figure-1-Network.pdf>]
+<./figs/Figure-2-ControlSchematic.pdf, id=147, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 465.
+e 472.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [21 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-DIFF_FII_NO_APC.p
-df, id=301, 794.97pt x 614.295pt>
+ [22 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-DIFF_FII_NO_APC.p
+df, id=300, 794.97pt x 614.295pt>
 File: ./figs/Figure-3-DIFF_FII_NO_APC.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-DIFF_FII_NO_APC.pdf>
 Package pdftex.def Info: ./figs/Figure-3-DIFF_FII_NO_APC.pdf used on input line
- 477.
+ 484.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [22 <./figs/Figure-3-DIFF_FII_NO_APC.pdf>] <./figs/Figure-4-DIFF_FII_APC.pdf, 
+ [23 <./figs/Figure-3-DIFF_FII_NO_APC.pdf>] <./figs/Figure-4-DIFF_FII_APC.pdf, 
 id=336, 794.97pt x 614.295pt>
 File: ./figs/Figure-4-DIFF_FII_APC.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-4-DIFF_FII_APC.pdf>
 Package pdftex.def Info: ./figs/Figure-4-DIFF_FII_APC.pdf used on input line 49
-2.
+9.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [23 <./figs/Figure-4-DIFF_FII_APC.pdf>]
-<./figs/Figure-5-FII_ATIII.pdf, id=367, 794.97pt x 614.295pt>
+ [24 <./figs/Figure-4-DIFF_FII_APC.pdf>]
+<./figs/Figure-5-FII_ATIII.pdf, id=366, 794.97pt x 614.295pt>
 File: ./figs/Figure-5-FII_ATIII.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-5-FII_ATIII.pdf>
-Package pdftex.def Info: ./figs/Figure-5-FII_ATIII.pdf used on input line 508.
+Package pdftex.def Info: ./figs/Figure-5-FII_ATIII.pdf used on input line 515.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [24 <./figs/Figure-5-FII_ATIII.pdf>]
-<./figs/Figure-6-Hemophilia.pdf, id=397, 794.97pt x 614.295pt>
+ [25 <./figs/Figure-5-FII_ATIII.pdf>]
+<./figs/Figure-6-Hemophilia.pdf, id=396, 794.97pt x 614.295pt>
 File: ./figs/Figure-6-Hemophilia.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-6-Hemophilia.pdf>
-Package pdftex.def Info: ./figs/Figure-6-Hemophilia.pdf used on input line 524.
+Package pdftex.def Info: ./figs/Figure-6-Hemophilia.pdf used on input line 531.
 
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [25 <./figs/Figure-6-Hemophilia.pdf>]
-<./figs/Figure-7-rFVIIa-Trigger.pdf, id=427, 794.97pt x 614.295pt>
+ [26 <./figs/Figure-6-Hemophilia.pdf>]
+<./figs/Figure-7-rFVIIa-Trigger.pdf, id=426, 794.97pt x 614.295pt>
 File: ./figs/Figure-7-rFVIIa-Trigger.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-7-rFVIIa-Trigger.pdf>
 Package pdftex.def Info: ./figs/Figure-7-rFVIIa-Trigger.pdf used on input line 
-539.
+546.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [26 <./figs/Figure-7-rFVIIa-Trigger.pdf>] <./figs/Figure-8-Flux-rFVIIa-Trigger
-.pdf, id=450, 794.97pt x 614.295pt>
+ [27 <./figs/Figure-7-rFVIIa-Trigger.pdf>] <./figs/Figure-8-Flux-rFVIIa-Trigger
+.pdf, id=449, 794.97pt x 614.295pt>
 File: ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>
 Package pdftex.def Info: ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf used on input 
-line 551.
+line 558.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [27 <./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>] <./figs/Figure-9-Sensitivity.pd
-f, id=470, 794.97pt x 614.295pt>
+ [28 <./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>] <./figs/Figure-9-Sensitivity.pd
+f, id=469, 794.97pt x 614.295pt>
 File: ./figs/Figure-9-Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-9-Sensitivity.pdf>
-Package pdftex.def Info: ./figs/Figure-9-Sensitivity.pdf used on input line 562
+Package pdftex.def Info: ./figs/Figure-9-Sensitivity.pdf used on input line 569
 .
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [28 <./figs/Figure-9-Sensitivity.pdf>]
+ [29 <./figs/Figure-9-Sensitivity.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
@@ -804,7 +804,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (30 pages, 1118544 bytes).
+Output written on Paper_v1.pdf (31 pages, 1120754 bytes).
 PDF statistics:
  563 PDF objects out of 1000 (max. 8388607)
  437 compressed objects within 5 object streams

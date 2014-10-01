@@ -180,8 +180,7 @@ Thus, termination occurs after prothrombin is consumed or activated thrombin is 
 
 In this study, we constructed a reduced order effective model of thrombin generation in normal and hemophilic blood.
 We used this model to understand how physiological coagulation was altered by prothrombin levels, the activated protein C pathway and the level of ATIII.  
-Previous models of coagulation have been formulated as systems of nonlinear ordinary differential equations, often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE]. 
-While this approach has proven highly effective, it does require significant experimental data for model identification and validation.    
+Previous models of coagulation have been formulated as systems of nonlinear ordinary differential equations, often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE]. While this approach has proven highly effective, it does require significant experimental data for model identification and validation.    
 For example, a previous coagulation model from our laboratory, which described 193 proteins and protein complexes interconnected by 301 biochemical interactions, 
 contained 467 unknown parameters (301 kinetic parameters and 166 initial conditions) [REFHERE]. 
 The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulatory motifs with traditional kinetic pathway modeling. 
@@ -399,13 +398,21 @@ Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling t
 	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{nj}\left(\mathcal{Z}\right)\right)
 \end{eqnarray}
 The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating and inhibitory factors for enzyme $j$. 
-If an enzyme had no allosteric factors, we set $v_{j} = 1$.
+If a process has no modifying factors, we set $v_{j} = 1$.
 There are many possible functional forms for $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$. 
 However, in this study, each individual transfer function took the form:
 \begin{equation}\label{eqn:control-factor}
 	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
 \end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $\kappa_{ij}$ and $\eta$ are control parameters. 
 The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
+Applying the general framework to the reduced coagulation network resulted in five ordinary differential equations:
+\begin{eqnarray}
+	\frac{dx_{1}}{dt} & =& -\left(r_{init}v_{init} + r_{amp}v_{amp}\right)\\
+	\frac{dx_{2}}{dt} &=& r_{amp}v_{amp} + r_{init}v_{init} - \left(r_{inh,ATIII}v_{inh,ATIII} + r_{inh,APC}v_{inh,APC}\right)\\
+	\frac{dx_{3}}{dt} &=& -r_{apc}v_{apc} \\
+	\frac{dx_{4}}{dt} &=& r_{apc}v_{apc} \\
+	\frac{dx_{5}}{dt} & = & -r_{inh,ATIII}v_{inh,ATIII}
+\end{eqnarray}where $\mathbf{x} = \left(fII,FIIa,PC,APC,ATIII\right)^{T}$.
 The model equations were encoded using the Python programming language and solved using the ODEINT routine of the SciPy module \citep{SCIPY}.
 
 \subsection*{Estimation of model parameters from experimental data.}
