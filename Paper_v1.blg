@@ -5,6 +5,7 @@ The style file: plos2009.bst
 Database file #1: References_v1.bib
 Warning--I didn't find a database entry for "Duchesne:2008hw"
 Warning--I didn't find a database entry for "VARNER2007"
+Warning--I didn't find a database entry for "BUTENAS2002"
 Warning--I didn't find a database entry for "ALLEN2007"
 Warning--I didn't find a database entry for "Gutenkunst2007"
 Warning--I didn't find a database entry for "ROBERTS2004"
@@ -12,43 +13,43 @@ Warning--I didn't find a database entry for "ROBERTS2006"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 39 entries,
             2441 wiz_defined-function locations,
-            847 strings with 12650 characters,
-and the built_in function-call counts, 29473 in all, are:
-= -- 2697
-> -- 493
+            849 strings with 12770 characters,
+and the built_in function-call counts, 29254 in all, are:
+= -- 2678
+> -- 485
 < -- 2
-+ -- 246
-- -- 123
-* -- 2434
-:= -- 3540
++ -- 242
+- -- 121
+* -- 2416
+:= -- 3515
 add.period$ -- 80
 call.type$ -- 39
 change.case$ -- 39
 chr.to.int$ -- 0
 cite$ -- 78
-duplicate$ -- 2893
-empty$ -- 3065
-format.name$ -- 155
-if$ -- 6551
+duplicate$ -- 2878
+empty$ -- 3044
+format.name$ -- 153
+if$ -- 6503
 int.to.chr$ -- 0
 int.to.str$ -- 39
-missing$ -- 400
+missing$ -- 398
 newline$ -- 211
 num.names$ -- 40
-pop$ -- 499
+pop$ -- 492
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 248
+skip$ -- 246
 stack$ -- 0
-substring$ -- 4077
-swap$ -- 804
+substring$ -- 4037
+swap$ -- 800
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 234
+while$ -- 232
 width$ -- 41
 write$ -- 442
-(There were 6 warnings)
+(There were 7 warnings)

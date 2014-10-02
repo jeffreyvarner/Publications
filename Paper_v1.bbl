@@ -25,12 +25,6 @@ Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
 \newblock Syst Biol (Stevenage) 2: 17--30.
 \bibAnnoteFile{Gadkar:2005ad}
 
-\bibitem{Apgar:2010fk}
-Apgar JF, Witmer DK, White FM, Tidor B (2010) Sloppy models, parameter
-  uncertainty, and the role of experimental design.
-\newblock Mol Biosyst 6: 1890-900.
-\bibAnnoteFile{Apgar:2010fk}
-
 \bibitem{2001_bailey_NatBiotech}
 Bailey JE (2001) Complex biology with no parameters.
 \newblock Nat Biotechnol 19: 503-4.
@@ -56,26 +50,22 @@ Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
 \newblock PLoS Comput Biol 7: e1001099.
 \bibAnnoteFile{Morris:2011ys}
 
-\bibitem{ROBERTS1998}
-Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
-  blood coagulation.
-\newblock Haemophilia 4: 331-334.
-\bibAnnoteFile{ROBERTS1998}
+\bibitem{Butenas:2002aa}
+Butenas S, Mann KG (2002) Blood coagulation.
+\newblock Biochemistry (Mosc) 67: 3-12.
+\bibAnnoteFile{Butenas:2002aa}
 
-\bibitem{MANN1999}
-Mann K (1999) Biochemistry and physiology of blood coagulation.
-\newblock Thromb Haemost 82: 165-174.
-\bibAnnoteFile{MANN1999}
+\bibitem{Schenone:2004aa}
+Schenone M, Furie BC, Furie B (2004) The blood coagulation cascade.
+\newblock Curr Opin Hematol 11: 272-7.
+\bibAnnoteFile{Schenone:2004aa}
 
-\bibitem{BUTENAS2002}
-Butenas S, Mann K (2002) Blood coagulation.
-\newblock Biochemistry (Moscow) 67: 3-12.
-\bibAnnoteFile{BUTENAS2002}
-
-\bibitem{FURIE2004}
-Schenone M, Furie BC, Furie B (2004) {The blood coagulation cascade}.
-\newblock Curr Opin Hematol 11: 272 - 277.
-\bibAnnoteFile{FURIE2004}
+\bibitem{Adams:2009aa}
+Adams RLC, Bird RJ (2009) Review article: Coagulation cascade and therapeutics
+  update: relevance to nephrology. part 1: Overview of coagulation,
+  thrombophilias and history of anticoagulants.
+\newblock Nephrology (Carlton) 14: 462-70.
+\bibAnnoteFile{Adams:2009aa}
 
 \bibitem{GIESEN1999}
 Giesen P, Rauch U, Bohrmann B, Kling D, Roque M, et~al. (1999) {Blood-borne
@@ -88,6 +78,17 @@ Mann K, Nesheim M, Church W, Haley P, Krishnaswamy S (1990) Surface-dependent
   reactions of vitamin k-dependent enzyme complexes.
 \newblock Blood 76: 1-16.
 \bibAnnoteFile{MANN1990}
+
+\bibitem{ROBERTS1998}
+Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
+  blood coagulation.
+\newblock Haemophilia 4: 331-334.
+\bibAnnoteFile{ROBERTS1998}
+
+\bibitem{MANN1999}
+Mann K (1999) Biochemistry and physiology of blood coagulation.
+\newblock Thromb Haemost 82: 165-174.
+\bibAnnoteFile{MANN1999}
 
 \bibitem{GOLDHABER2006}
 Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
