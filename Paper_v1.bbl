@@ -67,11 +67,17 @@ Adams RLC, Bird RJ (2009) Review article: Coagulation cascade and therapeutics
 \newblock Nephrology (Carlton) 14: 462-70.
 \bibAnnoteFile{Adams:2009aa}
 
-\bibitem{GIESEN1999}
-Giesen P, Rauch U, Bohrmann B, Kling D, Roque M, et~al. (1999) {Blood-borne
-  tissue factor: another view of thrombosis.}
-\newblock Proc Natl Acad Sci USA 96: 2311 - 2315.
-\bibAnnoteFile{GIESEN1999}
+\bibitem{GOLDHABER2006}
+Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
+  Basic Principles and Clinical Practice}.
+\newblock Lippincott Williams and Wilkins.
+\bibAnnoteFile{GOLDHABER2006}
+
+\bibitem{BRUMMEL2002}
+Brummel KE, Paradis SG, Butenas S, Mann KG (2002) Thrombin functions during
+  tissue factor-induced blood coagulation.
+\newblock Blood 100: 148-152.
+\bibAnnoteFile{BRUMMEL2002}
 
 \bibitem{MANN1990}
 Mann K, Nesheim M, Church W, Haley P, Krishnaswamy S (1990) Surface-dependent
@@ -90,23 +96,69 @@ Mann K (1999) Biochemistry and physiology of blood coagulation.
 \newblock Thromb Haemost 82: 165-174.
 \bibAnnoteFile{MANN1999}
 
-\bibitem{GOLDHABER2006}
-Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
-  Basic Principles and Clinical Practice}.
-\newblock Lippincott Williams and Wilkins.
-\bibAnnoteFile{GOLDHABER2006}
-
-\bibitem{BRUMMEL2002}
-Brummel KE, Paradis SG, Butenas S, Mann KG (2002) Thrombin functions during
-  tissue factor-induced blood coagulation.
-\newblock Blood 100: 148-152.
-\bibAnnoteFile{BRUMMEL2002}
-
 \bibitem{BUTENAS2002a}
 Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
   factor {VIIa}-dependent coagulation in hemophilia blood.
 \newblock Blood 99: 923-930.
 \bibAnnoteFile{BUTENAS2002a}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{2010_luan_varner_MolBioSys}
+
+\bibitem{Jones:1994aa}
+Jones KC, Mann KG (1994) A model for the tissue factor pathway to thrombin. ii.
+  a mathematical simulation.
+\newblock J Biol Chem 269: 23367-73.
+\bibAnnoteFile{Jones:1994aa}
+
+\bibitem{Hockin:2002aa}
+Hockin MF, Jones KC, Everse SJ, Mann KG (2002) A model for the stoichiometric
+  regulation of blood coagulation.
+\newblock J Biol Chem 277: 18322-33.
+\bibAnnoteFile{Hockin:2002aa}
+
+\bibitem{Chatterjee:2010aa}
+Chatterjee MS, Denney WS, Jing H, Diamond SL (2010) Systems biology of
+  coagulation initiation: kinetics of thrombin generation in resting and
+  activated human blood.
+\newblock PLoS Comput Biol 6.
+\bibAnnoteFile{Chatterjee:2010aa}
+
+\bibitem{Stalker:2013aa}
+Stalker TJ, Traxler EA, Wu J, Wannemacher KM, Cermignano SL, et~al. (2013)
+  Hierarchical organization in the hemostatic response and its relationship to
+  the platelet-signaling network.
+\newblock Blood 121: 1875-85.
+\bibAnnoteFile{Stalker:2013aa}
+
+\bibitem{Leiderman:2014aa}
+Leiderman K, Fogelson A (2014) An overview of mathematical modeling of thrombus
+  formation under flow.
+\newblock Thromb Res 133 Suppl 1: S12-4.
+\bibAnnoteFile{Leiderman:2014aa}
+
+\bibitem{Bannish:2014ab}
+Bannish BE, Keener JP, Fogelson AL (2014) Modelling fibrinolysis: a 3d
+  stochastic multiscale model.
+\newblock Math Med Biol 31: 17-44.
+\bibAnnoteFile{Bannish:2014ab}
+
+\bibitem{Voronov:2013aa}
+Voronov RS, Stalker TJ, Brass LF, Diamond SL (2013) Simulation of intrathrombus
+  fluid and solute transport using in vivo clot structures with single platelet
+  resolution.
+\newblock Ann Biomed Eng 41: 1297-307.
+\bibAnnoteFile{Voronov:2013aa}
 
 \bibitem{Hedner:2008rm}
 Hedner U (2008) Factor viia and its potential therapeutic use in

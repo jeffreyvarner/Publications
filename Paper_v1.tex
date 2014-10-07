@@ -146,8 +146,7 @@
 
 \section*{Introduction}
 Developing mathematical models of biochemical networks is a significant facet of systems biology.
-Modeling approaches differ in their degree of detail. 
-The choice of approach is often determined by prior system knowledge, and model requirements \citep{2012_kholodenko_kolch_SciSig}. 
+Modeling approaches differ in their degree of detail, and the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
 Ordinary differential equation (ODE) models are a common tool for modeling biochemical systems because of their ability to capture dynamics. 
 However, ODEs often come with difficult (and sometimes impossible) parameter identification problems. 
 For example, Gadkar et al., showed that even with near-perfect information and high frequency sampling, 
@@ -155,46 +154,59 @@ it was often impossible to identify (to within a specified uncertainty) all the 
 ODE models can also require significant mechanistic knowledge of the underlying biology. 
 However, Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
 should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
-Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model behavior and predictive ability is typically 
+Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers have shown that model behavior and predictive ability is typically 
 sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter signaling models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
-Thus, accurate model predictions may be possible even if parameters or mechanistic structure is not well understood.
+Thus, accurate model predictions from a sloppy model may be possible, even if the parameters or mechanistic structure is not well understood, 
+if the critical directions in parameter space are properly constrained. 
 Alternatively, data-driven approaches \citep{Cirit:2012kx} or logical model formulations \citep{Morris:2011ys} 
 are emerging paradigms that constrain model structure (and hence the identifiability challenge) by the availability of training and validation data. 
 These are interesting techniques because the data naturally informs model structure, which can be expanded as more data becomes available. 
-Thus, while not mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism. 
-A potential third approach could be a combination of ODEs and logical models, where mechanistic information could be used when available, 
+While not mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
+However, modeling dynamics using logical models is not straightforward. 
+Thus, a potential third approach could be a combination of ODEs and logical models, where mechanistic information was used when available, 
 and missing or incomplete knowledge encoded using causal local rules.  
 
-In this study, we explored a hybrid modeling approach involving both ODEs and logical rules on a well studied biochemical network, 
-the human coagulation system. The human coagulation system is an archetype proteolytic cascade involving both positive 
+In this study, we developed a hybrid approach which combined ODEs and logical rules to model a well studied biochemical network, 
+the human coagulation system. Coagulation is an archetype proteolytic cascade involving both positive 
 and negative feedback \cite{Butenas:2002aa,Schenone:2004aa,Adams:2009aa}. 
 Coagulation is mediated by a family proteases in the circulation, called factors and a key group of blood cells, called platelets. 
-The activation of coagulation factors and platelets, which are normally inactive in the circulation, requires a trigger event.
-Trigger events such as vessel injury expose procoagulant materials like collagen, fibronectin, von Willebrand factor (vWF) or tissue factor (TF).
-These materials drive platelet localization and activation, coagulation factor activation and ultimately clot formation \cite{GIESEN1999}.  
-Once coagulation has been activated, two converging pathways activate the master protease thrombin (FIIa) from prothrombin (fII). 
+The central process in coagulation is the conversion of prothrombin (fII), an inactive coagulation factor, to the master protease thrombin (FIIa).
+Thrombin generation involves three phases, initiation, amplification and termination \cite{GOLDHABER2006, BRUMMEL2002}.
+Initiation requires a trigger event, for example vessel injury, which leads to the activation of factor VII (FVIIa).
+Two converging pathways, the extrinsic and intrinsic cascades, then process and amplify this initial coagulation signal. 
 The extrinsic cascade is generally believed to be the main mechanism of thrombinogenesis in the blood \cite{MANN1990,ROBERTS1998,MANN1999}.
-Thrombin generation consists of three phases, initiation, amplification and termination \cite{GOLDHABER2006, BRUMMEL2002}.  
-Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa) \cite{BUTENAS2002a}. 
+Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa), which itself has been activated by FVIIa \cite{BUTENAS2002a}. 
 Picomolar amounts of thrombin then activate the cofactors factors V and VIII (fV and fVIII) and platelets, 
-resulting in the formation of the tenase and prothrombinase complexes on activated platelets.
-Tenese amplifies the early coagulation signal by activating FXa, while prothrombinase, a complex of FVa-FXa, 
-directly converts prothrombin to thrombin. There are several control points in the cascade that inhibit thrombin formation. 
-Tissue Factor Pathway Inhibitor (TFPI) downregulates FXa formation catalyzed by TF/FVIIa, while antithrombin III (ATIII) \
-neutralizes several of the serine proteases generated during coagulation.  
+leading to the formation of the tenase and prothrombinase complexes on activated platelets.
+These complexes amplify the early coagulation signal by further activating FXa, and directly converting prothrombin to thrombin. 
+There are several control points in the cascade that inhibit thrombin formation, and eventually terminate thrombin generation. 
+Tissue Factor Pathway Inhibitor (TFPI) inhibits FXa formation catalyzed by TF/FVIIa, while antithrombin III (ATIII)
+neutralizes several of the proteases generated during coagulation, including thrombin.  
 Thrombin itself also inadvertently plays a role in its own inhibition; thrombin, through interaction with thrombomodulin, protein C and endothelial cell protein C receptor (EPCR),
 converts protein C to activated protein C (APC) which attenuates the coagulation response by proteolytic cleavage of fV/FVa and fVIII/FVIIIa. 
-Termination occurs after prothrombin is consumed or activated thrombin formation is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
+Termination occurs after either prothrombin is consumed, or thrombin formation is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
 
-In this study, we constructed a reduced order effective model of thrombin generation in normal and hemophilic blood.
-We used this model to understand how physiological coagulation was altered by prothrombin levels, the activated protein C pathway and the level of ATIII.  
-Previous models of coagulation have been formulated as systems of nonlinear ordinary differential equations, often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE]. While this approach has proven highly effective, it does require significant experimental data for model identification and validation.    
-For example, a previous coagulation model from our laboratory, which described 193 proteins and protein complexes interconnected by 301 biochemical interactions, 
-contained 467 unknown parameters (301 kinetic parameters and 166 initial conditions) [REFHERE]. 
-The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulatory motifs with traditional kinetic pathway modeling. 
-This integration allows the description of complex regulatory interactions, such as time-dependent allosteric regulation of enzyme activity, in the absence of specific mechanistic information. 
-The regulatory rules are easy to understand, easy to formulate and do not rely on overarching theoretical abstractions or restrictive assumptions. 
-We tested our approach by modeling the time evolution of the human coagulation cascade.
+There are many mathematical models of the human coagulation cascade in the literature.
+Previous coagulation models have typically been formulated as systems of nonlinear ordinary differential equations, 
+often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE].
+Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys}, 
+were built upon the pioneering studies of Jones and Mann \citep{Jones:1994aa}, 
+and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and subsequently refined a highly mechanistic model of the extrinsic coagulation cascade. 
+Other laboratories have also expanded upon Hockin \emph{et al.}, for example Chatterjee \emph{et al.,} augmented the Hockin model to include 
+the intrinsic pathway, and the role of thrombin in clot formation \citep{Chatterjee:2010aa}. 
+More recently, modeling studies have explored other biochemical or biophysical aspects of coagulation, such as the biochemical networks inside platelets \citep{Stalker:2013aa}, 
+multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and the transport of material inside growing clots \citep{Voronov:2013aa}.
+However, most of these previous studies share the common feature of a mechanism based description of coagulation. 
+Such a description is possible because blood, while enormously complex, can be systematically interrogated. 
+However, other biochemical networks, such as the intracellular networks which mediate cancer, are more difficult to probe and model.  
+Towards this need, we have proposed a hybrid approach which combined ODEs and logical rules that can be used to model 
+biochemical processes where mechanistic information is difficult or impossible to obtain. 
+We have used this approach to model the coagulation cascade, because of the wealth of training and validation data available for this system.
+Our hypothesis is that coagulation represents a best case, if our approach fails in this proof-of-concept study, it will never be acceptable in model difficult cases.
+We proposed a reduced order coagulation model that consisted of five differential equations augmented with several logical rules.
+We identified the reduced order coagulation model parameters from in vitro extrinsic data sets of thrombin generation initiated by TF/FVIIa in the presence of ATIII, with and without the protein C pathway. We then validated the model using thrombin data sets from multiple laboratories, for both normal and hemophilia coagulation.
+The reduced order hybrid approach produced a surprisingly predictive coagulation model, suggesting this framework could potentially be used to model other biochemical networks
+important to human health. 
 
 \clearpage
 
