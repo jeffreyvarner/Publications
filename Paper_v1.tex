@@ -149,19 +149,19 @@ Developing mathematical models of biochemical networks is a significant facet of
 Modeling approaches differ in their degree of detail, and the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
 Ordinary differential equation (ODE) models are a common tool for modeling biochemical systems because of their ability to capture dynamics. 
 However, ODEs often come with difficult (and sometimes impossible) parameter identification problems. 
-For example, Gadkar et al., showed that even with near-perfect information and high frequency sampling, 
-it was often impossible to identify (to within a specified uncertainty) all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
-ODE models can also require significant mechanistic knowledge of the underlying biology. 
+For example, Gadkar et al., showed that even with near-perfect information, 
+it was often impossible to identify all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
 However, Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
 should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
 Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers have shown that model behavior and predictive ability is typically 
-sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter signaling models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
-Thus, accurate model predictions from a sloppy model may be possible, even if the parameters or mechanistic structure is not well understood, 
-if the critical directions in parameter space are properly constrained. 
+sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+Thus, reasonable predictions from sloppy models may be possible, even if the parameters or structure is uncertain, 
+if a few critical directions in parameter space are properly constrained. 
+Typical ODE models can also require significant mechanistic information.
 Alternatively, data-driven approaches \citep{Cirit:2012kx} or logical model formulations \citep{Morris:2011ys} 
-are emerging paradigms that constrain model structure (and hence the identifiability challenge) by the availability of training and validation data. 
-These are interesting techniques because the data naturally informs model structure, which can be expanded as more data becomes available. 
-While not mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
+are emerging paradigms that constrain model structure by the availability of training and validation data. 
+These are interesting techniques because the data naturally informs model structure, which can be expanded as more data becomes available, and limits the 
+identification challenge. Although not mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
 However, modeling dynamics using logical models is not straightforward. 
 Thus, a potential third approach could be a combination of ODEs and logical models, where mechanistic information was used when available, 
 and missing or incomplete knowledge encoded using causal local rules.  
@@ -186,27 +186,25 @@ Thrombin itself also inadvertently plays a role in its own inhibition; thrombin,
 converts protein C to activated protein C (APC) which attenuates the coagulation response by proteolytic cleavage of fV/FVa and fVIII/FVIIIa. 
 Termination occurs after either prothrombin is consumed, or thrombin formation is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
 
-There are many mathematical models of the human coagulation cascade in the literature.
-Previous coagulation models have typically been formulated as systems of nonlinear ordinary differential equations, 
+Coagulation models in the literature have typically been formulated as systems of nonlinear ordinary differential equations, 
 often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE].
 Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys}, 
-were built upon the pioneering studies of Jones and Mann \citep{Jones:1994aa}, 
-and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and subsequently refined a highly mechanistic model of the extrinsic coagulation cascade. 
-Other laboratories have also expanded upon Hockin \emph{et al.}, for example Chatterjee \emph{et al.,} augmented the Hockin model to include 
-the intrinsic pathway, and the role of thrombin in clot formation \citep{Chatterjee:2010aa}. 
-More recently, modeling studies have explored other biochemical or biophysical aspects of coagulation, such as the biochemical networks inside platelets \citep{Stalker:2013aa}, 
-multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and the transport of material inside growing clots \citep{Voronov:2013aa}.
-However, most of these previous studies share the common feature of a mechanism based description of coagulation. 
+were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, 
+and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined a highly mechanistic model of extrinsic coagulation. 
+Other laboratories have also expanded upon Hockin \emph{et al.}, for example including the intrinsic pathway, and thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
+Other biochemical or biophysical aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
+multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside growing clots \citep{Voronov:2013aa}.
+However, most of these previous studies were based upon detailed mechanistic knowledge. 
 Such a description is possible because blood, while enormously complex, can be systematically interrogated. 
-However, other biochemical networks, such as the intracellular networks which mediate cancer, are more difficult to probe and model.  
-Towards this need, we have proposed a hybrid approach which combined ODEs and logical rules that can be used to model 
-biochemical processes where mechanistic information is difficult or impossible to obtain. 
-We have used this approach to model the coagulation cascade, because of the wealth of training and validation data available for this system.
-Our hypothesis is that coagulation represents a best case, if our approach fails in this proof-of-concept study, it will never be acceptable in model difficult cases.
+However, other systems, such as the intracellular networks which mediate cancer, are more difficult to experimentally probe and model.  
+Towards this unmet need, we have formulated a hybrid modeling approach which combines ODEs and logical rules to model 
+biochemical processes for which mechanistic information is difficult or impossible to obtain. 
+We have used this approach to model the coagulation cascade because of the wealth of training and validation data available for this system. 
 We proposed a reduced order coagulation model that consisted of five differential equations augmented with several logical rules.
-We identified the reduced order coagulation model parameters from in vitro extrinsic data sets of thrombin generation initiated by TF/FVIIa in the presence of ATIII, with and without the protein C pathway. We then validated the model using thrombin data sets from multiple laboratories, for both normal and hemophilia coagulation.
-The reduced order hybrid approach produced a surprisingly predictive coagulation model, suggesting this framework could potentially be used to model other biochemical networks
-important to human health. 
+We identified the reduced order coagulation model parameters from in vitro extrinsic coagulation data sets, in the presence of ATIII, with and without the protein C pathway. 
+We then validated the model using thrombin data sets from multiple laboratories, for both normal and hemophilic coagulation.
+Flux and sensitivity analysis identified which parameter or parameters combinations were critical to model performance in several conditions. 
+The reduced order hybrid approach produced a surprisingly predictive coagulation model, suggesting this framework could potentially be used to model other biochemical networks important to human health. 
 
 \clearpage
 
