@@ -73,11 +73,11 @@ Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
 \newblock Lippincott Williams and Wilkins.
 \bibAnnoteFile{GOLDHABER2006}
 
-\bibitem{BRUMMEL2002}
+\bibitem{Brummel:2002aa}
 Brummel KE, Paradis SG, Butenas S, Mann KG (2002) Thrombin functions during
   tissue factor-induced blood coagulation.
-\newblock Blood 100: 148-152.
-\bibAnnoteFile{BRUMMEL2002}
+\newblock Blood 100: 148-52.
+\bibAnnoteFile{Brummel:2002aa}
 
 \bibitem{MANN1990}
 Mann K, Nesheim M, Church W, Haley P, Krishnaswamy S (1990) Surface-dependent
@@ -95,12 +95,6 @@ Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
 Mann K (1999) Biochemistry and physiology of blood coagulation.
 \newblock Thromb Haemost 82: 165-174.
 \bibAnnoteFile{MANN1999}
-
-\bibitem{BUTENAS2002a}
-Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
-  factor {VIIa}-dependent coagulation in hemophilia blood.
-\newblock Blood 99: 923-930.
-\bibAnnoteFile{BUTENAS2002a}
 
 \bibitem{Luan:2007aa}
 Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
@@ -199,28 +193,6 @@ Tomokiyo K, Nakatomi Y, Araki T, Teshima K, Nakano H, et~al. (2003) A novel
 \newblock Vox Sanguinis 85: 290-299.
 \bibAnnoteFile{TOMOKIYO2003}
 
-\bibitem{CHAVIN1988}
-Chavin SI, Siegel DM, Rocco TA, Olson JP (1988) Acute mycardial infarction
-  during treatment with an activated prothrombin complex concentrate in a
-  patient with factor viii deficiency and a factor viii inhibitor.
-\newblock Am J Med 85: 245-249.
-\bibAnnoteFile{CHAVIN1988}
-
-\bibitem{ALLEN2006}
-Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
-  concentration improves response to high-dose factor {VIIa} in a cell-based
-  model of haemophilia.
-\newblock Br J Haematology 134: 314 - 319.
-\bibAnnoteFile{ALLEN2006}
-
-\bibitem{SCHNEIDERMAN2007}
-Schneiderman J, Rubin E, Nugent DJ, Young G (2007) Sequential therapy with
-  activated prothrombin complex concentrates and recombinant {FVIIa} in
-  patients with severe haemophilia and inhibitors: update of our previous
-  experience.
-\newblock Haemophilia 13: 244-248.
-\bibAnnoteFile{SCHNEIDERMAN2007}
-
 \bibitem{Hedner:2008rm}
 Hedner U (2008) Factor viia and its potential therapeutic use in
   bleeding-associated pathologies.
@@ -232,60 +204,36 @@ Talbot M, Tien HC (2009) The use of recombinant factor viia in trauma patients.
 \newblock J Am Acad Orthop Surg 17: 477-81.
 \bibAnnoteFile{Talbot:2009kk}
 
-\bibitem{Lusher:1998bs}
-Lusher JM, Roberts HR, Davignon G, Joist JH, Smith H, et~al. (1998) A
-  randomized, double-blind comparison of two dosage levels of recombinant
-  factor viia in the treatment of joint, muscle and mucocutaneous haemorrhages
-  in persons with haemophilia a and b, with and without inhibitors. rfviia
-  study group.
-\newblock Haemophilia 4: 790--798.
-\bibAnnoteFile{Lusher:1998bs}
-
-\bibitem{Shapiro:1998sh}
-Shapiro AD, Gilchrist GS, Hoots WK, Cooper HA, Gastineau DA (1998) Prospective,
-  randomised trial of two doses of rfviia (novoseven) in haemophilia patients
-  with inhibitors undergoing surgery.
-\newblock Thromb Haemost 80: 773--778.
-\bibAnnoteFile{Shapiro:1998sh}
-
-\bibitem{Shapiro:2000pr}
-Shapiro AD (2000) Recombinant factor viia in the treatment of bleeding in
-  hemophilic children with inhibitors.
-\newblock Semin Thromb Hemost 26: 413--419.
-\bibAnnoteFile{Shapiro:2000pr}
-
 \bibitem{Shapiro:2008px}
 Shapiro AD (2008) Single-dose recombinant activated factor vii for the
   treatment of joint bleeds in hemophilia patients with inhibitors.
 \newblock Clin Adv Hematol Oncol 6: 579--586.
 \bibAnnoteFile{Shapiro:2008px}
 
-\bibitem{KOMIYAMA1990}
-Komiyama Y, Pedersen AH, Kisiel W (1990) Proteolytic activation of human
-  factors ix and x by recombinant human factor viia: Effects of calcium,
-  phospholipids and tissure factor.
-\newblock Biochemistry 29: 9418-9425.
-\bibAnnoteFile{KOMIYAMA1990}
+\bibitem{Duchesne:2008hw}
+Duchesne JC, Mathew KA, Marr AB, Pinsky MR, Barbeau JM, et~al. (2008) Current
+  evidence based guidelines for factor viia use in trauma: the good, the bad,
+  and the ugly.
+\newblock Am Surg 74: 1159-65.
+\bibAnnoteFile{Duchesne:2008hw}
 
-\bibitem{PAYNE1996}
-Payne MA, Neuenschwander PF, Johnson AE, Morrissey JH (1996) Effect of soluble
-  tissue factor on the kinetic mechanism of factor viia: Enhancement of
-  p-guanidinobenzoate substrate hydrolysis.
-\newblock Biochemistry 35: 7100-7106.
-\bibAnnoteFile{PAYNE1996}
+\bibitem{Butenas:2002ab}
+Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
+  factor viia-dependent coagulation in hemophilia blood.
+\newblock Blood 99: 923-30.
+\bibAnnoteFile{Butenas:2002ab}
 
-\bibitem{MONROE1997}
-Monroe DM, Hoffman M, Oliver JA, Roberts HR (1997) Platelet activity of
-  high-dose factor viia is independent of tissure factor.
-\newblock Br J Haematol 99: 542-547.
-\bibAnnoteFile{MONROE1997}
+\bibitem{NAITO1991}
+Naito K, Fujikawa K (1991) Activation of human blood coagulation factor {XI}
+  independent of factor {XII}.
+\newblock J Biol Chem 266: 7353-7358.
+\bibAnnoteFile{NAITO1991}
 
-\bibitem{HOFFMAN1998}
-Hoffman M, {Monroe III} DM, Roberts HR (1998) Activated factor {VII} activates
-  factors {IX} and {X} on the surface of activated platelets: thoughts on the
-  mechanism of action of high-dose activated factor {VII}.
-\newblock Blood Coag Fibrin 9: S61-S65.
-\bibAnnoteFile{HOFFMAN1998}
+\bibitem{Smith:2006zl}
+Smith SA, Mutch NJ, Baskar D, Rohloff P, Docampo R, et~al. (2006) Polyphosphate
+  modulates blood coagulation and fibrinolysis.
+\newblock Proc Natl Acad Sci U S A 103: 903-8.
+\bibAnnoteFile{Smith:2006zl}
 
 \bibitem{SCIPY}
 Jones E, Oliphant T, Peterson P (2001--).
@@ -308,5 +256,12 @@ Hunter JD (2007) Matplotlib: A 2d graphics environment.
 Butenas S, van't Veer C, Mann KG (1999) "normal" thrombin generation.
 \newblock Blood 94: 2169-78.
 \bibAnnoteFile{Butenas:1999aa}
+
+\bibitem{ALLEN2006}
+Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
+  concentration improves response to high-dose factor {VIIa} in a cell-based
+  model of haemophilia.
+\newblock Br J Haematology 134: 314 - 319.
+\bibAnnoteFile{ALLEN2006}
 
 \end{thebibliography}

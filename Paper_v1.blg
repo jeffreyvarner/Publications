@@ -3,52 +3,45 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: plos2009.bst
 Database file #1: References_v1.bib
-Warning--I didn't find a database entry for "ROBERTS2004"
-Warning--I didn't find a database entry for "ROBERTS2006"
-Warning--I didn't find a database entry for "ALLEN2007"
-Warning--I didn't find a database entry for "Duchesne:2008hw"
-Warning--I didn't find a database entry for "NAITO1991"
-Warning--I didn't find a database entry for "Smith:2006zl"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 47 entries,
+You've used 41 entries,
             2441 wiz_defined-function locations,
-            909 strings with 14595 characters,
-and the built_in function-call counts, 35073 in all, are:
-= -- 3208
-> -- 593
+            861 strings with 12708 characters,
+and the built_in function-call counts, 30165 in all, are:
+= -- 2749
+> -- 513
 < -- 2
-+ -- 296
-- -- 148
-* -- 2905
-:= -- 4223
-add.period$ -- 96
-call.type$ -- 47
-change.case$ -- 47
++ -- 256
+- -- 128
+* -- 2487
+:= -- 3635
+add.period$ -- 84
+call.type$ -- 41
+change.case$ -- 41
 chr.to.int$ -- 0
-cite$ -- 94
-duplicate$ -- 3457
-empty$ -- 3640
-format.name$ -- 188
-if$ -- 7790
+cite$ -- 82
+duplicate$ -- 2983
+empty$ -- 3132
+format.name$ -- 163
+if$ -- 6698
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 480
-newline$ -- 251
-num.names$ -- 48
-pop$ -- 582
+int.to.str$ -- 41
+missing$ -- 418
+newline$ -- 221
+num.names$ -- 42
+pop$ -- 503
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 289
+skip$ -- 261
 stack$ -- 0
-substring$ -- 4816
-swap$ -- 962
+substring$ -- 4093
+swap$ -- 838
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 282
-width$ -- 49
-write$ -- 530
-(There were 6 warnings)
+while$ -- 244
+width$ -- 43
+write$ -- 464

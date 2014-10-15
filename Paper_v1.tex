@@ -170,11 +170,11 @@ the human coagulation system. Coagulation is an archetype proteolytic cascade in
 and negative feedback \cite{Butenas:2002aa,Schenone:2004aa,Adams:2009aa}. 
 Coagulation is mediated by a family proteases in the circulation, called factors and a key group of blood cells, called platelets. 
 The central process in coagulation is the conversion of prothrombin (fII), an inactive coagulation factor, to the master protease thrombin (FIIa).
-Thrombin generation involves three phases, initiation, amplification and termination \cite{GOLDHABER2006, BRUMMEL2002}.
+Thrombin generation involves three phases, initiation, amplification and termination \cite{GOLDHABER2006, Brummel:2002aa}.
 Initiation requires a trigger event, for example vessel injury, which leads to the activation of factor VII (FVIIa).
 Two converging pathways, the extrinsic and intrinsic cascades, then process and amplify this initial coagulation signal. 
 The extrinsic cascade is generally believed to be the main mechanism of thrombinogenesis in the blood \cite{MANN1990,ROBERTS1998,MANN1999}.
-Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa), which itself has been activated by FVIIa \cite{BUTENAS2002a}. 
+Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa), which itself has been activated by FVIIa \cite{Butenas:2002aa}. 
 Picomolar amounts of thrombin then activate the cofactors factors V and VIII (fV and fVIII) and platelets, 
 leading to the formation of the tenase and prothrombinase complexes on activated platelets.
 These complexes amplify the early coagulation signal by further activating FXa, and directly converting prothrombin to thrombin. 
@@ -304,7 +304,7 @@ However, similar to hemophilia alone, without amplification the thrombin signal 
 
 \clearpage
 
-\subsection*{Sensitivity analysis of the reduced order coagulation model.}
+\subsection*{Global sensitivity analysis of the reduced order coagulation model.}
 We conducted a global sensitivity analysis to estimate which parameters controlled the performance of the reduced order model. 
 We calculated the sensitivity of the time to maximum thrombin (peak time) and the thrombin exposure (area under the thrombin curve) 
 for different levels of prothrombin, and protein C (Fig. \ref{fig-sensitivity}). 
@@ -365,33 +365,38 @@ We then used flux analysis to understand how the network operated in a variety o
 performance of the network. Taken together, the reduced order hybrid approach produced a surprisingly predictive model, suggesting this approach could potentially 
 be used to model other biochemical networks important to human health. 
 
-Malfunctions in coagulation can have serious or potentially even fatal consequences.
-For example, aggressive clotting is involved with Coronary Artery Diseases (CADs), which collectively account for 38\% of all deaths in North America \cite{HANSSON2005}.
+Malfunctions in coagulation can have potentially fatal consequences.
+For example, aggressive clotting involved with Coronary Artery Diseases (CADs), collectively accounts for 38\% of all deaths in North America \cite{HANSSON2005}.
 Coagulation management during surgery can also be challenging, particularly because of the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
 Insufficient coagulation due to genetic disorders such as hemophilia can also result in recurrent bleeding. 
 The coagulation factors VIII (fVIII) and IX (fIX) are deficient in Hemophilia A and B, respectively \cite{COOPER1994,MANNUCCI2001,MITCHELL2008}.
 People with mild hemophilia have 5-40\% of the normal clotting factor levels while severe hemophiliacs have $<$1\% \cite{MITCHELL2008}.
 Hemophilia can be controlled with regular infusions of the deficient clotting factors. 
-However, clotting factor replacement sometimes leads to the formation of \emph{in-vivo} fVIII and fIX inhibitors \cite{TOMOKIYO2003}.
-Activated Prothrombin Complex Concentrates (aPCCs) from pooled plasma have been used to treat hemophilia. 
-However, aPCCs can have safety issues \cite{CHAVIN1988,ALLEN2006,SCHNEIDERMAN2007}. 
+However, clotting factor replacement sometimes leads to the formation of fVIII and fIX inhibitors \emph{in-vivo} \cite{TOMOKIYO2003}.
 Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
-hemophilia with and without factor VIII/IX inhibitors \cite{Lusher:1998bs,Shapiro:1998sh,Shapiro:2000pr,Shapiro:2008px}.
+hemophilia with and without factor VIII/IX inhibitors \cite{Shapiro:2008px}.
 However, rFVIIa requires frequent administration (every 2-3 hr) because of its short half-life in the circulation. 
-Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONROE1997,HOFFMAN1998,BUTENAS2002a,ROBERTS2004,ROBERTS2006,ALLEN2007}
-and effective dose range \cite{TOMOKIYO2003}.
-Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
+Many questions also remain about the mechanism of action of rFVIIa, its effective dose range \cite{TOMOKIYO2003}, and its overall utility 
+for the treatment trauma-associated hemorrhage \cite{Duchesne:2008hw}. In the current proof of concept model, we did not model rFVIIa directly. 
+Rather we modeled a broad class of trigger materials which initiated the extrinsic coagulation cascade. Since we identified the model using TF/FVIIa, inherent to
+our rFVIIa simulations was the presence of TF. However, even with this complication, 
+the model generated potentially useful insight into the rFVIIa mechanism of action, and its possible shortcomings especially for the treatment of hemophilia. 
+Addition of rFVIIa directly activated thrombin through the fluid phase initiation pathway. 
+However, in the presence of ATIII and the protein C pathway but without fVIII or fIX, 
+this initial thrombin signal was quickly extinguished by inhibition, as thrombin amplification could not occur. 
+As the dose of rFVIIa increased, the peak thrombin time decreased, eventually saturating.
+Butenas \emph{et al.,} performed an extensive study of rFVIIa induced thrombin generation in hemophilia \citep{Butenas:2002ab}.
 
 Although the performance of the proof of principle coagulation model was impressive given its size, there were several mathematical and biological questions that can be explored further.
 First, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
-Theoretically, an integration rule is simply a function whose domain is a set of transfer function inputs, and whose range is $[0,1]$.
-Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $[0,1]$.
+Theoretically, an integration rule is simply a function whose domain is a set of transfer function inputs, and whose range is $v\in[0,1]$.
+Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
 Alternative integration rules such the mean would have different properties which could influence model identification or performance. 
 For example, a mean or product integration rule would be differentiable, which allows derivative based optimization approaches to be used. 
 The particular form of the transfer function could also be explored. We choose a hill-like function because of its 
 prominence in the systems and synthetic biology community. 
-However, the only mathematical requirement for a transfer function is to map a non-negative continuous or categorical variable into the 
-range $[0,1]$. Thus, many other function types e.g., tanh are also possible.
+However, the only mathematical requirement for a transfer function is that it must map a non-negative continuous or categorical variable into the 
+range $f\in[0,1]$. Thus, many function types are possible.
 There are several additional biological modules that can be added to the core model presented here. 
 First, we need to update the model to included thrombin induced platelet activation. 
 While we were able to capture thrombin generation data in the presence of platelets, 
@@ -401,10 +406,12 @@ Next, we should add the intrinsic or contact thrombin activation pathway to the 
 The intrinsic coagulation pathway is triggered by contact activation of the plasma protease factor XII (fXII) by negatively charged surfaces.
 The activation of fXII is followed by proteolytic activation of factor XI (fXI) and the activation of downstream factors like fIX \cite{NAITO1991}.
 It has also been suggested that activated platelets can release polyphosphate which directly activates fXII \cite{Smith:2006zl}. 
-Thus, platelet and fXI activation may be integrated.
-Lastly, to make the model more clinically relevant, we should include the biochemical processes driving clot formation, and clot dissolution (fibrinolysis).
+Lastly, to make the model more clinically relevant, we should include the biochemical processes responsible for clot formation, and clot dissolution (fibrinolysis).
 Clot formation is driven by thrombin activity, while fibrinolysis is driven by plasmin activity, a key enzyme that cleaves fibrin (one of the main materials in a clot).
 Similar to coagulation, fibrinolysis is managed by several activating and inhibitory factors which control the balance between clot formation and dissolution.
+Tissue plasminogen activator (t-PA) and urokinase activate plasmin, along with contact pathway factors such fXIa. On the other hand, thrombin activatable fibrinolysis inhibitor (TAFI)
+inhibits the degradation of fibrin by plasmin. Also similar to coagulation, there is considerable fibrinolysis and contact pathway data sets that can be used to train the model.
+
 
 
 \clearpage
