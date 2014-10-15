@@ -7,10 +7,12 @@ Warning--I didn't find a database entry for "ROBERTS2004"
 Warning--I didn't find a database entry for "ROBERTS2006"
 Warning--I didn't find a database entry for "ALLEN2007"
 Warning--I didn't find a database entry for "Duchesne:2008hw"
+Warning--I didn't find a database entry for "NAITO1991"
+Warning--I didn't find a database entry for "Smith:2006zl"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 47 entries,
             2441 wiz_defined-function locations,
-            905 strings with 14553 characters,
+            909 strings with 14595 characters,
 and the built_in function-call counts, 35073 in all, are:
 = -- 3208
 > -- 593
@@ -49,4 +51,4 @@ warning$ -- 0
 while$ -- 282
 width$ -- 49
 write$ -- 530
-(There were 4 warnings)
+(There were 6 warnings)

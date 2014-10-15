@@ -382,7 +382,7 @@ Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONR
 and effective dose range \cite{TOMOKIYO2003}.
 Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
 
-Although the performance of the proof of principle coagulation model was impressive given its dimension, there are several mathematical and biological questions that can be explored further.
+Although the performance of the proof of principle coagulation model was impressive given its size, there were several mathematical and biological questions that can be explored further.
 First, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
 Theoretically, an integration rule is simply a function whose domain is a set of transfer function inputs, and whose range is $[0,1]$.
 Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $[0,1]$.
@@ -390,9 +390,21 @@ Alternative integration rules such the mean would have different properties whic
 For example, a mean or product integration rule would be differentiable, which allows derivative based optimization approaches to be used. 
 The particular form of the transfer function could also be explored. We choose a hill-like function because of its 
 prominence in the systems and synthetic biology community. 
-However the only mathematical requirement for a transfer function is to map a non-negative continuous or categorical variable into the 
-range $[0,1]$. Thus, many other function types are possible.
-   
+However, the only mathematical requirement for a transfer function is to map a non-negative continuous or categorical variable into the 
+range $[0,1]$. Thus, many other function types e.g., tanh are also possible.
+There are several additional biological modules that can be added to the core model presented here. 
+First, we need to update the model to included thrombin induced platelet activation. 
+While we were able to capture thrombin generation data in the presence of platelets, 
+the initial shape of the activation curve and the time-scale of activation was not always consistent with the data.
+Platelets are activated by thrombin through the cleavage of the extracellular domain of protease-activated receptors (PARs) on the platelet surface.
+Next, we should add the intrinsic or contact thrombin activation pathway to the model. 
+The intrinsic coagulation pathway is triggered by contact activation of the plasma protease factor XII (fXII) by negatively charged surfaces.
+The activation of fXII is followed by proteolytic activation of factor XI (fXI) and the activation of downstream factors like fIX \cite{NAITO1991}.
+It has also been suggested that activated platelets can release polyphosphate which directly activates fXII \cite{Smith:2006zl}. 
+Thus, platelet and fXI activation may be integrated.
+Lastly, to make the model more clinically relevant, we should include the biochemical processes driving clot formation, and clot dissolution (fibrinolysis).
+Clot formation is driven by thrombin activity, while fibrinolysis is driven by plasmin activity, a key enzyme that cleaves fibrin (one of the main materials in a clot).
+Similar to coagulation, fibrinolysis is managed by several activating and inhibitory factors which control the balance between clot formation and dissolution.
 
 
 \clearpage
