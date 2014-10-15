@@ -146,22 +146,21 @@
 
 \section*{Introduction}
 Developing mathematical models of biochemical networks is a significant facet of systems biology.
-Modeling approaches differ in their degree of detail, and the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
+Modeling approaches differ in their degree of detail, but the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
 Ordinary differential equation (ODE) models are a common tool for modeling biochemical systems because of their ability to capture dynamics. 
-However, ODEs often come with difficult (and sometimes impossible) parameter identification problems. 
+However, ODE models typically come with difficult (or sometimes impossible) parameter identification problems. 
 For example, Gadkar et al., showed that even with near-perfect information, 
 it was often impossible to identify all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
 However, Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
 should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
-Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers have shown that model behavior and predictive ability is typically 
+Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model performance is typically 
 sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
-Thus, reasonable predictions from sloppy models may be possible, even if the parameters or structure is uncertain, 
-if a few critical directions in parameter space are properly constrained. 
-Typical ODE models can also require significant mechanistic information.
-Alternatively, data-driven approaches \citep{Cirit:2012kx} or logical model formulations \citep{Morris:2011ys} 
-are emerging paradigms that constrain model structure by the availability of training and validation data. 
-These are interesting techniques because the data naturally informs model structure, which can be expanded as more data becomes available, and limits the 
-identification challenge. Although not mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
+Thus, reasonable predictions from sloppy models may be possible, despite parametric uncertainty, if a few critical components are well understood. 
+Perhaps a more important issue is that ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
+Data-driven \citep{Cirit:2012kx} or logical model approaches \citep{Morris:2011ys} 
+are emerging modeling paradigms that constrain model structure by the availability of experimental data. 
+These are interesting techniques because the data naturally informs model structure, thereby limiting the 
+identification challenge. Although not always mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
 However, modeling dynamics using logical models is not straightforward. 
 Thus, a potential third approach could be a combination of ODEs and logical models, where mechanistic information was used when available, 
 and missing or incomplete knowledge encoded using causal local rules.  
@@ -190,7 +189,7 @@ Coagulation models in the literature have typically been formulated as systems o
 often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE].
 Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys}, 
 were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, 
-and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined a highly mechanistic model of extrinsic coagulation. 
+and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined highly mechanistic models of extrinsic coagulation. 
 Other laboratories have also expanded upon Hockin \emph{et al.}, for example including the intrinsic pathway, and thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
 Other biochemical or biophysical aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
 multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside growing clots \citep{Voronov:2013aa}.
@@ -214,7 +213,7 @@ The reduced order hybrid approach produced a surprisingly predictive coagulation
 
 
 \subsection*{Formulation of reduced order coagulation models.}
-We developed a reduced order coagulation model to test our hybrid kinetic modeling approach (Fig. \ref{fig-network}).
+We developed a reduced order coagulation model to test our hybrid kinetic rule based modeling approach (Fig. \ref{fig-network}).
 A trigger event initiates thrombin formation (FIIa) from prothrombin (fII) through a lumped initiation step.
 This step loosely represents the initial fluid phase activation of thrombin by activated FXa.
 Once activated, thrombin catalyzes its own formation (amplification step), and inhibition via the conversion of protein C to activated protein C (APC).
@@ -240,9 +239,7 @@ A population of particles (N = 20) was initialized with randomized kinetic and c
 the residual. However, not all parameters were varied simultaneously. 
 We partitioned the parameter estimation problem into two subproblems based upon the biological organization of the training data; 
 (i) estimation of parameters associated with thrombin formation in the absence of the protein C pathway and (ii) estimation of parameters associated with the protein C pathway.
-Only those parameters associated with each subproblem were varied during the optimization procedure for that subproblem e.g., thrombin parameters were \textit{not} varied during the protein C subproblem.
-The PSO procedure was run for 20 generations for each subproblem, where each generation was 1200 iterations. The best particle from each generation was used to generate the particle population
-for the next generation. We rotated the subproblems, starting with subproblem 1 in the first generation.
+Only those parameters associated with each subproblem were varied during the optimization procedure for that subproblem e.g., thrombin parameters were \textit{not} varied during the protein C subproblem.The PSO procedure was run for 20 generations for each subproblem, where each generation was 1200 iterations. The best particle from each generation was used to generate the particle population for the next generation. We rotated the subproblems, starting with subproblem 1 in the first generation.
 
 The reduced order coagulation model captured the role of initial prothrombin abundance, and the decay of the thrombin signal following from ATIII activity (Fig. \ref{fig-diff_fII_NO_APC}).
 However, we systematically under-predicted the thrombin peak and the strength of ATIII inhibition in this training data set.
@@ -289,7 +286,7 @@ Simulations with a baseline level of trigger were consistent with the previous h
 As we increased the strength of the trigger event, the thrombin peak time and the maximum value of thrombin increased (Fig. \ref{fig-rFVII}, 50$\times$~trigger). 
 However, as the trigger strength increased, the thrombin generated quickly decayed.
 For example, for the highest trigger strength simulated (50$\times$trigger), 95\% of the thrombin was gone by 20 min after initiation. 
-We performed flux analysis to understand how the reduced order coagulation model balanced initiation, amplification and inhibition of thrombin formation for normal coagulation and hemophilia.util..
+We performed flux analysis to understand how the reduced order coagulation model balanced initiation, amplification and inhibition of thrombin formation for normal coagulation and hemophilia.
 Analysis of the reaction flux through the reduced order network for thrombin generation in normal, hemophilia and rFVIIa-treated hemophilia identified three distinct operational modes (Fig. \ref{fig-flux-analysis}).
 The reduced order network includes four lumped reactions, initiation, amplification, thrombin-induced APC generation and total thrombin inhibition (including both APC and ATIII action).
 Directly after the addition of a trigger (e.g., TF/FVIIa or rFVIIa), the lumped initiation flux was the largest for all three cases.
@@ -327,26 +324,46 @@ amplification. However, the influence of the amplification parameter was much le
 
 \clearpage
 
+%Controlling hemorrhage has been a driving force to understand the molecular basis of blood coagulation.
+%Replacement therapy improves bleeding times for most hemophilia patients. However, repeated fVIII/fIX administration can lead to neutralizing inhibitors. 
+%Alternatively, rFVIIa has been used as a universal hemostatic agent to initiate clotting with and without fVIII or fIX inhibitors \cite{Hedner:2008rm}.
+%Despite its wide adoption, the mechanism and the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}. 
+%The model described the extrinsic activation of thrombin, in the presence of ATIII, with and without the protein C pathway.
+%The coagulation network architecture was based on literature and a previous mathematical model from our laboratory \cite{VARNER2007}.
+%Simulations of thrombin dynamics were independently validated using blood drawn from patients with coronary artery disease (reported here) and previous TF/FVIIa and FVIIa 
+%\emph{in-vitro} studies \cite{BUTENAS2002}.
+
+%Additionally, using sensitivity analysis on the ensemble of models, we identified 
+%structurally sensitive components of the coagulation architecture as a function of condition.
+%We also demonstrated that the ensemble robustly constrained model predictions of independent validation sets, despite having many poorly constrained parameters.
+%Thus, the model ensemble displayed \emph{sloppy} behavior similar to that observed by Sethna and coworkers for other signal transduction networks \cite{Gutenkunst2007}.  
+%By studying a family of models, we perhaps partially addressed the uncertainty stemming from the many poorly characterized model parameters.
+%However, many other factors could influence our results. For example, missing structural interactions or biophysical factors such as blood flow could play a large role.
+%Thus, while the results presented here may be a valuable first step, more studies are required.
+% \cite{ALLEN2007}.
+
+%We used this ensemble of parameters in all subsequent simulations to estimate the uncertainty in model simulations following from uncertainty in the model parameters.
+
 \section*{Discussion}
-Controlling hemorrhage has been a driving force to understand the molecular basis of blood coagulation.
-Replacement therapy improves bleeding times for most hemophilia patients. However, repeated fVIII/fIX administration can lead to neutralizing inhibitors. 
-Alternatively, rFVIIa has been used as a universal hemostatic agent to initiate clotting with and without fVIII or fIX inhibitors \cite{Hedner:2008rm}.
-Despite its wide adoption, the mechanism and the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}. 
-In this study, we formulated a model of the human coagulation cascade and studied thrombin formation in normal and rFVIIa treated and untreated
-hemophilic plasma. The model described 193 proteins or protein complexes connected by 301 interactions. 
-The coagulation network architecture was based on literature and a previous mathematical model from our laboratory \cite{VARNER2007}.
-Simulations of thrombin dynamics were independently validated using blood drawn from patients with coronary artery disease (reported here) and previous TF/FVIIa and FVIIa 
-\emph{in-vitro} studies \cite{BUTENAS2002}.
-While the human coagulation cascade is perhaps an ideal model system to develop network analysis tools, not all the model parameters were identifiable given the current training data.
-Instead, an \emph{ensemble} of models (N = 437) was estimated using nine cell-based coagulation training sets \cite{ALLEN2007}.
-We used this family of consistent coagulation models in all simulations instead of a single best-fit but uncertain model.
-Additionally, using sensitivity analysis on the ensemble of models, we identified 
-structurally sensitive components of the coagulation architecture as a function of condition.
-We also demonstrated that the ensemble robustly constrained model predictions of independent validation sets, despite having many poorly constrained parameters.
-Thus, the model ensemble displayed \emph{sloppy} behavior similar to that observed by Sethna and coworkers for other signal transduction networks \cite{Gutenkunst2007}.  
-By studying a family of models, we perhaps partially addressed the uncertainty stemming from the many poorly characterized model parameters.
-However, many other factors could influence our results. For example, missing structural interactions or biophysical factors such as blood flow could play a large role.
-Thus, while the results presented here may be a valuable first step, more studies are required.
+In this study, we developed a reduced order model of the human coagulation cascade.
+We chose coagulation because it is well studied, has a complex architecture, 
+and has an abundance of experimental data available for model identification and validation. 
+However, coagulation was just a proof-of concept; 
+the proposed framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
+or potentially even cell free metabolic systems. 
+The model consisted of five differential equations augmented with several logical rules describing 
+regulatory connections between model components, and unmodeled interactions in the network. 
+We estimated model parameters from in vitro extrinsic coagulation data sets, in the presence of ATIII, with and without the protein C pathway. 
+To estimate parameters, the residual between model simulations and experimental measurements was minimized using particle swarm optimization (PSO). 
+However, not all of the model parameters were uniquely identifiable, given the training data.
+Instead, we estimated an ensemble of likely parameter sets (N = 20)
+from eight \emph{in vitro} time-series coagulation data sets with and without the protein C pathway.
+We validated the ensemble using thrombin data sets taken from multiple laboratories for a variety of experimental conditions not used during training. 
+The ensemble predicted thrombin trajectories for conditions not used for model training, including thrombin generation for normal and hemophilic coagulation 
+in the presence of platelets (a significant unmodeled component).
+We then used flux analysis to understand how the network operated in a variety of conditions, and global sensitivity analysis to identify which parameters controlled the 
+performance of the network. Taken together, the reduced order hybrid approach produced a surprisingly predictive model, suggesting this approach could potentially 
+be used to model other biochemical networks important to human health. 
 
 Malfunctions in coagulation can have serious or potentially even fatal consequences.
 For example, aggressive clotting is involved with Coronary Artery Diseases (CADs), which collectively account for 38\% of all deaths in North America \cite{HANSSON2005}.
@@ -365,9 +382,18 @@ Many questions also remain about its mechanism \cite{KOMIYAMA1990,PAYNE1996,MONR
 and effective dose range \cite{TOMOKIYO2003}.
 Thus, despite its wide adoption, the utility of rFVIIa in trauma-associated hemorrhage remains controversial \cite{Duchesne:2008hw}.
 
+Although the performance of the proof of principle coagulation model was impressive given its dimension, there are several mathematical and biological questions that can be explored further.
+First, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
+Theoretically, an integration rule is simply a function whose domain is a set of transfer function inputs, and whose range is $[0,1]$.
+Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $[0,1]$.
+Alternative integration rules such the mean would have different properties which could influence model identification or performance. 
+For example, a mean or product integration rule would be differentiable, which allows derivative based optimization approaches to be used. 
+The particular form of the transfer function could also be explored. We choose a hill-like function because of its 
+prominence in the systems and synthetic biology community. 
+However the only mathematical requirement for a transfer function is to map a non-negative continuous or categorical variable into the 
+range $[0,1]$. Thus, many other function types are possible.
+   
 
-While the performance of the proof of principle reduced order model was impressive, there are several questions that should be explored further.
-[FINISH]
 
 \clearpage
 

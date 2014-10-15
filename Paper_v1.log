@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  7 OCT 2014 16:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 OCT 2014 06:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,127 +647,106 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 ]
 
-Package natbib Warning: Citation `Duchesne:2008hw' on page 10 undefined on inpu
-t line 334.
+Package natbib Warning: Citation `ROBERTS2004' on page 10 undefined on input li
+ne 381.
 
 
-Package natbib Warning: Citation `VARNER2007' on page 10 undefined on input lin
-e 337.
-
-
-Package natbib Warning: Citation `BUTENAS2002' on page 10 undefined on input li
-ne 339.
+Package natbib Warning: Citation `ROBERTS2006' on page 10 undefined on input li
+ne 381.
 
 
 Package natbib Warning: Citation `ALLEN2007' on page 10 undefined on input line
- 341.
+ 381.
 
 
-Package natbib Warning: Citation `Gutenkunst2007' on page 10 undefined on input
- line 346.
+Package natbib Warning: Citation `Duchesne:2008hw' on page 10 undefined on inpu
+t line 383.
 
 [10
 
-]
-
-Package natbib Warning: Citation `ROBERTS2004' on page 11 undefined on input li
-ne 364.
-
-
-Package natbib Warning: Citation `ROBERTS2006' on page 11 undefined on input li
-ne 364.
-
-
-Package natbib Warning: Citation `ALLEN2007' on page 11 undefined on input line
- 364.
-
-
-Package natbib Warning: Citation `Duchesne:2008hw' on page 11 undefined on inpu
-t line 366.
-
-[11]
-Overfull \hbox (2.4994pt too wide) in paragraph at lines 377--378
+] [11] [12]
+Overfull \hbox (2.4994pt too wide) in paragraph at lines 403--404
  \OT1/phv/b/n/12 For-mu-la-tion and so-lu-tion of the model equa-tions. \OT1/ph
 v/m/n/12 We used or-di-nary dif-fer-en-tial equa-
  []
 
-[12
+[13
 
-] [13] [14] [15] [16] [17] (./Paper_v1.bbl [18
+] [14] [15] [16] [17] [18] (./Paper_v1.bbl [19
 
-] [19] [20] [21]) [22]
-<./figs/Figure-1-Network.pdf, id=93, 794.97pt x 614.295pt>
+] [20] [21] [22]) [23]
+<./figs/Figure-1-Network.pdf, id=97, 794.97pt x 614.295pt>
 File: ./figs/Figure-1-Network.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Network.pdf>
-Package pdftex.def Info: ./figs/Figure-1-Network.pdf used on input line 512.
+Package pdftex.def Info: ./figs/Figure-1-Network.pdf used on input line 538.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 519.
- [23 <./figs/Figure-1-Network.pdf>]
-<./figs/Figure-2-ControlSchematic.pdf, id=154, 794.97pt x 614.295pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 545.
+ [24 <./figs/Figure-1-Network.pdf>]
+<./figs/Figure-2-ControlSchematic.pdf, id=157, 794.97pt x 614.295pt>
 File: ./figs/Figure-2-ControlSchematic.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-2-ControlSchematic.pdf>
 Package pdftex.def Info: ./figs/Figure-2-ControlSchematic.pdf used on input lin
-e 526.
+e 552.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [24 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-DIFF_FII_NO_APC.p
-df, id=307, 794.97pt x 614.295pt>
+ [25 <./figs/Figure-2-ControlSchematic.pdf>] <./figs/Figure-3-DIFF_FII_NO_APC.p
+df, id=310, 794.97pt x 614.295pt>
 File: ./figs/Figure-3-DIFF_FII_NO_APC.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-DIFF_FII_NO_APC.pdf>
 Package pdftex.def Info: ./figs/Figure-3-DIFF_FII_NO_APC.pdf used on input line
- 538.
+ 564.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [25 <./figs/Figure-3-DIFF_FII_NO_APC.pdf>] <./figs/Figure-4-DIFF_FII_APC.pdf, 
-id=342, 794.97pt x 614.295pt>
+ [26 <./figs/Figure-3-DIFF_FII_NO_APC.pdf>] <./figs/Figure-4-DIFF_FII_APC.pdf, 
+id=345, 794.97pt x 614.295pt>
 File: ./figs/Figure-4-DIFF_FII_APC.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-4-DIFF_FII_APC.pdf>
-Package pdftex.def Info: ./figs/Figure-4-DIFF_FII_APC.pdf used on input line 55
-3.
+Package pdftex.def Info: ./figs/Figure-4-DIFF_FII_APC.pdf used on input line 57
+9.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [26 <./figs/Figure-4-DIFF_FII_APC.pdf>]
-<./figs/Figure-5-FII_ATIII.pdf, id=372, 794.97pt x 614.295pt>
+ [27 <./figs/Figure-4-DIFF_FII_APC.pdf>]
+<./figs/Figure-5-FII_ATIII.pdf, id=375, 794.97pt x 614.295pt>
 File: ./figs/Figure-5-FII_ATIII.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-5-FII_ATIII.pdf>
-Package pdftex.def Info: ./figs/Figure-5-FII_ATIII.pdf used on input line 569.
+Package pdftex.def Info: ./figs/Figure-5-FII_ATIII.pdf used on input line 595.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [27 <./figs/Figure-5-FII_ATIII.pdf>]
-<./figs/Figure-6-Hemophilia.pdf, id=402, 794.97pt x 614.295pt>
+ [28 <./figs/Figure-5-FII_ATIII.pdf>]
+<./figs/Figure-6-Hemophilia.pdf, id=405, 794.97pt x 614.295pt>
 File: ./figs/Figure-6-Hemophilia.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-6-Hemophilia.pdf>
-Package pdftex.def Info: ./figs/Figure-6-Hemophilia.pdf used on input line 585.
+Package pdftex.def Info: ./figs/Figure-6-Hemophilia.pdf used on input line 611.
 
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [28 <./figs/Figure-6-Hemophilia.pdf>]
-<./figs/Figure-7-rFVIIa-Trigger.pdf, id=432, 794.97pt x 614.295pt>
+ [29 <./figs/Figure-6-Hemophilia.pdf>]
+<./figs/Figure-7-rFVIIa-Trigger.pdf, id=436, 794.97pt x 614.295pt>
 File: ./figs/Figure-7-rFVIIa-Trigger.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-7-rFVIIa-Trigger.pdf>
 Package pdftex.def Info: ./figs/Figure-7-rFVIIa-Trigger.pdf used on input line 
-600.
+626.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [29 <./figs/Figure-7-rFVIIa-Trigger.pdf>] <./figs/Figure-8-Flux-rFVIIa-Trigger
-.pdf, id=456, 794.97pt x 614.295pt>
+ [30 <./figs/Figure-7-rFVIIa-Trigger.pdf>] <./figs/Figure-8-Flux-rFVIIa-Trigger
+.pdf, id=459, 794.97pt x 614.295pt>
 File: ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>
 Package pdftex.def Info: ./figs/Figure-8-Flux-rFVIIa-Trigger.pdf used on input 
-line 612.
+line 638.
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [30 <./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>] <./figs/Figure-9-Sensitivity.pd
-f, id=476, 794.97pt x 614.295pt>
+ [31 <./figs/Figure-8-Flux-rFVIIa-Trigger.pdf>] <./figs/Figure-9-Sensitivity.pd
+f, id=479, 794.97pt x 614.295pt>
 File: ./figs/Figure-9-Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-9-Sensitivity.pdf>
-Package pdftex.def Info: ./figs/Figure-9-Sensitivity.pdf used on input line 623
+Package pdftex.def Info: ./figs/Figure-9-Sensitivity.pdf used on input line 649
 .
 (pdftex.def)             Requested size: 469.75502pt x 363.00267pt.
- [31 <./figs/Figure-9-Sensitivity.pdf>]
+ [32 <./figs/Figure-9-Sensitivity.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
@@ -777,10 +756,10 @@ Package natbib Warning: There were undefined citations.
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5247 strings out of 493315
- 77088 string characters out of 6137904
+ 5244 strings out of 493315
+ 77047 string characters out of 6137904
  145812 words of memory out of 5000000
- 8509 multiletter control sequences out of 15000+600000
+ 8506 multiletter control sequences out of 15000+600000
  28842 words of font info for 70 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,8n,41p,1252b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -808,10 +787,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
 onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (33 pages, 1127917 bytes).
+Output written on Paper_v1.pdf (34 pages, 1128471 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
+ 572 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

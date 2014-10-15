@@ -3,17 +3,14 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v1.aux
 The style file: plos2009.bst
 Database file #1: References_v1.bib
-Warning--I didn't find a database entry for "Duchesne:2008hw"
-Warning--I didn't find a database entry for "VARNER2007"
-Warning--I didn't find a database entry for "BUTENAS2002"
-Warning--I didn't find a database entry for "ALLEN2007"
-Warning--I didn't find a database entry for "Gutenkunst2007"
 Warning--I didn't find a database entry for "ROBERTS2004"
 Warning--I didn't find a database entry for "ROBERTS2006"
+Warning--I didn't find a database entry for "ALLEN2007"
+Warning--I didn't find a database entry for "Duchesne:2008hw"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 47 entries,
             2441 wiz_defined-function locations,
-            911 strings with 14623 characters,
+            905 strings with 14553 characters,
 and the built_in function-call counts, 35073 in all, are:
 = -- 3208
 > -- 593
@@ -52,4 +49,4 @@ warning$ -- 0
 while$ -- 282
 width$ -- 49
 write$ -- 530
-(There were 7 warnings)
+(There were 4 warnings)
