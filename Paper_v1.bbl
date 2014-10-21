@@ -36,12 +36,18 @@ Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
 \newblock Science 342: 604-7.
 \bibAnnoteFile{Machta:2013aa}
 
-\bibitem{Cirit:2012kx}
-Cirit M, Haugh JM (2012) Data-driven modelling of receptor tyrosine kinase
-  signalling networks quantifies receptor-specific potencies of pi3k- and
-  ras-dependent erk activation.
-\newblock Biochem J 441: 77-85.
-\bibAnnoteFile{Cirit:2012kx}
+\bibitem{Morris:2010aa}
+Morris MK, Saez-Rodriguez J, Sorger PK, Lauffenburger DA (2010) Logic-based
+  models for the analysis of cell signaling networks.
+\newblock Biochemistry 49: 3216-24.
+\bibAnnoteFile{Morris:2010aa}
+
+\bibitem{Saez-Rodriguez:2011aa}
+Saez-Rodriguez J, Alexopoulos LG, Zhang M, Morris MK, Lauffenburger DA, et~al.
+  (2011) Comparing signaling networks between normal and transformed
+  hepatocytes using discrete logical models.
+\newblock Cancer Res 71: 5400-11.
+\bibAnnoteFile{Saez-Rodriguez:2011aa}
 
 \bibitem{Morris:2011ys}
 Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
@@ -49,6 +55,13 @@ Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
   logic: quantitative analysis of liver cell responses to inflammatory stimuli.
 \newblock PLoS Comput Biol 7: e1001099.
 \bibAnnoteFile{Morris:2011ys}
+
+\bibitem{Morris:2012aa}
+Morris MK, Shriver Z, Sasisekharan R, Lauffenburger DA (2012) Querying
+  quantitative logic models (q2lm) to study intracellular signaling networks
+  and cell-cytokine interactions.
+\newblock Biotechnol J 7: 374-86.
+\bibAnnoteFile{Morris:2012aa}
 
 \bibitem{Butenas:2002aa}
 Butenas S, Mann KG (2002) Blood coagulation.
@@ -95,6 +108,12 @@ Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
 Mann K (1999) Biochemistry and physiology of blood coagulation.
 \newblock Thromb Haemost 82: 165-174.
 \bibAnnoteFile{MANN1999}
+
+\bibitem{Kuharsky:2001aa}
+Kuharsky AL, Fogelson AL (2001) Surface-mediated control of blood coagulation:
+  the role of binding site densities and platelet deposition.
+\newblock Biophys J 80: 1050-74.
+\bibAnnoteFile{Kuharsky:2001aa}
 
 \bibitem{Luan:2007aa}
 Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of

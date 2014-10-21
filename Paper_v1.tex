@@ -113,8 +113,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
+In this study, we present a novel hybrid modeling approach which combines ordinary differential equation (ODE) modeling with logical rules to simulate an archetype biochemical network, 
+the human coagulation cascade.  
+The model consisted of five differential equations augmented with several logical rules describing 
+regulatory connections between model components, and unmodeled interactions in the network. 
+This formulation was more than an order of magnitude smaller than current coagulation models, 
+because many of the mechanistic details of coagulation were encoded as logical rules.
+We estimated an ensemble of likely model parameters (N = 20) from \textit{in~vitro} extrinsic coagulation data sets, with and without inhibitors, 
+by minimizing the residual between model simulations and experimental measurements using particle swarm optimization (PSO). 
+We then validated the model ensemble using thrombin data sets that were not used during training. 
+The ensemble predicted thrombin trajectories for conditions not used for model training, including thrombin generation for normal and hemophilic coagulation 
+in the presence of platelets (a significant unmodeled component).
+We then used flux analysis to understand how the network operated in a variety of conditions, and global sensitivity analysis to identify which parameters controlled the 
+performance of the network. Taken together, the hybrid approach produced a surprisingly predictive model given its small size, 
+suggesting the proposed hybrid framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
+or potentially even cell free metabolic systems. 
 
-{\noindent \textbf{Keywords:}~Coagulation, Mathematical modeling, Systems Biology}
+\vspace{0.25in}
+{\noindent \textbf{Keywords:}~Blood coagulation, Mathematical modeling, Systems biology}
 
 \pagebreak
 
@@ -122,6 +138,12 @@
 
 \linenumbers
 
+%We chose coagulation because it is well studied, has a complex architecture, 
+%and has an abundance of experimental data available for model identification and validation. 
+%However, coagulation was just a proof-of concept to validate our approach; 
+%
+
+%Developing mathematical modeling tools to interrogate the molecular basis of human disease is one of the grand challenges facing systems biology.
 %Developing computational tools to understand the molecular basis of human disease is a grand challenge facing systems biology.
 %Many have suggested that the integration of experimental and computational research is required to unravel
 %critical questions facing molecular medicine \cite{KITANO2002,ASSMUS2006,ARNAUD2006}. 
@@ -146,26 +168,26 @@
 
 \section*{Introduction}
 Developing mathematical models of biochemical networks is a significant facet of systems biology.
-Modeling approaches differ in their degree of detail, but the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
-Ordinary differential equation (ODE) models are a common tool for modeling biochemical systems because of their ability to capture dynamics. 
+Modeling approaches differ in their degree of detail, where the choice of approach is often determined by prior knowledge, or model requirements \citep{2012_kholodenko_kolch_SciSig}. 
+Ordinary differential equation (ODE) models are a common tool for modeling biochemical systems because of their ability to capture dynamics, and encode mechanism.
 However, ODE models typically come with difficult (or sometimes impossible) parameter identification problems. 
 For example, Gadkar et al., showed that even with near-perfect information, 
 it was often impossible to identify all the parameters in typical signal transduction models \citep{Gadkar:2005ad}. 
-However, Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
+However, it is not clear whether we actually need precise estimates for all model parameters. 
+Bailey suggested more than a decade ago, that achieving qualitative or even quantitative understanding of biological systems 
 should not require complete structural and parametric knowledge \citep{2001_bailey_NatBiotech}. 
-Since Bailey's complex biology with no parameters hypothesis, Sethna and coworkers showed that model performance is typically 
-sensitive to only a few parameter combinations, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
-Thus, reasonable predictions from sloppy models may be possible, despite parametric uncertainty, if a few critical components are well understood. 
-Perhaps a more important issue is that ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
-Data-driven \citep{Cirit:2012kx} or logical model approaches \citep{Morris:2011ys} 
-are emerging modeling paradigms that constrain model structure by the availability of experimental data. 
-These are interesting techniques because the data naturally informs model structure, thereby limiting the 
-identification challenge. Although not always mechanistic, these models can simulate surprisingly rich system responses in the absence of mechanism [REFHERE]. 
-However, modeling dynamics using logical models is not straightforward. 
-Thus, a potential third approach could be a combination of ODEs and logical models, where mechanistic information was used when available, 
-and missing or incomplete knowledge encoded using causal local rules.  
+Since Bailey's complex biology with no parameters hypothesis, Sethna showed that model performance is typically 
+sensitive to only a few parameters, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+Thus, reasonable predictions may be possible, despite parametric uncertainty, if a few critical parameters are well defined. 
+Perhaps more importantly, ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
+Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships using non-linear transfer functions \citep{Morris:2010aa}.
+These functions encode interactions between model components, without requiring mechanism.
+Despite their simplicity, logical models have captured rich system behaviors in the absence of mechanistic information \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
+However, modeling complex dynamics remains difficult with this class of model.
+Thus, there is an unmet need for a third approach which combines ODEs and logical models, where ODEs could encode mechanistic information, 
+while missing or incomplete mechanistic knowledge can be approximated using a logical approach.  
 
-In this study, we developed a hybrid approach which combined ODEs and logical rules to model a well studied biochemical network, 
+In this study, we developed a hybrid approach which combines ODE modeling with logical rules to model a well studied biochemical network, 
 the human coagulation system. Coagulation is an archetype proteolytic cascade involving both positive 
 and negative feedback \cite{Butenas:2002aa,Schenone:2004aa,Adams:2009aa}. 
 Coagulation is mediated by a family proteases in the circulation, called factors and a key group of blood cells, called platelets. 
@@ -185,8 +207,8 @@ Thrombin itself also inadvertently plays a role in its own inhibition; thrombin,
 converts protein C to activated protein C (APC) which attenuates the coagulation response by proteolytic cleavage of fV/FVa and fVIII/FVIIIa. 
 Termination occurs after either prothrombin is consumed, or thrombin formation is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
 
-Coagulation models in the literature have typically been formulated as systems of nonlinear ordinary differential equations, 
-often using mass-action kinetics to describe the rates of biochemical conversions [REFHERE].
+Coagulation models in the literature are typically formulated as systems of nonlinear ordinary differential equations, 
+using mass-action or other kinetics, to describe the rates of biochemical conversions \citep{Kuharsky:2001aa}.
 Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys}, 
 were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, 
 and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined highly mechanistic models of extrinsic coagulation. 
@@ -348,8 +370,8 @@ amplification. However, the influence of the amplification parameter was much le
 In this study, we developed a reduced order model of the human coagulation cascade.
 We chose coagulation because it is well studied, has a complex architecture, 
 and has an abundance of experimental data available for model identification and validation. 
-However, coagulation was just a proof-of concept; 
-the proposed framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
+However, coagulation was just a proof-of concept validation of our approach; 
+the proposed hybrid framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
 or potentially even cell free metabolic systems. 
 The model consisted of five differential equations augmented with several logical rules describing 
 regulatory connections between model components, and unmodeled interactions in the network. 
@@ -366,8 +388,8 @@ performance of the network. Taken together, the reduced order hybrid approach pr
 be used to model other biochemical networks important to human health. 
 
 Malfunctions in coagulation can have potentially fatal consequences.
-For example, aggressive clotting involved with Coronary Artery Diseases (CADs), collectively accounts for 38\% of all deaths in North America \cite{HANSSON2005}.
-Coagulation management during surgery can also be challenging, particularly because of the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
+Aggressive clotting involved with Coronary Artery Diseases (CADs), collectively accounts for 38\% of all deaths in North America \cite{HANSSON2005}.
+Coagulation management during surgery can also be challenging, particularly with the increasing clinical use of antithrombotic drugs \cite{Tanaka:2009wo}.   
 Insufficient coagulation due to genetic disorders such as hemophilia can also result in recurrent bleeding. 
 The coagulation factors VIII (fVIII) and IX (fIX) are deficient in Hemophilia A and B, respectively \cite{COOPER1994,MANNUCCI2001,MITCHELL2008}.
 People with mild hemophilia have 5-40\% of the normal clotting factor levels while severe hemophiliacs have $<$1\% \cite{MITCHELL2008}.
@@ -375,17 +397,24 @@ Hemophilia can be controlled with regular infusions of the deficient clotting fa
 However, clotting factor replacement sometimes leads to the formation of fVIII and fIX inhibitors \emph{in-vivo} \cite{TOMOKIYO2003}.
 Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
 hemophilia with and without factor VIII/IX inhibitors \cite{Shapiro:2008px}.
-However, rFVIIa requires frequent administration (every 2-3 hr) because of its short half-life in the circulation. 
-Many questions also remain about the mechanism of action of rFVIIa, its effective dose range \cite{TOMOKIYO2003}, and its overall utility 
-for the treatment trauma-associated hemorrhage \cite{Duchesne:2008hw}. In the current proof of concept model, we did not model rFVIIa directly. 
-Rather we modeled a broad class of trigger materials which initiated the extrinsic coagulation cascade. Since we identified the model using TF/FVIIa, inherent to
-our rFVIIa simulations was the presence of TF. However, even with this complication, 
+However, rFVIIa requires frequent administration (every 2-3 hr), and many questions remain about its mechanism of action, 
+its effective dose range \cite{TOMOKIYO2003}, and its overall utility for the treatment trauma-associated hemorrhage \cite{Duchesne:2008hw}. 
+In this study, we did not model rFVIIa induced coagulation directly. 
+Rather, we modeled a general trigger which initiated the extrinsic coagulation cascade. 
+Since we identified the model using TF/FVIIa, inherent to our rFVIIa simulations (and the rate constant governing initiation) 
+was the presence of TF. However, even with this complication, 
 the model generated potentially useful insight into the rFVIIa mechanism of action, and its possible shortcomings especially for the treatment of hemophilia. 
-Addition of rFVIIa directly activated thrombin through the fluid phase initiation pathway. 
-However, in the presence of ATIII and the protein C pathway but without fVIII or fIX, 
-this initial thrombin signal was quickly extinguished by inhibition, as thrombin amplification could not occur. 
-As the dose of rFVIIa increased, the peak thrombin time decreased, eventually saturating.
-Butenas \emph{et al.,} performed an extensive study of rFVIIa induced thrombin generation in hemophilia \citep{Butenas:2002ab}.
+The addition of rFVIIa directly activated thrombin through the initiation pathway. 
+However, no amplification of the thrombin signal occurred without fVIII or fIX. 
+Thus, the peak thrombin signal was lower than normal coagulation, the peak thrombin time was longer, and the thrombin signal was eventually inhibited by ATIII and the protein C pathway.
+However, as the dose of rFVIIa increased, the peak thrombin time decreased (eventually saturating around 100$\times$nominal trigger), and the peak thrombin value increased.
+For 100$\times$nominal trigger, the thrombin profile resembled normal coagulation.
+Butenas \emph{et al.,} performed an extensive in vitro study of rFVIIa induced thrombin generation under normal and hemophilic conditions \citep{Butenas:2002ab}.
+They found qualitatively similar trends, namely rFVIIa could restore normal coagulation (even in the absence of TF) for large enough rFVIIa doses, although rFVIIa induced coagulation 
+in hemophilia (even for large rFVIIa doses) lagged the normal profile. 
+These results suggest that rFVIIa administration alone
+might not be able to initiate normal coagulation in recurrent bleeding, unless the dosage is above a critical threshold. 
+Unfortunately, this threshold is likely patient specific, thus limiting potentially limiting the utility of rFVIIa administration.  
 
 Although the performance of the proof of principle coagulation model was impressive given its size, there were several mathematical and biological questions that can be explored further.
 First, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
@@ -644,7 +673,8 @@ The experimental validation data was reproduced from the study of Allen et al. \
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Figure-7-rFVIIa-Trigger.pdf}
 \caption{Reduced order coagulation model predictions of rFVIIa administration. 
-Simulations of thrombin formation in the presence of ATIII and the protein C pathway were conducted for a range of trigger values (1x - 50x) in the absence of fVIII and fIX.
+A: Simulations of thrombin formation in the presence of ATIII and the protein C pathway were conducted for a range of trigger values (1x - 200x nominal) in the absence of fVIII and fIX.
+B: Comparison of thrombin generation for normal versus hemophilia for 10x nominal trigger.
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles.
 The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
 All factors and control proteins were at their physiological concentration unless others noted.}\label{fig-rFVII}

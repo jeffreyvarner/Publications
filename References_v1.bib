@@ -2,12 +2,112 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Jeffrey Varner at 2014-10-15 15:03:40 -0400 
+%% Created for Jeffrey Varner at 2014-10-21 16:00:50 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Morris:2010aa,
+	Abstract = {Computational models are increasingly used to analyze the operation of complex biochemical networks, including those involved in cell signaling networks. Here we review recent advances in applying logic-based modeling to mammalian cell biology. Logic-based models represent biomolecular networks in a simple and intuitive manner without describing the detailed biochemistry of each interaction. A brief description of several logic-based modeling methods is followed by six case studies that demonstrate biological questions recently addressed using logic-based models and point to potential advances in model formalisms and training procedures that promise to enhance the utility of logic-based methods for studying the relationship between environmental inputs and phenotypic or signaling state outputs of complex signaling networks.},
+	Author = {Morris, Melody K and Saez-Rodriguez, Julio and Sorger, Peter K and Lauffenburger, Douglas A},
+	Date-Added = {2014-10-21 19:56:23 +0000},
+	Date-Modified = {2014-10-21 19:56:23 +0000},
+	Doi = {10.1021/bi902202q},
+	Journal = {Biochemistry},
+	Journal-Full = {Biochemistry},
+	Mesh = {Biochemistry; Cell Physiological Phenomena; Computers, Molecular; Fuzzy Logic; Kinetics; Logic; Models, Biological; Molecular Biology; Proteins; Signal Transduction},
+	Month = {Apr},
+	Number = {15},
+	Pages = {3216-24},
+	Pmc = {PMC2853906},
+	Pmid = {20225868},
+	Pst = {ppublish},
+	Title = {Logic-based models for the analysis of cell signaling networks},
+	Volume = {49},
+	Year = {2010},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1021/bi902202q}}
+
+@article{Saez-Rodriguez:2011aa,
+	Abstract = {Substantial effort in recent years has been devoted to constructing and analyzing large-scale gene and protein networks on the basis of "omic" data and literature mining. These interaction graphs provide valuable insight into the topologies of complex biological networks but are rarely context specific and cannot be used to predict the responses of cell signaling proteins to specific ligands or drugs. Conversely, traditional approaches to analyzing cell signaling are narrow in scope and cannot easily make use of network-level data. Here, we combine network analysis and functional experimentation by using a hybrid approach in which graphs are converted into simple mathematical models that can be trained against biochemical data. Specifically, we created Boolean logic models of immediate-early signaling in liver cells by training a literature-based prior knowledge network against biochemical data obtained from primary human hepatocytes and 4 hepatocellular carcinoma cell lines exposed to combinations of cytokines and small-molecule kinase inhibitors. Distinct families of models were recovered for each cell type, and these families clustered topologically into normal and diseased sets.},
+	Author = {Saez-Rodriguez, Julio and Alexopoulos, Leonidas G and Zhang, Mingsheng and Morris, Melody K and Lauffenburger, Douglas A and Sorger, Peter K},
+	Date-Added = {2014-10-21 19:56:16 +0000},
+	Date-Modified = {2014-10-21 19:56:16 +0000},
+	Doi = {10.1158/0008-5472.CAN-10-4453},
+	Journal = {Cancer Res},
+	Journal-Full = {Cancer research},
+	Mesh = {Cell Line, Transformed; Cell Line, Tumor; Hepatocytes; Humans; Models, Biological; Signal Transduction},
+	Month = {Aug},
+	Number = {16},
+	Pages = {5400-11},
+	Pmc = {PMC3207250},
+	Pmid = {21742771},
+	Pst = {ppublish},
+	Title = {Comparing signaling networks between normal and transformed hepatocytes using discrete logical models},
+	Volume = {71},
+	Year = {2011},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1158/0008-5472.CAN-10-4453}}
+
+@article{Morris:2012aa,
+	Abstract = {Mathematical models have substantially improved our ability to predict the response of a complex biological system to perturbation, but their use is typically limited by difficulties in specifying model topology and parameter values. Additionally, incorporating entities across different biological scales ranging from molecular to organismal in the same model is not trivial. Here, we present a framework called "querying quantitative logic models" (Q2LM) for building and asking questions of constrained fuzzy logic (cFL) models. cFL is a recently developed modeling formalism that uses logic gates to describe influences among entities, with transfer functions to describe quantitative dependencies. Q2LM does not rely on dedicated data to train the parameters of the transfer functions, and it permits straight-forward incorporation of entities at multiple biological scales. The Q2LM framework can be employed to ask questions such as: Which therapeutic perturbations accomplish a designated goal, and under what environmental conditions will these perturbations be effective? We demonstrate the utility of this framework for generating testable hypotheses in two examples: (i) a intracellular signaling network model; and (ii) a model for pharmacokinetics and pharmacodynamics of cell-cytokine interactions; in the latter, we validate hypotheses concerning molecular design of granulocyte colony stimulating factor.},
+	Author = {Morris, Melody K and Shriver, Zachary and Sasisekharan, Ram and Lauffenburger, Douglas A},
+	Date-Added = {2014-10-21 19:56:14 +0000},
+	Date-Modified = {2014-10-21 19:56:14 +0000},
+	Doi = {10.1002/biot.201100222},
+	Journal = {Biotechnol J},
+	Journal-Full = {Biotechnology journal},
+	Mesh = {Algorithms; Cell Communication; Computer Simulation; Cytokines; Fuzzy Logic; Granulocyte Colony-Stimulating Factor; Humans; Models, Theoretical; Signal Transduction},
+	Month = {Mar},
+	Number = {3},
+	Pages = {374-86},
+	Pmc = {PMC3292705},
+	Pmid = {22125256},
+	Pst = {ppublish},
+	Title = {Querying quantitative logic models (Q2LM) to study intracellular signaling networks and cell-cytokine interactions},
+	Volume = {7},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1002/biot.201100222}}
+
+@article{Terfve:2012aa,
+	Abstract = {BACKGROUND: Cells process signals using complex and dynamic networks. Studying how this is performed in a context and cell type specific way is essential to understand signaling both in physiological and diseased situations. Context-specific medium/high throughput proteomic data measured upon perturbation is now relatively easy to obtain but formalisms that can take advantage of these features to build models of signaling are still comparatively scarce.
+RESULTS: Here we present CellNOptR, an open-source R software package for building predictive logic models of signaling networks by training networks derived from prior knowledge to signaling (typically phosphoproteomic) data. CellNOptR features different logic formalisms, from Boolean models to differential equations, in a common framework. These different logic model representations accommodate state and time values with increasing levels of detail. We provide in addition an interface via Cytoscape (CytoCopteR) to facilitate use and integration with Cytoscape network-based capabilities.
+CONCLUSIONS: Models generated with this pipeline have two key features. First, they are constrained by prior knowledge about the network but trained to data. They are therefore context and cell line specific, which results in enhanced predictive and mechanistic insights. Second, they can be built using different logic formalisms depending on the richness of the available data. Models built with CellNOptR are useful tools to understand how signals are processed by cells and how this is altered in disease. They can be used to predict the effect of perturbations (individual or in combinations), and potentially to engineer therapies that have differential effects/side effects depending on the cell type or context.},
+	Author = {Terfve, Camille and Cokelaer, Thomas and Henriques, David and MacNamara, Aidan and Goncalves, Emanuel and Morris, Melody K and van Iersel, Martijn and Lauffenburger, Douglas A and Saez-Rodriguez, Julio},
+	Date-Added = {2014-10-21 19:56:04 +0000},
+	Date-Modified = {2014-10-21 19:56:04 +0000},
+	Doi = {10.1186/1752-0509-6-133},
+	Journal = {BMC Syst Biol},
+	Journal-Full = {BMC systems biology},
+	Mesh = {Computational Biology; Data Interpretation, Statistical; Hep G2 Cells; Humans; Liver Neoplasms; Logic; Models, Biological; Proteins; Signal Transduction; Software; User-Computer Interface},
+	Pages = {133},
+	Pmc = {PMC3605281},
+	Pmid = {23079107},
+	Pst = {epublish},
+	Title = {CellNOptR: a flexible toolkit to train protein signaling networks to data using multiple logic formalisms},
+	Volume = {6},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1752-0509-6-133}}
+
+@article{Kuharsky:2001aa,
+	Abstract = {A mathematical model of the extrinsic or tissue factor (TF) pathway of blood coagulation is formulated and results from a computational study of its behavior are presented. The model takes into account plasma-phase and surface-bound enzymes and zymogens, coagulation inhibitors, and activated and unactivated platelets. It includes both plasma-phase and membrane-phase reactions, and accounts for chemical and cellular transport by flow and diffusion, albeit in a simplified manner by assuming the existence of a thin, well-mixed fluid layer, near the surface, whose thickness depends on flow. There are three main conclusions from these studies. (i) The model system responds in a threshold manner to changes in the availability of particular surface binding sites; an increase in TF binding sites, as would occur with vascular injury, changes the system's production of thrombin dramatically. (ii) The model suggests that platelets adhering to and covering the subendothelium, rather than chemical inhibitors, may play the dominant role in blocking the activity of the TF:VIIa enzyme complex. This, in turn, suggests that a role of the IXa-tenase pathway for activating factor X to Xa is to continue factor Xa production after platelets have covered the TF:VIIa complexes on the subendothelium. (iii) The model gives a kinetic explanation of the reduced thrombin production in hemophilias A and B.},
+	Author = {Kuharsky, A L and Fogelson, A L},
+	Date-Added = {2014-10-21 19:44:24 +0000},
+	Date-Modified = {2014-10-21 19:44:24 +0000},
+	Doi = {10.1016/S0006-3495(01)76085-7},
+	Journal = {Biophys J},
+	Journal-Full = {Biophysical journal},
+	Mesh = {Binding Sites; Blood Coagulation; Blood Coagulation Factors; Blood Flow Velocity; Blood Platelets; Humans; Models, Biological; Models, Theoretical; Platelet Activation; Thrombocytopenia; Thromboplastin},
+	Month = {Mar},
+	Number = {3},
+	Pages = {1050-74},
+	Pmc = {PMC1301304},
+	Pmid = {11222273},
+	Pst = {ppublish},
+	Title = {Surface-mediated control of blood coagulation: the role of binding site densities and platelet deposition},
+	Volume = {80},
+	Year = {2001},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/S0006-3495(01)76085-7}}
 
 @article{Duchesne:2008hw,
 	Abstract = {Recombinant factor VII (rFVIIa) has arisen as an option for the control of life-threatening traumatic bleeding unresponsive to other means. The timing of administration, dosage, mortality, units of blood transfusion saved, risk of thrombotic events, and risk/benefits ratio are presently poorly defined. A Medline search from 1995 through March 2008 was conducted. All English language articles containing the terms "trauma" and "factor VII" or its variants were retrieved. Letters to the editor, animal studies, and general reviews were excluded. A total of 19 articles met inclusion criteria. These articles were then reviewed and stratified into three classes of evidence according to the quality assessment instrument developed by the Brain and Trauma Foundation. Levels of recommendation were developed. A total of 118 articles were identified. Only one Class I study was identified. This study demonstrated that three doses of rFVIIa given in blunt traumatic hemorrhage yielded a significant reduction of 2.6 of red blood cells used. These findings were not statistically significant for penetrating trauma patients. There was no reduction in mortality and no increase in thromboembolic events. Four Class II studies were identified; three showed a significant decrease of blood product usage and one demonstrated significant reductions in 24-hour and 30 day death from hemorrhage in patients receiving rFVIIa. The remaining 14 studies were Class III reviews of databases, registries, case series, and case reports. No identified study specifically addressed the cost/benefit analysis of rFVIIa usage in trauma hemorrhage. Utility of rFVIIa in trauma-associated hemorrhage remains controversial. There is Level I supporting the use of rFVIIa for blunt trauma patients only. There is no Class I evidence supporting decreased mortality or differences in thromboembolic events. Minimal effective dosing regimens and cost/benefit analyses have not yet been examined.},
