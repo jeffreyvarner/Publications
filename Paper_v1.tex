@@ -180,10 +180,10 @@ Since Bailey's complex biology with no parameters hypothesis, Sethna showed that
 sensitive to only a few parameters, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
 Thus, reasonable predictions may be possible, despite parametric uncertainty, if a few critical parameters are well defined. 
 Perhaps more importantly, ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
-Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships using non-linear transfer functions \citep{Morris:2010aa}.
-These functions encode interactions between model components, without requiring mechanism.
-Despite their simplicity, logical models have captured rich system behaviors in the absence of mechanistic information \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
-However, modeling complex dynamics remains difficult with this class of model.
+Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships between model components using non-linear transfer functions, 
+without requiring mechanism. \citep{Morris:2010aa}. 
+Despite their simplicity, logical models have captured rich behaviors in a variety of systems important to human health \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
+However, modeling complex dynamics with logical models is challenging. 
 Thus, there is an unmet need for a third approach which combines ODEs and logical models, where ODEs could encode mechanistic information, 
 while missing or incomplete mechanistic knowledge can be approximated using a logical approach.  
 
@@ -196,7 +196,7 @@ Thrombin generation involves three phases, initiation, amplification and termina
 Initiation requires a trigger event, for example vessel injury, which leads to the activation of factor VII (FVIIa).
 Two converging pathways, the extrinsic and intrinsic cascades, then process and amplify this initial coagulation signal. 
 The extrinsic cascade is generally believed to be the main mechanism of thrombinogenesis in the blood \cite{MANN1990,ROBERTS1998,MANN1999}.
-Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa), which itself has been activated by FVIIa \cite{Butenas:2002aa}. 
+Initially, thrombin is produced upon cleavage of prothrombin by fluid phase activated factor X (FXa), which itself has been activated by TF/FVIIa \cite{Butenas:2002aa}. 
 Picomolar amounts of thrombin then activate the cofactors factors V and VIII (fV and fVIII) and platelets, 
 leading to the formation of the tenase and prothrombinase complexes on activated platelets.
 These complexes amplify the early coagulation signal by further activating FXa, and directly converting prothrombin to thrombin. 
@@ -235,22 +235,22 @@ The reduced order hybrid approach produced a surprisingly predictive coagulation
 
 
 \subsection*{Formulation of reduced order coagulation models.}
-We developed a reduced order coagulation model to test our hybrid kinetic rule based modeling approach (Fig. \ref{fig-network}).
+We developed a reduced order extrinsic coagulation model to test our hybrid modeling approach (Fig. \ref{fig-network}).
 A trigger event initiates thrombin formation (FIIa) from prothrombin (fII) through a lumped initiation step.
-This step loosely represents the initial fluid phase activation of thrombin by activated FXa.
+This step loosely represents the initial activation of thrombin by activated FXa.
 Once activated, thrombin catalyzes its own formation (amplification step), and inhibition via the conversion of protein C to activated protein C (APC).
-APC and tissue factor pathway inhibitor (TFPI) inhibit initiation, while antithrombin III (ATIII) inhibits amplification. 
+Antithrombin III (ATIII) inhibits amplification, while APC and tissue factor pathway inhibitor (TFPI) potentially inhibit both initiation and amplification. 
 All initiation and inhibition processes, as well as the dependence of amplification upon other coagulation factors, was approximated using our rule-based approach (Fig. \ref{fig-control-schematic}). 
-Individual regulatory contributions to the activity of pathway enzymes were integrated into control coefficients using an integration rule.  
+Individual regulatory contributions to the activity of pathway enzymes were integrated into control coefficients (v's) using an integration rule (min/max).  
 These control coefficients then modified the rates of model processes at each time step.
-Hill-like transfer functions $0 \leq f\left(\mathcal{Z}\right) \leq 1$ quantified the influence of components upon a target process. 
+Hill-like transfer functions $0 \leq f\left(\mathcal{Z}\right) \leq 1$ quantified the contribution of components upon a target process. 
 Components were either individual inhibitor or activator levels or some function of levels, e.g., the product of factor levels. 
 In this study, $\mathcal{Z}$ corresponded to the abundance of individual inhibitors or activators, 
 with the exception of the dependence of amplification upon specific coagulation factors (modeled as the product of factors). 
 When a process was potentially sensitive to multiple inputs, logical integration rules were used to select which transfer functions influenced the process at any given time. 
 In our proof of concept model, we used a winner takes all strategy; the maximum or minimum transfer function was selected at any given time step. 
 However, other integration rules are certainly possible. 
-Taken together, while the reduced order coagulation model encodes significant biological complexity, it is highly compact, consisting of only five differential equations. 
+Taken together, while the reduced order coagulation model encodes significant biological complexity, it is highly compact (consisting of only five differential equations). 
 Thus, it will serve as an excellent proof of principle example to study the reduction of a highly complex human subsystem.  
 
 \subsection*{Identification of model parameters using particle swarm optimization.}
@@ -561,12 +561,15 @@ $\mathcal{G}$ denotes the best solution found over the entire population of part
 parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
 estimates was measured using goodness of fit (model residual). The particle swarm optimization routine was implemented in the Python programming language. 
 All plots were made using the Matplotlib module of Python \citep{Matplotlib}.
-The optimization code can be downloaded from http://www.varnerlab.org.
+%The optimization and plotting code can be downloaded from http://www.varnerlab.org.
 
 \subsection*{Global sensitivity analysis of model performance.}
-We conducted a global sensitivity analysis to estimate which parameters controlled the performance of the reduced order model. 
-We computed the total sensitivity index of each parameter relative to two performance objectives, the peak thrombin time and the area under the thrombin curve 
-(thrombin exposure). [FINISH~ME].
+We conducted a global sensitivity analysis, using the variance based method of Sobol, to estimate which parameters controlled the performance of the reduced order model \citep{SOBOL_METHOD}. 
+We computed the total sensitivity index of each parameter relative to two performance objectives, the peak thrombin time and the area under the thrombin curve (thrombin exposure).
+We established the sampling bounds for each parameter from the minimum and maximum value of that parameter in the parameter set ensemble. 
+We used the sampling method of Saltelli et al., \citep{Saltelli:2010} to compute a family of $N\left(2d+2\right)$ parameter sets which obeyed our parameter ranges, 
+where $N$ was the number of trials, and $d$ was the number of parameters in the model. In our case, N = 10,000 and d = 22, so the total sensitivity indices were computed from
+460,000 model evaluations. The variance based sensitivity analysis was conducted using the SALib module encoded the Python programming language \citep{SALIB}.
 
 \section*{Acknowledgements}
 This study was supported by an award from the Army Research Office (ARO \#59155-LS).
@@ -676,7 +679,7 @@ The experimental validation data was reproduced from the study of Allen et al. \
 A: Simulations of thrombin formation in the presence of ATIII and the protein C pathway were conducted for a range of trigger values (1x - 200x nominal) in the absence of fVIII and fIX.
 B: Comparison of thrombin generation for normal versus hemophilia for 10x nominal trigger.
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles.
-The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
+The shaded region denotes the 99\% confidence estimate of the mean thrombin value (uncertainty in the model simulation). 
 All factors and control proteins were at their physiological concentration unless others noted.}\label{fig-rFVII}
 \end{figure}
 

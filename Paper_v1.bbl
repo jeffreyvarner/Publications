@@ -271,6 +271,24 @@ Hunter JD (2007) Matplotlib: A 2d graphics environment.
 \newblock Computing in Science and Engineering 9: 90 - 95.
 \bibAnnoteFile{Matplotlib}
 
+\bibitem{SOBOL_METHOD}
+Sobol I (2001) Global sensitivity indices for nonlinear mathematical models and
+  their monte carlo estimates.
+\newblock Mathematics and Computers in Simulation 55: 271 - 280.
+\bibAnnoteFile{SOBOL_METHOD}
+
+\bibitem{Saltelli:2010}
+Saltelli A, Annoni P, Azzini I, Campolongo F, Ratto M, et~al. (2010) Variance
+  based sensitivity analysis of model output. design and estimator for the
+  total sensitivity index.
+\newblock Computer Physics Communications 181: 259 - 270.
+\bibAnnoteFile{Saltelli:2010}
+
+\bibitem{SALIB}
+Herman JD.
+\newblock http://jdherman.github.io/salib/.
+\bibAnnoteFile{SALIB}
+
 \bibitem{Butenas:1999aa}
 Butenas S, van't Veer C, Mann KG (1999) "normal" thrombin generation.
 \newblock Blood 94: 2169-78.
