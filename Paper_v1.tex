@@ -95,7 +95,7 @@
 {\par \centering \large{School of Chemical and Biomolecular Engineering}}
 {\par \centering \large{Cornell University, Ithaca NY 14853}}
 \vspace{0.1in}
-{\par \centering \textbf{Running Title:}~Modeling blood coagulation}
+{\par \centering \textbf{Running Title:}~Reduced order modeling of blood coagulation}
 \vspace{0.1in}
 {\par \centering \textbf{To be submitted:}~\emph{Processes}}
 \vspace{0.5in}
@@ -181,13 +181,13 @@ sensitive to only a few parameters, a characteristic seemingly universal to mult
 Thus, reasonable predictions may be possible, despite parametric uncertainty, if a few critical parameters are well defined. 
 Perhaps more importantly, ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
 Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships between model components using non-linear transfer functions, 
-without requiring mechanism. \citep{Morris:2010aa}. 
+without requiring mechanism \citep{Morris:2010aa}. 
 Despite their simplicity, logical models have captured rich behaviors in a variety of systems important to human health \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
 However, modeling complex dynamics with logical models is challenging. 
 Thus, there is an unmet need for a third approach which combines ODEs and logical models, where ODEs could encode mechanistic information, 
 while missing or incomplete mechanistic knowledge can be approximated using a logical approach.  
 
-In this study, we developed a hybrid approach which combines ODE modeling with logical rules to model a well studied biochemical network, 
+In this study, we developed a hybrid approach which combined ODE modeling with logical rules to model a well studied biochemical network, 
 the human coagulation system. Coagulation is an archetype proteolytic cascade involving both positive 
 and negative feedback \cite{Butenas:2002aa,Schenone:2004aa,Adams:2009aa}. 
 Coagulation is mediated by a family proteases in the circulation, called factors and a key group of blood cells, called platelets. 
@@ -207,32 +207,36 @@ Thrombin itself also inadvertently plays a role in its own inhibition; thrombin,
 converts protein C to activated protein C (APC) which attenuates the coagulation response by proteolytic cleavage of fV/FVa and fVIII/FVIIIa. 
 Termination occurs after either prothrombin is consumed, or thrombin formation is neutralized by inhibitors such as activated protein C (APC) or antithrombin III (ATIII).   
 
-Coagulation models in the literature are typically formulated as systems of nonlinear ordinary differential equations, 
-using mass-action or other kinetics, to describe the rates of biochemical conversions \citep{Kuharsky:2001aa}.
+Previous coagulation models have typically been formulated as systems of nonlinear ordinary differential equations, 
+using mass-action or more complex kinetics, to describe the rates of biochemical conversions \citep{Kuharsky:2001aa}.
 Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys}, 
 were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, 
 and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined highly mechanistic models of extrinsic coagulation. 
 Other laboratories have also expanded upon Hockin \emph{et al.}, for example including the intrinsic pathway, and thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
-Other biochemical or biophysical aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
-multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside growing clots \citep{Voronov:2013aa}.
-However, most of these previous studies were based upon detailed mechanistic knowledge. 
-Such a description is possible because blood, while enormously complex, can be systematically interrogated. 
-However, other systems, such as the intracellular networks which mediate cancer, are more difficult to experimentally probe and model.  
-Towards this unmet need, we have formulated a hybrid modeling approach which combines ODEs and logical rules to model 
-biochemical processes for which mechanistic information is difficult or impossible to obtain. 
-We have used this approach to model the coagulation cascade because of the wealth of training and validation data available for this system. 
-We proposed a reduced order coagulation model that consisted of five differential equations augmented with several logical rules.
-We identified the reduced order coagulation model parameters from in vitro extrinsic coagulation data sets, in the presence of ATIII, with and without the protein C pathway. 
-We then validated the model using thrombin data sets from multiple laboratories, for both normal and hemophilic coagulation.
-Flux and sensitivity analysis identified which parameter or parameters combinations were critical to model performance in several conditions. 
-The reduced order hybrid approach produced a surprisingly predictive coagulation model, suggesting this framework could potentially be used to model other biochemical networks important to human health. 
+Other aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
+multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside clots \citep{Voronov:2013aa}.
+However, these previous studies were largely based upon extensive mechanistic knowledge. 
+This is possible because blood, while enormously complex, can be systematically interrogated.
+Other systems, such as intracellular signaling networks, are much more difficult to experimentally interrogate.  
+Towards this unmet need, we formulated a hybrid modeling approach which combines ODEs and logical rules to model 
+biochemical processes for which a complete mechanistic understanding is missing. 
+We tested this approach by modeling the human coagulation cascade. 
+The hybrid model consisted of only five differential equations augmented with several logical rules.
+Thus, the model was more than an order of magnitude smaller than comparable purely ODE models in the literature.
+We estimated the model parameters from \textit{in~vitro} extrinsic coagulation data sets, in the presence of ATIII, with and without the protein C pathway. 
+We then compared the model predictions with thrombin data sets, for both normal and hemophilic coagulation, that were not used for model training.
+Once validated, we performed flux and sensitivity analysis on the model to estimate which parameters were critical to model performance in several conditions. 
+The reduced order hybrid approach produced a surprisingly predictive coagulation model, 
+suggesting this framework could potentially be used to model other biochemical networks important to human health. 
 
 \clearpage
 
 \section*{Results}
 
 %However, components could also correspond to non-modeled influences, categorial variables or other abstract quantities.
-
+%In the current proof-of-principle model, 
+%APC can inhibit amplification, and upstream of amplification thus APC activity will directly slow the rate of thrombin formation from the initiation trigger, and amplification itself.
+%On the other hand, ATIII inhibits thrombin directly.
 
 \subsection*{Formulation of reduced order coagulation models.}
 We developed a reduced order extrinsic coagulation model to test our hybrid modeling approach (Fig. \ref{fig-network}).
@@ -267,15 +271,15 @@ The reduced order coagulation model captured the role of initial prothrombin abu
 However, we systematically under-predicted the thrombin peak and the strength of ATIII inhibition in this training data set.
 On the other hand, with fixed thrombin parameters, we captured peak thrombin values and the decay of the thrombin signal (at least for the 150\% fII case) in the presence
 of both ATIII and the protein C pathway (Fig. \ref{fig-diff_fII_APC}). Lastly, we were unable to capture global differences in initiation time \textit{across} separate data 
-sets with a single ensemble of model parameters. These differences likely result from normal experimental variability.
-For example different thrombin generation experiments within our 
-training data (at the same physiological factor levels) have significantly different initiation times (supplemental results). 
-However, this also highlights a potential shortcoming of the initiation module within the model. 
+sets with a single ensemble of model parameters. These differences likely resulted from normal experimental variability.
+For example, different thrombin generation experiments within the 
+training data (at the same physiological factor levels) had significantly different initiation times (data not shown). 
+However, the inability to globally capture initiation time also highlighted a potential shortcoming of the initiation module within the model. 
 To capture the variability in initiation time \textit{across} training data sets, we included a constant time-delay parameter ($T_{D}$) for each data group.
-The delay parameter was constant within a data set, but allowed to vary \textit{across} training data sets. Introduction of the delay parameter allowed the model
-to simulate multiple training data sets using a single ensemble of model parameters.
+The delay parameter was constant within a data set, but allowed to vary \textit{across} training data sets. 
+Introduction of the delay parameter allowed the model to simulate multiple training data sets using a single ensemble of model parameters.
 Taken together, the model identification results suggested 
-that our kinetic-rules based approach could reproduce a panel of thrombin generation data sets conducted at physiological factor and inhibitors concentrations.
+that our hybrid approach could reproduce a panel of thrombin generation data sets in the neighborhood of physiological factor and inhibitors concentrations.
 However, it was unclear whether the reduced order model could predict new data, without updating the model parameters.
 
 \subsection*{Validation of the reduced order coagulation model.}
@@ -298,31 +302,32 @@ Thus, in the absence of fVIII or fIX, the amplification control variable evaluat
 However, the decay of the thrombin signal was underpredicted in the normal case (Fig. \ref{fig-hemophilia}A), while the activated thrombin level was overpredicted 
 in hemophilia simulations, although thrombin generation was far less than normal (Fig. \ref{fig-hemophilia}B). 
 Taken together, the reduced order model performed well in the physiological range of factors, even with
-unmodeled components such as platelet activation in the hemophilia data set. Thus, our kinetic-rules framework predicted 
-the output of a physiologically important cascades such as coagulation, despite significant unmodeled components.
+unmodeled components such as platelet activation in the hemophilia data set. 
 
 The model ensemble predicted a direct correlation between thrombin generation and rFVIIa addition in hemophilia (Fig. \ref{fig-rFVII}).
-In the current model, we cannot distinguish between different initiation sources, e.g., TF/FVIIa and rFVIIa, as we have only a single lumped initiation source (trigger).
+In the current model, we cannot distinguish between different initiation sources, e.g., TF/FVIIa versus rFVIIa, as we have only a single lumped initiation source (trigger).
 Thus, we simulated the addition of rFVIIa in hemophilia by removing fVIII and fIX from the model, and modulating the initial level of trigger.
-Simulations with a baseline level of trigger were consistent with the previous hemophilia simulations, where the only thrombin being produced was from initiation (Fig. \ref{fig-rFVII}, 1$\times$~trigger).
-As we increased the strength of the trigger event, the thrombin peak time and the maximum value of thrombin increased (Fig. \ref{fig-rFVII}, 50$\times$~trigger). 
-However, as the trigger strength increased, the thrombin generated quickly decayed.
-For example, for the highest trigger strength simulated (50$\times$trigger), 95\% of the thrombin was gone by 20 min after initiation. 
+Simulations with a baseline level of trigger were consistent with the previous hemophilia simulations, where the only thrombin produced was from initiation (Fig. \ref{fig-rFVII}A, 1$\times$~trigger).
+However, as we increased the trigger strength, the thrombin profile began to approximate normal coagulation, showing a pronounced peak albeit with a slower peak time (Fig. \ref{fig-rFVII}B).
+Further increases in trigger strength resulted in decreased thrombin peak time and increased maximum thrombin values (Fig. \ref{fig-rFVII}A, 50$\times$~trigger). 
+Thus, for large trigger values (200$\times$trigger) the hemophilic thrombin profile approximated normal coagulation, where peak thrombin was achieved shortly 
+after administration and 95\% of the thrombin was gone by 20 min after initiation. 
 We performed flux analysis to understand how the reduced order coagulation model balanced initiation, amplification and inhibition of thrombin formation for normal coagulation and hemophilia.
 Analysis of the reaction flux through the reduced order network for thrombin generation in normal, hemophilia and rFVIIa-treated hemophilia identified three distinct operational modes (Fig. \ref{fig-flux-analysis}).
-The reduced order network includes four lumped reactions, initiation, amplification, thrombin-induced APC generation and total thrombin inhibition (including both APC and ATIII action).
+We calculated the flux through four lumped reactions, initiation, amplification, thrombin-induced APC generation and total thrombin inhibition (including both APC and ATIII action).
 Directly after the addition of a trigger (e.g., TF/FVIIa or rFVIIa), the lumped initiation flux was the largest for all three cases.
 However, within a few minutes enough thrombin was generated by the initiation mechanism to induce the amplification stage. 
 During amplification, thrombin catalyzes its own formation and inhibition by generating activated protein C (APC), a potent inhibitor of the coagulation cascade.
-For normal coagulation, amplification and thrombin inhibition are the dominate reactions by 6 min after initiation (Fig. \ref{fig-flux-analysis}, left). 
-After 10 min, the dominate reaction has shifted to thrombin inhibition (both ATIII and APC action). In the current proof-of-principle model, 
-APC inhibits upstream of amplification thus APC activity will slow the rate of thrombin formation directly from the initiation trigger. 
-On the other hand, ATIII inhibits thrombin directly, as well as upstream coagulation factors.
-In hemophilia (missing both fVIII and fIX), the amplification reaction does not occur and the only thrombin produced is from initiation (Fig. \ref{fig-flux-analysis}, center).
-Initiation is quickly inhibited by APC, and the thrombin level stabilizes and eventually decays because of ATIII activity. 
-Lastly, when 50$\times$rFVIIa is used to induce thrombin formation in hemophilia (absence of fVIII/fIX), 
-initiation mechanisms dominate for up to 6 min following initiation (Fig. \ref{fig-flux-analysis}, right). 
-However, similar to hemophilia alone, without amplification the thrombin signal is quickly extinguished by the combined action of ATIII and APC generated by thrombin.   
+For normal coagulation, amplification and thrombin inhibition were the dominate reactions by 6 min after initiation (Fig. \ref{fig-flux-analysis}, left). 
+After 10 min, the dominate reaction had shifted to thrombin inhibition (both ATIII and APC action). 
+In hemophilia (missing both fVIII and fIX), the amplification reaction did not occur, and thrombin was produced only by initiation (Fig. \ref{fig-flux-analysis}, center).
+Initiation was quickly inhibited by APC, and the thrombin level stabilized (eventually decaying at longer times because of ATIII activity). 
+Lastly, when 50$\times$trigger was used to induce thrombin formation in hemophilia (absence of fVIII/fIX), 
+initiation mechanisms dominated for up to 6 min following initiation (Fig. \ref{fig-flux-analysis}, right). 
+Similar to hemophilia alone, no amplification occurred in the 50$\times$trigger+hemophilia case, 
+and the rate of thrombin generation was extinguished by the combined action of ATIII and APC. 
+Taken together, the hybrid modeling approach captured the transition between the modes of thrombin generation, as well as the role that inhibitors play 
+in attenuating the thrombin generation rate. Thus, the transfer function approach encoded the inhibitory logic of this cascade in the absence of specific mechanism.  
 
 \clearpage
 
@@ -331,18 +336,18 @@ We conducted a global sensitivity analysis to estimate which parameters controll
 We calculated the sensitivity of the time to maximum thrombin (peak time) and the thrombin exposure (area under the thrombin curve) 
 for different levels of prothrombin, and protein C (Fig. \ref{fig-sensitivity}). 
 Globally, 41\% of the parameters shifted in importance between the (fII,PC) = (50\%, 0\%) and (150\%,100\%) cases for the peak thrombin time (Fig. \ref{fig-sensitivity}A). 
-The majority of these shifts were involved increased prothrombin and the protein C pathway, while only
+The majority of these shifts involved the interaction between increased prothrombin and the protein C pathway, while only
 5\% were directly associated with increased prothrombin alone. The rate constant for thrombin amplification was the most important parameter controlling the
 peak thrombin time. While this parameter was differentially important for different prothrombin levels, and in the presence or absence of 
-the activated protein C pathway, it's sensitivity was consistently above all other parameters in the model. The saturation constant governing thrombin amplification was
+the activated protein C pathway, it's was consistently the most sensitive parameter in the model. The saturation constant governing thrombin amplification was
 the second most important parameter, followed by the initiation control gain parameter. Other important parameters influencing the thrombin peak time included the control gain for
-activated protein C formation, as well as the rate constant controlling ATIII inhibition of thrombin activity. 
-On the other hand, only 27\% of the model parameters were differentially sensitive between the (\%fII,\%PC) (50\%, 0\%) and (150\%,100\%) cases 
-for the thrombin exposure (Fig. \ref{fig-sensitivity}B). Of these parameters, all of the shifts were associated the interplay between thrombin formation and the protein C pathway. 
+activated protein C formation, and the rate constant controlling ATIII inhibition of thrombin activity. 
+On the other hand, only 27\% of the model parameters were differentially sensitive between the (fII,PC) = (50\%, 0\%) and (150\%,100\%) cases 
+for thrombin exposure (Fig. \ref{fig-sensitivity}B). Of these parameters, all of the shifts were associated with the interplay between thrombin formation and the protein C pathway. 
 The rate constant controlling ATIII inhibition was the most important parameter controlling the thrombin exposure.
 While this parameter was less important in the presence of protein C for 150\% prothrombin levels, it was significantly above all other parameters. 
 Similar to the peak time, for 150\% prothrombin, the control gain for activated protein C formation was differentially important along with the rate constant controlling
-amplification. However, the influence of the amplification parameter was much less in the thrombin exposure case versus peak time. 
+amplification. However, the amplification parameter was much less important for thrombin exposure versus peak time. 
 
 \clearpage
 
@@ -370,7 +375,7 @@ amplification. However, the influence of the amplification parameter was much le
 In this study, we developed a reduced order model of the human coagulation cascade.
 We chose coagulation because it is well studied, has a complex architecture, 
 and has an abundance of experimental data available for model identification and validation. 
-However, coagulation was just a proof-of concept validation of our approach; 
+However, coagulation was just a proof-of concept test of our approach; 
 the proposed hybrid framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
 or potentially even cell free metabolic systems. 
 The model consisted of five differential equations augmented with several logical rules describing 
@@ -384,7 +389,7 @@ We validated the ensemble using thrombin data sets taken from multiple laborator
 The ensemble predicted thrombin trajectories for conditions not used for model training, including thrombin generation for normal and hemophilic coagulation 
 in the presence of platelets (a significant unmodeled component).
 We then used flux analysis to understand how the network operated in a variety of conditions, and global sensitivity analysis to identify which parameters controlled the 
-performance of the network. Taken together, the reduced order hybrid approach produced a surprisingly predictive model, suggesting this approach could potentially 
+performance of the network. Taken together, the proposed hybrid framework produced a surprisingly predictive model, suggesting this approach could 
 be used to model other biochemical networks important to human health. 
 
 Malfunctions in coagulation can have potentially fatal consequences.
@@ -398,7 +403,7 @@ However, clotting factor replacement sometimes leads to the formation of fVIII a
 Alternatively, recombinant factor VIIa (rFVIIa) has been used to treat bleeding disorders \cite{Hedner:2008rm,Talbot:2009kk} including
 hemophilia with and without factor VIII/IX inhibitors \cite{Shapiro:2008px}.
 However, rFVIIa requires frequent administration (every 2-3 hr), and many questions remain about its mechanism of action, 
-its effective dose range \cite{TOMOKIYO2003}, and its overall utility for the treatment trauma-associated hemorrhage \cite{Duchesne:2008hw}. 
+its effective dosage \cite{TOMOKIYO2003}, and its overall utility for the treatment trauma-associated hemorrhage \cite{Duchesne:2008hw}. 
 In this study, we did not model rFVIIa induced coagulation directly. 
 Rather, we modeled a general trigger which initiated the extrinsic coagulation cascade. 
 Since we identified the model using TF/FVIIa, inherent to our rFVIIa simulations (and the rate constant governing initiation) 
@@ -406,9 +411,9 @@ was the presence of TF. However, even with this complication,
 the model generated potentially useful insight into the rFVIIa mechanism of action, and its possible shortcomings especially for the treatment of hemophilia. 
 The addition of rFVIIa directly activated thrombin through the initiation pathway. 
 However, no amplification of the thrombin signal occurred without fVIII or fIX. 
-Thus, the peak thrombin signal was lower than normal coagulation, the peak thrombin time was longer, and the thrombin signal was eventually inhibited by ATIII and the protein C pathway.
-However, as the dose of rFVIIa increased, the peak thrombin time decreased (eventually saturating around 100$\times$nominal trigger), and the peak thrombin value increased.
-For 100$\times$nominal trigger, the thrombin profile resembled normal coagulation.
+Thus, the peak thrombin signal was lower than normal coagulation, the peak thrombin time was longer, and thrombin generation was eventually inhibited by the combined action of ATIII and the protein C pathway.
+However, as the dose of rFVIIa increased, the peak thrombin time decreased (eventually saturating around 200$\times$nominal trigger), and the peak thrombin value increased such that
+the thrombin profile resembled normal coagulation.
 Butenas \emph{et al.,} performed an extensive in vitro study of rFVIIa induced thrombin generation under normal and hemophilic conditions \citep{Butenas:2002ab}.
 They found qualitatively similar trends, namely rFVIIa could restore normal coagulation (even in the absence of TF) for large enough rFVIIa doses, although rFVIIa induced coagulation 
 in hemophilia (even for large rFVIIa doses) lagged the normal profile. 
@@ -416,32 +421,37 @@ These results suggest that rFVIIa administration alone
 might not be able to initiate normal coagulation in recurrent bleeding, unless the dosage is above a critical threshold. 
 Unfortunately, this threshold is likely patient specific, thus limiting potentially limiting the utility of rFVIIa administration.  
 
-Although the performance of the proof of principle coagulation model was impressive given its size, there were several mathematical and biological questions that can be explored further.
-First, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
-Theoretically, an integration rule is simply a function whose domain is a set of transfer function inputs, and whose range is $v\in[0,1]$.
-Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
-Alternative integration rules such the mean would have different properties which could influence model identification or performance. 
-For example, a mean or product integration rule would be differentiable, which allows derivative based optimization approaches to be used. 
-The particular form of the transfer function could also be explored. We choose a hill-like function because of its 
-prominence in the systems and synthetic biology community. 
-However, the only mathematical requirement for a transfer function is that it must map a non-negative continuous or categorical variable into the 
-range $f\in[0,1]$. Thus, many function types are possible.
-There are several additional biological modules that can be added to the core model presented here. 
-First, we need to update the model to included thrombin induced platelet activation. 
-While we were able to capture thrombin generation data in the presence of platelets, 
+Although the performance of the proof of principle coagulation model was impressive given its limited size, there were several issues that could be further explored.
+First, the prediction of initiation time should be investigated. 
+We were able to estimate initiation time within a data set, but unable to predict initiation time \textit{across} independent data sets. 
+This suggested that we should update the initiation module to distinguish between different triggers e.g., TF/FVIIa versus rFVIIa alone, 
+and to include key biological milestones such as FXa activation (a prerequisite to thrombin formation).
+Next, there are several additional biological modules that could be added to the core model presented here. 
+First, we could include thrombin induced platelet activation, and the role of activated platelets in amplification.
+We captured thrombin generation data in the presence of platelets, however,
 the initial shape of the activation curve and the time-scale of activation was not always consistent with the data.
 Platelets are activated by thrombin through the cleavage of the extracellular domain of protease-activated receptors (PARs) on the platelet surface.
-Next, we should add the intrinsic or contact thrombin activation pathway to the model. 
-The intrinsic coagulation pathway is triggered by contact activation of the plasma protease factor XII (fXII) by negatively charged surfaces.
-The activation of fXII is followed by proteolytic activation of factor XI (fXI) and the activation of downstream factors like fIX \cite{NAITO1991}.
-It has also been suggested that activated platelets can release polyphosphate which directly activates fXII \cite{Smith:2006zl}. 
-Lastly, to make the model more clinically relevant, we should include the biochemical processes responsible for clot formation, and clot dissolution (fibrinolysis).
+Once activated, platelets play an important role in amplification, and are key mediators of the positive feedback driving amplification.
+Thus, this biology is a potentially important component of an expanded model.
+We should also add the intrinsic pathway to the model. 
+The intrinsic pathway is triggered by contact activation of the plasma protease factor XI (fXI) by negatively charged surfaces, and by thrombin and upstream factors such as activated
+plasma protease factor XII (FXIIa) \citep{NAITO1991,Gailani:1991aa}.
+Activated platelets may also release polyphosphate which directly activates fXII \cite{Smith:2006zl}. 
+Arguably a minor player in acute bleeding, contact activation could also be important in other wound healing contexts. 
+Finally, to make the model more clinically relevant, we should include the biochemical processes responsible for clot formation, and clot dissolution (fibrinolysis).
 Clot formation is driven by thrombin activity, while fibrinolysis is driven by plasmin activity, a key enzyme that cleaves fibrin (one of the main materials in a clot).
 Similar to coagulation, fibrinolysis is managed by several activating and inhibitory factors which control the balance between clot formation and dissolution.
 Tissue plasminogen activator (t-PA) and urokinase activate plasmin, along with contact pathway factors such fXIa. On the other hand, thrombin activatable fibrinolysis inhibitor (TAFI)
 inhibits the degradation of fibrin by plasmin. Also similar to coagulation, there is considerable fibrinolysis and contact pathway data sets that can be used to train the model.
-
-
+Lastly, the choice of max/min integration rules, or the particular form of the transfer functions could be generalized to include other rule types and functions. 
+Theoretically, an integration rule is a function whose domain is a set of transfer function inputs, and whose range is $v\in[0,1]$.
+Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
+Alternative integration rules such the mean might have different properties which could influence model identification or performance. 
+For example, a mean integration rule would be differentiable, which allows derivative based optimization approaches to be used. 
+The particular form of the transfer function could also be explored. We choose a hill-like function because of its 
+prominence in the systems and synthetic biology community. 
+However, the only mathematical requirement for a transfer function is that it map a non-negative continuous or categorical variable into the 
+range $f\in[0,1]$. Thus, many transfer function types are possible.
 
 \clearpage
 
@@ -704,7 +714,8 @@ A: Sensitivity analysis of the thrombin peak time for different prothrombin leve
 B: Sensitivity analysis of the thrombin exposure for different prothrombin levels (150\%,100\% and 50\% of the physiological value) as a function of activated protein C. 
 Points denote the mean total sensitivity value, while the area around each point denotes the uncertainty in the sensitivity value. 
 The gray dashed line denotes the 45$^{o}$ degree diagonal, if sensitivity values are equal for different conditions they will lie on the diagonal.  
-Sensitivity values significantly above or below the diagonal indicate differentially important model parameters.
+Sensitivity values significantly above or below the diagonal indicate differentially important model parameters. 
+The radius of the shaded region around each total sensitivity value was the maximum uncertainty in that value estimated by the Sobol method. 
 }\label{fig-sensitivity}
 \end{figure}
 
