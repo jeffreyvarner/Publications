@@ -36,6 +36,12 @@ Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
 \newblock Science 342: 604-7.
 \bibAnnoteFile{Machta:2013aa}
 
+\bibitem{Tasseff:2011aa}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol (Camb) 3: 578-91.
+\bibAnnoteFile{Tasseff:2011aa}
+
 \bibitem{Morris:2010aa}
 Morris MK, Saez-Rodriguez J, Sorger PK, Lauffenburger DA (2010) Logic-based
   models for the analysis of cell signaling networks.
@@ -109,6 +115,30 @@ Mann K (1999) Biochemistry and physiology of blood coagulation.
 \newblock Thromb Haemost 82: 165-174.
 \bibAnnoteFile{MANN1999}
 
+\bibitem{Khanin:1989aa}
+Khanin MA, Semenov VV (1989) A mathematical model of the kinetics of blood
+  coagulation.
+\newblock J Theor Biol 136: 127-34.
+\bibAnnoteFile{Khanin:1989aa}
+
+\bibitem{Willems:1991aa}
+Willems GM, Lindhout T, Hermens WT, Hemker HC (1991) Simulation model for
+  thrombin generation in plasma.
+\newblock Haemostasis 21: 197-207.
+\bibAnnoteFile{Willems:1991aa}
+
+\bibitem{Baldwin:1994aa}
+Baldwin SA, Basmadjian D (1994) A mathematical model of thrombin production in
+  blood coagulation, part i: The sparsely covered membrane case.
+\newblock Ann Biomed Eng 22: 357-70.
+\bibAnnoteFile{Baldwin:1994aa}
+
+\bibitem{Leipold:1995aa}
+Leipold RJ, Bozarth TA, Racanelli AL, Dicker IB (1995) Mathematical model of
+  serine protease inhibition in the tissue factor pathway to thrombin.
+\newblock J Biol Chem 270: 25383-7.
+\bibAnnoteFile{Leipold:1995aa}
+
 \bibitem{Kuharsky:2001aa}
 Kuharsky AL, Fogelson AL (2001) Surface-mediated control of blood coagulation:
   the role of binding site densities and platelet deposition.
@@ -145,6 +175,12 @@ Butenas S, Orfeo T, Gissel MT, Brummel KE, Mann KG (2004) The significance of
   circulating factor ixa in blood.
 \newblock J Biol Chem 279: 22875-82.
 \bibAnnoteFile{Butenas:2004aa}
+
+\bibitem{Lo:2005aa}
+Lo K, Denney WS, Diamond SL (2005) Stochastic modeling of blood coagulation
+  initiation.
+\newblock Pathophysiol Haemost Thromb 34: 80-90.
+\bibAnnoteFile{Lo:2005aa}
 
 \bibitem{Chatterjee:2010aa}
 Chatterjee MS, Denney WS, Jing H, Diamond SL (2010) Systems biology of

@@ -179,10 +179,12 @@ should not require complete structural and parametric knowledge \citep{2001_bail
 Since Bailey's complex biology with no parameters hypothesis, Sethna showed that model performance is typically 
 sensitive to only a few parameters, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
 Thus, reasonable predictions may be possible, despite parametric uncertainty, if a few critical parameters are well-defined. 
-Perhaps more importantly, ODE models also require significant mechanistic information, thereby limiting their utility in poorly understood systems.
-Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships between model components using non-linear transfer functions, 
-without requiring mechanism \citep{Morris:2010aa}. 
-Despite their simplicity, logical models have captured rich behaviors in a variety of systems important to human health \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
+For example, Tasseff et al., showed in a model of Retinoic acid (RA) induced differentiation of HL-60 cells, that correct 
+predictions were possible even when 75\% of the parameters were known only to an order of magnitude \citep{Tasseff:2011aa}. 
+Perhaps more importantly, ODE models require significant mechanistic information, thereby limiting their utility in poorly understood systems, 
+or conversely explode in size when considering multiple pathways or subsystems. 
+Toward this challenge, logical modeling is an emerging paradigm that encodes causal relationships between model components using quasi-mechanistic non-linear transfer functions \citep{Morris:2010aa}. 
+Logical models are highly flexible, and despite their simplicity, they have captured rich behaviors in a variety of systems important to human health \citep{Saez-Rodriguez:2011aa,Morris:2011ys,Morris:2012aa}. 
 However, modeling complex dynamics with logical models is challenging. 
 Thus, there is an unmet need for a third approach which combines ODEs and logical models, where ODEs could encode mechanistic information, 
 while missing or incomplete mechanistic knowledge can be approximated using a logical approach.  
@@ -208,11 +210,12 @@ converts protein C to activated protein C (APC) which attenuates the coagulation
 Termination occurs after either prothrombin is consumed, or thrombin formation is neutralized by inhibitors such as APC or ATIII.   
 
 Previous coagulation models have typically been formulated as systems of nonlinear ordinary differential equations, 
-using mass action or more complex kinetics, to describe the rates of biochemical conversions \citep{Kuharsky:2001aa}.
+using mass action or more complex kinetics, to describe the rates of biochemical conversions \citep{Khanin:1989aa,Willems:1991aa,Baldwin:1994aa,Leipold:1995aa,Kuharsky:2001aa}.
 Mechanistic ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys} 
 were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, Hockin \emph{et al.} \citep{Hockin:2002aa}, and later Butenas et al., \citep{Butenas:2004aa}
 who developed and then subsequently refined highly mechanistic models of coagulation. 
-Other laboratories have also expanded upon Hockin \emph{et al.}, for example including the intrinsic pathway, and thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
+Other laboratories have also expanded upon Hockin \emph{et al.}, for example by exploring the intrinsic pathway, the role of stochastic fluctuations in coagulation \citep{Lo:2005aa},
+and the dynamics of thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
 Other aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
 multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside clots \citep{Voronov:2013aa}.
 However, these previous studies were largely based upon extensive mechanistic knowledge. 
@@ -241,7 +244,7 @@ suggesting this framework could potentially be used to model other biochemical n
 \subsection*{Formulation of reduced order coagulation models.}
 We developed a reduced order extrinsic coagulation model to test our hybrid modeling approach (Fig. \ref{fig-network}).
 The core of our model was based upon the earlier work of Ismagilov and coworkers \citep{Runyon:2004aa,Kastrup:2006aa,Runyon:2007aa,Runyon:2008aa}, 
-where we added initiation, factor dependence, and specific inhibition terms to the earlier simplified models.
+where we added initiation, factor dependence, and specific inhibition terms to the earlier simplified model.
 A trigger event initiates thrombin formation (FIIa) from prothrombin (fII) through a lumped initiation step.
 This step loosely represents the initial activation of thrombin by activated FXa.
 Once activated, thrombin catalyzes its own formation (amplification step), and inhibition via the conversion of protein C to activated protein C (APC).
@@ -310,7 +313,7 @@ The model ensemble predicted a direct correlation between thrombin generation an
 In the current model, we cannot distinguish between different initiation sources, e.g., TF/FVIIa versus rFVIIa, as we have only a single lumped initiation source (trigger).
 Thus, we simulated the addition of rFVIIa in hemophilia by removing fVIII and fIX from the model, and modulating the initial level of trigger.
 Simulations with a baseline level of trigger were consistent with the previous hemophilia simulations, where the only thrombin produced was from initiation (Fig. \ref{fig-rFVII}A, 1$\times$~trigger).
-However, as we increased the trigger strength, the thrombin profile began to approximate normal coagulation, showing a pronounced peak albeit with a slower peak time (Fig. \ref{fig-rFVII}B).
+However, as we increased the trigger strength, the thrombin profile began to approximate normal coagulation, showing a pronounced peak albeit with a slower peak time (Fig. \ref{fig-rFVII}B, $t^{**}>t^{*}$).
 Further increases in trigger strength resulted in decreased thrombin peak time and increased maximum thrombin values (Fig. \ref{fig-rFVII}A, 50$\times$~trigger). 
 Thus, for large trigger values (200$\times$trigger), the hemophilic thrombin profile approximated normal coagulation, where peak thrombin was achieved shortly 
 after administration and 95\% of the thrombin was gone by 20 min after initiation. 
@@ -330,8 +333,6 @@ Similar to hemophilia alone, no amplification occurred in the 50$\times$trigger+
 and the rate of thrombin generation was extinguished by the combined action of ATIII and APC. 
 Taken together, the hybrid modeling approach captured the transition between the modes of thrombin generation, as well as the role that inhibitors play 
 in attenuating the thrombin generation rate. Thus, the transfer function approach encoded the inhibitory logic of this cascade in the absence of specific mechanism.  
-
-\clearpage
 
 \subsection*{Global sensitivity analysis of the reduced order coagulation model.}
 We conducted a global sensitivity analysis to estimate which parameters controlled the performance of the reduced order model. 
@@ -625,8 +626,8 @@ All other species were assumed to be constant.}\label{fig-network}
 \includegraphics[width=1.0\textwidth]{./figs/Figure-2-ControlSchematic.pdf}
 \caption{Schematic of rule-based effective control laws. 
 Traditional enzyme kinetic expressions, e.g., Michaelis–Menten or multiple saturation kinetics are multiplied by an enzyme activity control variable $0 \leq v_{j} \leq 1 $. 
-Control variables are functions of many possible regulatory factors encoded by arbitrary functions of the form $0\leq f_{j}\left(\mathcal{Z}\right)\leq 1$.
-At each simulation time step, the $v_{j}$ variables are calculated by evaluating integration rules such as the max or min of the set of factors $f_{1},\hdots,f_{n}$ 
+Control variables are functions of many possible regulatory factors encoded by arbitrary transfer functions of the form $0\leq f_{j}\left(\mathcal{Z}\right)\leq 1$.
+At each simulation time step, the $v_{j}$ variables are calculated by evaluating integration rules such as the max or min of the set of transfer functions $f_{1},\hdots,f_{n}$ 
 influencing the activity of enzyme $E_{j}$. }\label{fig-control-schematic}
 \end{figure}
 
@@ -700,7 +701,8 @@ The experimental validation data was reproduced from the study of Allen \textit{
 \caption{Reduced order coagulation model predictions of rFVIIa administration. 
 A: Simulations of thrombin formation in the presence of ATIII and the protein C pathway were conducted for a range of trigger values (1x - 200x nominal) in the absence of fVIII and fIX.
 B: Comparison of thrombin generation for normal versus hemophilia for 10x nominal trigger.
-Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles.
+Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles. 
+The peak thrombin time for normal coagulation ($t^{*}$) is less than rFVIIa induced coagulation in hemophilia ($t^{**}$), while the peak thrombin value was greater in normal coagulation.
 The shaded region denotes the 99\% confidence estimate of the mean thrombin value (uncertainty in the model simulation). 
 All factors and control proteins were at their physiological concentration unless others noted.}\label{fig-rFVII}
 \end{figure}
