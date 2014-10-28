@@ -140,6 +140,12 @@ Hockin MF, Jones KC, Everse SJ, Mann KG (2002) A model for the stoichiometric
 \newblock J Biol Chem 277: 18322-33.
 \bibAnnoteFile{Hockin:2002aa}
 
+\bibitem{Butenas:2004aa}
+Butenas S, Orfeo T, Gissel MT, Brummel KE, Mann KG (2004) The significance of
+  circulating factor ixa in blood.
+\newblock J Biol Chem 279: 22875-82.
+\bibAnnoteFile{Butenas:2004aa}
+
 \bibitem{Chatterjee:2010aa}
 Chatterjee MS, Denney WS, Jing H, Diamond SL (2010) Systems biology of
   coagulation initiation: kinetics of thrombin generation in resting and
@@ -172,6 +178,69 @@ Voronov RS, Stalker TJ, Brass LF, Diamond SL (2013) Simulation of intrathrombus
   resolution.
 \newblock Ann Biomed Eng 41: 1297-307.
 \bibAnnoteFile{Voronov:2013aa}
+
+\bibitem{Runyon:2004aa}
+Runyon MK, Johnson-Kerner BL, Ismagilov RF (2004) Minimal functional model of
+  hemostasis in a biomimetic microfluidic system.
+\newblock Angew Chem Int Ed Engl 43: 1531-6.
+\bibAnnoteFile{Runyon:2004aa}
+
+\bibitem{Kastrup:2006aa}
+Kastrup CJ, Runyon MK, Shen F, Ismagilov RF (2006) Modular chemical mechanism
+  predicts spatiotemporal dynamics of initiation in the complex network of
+  hemostasis.
+\newblock Proc Natl Acad Sci U S A 103: 15747-52.
+\bibAnnoteFile{Kastrup:2006aa}
+
+\bibitem{Runyon:2007aa}
+Runyon MK, Johnson-Kerner BL, Kastrup CJ, Van~Ha TG, Ismagilov RF (2007)
+  Propagation of blood clotting in the complex biochemical network of
+  hemostasis is described by a simple mechanism.
+\newblock J Am Chem Soc 129: 7014-5.
+\bibAnnoteFile{Runyon:2007aa}
+
+\bibitem{Runyon:2008aa}
+Runyon MK, Kastrup CJ, Johnson-Kerner BL, Ha TGV, Ismagilov RF (2008) Effects
+  of shear rate on propagation of blood clotting determined using microfluidics
+  and numerical simulations.
+\newblock J Am Chem Soc 130: 3458-64.
+\bibAnnoteFile{Runyon:2008aa}
+
+\bibitem{Kuepfer:2007aa}
+Kuepfer L, Peter M, Sauer U, Stelling J (2007) Ensemble modeling for analysis
+  of cell signaling dynamics.
+\newblock Nat Biotechnol 25: 1001-6.
+\bibAnnoteFile{Kuepfer:2007aa}
+
+\bibitem{Song:2009aa}
+Song SO, Varner J (2009) Modeling and analysis of the molecular basis of pain
+  in sensory neurons.
+\newblock PLoS One 4: e6758.
+\bibAnnoteFile{Song:2009aa}
+
+\bibitem{2010_song_varner_BiotechJ}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{2010_song_varner_BiotechJ}
+
+\bibitem{Tasseff:2010aa}
+Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, et~al. (2010) Analysis of the
+  molecular networks in androgen dependent and independent prostate cancer
+  revealed fragile and robust subsystems.
+\newblock PLoS One 5: e8864.
+\bibAnnoteFile{Tasseff:2010aa}
+
+\bibitem{Lequieu:2011aa}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
+  analysis of insulin induced eukaryotic translation initiation.
+\newblock PLoS Comput Biol 7: e1002263.
+\bibAnnoteFile{Lequieu:2011aa}
+
+\bibitem{Tran:2008aa}
+Tran LM, Rizk ML, Liao JC (2008) Ensemble modeling of metabolic networks.
+\newblock Biophys J 95: 5606-17.
+\bibAnnoteFile{Tran:2008aa}
 
 \bibitem{HANSSON2005}
 GKHansson (2005) {Inflammation, Atherosclerosis and Coronary Artery Disease}.
@@ -241,6 +310,12 @@ Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
   factor viia-dependent coagulation in hemophilia blood.
 \newblock Blood 99: 923-30.
 \bibAnnoteFile{Butenas:2002ab}
+
+\bibitem{Danforth:2012aa}
+Danforth CM, Orfeo T, Everse SJ, Mann KG, Brummel-Ziedins KE (2012) Defining
+  the boundaries of normal thrombin generation: investigations into hemostasis.
+\newblock PLoS One 7: e30385.
+\bibAnnoteFile{Danforth:2012aa}
 
 \bibitem{NAITO1991}
 Naito K, Fujikawa K (1991) Activation of human blood coagulation factor {XI}

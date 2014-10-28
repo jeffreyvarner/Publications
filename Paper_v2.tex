@@ -113,8 +113,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Abstract}
-In this study, we present a novel hybrid modeling approach which combines ordinary differential equation (ODE) modeling with logical rules to simulate an archetype biochemical network, 
-the human coagulation cascade.  
+In this study, we present a novel modeling approach which combines ordinary differential equation (ODE) 
+modeling with logical rules to simulate an archetype biochemical network, the human coagulation cascade.  
 The model consisted of five differential equations augmented with several logical rules describing 
 regulatory connections between model components, and unmodeled interactions in the network. 
 This formulation was more than an order of magnitude smaller than current coagulation models, 
@@ -209,9 +209,9 @@ Termination occurs after either prothrombin is consumed, or thrombin formation i
 
 Previous coagulation models have typically been formulated as systems of nonlinear ordinary differential equations, 
 using mass action or more complex kinetics, to describe the rates of biochemical conversions \citep{Kuharsky:2001aa}.
-Previous ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys} 
-were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, 
-and later Hockin \emph{et al.} \citep{Hockin:2002aa}, who developed and then refined highly mechanistic models of extrinsic coagulation. 
+Mechanistic ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys} 
+were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, Hockin \emph{et al.} \citep{Hockin:2002aa}, and later Butenas et al., \citep{Butenas:2004aa}
+who developed and then subsequently refined highly mechanistic models of coagulation. 
 Other laboratories have also expanded upon Hockin \emph{et al.}, for example including the intrinsic pathway, and thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
 Other aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
 multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside clots \citep{Voronov:2013aa}.
@@ -240,6 +240,8 @@ suggesting this framework could potentially be used to model other biochemical n
 
 \subsection*{Formulation of reduced order coagulation models.}
 We developed a reduced order extrinsic coagulation model to test our hybrid modeling approach (Fig. \ref{fig-network}).
+The core of our model was based upon the earlier work of Ismagilov and coworkers \citep{Runyon:2004aa,Kastrup:2006aa,Runyon:2007aa,Runyon:2008aa}, 
+where we added initiation, factor dependence, and specific inhibition terms to the earlier simplified models.
 A trigger event initiates thrombin formation (FIIa) from prothrombin (fII) through a lumped initiation step.
 This step loosely represents the initial activation of thrombin by activated FXa.
 Once activated, thrombin catalyzes its own formation (amplification step), and inhibition via the conversion of protein C to activated protein C (APC).
@@ -373,7 +375,7 @@ amplification. However, the amplification parameter was much less important for 
 
 \section*{Discussion}
 In this study, we developed a reduced order model of the human coagulation cascade.
-We chose coagulation because it is well studied, has a complex architecture, 
+We modeled coagulation because it is well studied, has a complex architecture, 
 and has an abundance of experimental data available for model identification and validation. 
 However, coagulation was just a proof of concept test of our approach. 
 The proposed hybrid framework could also be used to dynamically model other biochemical networks, including intracellular metabolic networks, gene expression programs 
@@ -385,12 +387,21 @@ To estimate parameters, the residual between model simulations and experimental 
 However, not all of the model parameters were uniquely identifiable, given the training data.
 Instead, we estimated an ensemble of likely parameter sets (N = 20)
 from eight \emph{in vitro} time-series coagulation data sets with and without the protein C pathway.
+Ensemble approaches have been used previously for other signal transduction models \citep{Kuepfer:2007aa,Song:2009aa,2010_song_varner_BiotechJ,Tasseff:2010aa,Lequieu:2011aa}, 
+and for metabolic models \citep{Tran:2008aa} to 
+estimate the impact of poorly constrained parameter values or poorly understood network structure on simulation performance. 
+Thus, ensemble approaches are common in the dynamic modeling community. 
+However, perhaps a unique feature of the current study is the direct connection between our particle swarm approach, 
+and the parameter ensemble; each particle in our swarm uniquely corresponded to a parameter set in our ensemble. 
+Thus, by constraining particles to operate in different parameter regions, giving each particle a different parameter combination to explore, 
+or perhaps even suppling a different model formulation to each particle we can effectively 
+traverse through complex parameter and model spaces. 
 We validated the ensemble using thrombin data sets taken from multiple laboratories for a variety of experimental conditions not used during training. 
 The ensemble predicted thrombin trajectories for conditions not used for model training, including thrombin generation for normal and hemophilic coagulation 
 in the presence of platelets (a significant unmodeled component).
 We then used flux analysis to understand how the network operated in a variety of conditions, and global sensitivity analysis to identify which parameters controlled the 
 performance of the network. Taken together, the proposed hybrid framework produced a surprisingly predictive model, suggesting this approach could 
-be used to model other biochemical networks important to human health. 
+be used to effectively model other biochemical networks important to human health. 
 
 Malfunctions in coagulation can have potentially fatal consequences.
 Aggressive clotting involved with Coronary Artery Diseases (CADs), collectively accounts for 38\% of all deaths in North America \cite{HANSSON2005}.
@@ -415,11 +426,12 @@ Thus, the peak thrombin signal was lower than normal coagulation, the peak throm
 However, as the dose of rFVIIa increased, the peak thrombin time decreased (eventually saturating around 200$\times$nominal trigger), and the peak thrombin value increased such that
 the thrombin profile resembled normal coagulation.
 Butenas \emph{et al.} performed an extensive \textit{in vitro} study of rFVIIa-induced thrombin generation under normal and hemophilic conditions \citep{Butenas:2002ab}.
-They found qualitatively similar trends, namely rFVIIa could restore normal coagulation (even in the absence of TF) for large enough rFVIIa doses, although rFVIIa-induced coagulation 
+They found qualitatively similar trends, namely rFVIIa restored normal coagulation (even in the absence of TF) for large enough rFVIIa doses, although rFVIIa-induced coagulation 
 in hemophilia (even for large rFVIIa doses) lagged the normal profile. 
 These results suggest that rFVIIa administration alone
-might not be able to initiate normal coagulation in recurrent bleeding, unless the dosage is above a critical threshold. 
-Unfortunately, this threshold is likely patient specific, thus potentially limiting the utility of rFVIIa administration.  
+might not be able to initiate normal coagulation in recurrent bleeding, unless the dosage is well above a critical threshold.
+However, defining this threshold, which is likely patient specific, is difficult as there is tremendous patient to patient variability even with a normal
+coagulation phenotype \citep{Danforth:2012aa}. 
 
 Although the performance of the proof of principle coagulation model was impressive given its limited size, there were several issues that could be further explored.
 First, the prediction of initiation time should be investigated. 

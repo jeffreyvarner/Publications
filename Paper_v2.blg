@@ -1,48 +1,50 @@
-This is BibTeX, Version 0.99c (TeX Live 2009)
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v2.aux
 The style file: plos2009.bst
 Database file #1: References_v1.bib
 Warning--entry type for "SALIB" isn't style-file defined
---line 29 of file References_v1.bib
-You've used 48 entries,
+--line 239 of file References_v1.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 60 entries,
             2441 wiz_defined-function locations,
-            911 strings with 14123 characters,
-and the built_in function-call counts, 36168 in all, are:
-= -- 3305
-> -- 609
+            992 strings with 16908 characters,
+and the built_in function-call counts, 46522 in all, are:
+= -- 4254
+> -- 805
 < -- 2
-+ -- 304
-- -- 152
-* -- 3008
-:= -- 4350
-add.period$ -- 98
-call.type$ -- 48
-change.case$ -- 48
++ -- 402
+- -- 201
+* -- 3902
+:= -- 5596
+add.period$ -- 122
+call.type$ -- 60
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 3579
-empty$ -- 3764
-format.name$ -- 192
-if$ -- 8028
+cite$ -- 120
+duplicate$ -- 4599
+empty$ -- 4826
+format.name$ -- 253
+if$ -- 10315
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 489
-newline$ -- 256
-num.names$ -- 49
-pop$ -- 584
+int.to.str$ -- 60
+missing$ -- 622
+newline$ -- 316
+num.names$ -- 61
+pop$ -- 737
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 315
+skip$ -- 392
 stack$ -- 0
-substring$ -- 4989
-swap$ -- 977
+substring$ -- 6467
+swap$ -- 1243
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 287
-width$ -- 50
-write$ -- 538
+while$ -- 372
+width$ -- 62
+write$ -- 670
 (There was 1 warning)
