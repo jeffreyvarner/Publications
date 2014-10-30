@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v2.aux
+The style file: plos2009.bst
+Database file #1: References_v1.bib
+Warning--entry type for "SALIB" isn't style-file defined
+--line 361 of file References_v1.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 66 entries,
+            2441 wiz_defined-function locations,
+            1033 strings with 17993 characters,
+and the built_in function-call counts, 51205 in all, are:
+= -- 4687
+> -- 885
+< -- 2
++ -- 442
+- -- 221
+* -- 4301
+:= -- 6161
+add.period$ -- 134
+call.type$ -- 66
+change.case$ -- 66
+chr.to.int$ -- 0
+cite$ -- 132
+duplicate$ -- 5063
+empty$ -- 5309
+format.name$ -- 279
+if$ -- 11353
+int.to.chr$ -- 0
+int.to.str$ -- 66
+missing$ -- 684
+newline$ -- 346
+num.names$ -- 67
+pop$ -- 807
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 424
+stack$ -- 0
+substring$ -- 7126
+swap$ -- 1367
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 410
+width$ -- 68
+write$ -- 736
+(There was 1 warning)

@@ -1,0 +1,421 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{2012_kholodenko_kolch_SciSig}
+Kholodenko B, Yaffe MB, Kolch W (2012) Computational approaches for analyzing
+  information flow in biological networks.
+\newblock Sci Signal 5: re1.
+\bibAnnoteFile{2012_kholodenko_kolch_SciSig}
+
+\bibitem{Gadkar:2005ad}
+Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
+  transduction networks from data using a state regulator problem.}
+\newblock Syst Biol (Stevenage) 2: 17--30.
+\bibAnnoteFile{Gadkar:2005ad}
+
+\bibitem{2001_bailey_NatBiotech}
+Bailey JE (2001) Complex biology with no parameters.
+\newblock Nat Biotechnol 19: 503-4.
+\bibAnnoteFile{2001_bailey_NatBiotech}
+
+\bibitem{Machta:2013aa}
+Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
+  compression underlies emergent theories and predictive models.
+\newblock Science 342: 604-7.
+\bibAnnoteFile{Machta:2013aa}
+
+\bibitem{Tasseff:2011aa}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol (Camb) 3: 578-91.
+\bibAnnoteFile{Tasseff:2011aa}
+
+\bibitem{Morris:2010aa}
+Morris MK, Saez-Rodriguez J, Sorger PK, Lauffenburger DA (2010) Logic-based
+  models for the analysis of cell signaling networks.
+\newblock Biochemistry 49: 3216-24.
+\bibAnnoteFile{Morris:2010aa}
+
+\bibitem{Saez-Rodriguez:2011aa}
+Saez-Rodriguez J, Alexopoulos LG, Zhang M, Morris MK, Lauffenburger DA, et~al.
+  (2011) Comparing signaling networks between normal and transformed
+  hepatocytes using discrete logical models.
+\newblock Cancer Res 71: 5400-11.
+\bibAnnoteFile{Saez-Rodriguez:2011aa}
+
+\bibitem{Morris:2011ys}
+Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
+  Training signaling pathway maps to biochemical data with constrained fuzzy
+  logic: quantitative analysis of liver cell responses to inflammatory stimuli.
+\newblock PLoS Comput Biol 7: e1001099.
+\bibAnnoteFile{Morris:2011ys}
+
+\bibitem{Morris:2012aa}
+Morris MK, Shriver Z, Sasisekharan R, Lauffenburger DA (2012) Querying
+  quantitative logic models (q2lm) to study intracellular signaling networks
+  and cell-cytokine interactions.
+\newblock Biotechnol J 7: 374-86.
+\bibAnnoteFile{Morris:2012aa}
+
+\bibitem{Butenas:2002aa}
+Butenas S, Mann KG (2002) Blood coagulation.
+\newblock Biochemistry (Mosc) 67: 3-12.
+\bibAnnoteFile{Butenas:2002aa}
+
+\bibitem{Schenone:2004aa}
+Schenone M, Furie BC, Furie B (2004) The blood coagulation cascade.
+\newblock Curr Opin Hematol 11: 272-7.
+\bibAnnoteFile{Schenone:2004aa}
+
+\bibitem{Adams:2009aa}
+Adams RLC, Bird RJ (2009) Review article: Coagulation cascade and therapeutics
+  update: relevance to nephrology. part 1: Overview of coagulation,
+  thrombophilias and history of anticoagulants.
+\newblock Nephrology (Carlton) 14: 462-70.
+\bibAnnoteFile{Adams:2009aa}
+
+\bibitem{GOLDHABER2006}
+Goldhaber SZ, Colman RW, Clowes AW, editors (2006) {Hemostasis and Thrombosis:
+  Basic Principles and Clinical Practice}.
+\newblock Lippincott Williams and Wilkins.
+\bibAnnoteFile{GOLDHABER2006}
+
+\bibitem{Brummel:2002aa}
+Brummel KE, Paradis SG, Butenas S, Mann KG (2002) Thrombin functions during
+  tissue factor-induced blood coagulation.
+\newblock Blood 100: 148-52.
+\bibAnnoteFile{Brummel:2002aa}
+
+\bibitem{MANN1990}
+Mann K, Nesheim M, Church W, Haley P, Krishnaswamy S (1990) Surface-dependent
+  reactions of vitamin k-dependent enzyme complexes.
+\newblock Blood 76: 1-16.
+\bibAnnoteFile{MANN1990}
+
+\bibitem{ROBERTS1998}
+Roberts H, Monroe D, Oliver J, Chang J, Hoffman M (1998) Newer concepts of
+  blood coagulation.
+\newblock Haemophilia 4: 331-334.
+\bibAnnoteFile{ROBERTS1998}
+
+\bibitem{MANN1999}
+Mann K (1999) Biochemistry and physiology of blood coagulation.
+\newblock Thromb Haemost 82: 165-174.
+\bibAnnoteFile{MANN1999}
+
+\bibitem{Khanin:1989aa}
+Khanin MA, Semenov VV (1989) A mathematical model of the kinetics of blood
+  coagulation.
+\newblock J Theor Biol 136: 127-34.
+\bibAnnoteFile{Khanin:1989aa}
+
+\bibitem{Willems:1991aa}
+Willems GM, Lindhout T, Hermens WT, Hemker HC (1991) Simulation model for
+  thrombin generation in plasma.
+\newblock Haemostasis 21: 197-207.
+\bibAnnoteFile{Willems:1991aa}
+
+\bibitem{Baldwin:1994aa}
+Baldwin SA, Basmadjian D (1994) A mathematical model of thrombin production in
+  blood coagulation, part i: The sparsely covered membrane case.
+\newblock Ann Biomed Eng 22: 357-70.
+\bibAnnoteFile{Baldwin:1994aa}
+
+\bibitem{Leipold:1995aa}
+Leipold RJ, Bozarth TA, Racanelli AL, Dicker IB (1995) Mathematical model of
+  serine protease inhibition in the tissue factor pathway to thrombin.
+\newblock J Biol Chem 270: 25383-7.
+\bibAnnoteFile{Leipold:1995aa}
+
+\bibitem{Kuharsky:2001aa}
+Kuharsky AL, Fogelson AL (2001) Surface-mediated control of blood coagulation:
+  the role of binding site densities and platelet deposition.
+\newblock Biophys J 80: 1050-74.
+\bibAnnoteFile{Kuharsky:2001aa}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{2010_luan_varner_MolBioSys}
+
+\bibitem{Jones:1994aa}
+Jones KC, Mann KG (1994) A model for the tissue factor pathway to thrombin. ii.
+  a mathematical simulation.
+\newblock J Biol Chem 269: 23367-73.
+\bibAnnoteFile{Jones:1994aa}
+
+\bibitem{Hockin:2002aa}
+Hockin MF, Jones KC, Everse SJ, Mann KG (2002) A model for the stoichiometric
+  regulation of blood coagulation.
+\newblock J Biol Chem 277: 18322-33.
+\bibAnnoteFile{Hockin:2002aa}
+
+\bibitem{Butenas:2004aa}
+Butenas S, Orfeo T, Gissel MT, Brummel KE, Mann KG (2004) The significance of
+  circulating factor ixa in blood.
+\newblock J Biol Chem 279: 22875-82.
+\bibAnnoteFile{Butenas:2004aa}
+
+\bibitem{Lo:2005aa}
+Lo K, Denney WS, Diamond SL (2005) Stochastic modeling of blood coagulation
+  initiation.
+\newblock Pathophysiol Haemost Thromb 34: 80-90.
+\bibAnnoteFile{Lo:2005aa}
+
+\bibitem{Chatterjee:2010aa}
+Chatterjee MS, Denney WS, Jing H, Diamond SL (2010) Systems biology of
+  coagulation initiation: kinetics of thrombin generation in resting and
+  activated human blood.
+\newblock PLoS Comput Biol 6.
+\bibAnnoteFile{Chatterjee:2010aa}
+
+\bibitem{Stalker:2013aa}
+Stalker TJ, Traxler EA, Wu J, Wannemacher KM, Cermignano SL, et~al. (2013)
+  Hierarchical organization in the hemostatic response and its relationship to
+  the platelet-signaling network.
+\newblock Blood 121: 1875-85.
+\bibAnnoteFile{Stalker:2013aa}
+
+\bibitem{Leiderman:2014aa}
+Leiderman K, Fogelson A (2014) An overview of mathematical modeling of thrombus
+  formation under flow.
+\newblock Thromb Res 133 Suppl 1: S12-4.
+\bibAnnoteFile{Leiderman:2014aa}
+
+\bibitem{Bannish:2014ab}
+Bannish BE, Keener JP, Fogelson AL (2014) Modelling fibrinolysis: a 3d
+  stochastic multiscale model.
+\newblock Math Med Biol 31: 17-44.
+\bibAnnoteFile{Bannish:2014ab}
+
+\bibitem{Voronov:2013aa}
+Voronov RS, Stalker TJ, Brass LF, Diamond SL (2013) Simulation of intrathrombus
+  fluid and solute transport using in vivo clot structures with single platelet
+  resolution.
+\newblock Ann Biomed Eng 41: 1297-307.
+\bibAnnoteFile{Voronov:2013aa}
+
+\bibitem{Runyon:2004aa}
+Runyon MK, Johnson-Kerner BL, Ismagilov RF (2004) Minimal functional model of
+  hemostasis in a biomimetic microfluidic system.
+\newblock Angew Chem Int Ed Engl 43: 1531-6.
+\bibAnnoteFile{Runyon:2004aa}
+
+\bibitem{Kastrup:2006aa}
+Kastrup CJ, Runyon MK, Shen F, Ismagilov RF (2006) Modular chemical mechanism
+  predicts spatiotemporal dynamics of initiation in the complex network of
+  hemostasis.
+\newblock Proc Natl Acad Sci U S A 103: 15747-52.
+\bibAnnoteFile{Kastrup:2006aa}
+
+\bibitem{Runyon:2007aa}
+Runyon MK, Johnson-Kerner BL, Kastrup CJ, Van~Ha TG, Ismagilov RF (2007)
+  Propagation of blood clotting in the complex biochemical network of
+  hemostasis is described by a simple mechanism.
+\newblock J Am Chem Soc 129: 7014-5.
+\bibAnnoteFile{Runyon:2007aa}
+
+\bibitem{Runyon:2008aa}
+Runyon MK, Kastrup CJ, Johnson-Kerner BL, Ha TGV, Ismagilov RF (2008) Effects
+  of shear rate on propagation of blood clotting determined using microfluidics
+  and numerical simulations.
+\newblock J Am Chem Soc 130: 3458-64.
+\bibAnnoteFile{Runyon:2008aa}
+
+\bibitem{Kuepfer:2007aa}
+Kuepfer L, Peter M, Sauer U, Stelling J (2007) Ensemble modeling for analysis
+  of cell signaling dynamics.
+\newblock Nat Biotechnol 25: 1001-6.
+\bibAnnoteFile{Kuepfer:2007aa}
+
+\bibitem{Song:2009aa}
+Song SO, Varner J (2009) Modeling and analysis of the molecular basis of pain
+  in sensory neurons.
+\newblock PLoS One 4: e6758.
+\bibAnnoteFile{Song:2009aa}
+
+\bibitem{2010_song_varner_BiotechJ}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{2010_song_varner_BiotechJ}
+
+\bibitem{Tasseff:2010aa}
+Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, et~al. (2010) Analysis of the
+  molecular networks in androgen dependent and independent prostate cancer
+  revealed fragile and robust subsystems.
+\newblock PLoS One 5: e8864.
+\bibAnnoteFile{Tasseff:2010aa}
+
+\bibitem{Lequieu:2011aa}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
+  analysis of insulin induced eukaryotic translation initiation.
+\newblock PLoS Comput Biol 7: e1002263.
+\bibAnnoteFile{Lequieu:2011aa}
+
+\bibitem{Tran:2008aa}
+Tran LM, Rizk ML, Liao JC (2008) Ensemble modeling of metabolic networks.
+\newblock Biophys J 95: 5606-17.
+\bibAnnoteFile{Tran:2008aa}
+
+\bibitem{HANSSON2005}
+GKHansson (2005) {Inflammation, Atherosclerosis and Coronary Artery Disease}.
+\newblock N Engl J Med 352: 1685 - 1695.
+\bibAnnoteFile{HANSSON2005}
+
+\bibitem{Tanaka:2009wo}
+Tanaka KA, Key NS, Levy JH (2009) Blood coagulation: hemostasis and thrombin
+  regulation.
+\newblock Anesth Analg 108: 1433-46.
+\bibAnnoteFile{Tanaka:2009wo}
+
+\bibitem{COOPER1994}
+Tuddenham E, Cooper D (1994) {The molecular genetics of haemostasis and its
+  inherited disorders.}, volume~25 of \emph{Oxford monographs in medical
+  genetics}.
+\newblock Oxford University Press.
+\bibAnnoteFile{COOPER1994}
+
+\bibitem{MANNUCCI2001}
+Mannucci MP, Tuddenham EGD (2001) The hemophilias - from royal genes to gene
+  therapy.
+\newblock N Engl J Med 344: 1773 - 1780.
+\bibAnnoteFile{MANNUCCI2001}
+
+\bibitem{MITCHELL2008}
+Mitchell J, Phillott A (2008) Haemophilia and inhibitors 1: diagnosis and
+  treatment.
+\newblock Nursing Times 104: 26--27.
+\bibAnnoteFile{MITCHELL2008}
+
+\bibitem{TOMOKIYO2003}
+Tomokiyo K, Nakatomi Y, Araki T, Teshima K, Nakano H, et~al. (2003) A novel
+  therapeutic approach combining human plasma-derived factors viia and x for
+  haemophiliacs with inhibitors: evidence of a higher thrombin generation rate
+  in vitro and more sustained haemostatic activity in vivo than obtained with
+  factor viia alone.
+\newblock Vox Sanguinis 85: 290-299.
+\bibAnnoteFile{TOMOKIYO2003}
+
+\bibitem{Hedner:2008rm}
+Hedner U (2008) Factor viia and its potential therapeutic use in
+  bleeding-associated pathologies.
+\newblock Thromb Haemost 100: 557--562.
+\bibAnnoteFile{Hedner:2008rm}
+
+\bibitem{Talbot:2009kk}
+Talbot M, Tien HC (2009) The use of recombinant factor viia in trauma patients.
+\newblock J Am Acad Orthop Surg 17: 477-81.
+\bibAnnoteFile{Talbot:2009kk}
+
+\bibitem{Shapiro:2008px}
+Shapiro AD (2008) Single-dose recombinant activated factor vii for the
+  treatment of joint bleeds in hemophilia patients with inhibitors.
+\newblock Clin Adv Hematol Oncol 6: 579--586.
+\bibAnnoteFile{Shapiro:2008px}
+
+\bibitem{Duchesne:2008hw}
+Duchesne JC, Mathew KA, Marr AB, Pinsky MR, Barbeau JM, et~al. (2008) Current
+  evidence based guidelines for factor viia use in trauma: the good, the bad,
+  and the ugly.
+\newblock Am Surg 74: 1159-65.
+\bibAnnoteFile{Duchesne:2008hw}
+
+\bibitem{Butenas:2002ab}
+Butenas S, Brummel KE, Branda RF, Paradis SG, Mann KG (2002) Mechanism of
+  factor viia-dependent coagulation in hemophilia blood.
+\newblock Blood 99: 923-30.
+\bibAnnoteFile{Butenas:2002ab}
+
+\bibitem{Danforth:2012aa}
+Danforth CM, Orfeo T, Everse SJ, Mann KG, Brummel-Ziedins KE (2012) Defining
+  the boundaries of normal thrombin generation: investigations into hemostasis.
+\newblock PLoS One 7: e30385.
+\bibAnnoteFile{Danforth:2012aa}
+
+\bibitem{NAITO1991}
+Naito K, Fujikawa K (1991) Activation of human blood coagulation factor {XI}
+  independent of factor {XII}.
+\newblock J Biol Chem 266: 7353-7358.
+\bibAnnoteFile{NAITO1991}
+
+\bibitem{Gailani:1991aa}
+Gailani D, Broze GJ Jr (1991) Factor xi activation in a revised model of blood
+  coagulation.
+\newblock Science 253: 909-12.
+\bibAnnoteFile{Gailani:1991aa}
+
+\bibitem{Smith:2006zl}
+Smith SA, Mutch NJ, Baskar D, Rohloff P, Docampo R, et~al. (2006) Polyphosphate
+  modulates blood coagulation and fibrinolysis.
+\newblock Proc Natl Acad Sci U S A 103: 903-8.
+\bibAnnoteFile{Smith:2006zl}
+
+\bibitem{SCIPY}
+Jones E, Oliphant T, Peterson P (2001--).
+\newblock {SciPy}: Open source scientific tools for {Python}.
+\newblock http://www.scipy.org/.
+\bibAnnoteFile{SCIPY}
+
+\bibitem{PSO}
+Kennedy J, Eberhart R (1995) Particle swarm optimization.
+\newblock In: Proceedings of the International Conference on Neural Networks.
+  pp. 1942 - 1948.
+\bibAnnoteFile{PSO}
+
+\bibitem{Matplotlib}
+Hunter JD (2007) Matplotlib: A 2d graphics environment.
+\newblock Computing in Science and Engineering 9: 90 - 95.
+\bibAnnoteFile{Matplotlib}
+
+\bibitem{SOBOL_METHOD}
+Sobol I (2001) Global sensitivity indices for nonlinear mathematical models and
+  their monte carlo estimates.
+\newblock Mathematics and Computers in Simulation 55: 271 - 280.
+\bibAnnoteFile{SOBOL_METHOD}
+
+\bibitem{Saltelli:2010}
+Saltelli A, Annoni P, Azzini I, Campolongo F, Ratto M, et~al. (2010) Variance
+  based sensitivity analysis of model output. design and estimator for the
+  total sensitivity index.
+\newblock Computer Physics Communications 181: 259 - 270.
+\bibAnnoteFile{Saltelli:2010}
+
+\bibitem{SALIB}
+Herman JD.
+\newblock http://jdherman.github.io/salib/.
+\bibAnnoteFile{SALIB}
+
+\bibitem{Butenas:1999aa}
+Butenas S, van't Veer C, Mann KG (1999) "normal" thrombin generation.
+\newblock Blood 94: 2169-78.
+\bibAnnoteFile{Butenas:1999aa}
+
+\bibitem{ALLEN2006}
+Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
+  concentration improves response to high-dose factor {VIIa} in a cell-based
+  model of haemophilia.
+\newblock Br J Haematology 134: 314 - 319.
+\bibAnnoteFile{ALLEN2006}
+
+\end{thebibliography}
