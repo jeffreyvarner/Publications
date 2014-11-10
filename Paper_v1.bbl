@@ -207,6 +207,78 @@ Gadkar KG, Doyle FJ 3rd, Crowley TJ, Varner JD (2003) Cybernetic model
 \newblock Biotechnol Prog 19: 1487-97.
 \bibAnnoteFile{Gadkar:2003aa}
 
+\bibitem{Brown:2003aa}
+Brown KS, Sethna JP (2003) Statistical mechanical approaches to models with
+  many poorly known parameters.
+\newblock Phys Rev E Stat Nonlin Soft Matter Phys 68: 021904.
+\bibAnnoteFile{Brown:2003aa}
+
+\bibitem{Machta:2013aa}
+Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
+  compression underlies emergent theories and predictive models.
+\newblock Science 342: 604-7.
+\bibAnnoteFile{Machta:2013aa}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{Song:2009aa}
+Song SO, Varner J (2009) Modeling and analysis of the molecular basis of pain
+  in sensory neurons.
+\newblock PLoS One 4: e6758.
+\bibAnnoteFile{Song:2009aa}
+
+\bibitem{Tasseff:2010aa}
+Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, et~al. (2010) Analysis of the
+  molecular networks in androgen dependent and independent prostate cancer
+  revealed fragile and robust subsystems.
+\newblock PLoS One 5: e8864.
+\bibAnnoteFile{Tasseff:2010aa}
+
+\bibitem{Tasseff:2011aa}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol (Camb) 3: 578-91.
+\bibAnnoteFile{Tasseff:2011aa}
+
+\bibitem{Nayak:2011aa}
+Nayak S, Siddiqui JK, Varner JD (2011) Modelling and analysis of an ensemble of
+  eukaryotic translation initiation models.
+\newblock IET Syst Biol 5: 2.
+\bibAnnoteFile{Nayak:2011aa}
+
+\bibitem{Lequieu:2011aa}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
+  analysis of insulin induced eukaryotic translation initiation.
+\newblock PLoS Comput Biol 7: e1002263.
+\bibAnnoteFile{Lequieu:2011aa}
+
+\bibitem{BERG_BIOCHEMISTRY}
+Berg JM, Tymoczko JL, Stryer L (2002) Biochemistry.
+\newblock W.H. Freeman.
+\bibAnnoteFile{BERG_BIOCHEMISTRY}
+
+\bibitem{Peskov:2008aa}
+Peskov K, Goryanin I, Demin O (2008) Kinetic model of phosphofructokinase-1
+  from escherichia coli.
+\newblock J Bioinform Comput Biol 6: 843-67.
+\bibAnnoteFile{Peskov:2008aa}
+
+\bibitem{Keseler:2013aa}
+Keseler IM, Mackie A, Peralta-Gil M, Santos-Zavaleta A, Gama-Castro S, et~al.
+  (2013) Ecocyc: fusing model organism databases with systems biology.
+\newblock Nucleic Acids Res 41: D605-12.
+\bibAnnoteFile{Keseler:2013aa}
+
+\bibitem{Huang:2014aa}
+Huang Z, Mou L, Shen Q, Lu S, Li C, et~al. (2014) Asd v2.0: updated content and
+  novel features focusing on allosteric regulation.
+\newblock Nucleic Acids Res 42: D510-6.
+\bibAnnoteFile{Huang:2014aa}
+
 \bibitem{Octave:2014}
 {Octave community} (2014).
 \newblock {GNU Octave 3.8.1}.

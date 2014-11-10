@@ -19,7 +19,7 @@
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 \usepackage[wide]{sidecap}
 %\usepackage[authoryear,round,comma,sort&compress]{natbib}
-\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage[square,sort&compress,comma,numbers]{natbib}
 %\usepackage[authoryear,round]{natbib}
 \usepackage{supertabular}
 \usepackage{simplemargins}
@@ -196,7 +196,7 @@ This strategy is similar in spirit to the Constrained Fuzzy Logic (cFL) approach
 In our formulation, Hill-like transfer functions $0 \leq f\left(\mathcal{Z}\right) \leq 1$ were used to calculate the influence of factor abundance upon target enzyme activity. 
 In this context, factors can be individual metabolite levels or some function, e.g., the product of metabolite levels. 
 However, more generally, factors can also correspond to non-modeled influences, categorial variables or other abstract quantities. 
-In the current study, we simply let $\mathcal{Z}$ correspond to the abundance of individual metabolites. 
+In the current study, we simply let $\mathcal{Z}$ correspond to the abundance of individual metabolites, however in general this can be a complex function of both modeled and unmodeled factors. 
 When an enzyme was potentially sensitive to more than one regulatory input, logical integration rules were used to select which regulatory transfer function influenced enzyme activity at any given time. 
 Thus, our test networks involved important features such as cofactor recycling, enzyme activity and metabolite dynamics, as well as multiple overlapping allosteric regulatory mechanisms.  
 
@@ -291,7 +291,7 @@ The proposed modeling strategy shares features with other popular techniques, bu
 At its core, our effective modeling approach is similar to regulatory constraints based methods, and to the cybernetic modeling paradigm developed by Ramkrishna and colleagues.
 Covert, Palsson and coworkers drastically improved the predictability of constraints based approaches by integrating boolean rules into the calculation of metabolic fluxes \citep{Covert:2001aa}.
 If the regulated intracellular flux problem is coupled with time-dependent extracellular balances, these models can predict complex behavior such as diauxie growth or the switch between 
-aerobic and anaerobic metabolism. Another important features of this approach is that it scales with biological complexity. 
+aerobic and anaerobic metabolism. Another important feature of this approach is that it scales with biological complexity. 
 For example, Covert \emph{et al.,} showed that a genome scale model of \emph{E.~coli} augmented with a boolean rule layer, 
 correctly predicted approximately 80\% of the outcomes of a high-throughput growth phenotyping experiment in \emph{E. coli}.
 Further, they showed that they could learn new biology by iteratively refining the model and its associated rules \citep{Covert:2004aa}. 
@@ -309,18 +309,25 @@ network metabolites. Second, similar to regulatory flux balance analysis, our co
 However, our rules are continuous, thus they potentially allow a finer grained description metabolic regulation and control mechanisms.
 Lastly, we can naturally incorporate non modeled factors and categorical factors or factor combinations into our control law formulations.
 
-While the results of this proof of concept study were encouraging, there are several critical questions that should be explored.
-First, it is unclear how this approach will scale to genome scale networks, and second it is unclear how we will design the appropriate experiments 
-to identify model parameters and allosteric connectivity. 
-We showed that particle swarm optimization quickly identified an ensemble of model parameters, at least for proof-of-concept metabolic networks using synthetic data.
-This suggested that we could expect reasonable model predictions, despite only partial knowledge of model parameters. 
-Brown and Sethna showed that good predictions were possible despite only order of magnitude estimates of parameter values in a model of signal transduction \citep{Brown:2003aa}.
-Sethna and coworkers further showed that model behavior is often controlled by only a few parameter combinations, 
-a characteristic seemingly universal to multi-parameter models referred to as ``sloppiness'' \citep{Machta:2013aa}.
-We have also seen \textit{sloppy} behavior in a wide class of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa,Lequieu:2011aa}.
-Thus, we expect good model predictions despite uncertainty in the estimated parameter values.
-Perhaps more critical will be our ability to estimate allosteric connectivity.
-
+There are several critical questions that should be explored following this proof of concept study.
+It is unclear how parameter identification will scale to genome scale networks, and second it is unclear how we will identify allosteric connectivity at a genome scale. 
+The enzymatic connectivity for genome scale cell free networks can easily be established by stripping away the growth and cell wall machinery from whole cell genome reconstructions.
+Then metabolic fluxes can transformed into kinetic expressions using heuristics such multiple saturation kinetics, which are then modified by our rule based control variables.  
+This leaves a large number of unknown kinetic constants that must be estimated from time-resolved metabolite measurements.
+We showed that particle swarm optimization quickly identified an ensemble of model parameters, at least for proof of concept metabolic networks using synthetic data.
+This suggested that we can expect reasonable model predictions, despite only partial parameter knowledge, as network size grows if we have properly designed experiments. 
+Brown and Sethna showed in a model of signal transduction that good predictions were possible despite only order of magnitude estimates of parameter values \citep{Brown:2003aa}.
+Sethna and coworkers later showed that model performance is often controlled by only a few parameter combinations, 
+a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+We have also demonstrated \textit{sloppy} behavior in a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa,Lequieu:2011aa}.
+Thus, given our previous experience with models with hundreds of unknown parameters, we expect parameter estimation to be a manageable challenge. 
+On the other hand, a critical challenge will be the estimation of allosteric connectivity at a genome scale. 
+The regulation of glycolytic enzymes, such as phosphofructokinase I, has been studied for many years \citep{BERG_BIOCHEMISTRY,Peskov:2008aa}. 
+The allosteric regulation of metabolic enzymes can also be established from organism specific databases, such as EcoCyc \citep{Keseler:2013aa} 
+or more general allosteric databases such as the AlloSteric Database \citep{Huang:2014aa}. 
+However, for those enzymes that have not been well studied, we will need to infer allosteric interactions from experimental data.
+In general, the reverse engineering of regulatory network structure from data is a very difficult problem.
+There are many different approaches from the reverse engineering of gene regulatory networks that perhaps could be adopted to this problem, however this remains an open question.
 
 
 \clearpage
@@ -356,26 +363,26 @@ The allosteric regulation term $v_{j}$ depended upon the combination of factors 
 For each enzyme, we used a rule-based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
 If an enzyme was activated by $m$ metabolites, we modeled this activation as:
 \begin{equation}
-	v_{j} = \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
-\end{equation}where $0\leq f_{ij}\left(x\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
+	v_{j} = \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
+\end{equation}where $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
 Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling this inhibition as:
 \begin{equation}
-	v_{j} = 1 - \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
+	v_{j} = 1 - \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
 \end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
 \begin{equation}
 	v_{j} = \min\left(u_{j},d_{j}\right)
 \end{equation}where:
 \begin{eqnarray}
-	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right) \\
-	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(x\right),\hdots,f_{nj}\left(x\right)\right)
+	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right) \\
+	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{nj}\left(\mathcal{Z}\right)\right)
 \end{eqnarray}
 The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating and inhibitory factors for enzyme $j$. 
 If an enzyme had no allosteric factors, we set $v_{j} = 1$.
-There are many possible functional forms for $0\leq f_{ij}\left(x\right)\leq 1$. 
+There are many possible functional forms for $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$. 
 However, in this study, each individual transfer function took the form:
 \begin{equation}\label{eqn:control-factor}
-	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}x_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}x_{j}^{\eta}}
-\end{equation}where $x_{j}$ denotes the abundance of metabolite $j$, and $\kappa_{ij}$ and $\eta$ are control parameters. 
+	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
+\end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $\kappa_{ij}$ and $\eta$ are control parameters. 
 The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
 The model equations were encoded using the Octave programming language and solved using the LSODE routine in Octave \citep{Octave:2014}.
 
