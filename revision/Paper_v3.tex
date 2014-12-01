@@ -233,10 +233,11 @@ Taken together, these simulations suggested that the rule-based allosteric contr
 A critical challenge for any dynamic model is the estimation of kinetic parameters. 
 For metabolic processes, there is also the added challenge of identifying the regulation and control structures that manage metabolism. 
 Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which in turn depends upon the kinetic parameters. 
-For cell-free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
+For cell free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
 We explored this linkage by estimating model parameters from synthetic data using both network structures. 
-We generated noise corrupted synthetic measurements of the substrate S, intermediate M$_{5}$ and end product P$_1$ approximately every 20 min using
-network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}). 
+We generated synthetic measurements of the substrate S, intermediate M$_{5}$ and end product P$_1$ approximately every 20 min using
+network A. This data set is similar to published cell free studies both in terms of network coverage, and sampling frequency \citep{Jewett:2008aa}. 
+We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}). 
 PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B). 
 However, with control mismatch (network B simulated with network A parameters), model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
 Taken together, these results suggested that we could perhaps simultaneously estimate both parameters and network control architectures, as incorrect control structures would be manifest as poor model fits.
@@ -338,6 +339,14 @@ They tested the effects of many putative allosteric protein-metabolite interacti
 A method similar to this may be easily applied to cell-free systems in order to identify relevant \textit{in vitro} allosteric interactions. 
 Because omics measurements of cell-free environments are easy to obtain, identification of large-scale allosteric control structures may be possible. 
 Also, there are many different approaches from the reverse engineering of gene regulatory networks that perhaps could be adopted to this problem, however this remains an open question.
+Lastly, the choice of max/min integration rules or the particular form of the transfer functions could be generalized to include other rule types and functions. 
+Theoretically, an integration rule is a function whose domain is a set of transfer function inputs, and whose range is $v\in[0,1]$.
+Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
+Alternative integration rules such as the mean might have different properties which could influence model identification or performance. 
+For example, a mean integration rule would be differentiable, which allows derivative-based optimization approaches to be used. 
+The particular form of the transfer function could also be explored. We choose a Hill-like function because of its 
+prominence in the systems and synthetic biology community. However, the only mathematical requirement for a transfer function is that it map a non-negative continuous or categorical variable into the 
+range $f\in[0,1]$. Thus, many types of transfer functions are possible.
 
 
 \clearpage
@@ -397,7 +406,12 @@ However, in this study, each individual transfer function took the form:
 The $\kappa_{ij}$ parameter represents a species gain parameter, while $\eta$ is a cooperativity parameter (similar to a Hill coefficient). 
 In the case $\eta>1$, the allosteric interaction displays positive cooperativity. For $\eta<1$, the interaction is negatively cooperative. Finally, if $\eta=1$, the interaction displays no cooperativity. 
 The effect of different values of $\eta$ on reaction rate can be seen in Figure \ref{fig-kinetics-simulations}.
-The model equations were encoded using the Octave programming language and solved using the LSODE routine in Octave (v 3.8.1; www.octave.org).
+The model equations were encoded using the Octave programming language and solved using the LSODE routine in Octave (v 3.8.1; www.octave.org). 
+In some cases, metabolic fluxes (or other quantities) were scaled according to:
+\begin{equation}
+	\hat{r}_{j}\left(t = \tau\right) = \left(\frac{r_{j} - \min\mathbf{r}}{\max\mathbf{r} - \min\mathbf{r}}\right)\Bigr|_{t = \tau}
+\end{equation}where $0\leq\hat{r}_{j}\left(t = \tau\right)\leq{1}$ denotes the scaled value for flux j evaluated at time $\tau$. 
+We have used this scaling in a variety of other contexts \citep{Song:2010ab,Lequieu:2011aa}.
 
 \subsection*{Estimation of model parameters and structures from synthetic experimental data.}
 Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data (squared residual):
@@ -406,7 +420,7 @@ Model parameters were estimated by minimizing the difference between simulations
 \end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
 value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes the experimental measurement variance for species $j$ at time $\tau$. The outer summation is respect to
 time, while the inner summation is with respect to state. We approximated a realistic model identification scenario, assuming noisy experimental data, 
-limited sampling resolution (approximately 20 minutes per sample) and a limited number of measurable metabolites. 
+limited sampling resolution (approximately 20 minutes per sample) and a limited number of measurable metabolites. We assumed a constant coefficient of variation of 10\% for the synthetic data set.
 
 We minimized the model residual using particle swarm optimization (PSO) \citep{PSO}.
 PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
@@ -513,7 +527,8 @@ For cases $\textbf{A,B}$ 20 particles were initialized with randomized parameter
 \textbf{A,B}: PSO estimated an ensemble of 20 parameters sets consistent with the synthetic experimental data assuming the correct
 enzymatic and control connectivity starting from randomized initial parameters.
 \textbf{C,D}: In the presence of control mismatch (Network B control policy simulated with Network A kinetic parameters) 
-the ensemble of models did not describe the synthetic data. 
+the ensemble of models did not describe the synthetic data. The synthetic data plotted here was unperturbed by noise. 
+However, we assumed a coefficient of variation of 10\% for the synthetic data during parameter estimation.
 }\label{fig-parameter-fit}
 \end{figure}
 
@@ -550,8 +565,10 @@ a large incorrect bias.
 \centering
 \includegraphics[width=1.0\textwidth,height=0.6\textheight]{./figs/Figure-8-Flux.pdf}
 \caption{Metabolic flux and control variables as a function of network type and particle index at t = 100 min.
-The control variables governing $E_{1},E_{3}$ and $E_{6}$ activity and the scaled metabolic flux and were calculated for the positively, 
-uniformly and negatively biased particle swarms (N = 100). The particles from each swarm were sorted based upon simulation error (low to high error). 
+The control variables governing $E_{1},E_{3}$ and $E_{6}$ activity and the scaled metabolic flux were calculated for the positively (top), 
+uniformly (middle) and negatively (bottom) biased particle swarms (N = 100). 
+Blue denotes a low value, while red denotes a high value for the respective quantity being plotted.
+The particles from each swarm were sorted based upon simulation error (low to high error). 
 \textbf{A}: Model performance for the positively biased particle swarm as a function of particle index.
 \textbf{B}: Model performance for the uniformly biased particle swarm as a function of particle index.
 \textbf{C}: Model performance for the negatively biased particle swarm as a function of particle index. 

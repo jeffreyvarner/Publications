@@ -297,6 +297,12 @@ Link H, Kochanowski K, Sauer U (2013) Systematic identification of allosteric
 \newblock Nat Biotechnol 31: 357-61.
 \bibAnnoteFile{Link:2013aa}
 
+\bibitem{Song:2010ab}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{Song:2010ab}
+
 \bibitem{PSO}
 Kennedy J, Eberhart R (1995) Particle swarm optimization.
 \newblock In: Proceedings of the International Conference on Neural Networks.
