@@ -1,0 +1,14 @@
+\BOOKMARK [1][]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][]{section.2}{Results}{}% 2
+\BOOKMARK [2][]{subsection.2.1}{Formulation of Reduced Order Coagulation Models}{section.2}% 3
+\BOOKMARK [2][]{subsection.2.2}{Identification of Model Parameters Using Particle Swarm Optimization}{section.2}% 4
+\BOOKMARK [2][]{subsection.2.3}{Validation of the Reduced Order Coagulation Model}{section.2}% 5
+\BOOKMARK [2][]{subsection.2.4}{Global Sensitivity Analysis of the Reduced Order Coagulation Model}{section.2}% 6
+\BOOKMARK [1][]{section.3}{Discussion}{}% 7
+\BOOKMARK [1][]{section.4}{Materials and Methods}{}% 8
+\BOOKMARK [2][]{subsection.4.1}{Formulation and Solution of the Model Equations }{section.4}% 9
+\BOOKMARK [2][]{subsection.4.2}{Estimation of Model Parameters From Experimental Data}{section.4}% 10
+\BOOKMARK [2][]{subsection.4.3}{Global Sensitivity Analysis of Model Performance}{section.4}% 11
+\BOOKMARK [1][]{subsection.4.3}{Acknowledgements}{}% 12
+\BOOKMARK [1][]{subsection.4.3}{Author Contributions}{}% 13
+\BOOKMARK [1][]{subsection.4.3}{Conflicts of Interest}{}% 14
