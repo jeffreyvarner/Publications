@@ -185,6 +185,12 @@ Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
 \newblock PLoS Comput Biol 7: e1001099.
 \bibAnnoteFile{Morris:2011aa}
 
+\bibitem{Brown:2003aa}
+Brown KS, Sethna JP (2003) Statistical mechanical approaches to models with
+  many poorly known parameters.
+\newblock Phys Rev E Stat Nonlin Soft Matter Phys 68: 021904.
+\bibAnnoteFile{Brown:2003aa}
+
 \bibitem{Covert:2001aa}
 Covert MW, Schilling CH, Palsson B (2001) Regulation of gene expression in flux
   balance models of metabolism.
@@ -256,12 +262,6 @@ Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
 \newblock PLoS Comput Biol 7: e1002263.
 \bibAnnoteFile{Lequieu:2011aa}
 
-\bibitem{Brown:2003aa}
-Brown KS, Sethna JP (2003) Statistical mechanical approaches to models with
-  many poorly known parameters.
-\newblock Phys Rev E Stat Nonlin Soft Matter Phys 68: 021904.
-\bibAnnoteFile{Brown:2003aa}
-
 \bibitem{Machta:2013aa}
 Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
   compression underlies emergent theories and predictive models.
@@ -296,6 +296,19 @@ Link H, Kochanowski K, Sauer U (2013) Systematic identification of allosteric
   protein-metabolite interactions that control enzyme activity in vivo.
 \newblock Nat Biotechnol 31: 357-61.
 \bibAnnoteFile{Link:2013aa}
+
+\bibitem{Kremling:2004aa}
+Kremling A, Fischer S, Gadkar K, Doyle FJ, Sauter T, et~al. (2004) A benchmark
+  for methods in reverse engineering and model discrimination: problem
+  formulation and solutions.
+\newblock Genome Res 14: 1773-85.
+\bibAnnoteFile{Kremling:2004aa}
+
+\bibitem{Gadkar:2005aa}
+Gadkar KG, Gunawan R, Doyle FJ 3rd (2005) Iterative approach to model
+  identification of biological networks.
+\newblock BMC Bioinformatics 6: 155.
+\bibAnnoteFile{Gadkar:2005aa}
 
 \bibitem{Song:2010ab}
 Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
