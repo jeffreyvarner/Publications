@@ -229,10 +229,10 @@ Taken together, these simulations suggested that the rule-based allosteric contr
 A critical challenge for any dynamic model is the estimation of kinetic parameters. 
 For metabolic processes, there is also the added challenge of identifying the regulation and control structures that manage metabolism. 
 Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which in turn depends upon the kinetic parameters. 
-For cell free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
+For cell-free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
 We explored this linkage by estimating model parameters from synthetic data using both network structures. 
 We generated synthetic measurements of the substrate S, intermediate M$_{5}$ and end product P$_1$ approximately every 20 min using
-network A. This data set is similar to published cell free studies both in terms of network coverage, and sampling frequency \citep{Jewett:2008aa}. 
+network A. This data set is similar to published cell-free studies, both in terms of network coverage and sampling frequency \citep{Jewett:2008aa}. 
 We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Fig. \ref{fig-parameter-fit}). 
 PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Fig. \ref{fig-parameter-fit}A and B). 
 However, with control mismatch (network B simulated with network A parameters), model simulations were not consistent with the synthetic data  (Fig. \ref{fig-parameter-fit}C and D). 
@@ -337,7 +337,7 @@ A method similar to this may be easily applied to cell-free systems in order to 
 Because omics measurements of cell-free environments are easy to obtain, identification of large-scale allosteric control structures may be possible. 
 Also, there are many different approaches from the reverse engineering of gene regulatory networks that perhaps could be adopted to this problem, however this remains an open question.
 For example, one could imagine designing pulse chase experiments which maximally distinguish between competing allosteric models, similar to the earlier work of Kremling et al \citep{Kremling:2004aa}, or
-iteratively estimate model structures similar to Doyle and coworkers \citep{Gadkar:2005aa}.
+iteratively estimating model structures similar to Doyle and coworkers \citep{Gadkar:2005aa}.
 Lastly, the choice of max/min integration rules or the particular form of the transfer functions could be generalized to include other rule types and functions. 
 Theoretically, an integration rule is a function whose domain is a set of transfer function inputs, and whose range is $v\in[0,1]$.
 Thus, integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
@@ -432,7 +432,7 @@ are then used to update the parameter estimates of each particle using the rules
 	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
 	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
 \end{eqnarray}
-where $\mathbf{\Delta_i}$ denotes the perturbation to the vector of parameters $\mathbf{k_i}$ for particle $i$. 
+where $\mathbf{\Delta}_i$ denotes the perturbation to the vector of parameters $\mathbf{k}_i$ for particle $i$. 
 $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes the best local solution found by particle $i$, and
 $\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
 parameters ($\mathcal{K}\times{1}$). In this study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
