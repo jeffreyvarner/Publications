@@ -1,8 +1,0 @@
-\documentclass[10pt]{article}
-\usepackage[usenames]{color} %used for font color
-\usepackage{amssymb} %maths
-\usepackage{amsmath} %maths
-\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
-\begin{document}
-\[d = 1 - \max_{f^-}\Bigl\{f_{1}\left(\mathcal{Z},\mathbf{k}\right),f_{2}\left(\mathcal{Z},\mathbf{k}\right),\hdots,f_{\mathcal{D}}\left(\mathcal{Z},\mathbf{k}\right)\Bigr\}\]
-\end{document}

@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{2007_feist_reed_hatzimanikatis_palsson_MolSysBio}
+Feist, A.~M., Henry, C.~S., Reed, J.~L., Krummenacker, M., Joyce, A.~R., Karp,
+  P.~D., Broadbelt, L.~J., Hatzimanikatis, V., and Palsson, B.~{\O}.
+\newblock A genome-scale metabolic reconstruction for escherichia coli k-12
+  mg1655 that accounts for 1260 orfs and thermodynamic information.
+\newblock {\em Mol Syst Biol}{ \bf 3}, 121 (2007).
+
+\bibitem{2004_covert_reed_herrgard_palsson_Nat}
+Covert, M.~W., Knight, E.~M., Reed, J.~L., Herrgard, M.~J., and Palsson, B.~O.
+\newblock Integrating high-throughput and computational data elucidates
+  bacterial networks.
+\newblock {\em Nature}{ \bf 429}(6987), 92--6, May  (2004).
+
+\bibitem{2012_schneider_eliceiri_NatMeth}
+Schneider, C.~A., Rasband, W.~S., and Eliceiri, K.~W.
+\newblock Nih image to imagej: 25 years of image analysis.
+\newblock {\em Nat Methods}{ \bf 9}(7), 671--5, Jul  (2012).
+
+\end{thebibliography}
