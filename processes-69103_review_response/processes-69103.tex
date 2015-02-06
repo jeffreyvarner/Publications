@@ -642,7 +642,7 @@ If $\sigma_{ij}>0$, species $i$ is produced by reaction $j$.
 Conversely, if $\sigma_{ij}<0$, species $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates species $i$ is not connected with reaction $j$. 
 The system material balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$, which were specified by the experimental setup.
 
-Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a control term ($v_{j}$) that depends on multiple regulators:
 \begin{equation}\label{eqn:rate-factor}
 	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
 \end{equation}
@@ -662,7 +662,7 @@ If an enzyme was activated by $m$ metabolites, we modeled this activation as:
 Conversely, if enzyme activity was inhibited by $m$ metabolites, we modeled this inhibition as:
 \begin{equation}
 	v_{j} = 1 - \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
-\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
+\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the control term as:
 \begin{equation}
 	v_{j} = \min\left(u_{j},d_{j}\right)
 \end{equation}where:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2014 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 FEB 2015 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,9 +710,9 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 
 AED: lastpage setting LastPage
 
-Underfull \hbox (badness 3612) in paragraph at lines 1675--1675
-[] \T1/ptm/m/n/12 De-cem-ber 14, 2014 by the au-thors; sub-mit-ted to \T1/ptm/m
-/it/12 Pro-cesses \T1/ptm/m/n/12 for pos-si-ble open ac-cess
+Underfull \hbox (badness 5446) in paragraph at lines 1675--1675
+[] \T1/ptm/m/n/12 Febru-ary 6, 2015 by the au-thors; sub-mit-ted to \T1/ptm/m/i
+t/12 Pro-cesses \T1/ptm/m/n/12 for pos-si-ble open ac-cess
  []
 
 
@@ -766,7 +766,7 @@ e1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
 mes/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8
 a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on processes-69103.pdf (27 pages, 1279394 bytes).
+Output written on processes-69103.pdf (27 pages, 1279660 bytes).
 PDF statistics:
  889 PDF objects out of 1000 (max. 8388607)
  754 compressed objects within 8 object streams
