@@ -18,8 +18,6 @@
 
 
 
-
-
   % Formatting web addresses  
 %\usepackage{ifthen}  % Conditional 
 %\usepackage{multicol}   %Columns
@@ -250,9 +248,7 @@ Previous coagulation models have typically been formulated as systems of nonline
 using mass action or more complex kinetics, to describe the rates of biochemical conversions \citep{Khanin:1989aa,Willems:1991aa,Baldwin:1994aa,Leipold:1995aa,Kuharsky:2001aa}.
 Mechanistic ODE coagulation models from our laboratory \citep{Luan:2007aa,2010_luan_varner_MolBioSys} 
 were built upon the earlier studies of Jones and Mann \citep{Jones:1994aa}, Hockin \emph{et al.} \citep{Hockin:2002aa}, and later Butenas et al., \citep{Butenas:2004aa}
-who developed and then subsequently refined highly mechanistic coagulation models. 
-Other laboratories have also expanded upon Hockin \emph{et al.}, for example by exploring the intrinsic pathway, the role of stochastic fluctuations in coagulation \citep{Lo:2005aa},
-and the dynamics of thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
+who developed and then subsequently refined highly mechanistic coagulation models. Recently Papadopoulos and co-workers used a phenomenological  mathematical model for thrombin generation \cite{Atkin:2014}. Using a set of four ordinary differential equations they were able to derive an equation for temporal evolution of thrombin generation. However the model focuses more on thrombin generation rather than dynamics of coagulation. It lacks any detail regarding regulatory activity and is unable to capture the roles of primary inhibitors like ATIII or protein C as the hybrid approach captures.The model also requires that the parameters are adjusted or fine tuned for each data set. This makes the model unfeasible in cases where we need to understand the dynamics of coagulation without complex modeling approaches or when there is incomplete mechanistic knowledge. Other laboratories have also expanded upon Hockin \emph{et al.}, for example by exploring the intrinsic pathway, the role of stochastic fluctuations in coagulation \citep{Lo:2005aa}, and the dynamics of thrombin mediated clot formation \citep{Chatterjee:2010aa}. 
 Other aspects of coagulation have also been modeled, such as platelet biochemistry \citep{Stalker:2013aa}, 
 multi-scale models of clot formation \citep{Leiderman:2014aa, Bannish:2014ab}, and transport inside clots \citep{Voronov:2013aa}.
 However, these previous studies were largely based upon extensive mechanistic knowledge. 
@@ -359,7 +355,7 @@ Reduced order coagulation model parameters were estimated using particle swarm o
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data. 
 The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation).
 (A,B,C) depict training data and results for 150\%, 100\% and 50\% of physiological prothrombin levels in the absence of protein C pathway.
-The experimental training data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}.
+The experimental training data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}\citep{Veer:1997}.
 Thrombin generation in these experiments was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
 As depicted in (A,B,C) the prothrombin levels were at 150\%, 100\% and 50\% of their physiological concentration in the absence of protein C pathway. 
 All factors and control proteins in these experiments were at their physiological concentration unless otherwise denoted.}\label{fig-diff_fII_NO_APC} 
@@ -374,7 +370,7 @@ Only APC pathway parameters were allowed to vary in these simulations keeping th
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data.
 The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation).
 (A,B,C) depict training data and results for 150\%, 100\% and 50\% of physiological prothrombin levels in the presence of the protein C pathway. 
-The experimental training data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}.
+The experimental training data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}\citep{Veer:1997}.
 Thrombin generation in these experiments was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
 As depicted in (A,B,C) the prothrombin levels were at 150\%, 100\% and 50\% of their physiological concentration in the presence of protein C pathway. 
 All factors and control proteins in these experiments were at their physiological concentration unless otherwise denoted.}\label{fig-diff_fII_APC}
@@ -411,7 +407,7 @@ The reduced order coagulation model parameter estimates were tested against data
 Simulations of different levels of prothrombin and ATIII were compared with experimental data in the absence of the protein C pathway. 
 Solid lines denote the simulated mean value of the thrombin profile for N = 20 independent particles, points denote experimental data.
 The shaded region denotes the 99\% confidence estimate of the mean simulated thrombin value (uncertainty in the model simulation). 
-(A,B,C,D) prediction results for (FII,ATIII): (50\%,150\%), (100\%, 100\%), (125\%, 75\%) and (150\%, 50\%) of physiological prothrombin and ATIII levels in the absence of the protein C pathway. The experimental validation data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}.
+(A,B,C,D) prediction results for (FII,ATIII): (50\%,150\%), (100\%, 100\%), (125\%, 75\%) and (150\%, 50\%) of physiological prothrombin and ATIII levels in the absence of the protein C pathway. The experimental validation data was reproduced from the study of Butenas \textit{et al.} \citep{Butenas:1999aa}\citep{Veer:1997}.
 Thrombin generation in these experiments was initiated using 5 pmol/L FVIIa-TF in the presence of 200 $\mu$mol/L of phospholipid vesicles (PCPS). 
 As depicted in (A,B,C,D) the prothrombin and ATIII levels were at (50\%,150\%), (100\%, 100\%), (125\%, 75\%) and (150\%, 50\%) of their physiological concentrations in the absence of protein C pathway. All factors and control proteins were at their physiological concentration unless otherswise denoted.}\label{fig-fII_ATIII}
 \end{figure}
@@ -675,8 +671,8 @@ If a process has no modifying factors, we set $v_{j} = 1$.
 There are many possible functional forms for $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$. 
 However, in this study, each individual transfer function took the form:
 \begin{equation}\label{eqn:control-factor}
-	f_{i}\left(\mathcal{Z}_{j}\right) = \frac{k_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + k_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
-\end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $\kappa_{ij}$ and $\eta$ are control parameters. 
+	f_{i}\left(\mathcal{Z}_{j},k_{ij}\right) = \frac{k_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + k_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
+\end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $k_{ij}$ and $\eta$ are control parameters. 
 $k_{ij}$ was the species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
 Applying the general framework to the reduced coagulation network resulted in five ordinary differential equations:
 \begin{eqnarray}
@@ -722,6 +718,7 @@ Lastly, we included direct irreversible inhibition of FIIa by ATIII:
 The model equations were encoded using the Python programming language and solved using the ODEINT routine of the SciPy module \citep{SCIPY}.
 The model files can be downloaded from http://www.varnerlab.org.
 
+
 \subsection{Estimation of Model Parameters From Experimental Data}
 
 Model parameters were estimated by minimizing the difference between simulations and experimental thrombin measurements (squared residual):
@@ -743,8 +740,10 @@ are then used to update the parameter estimates of each particle using the rules
 $\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
 parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
 estimates was measured using goodness of fit (model residual). The particle swarm optimization routine was implemented in the Python programming language. 
-All plots were made using the Matplotlib module of Python \citep{Matplotlib}.
+All plots were made using the Matplotlib module of Python \citep{Matplotlib}.\newline
 %The optimization and plotting code can be downloaded from http://www.varnerlab.org.
+%Experimental data,simulation code,parameter ensembles and initial conditions for each experimental simulation can be viewed and downloaded from https://github.com/jeffreyvarner/HybridCoagulationModel\_v1.
+
 
 \subsection{Global Sensitivity Analysis of Model Performance}
 
@@ -1192,6 +1191,14 @@ Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
 \newblock Br J Haematology 134: 314 - 319.
 %\bibAnnoteFile{ALLEN2006}
 
+\bibitem{Atkin:2014}
+Papadopoulos, Konstantinos and Gavaises, Manolis and Atkin,Chris (2014) A simplified mathematical model for thrombin generation.
+\newblock Medical Engineering \& Physics 36: 196 - 204.
+
+\bibitem{Veer:1997}
+Cornelis van't Veer, Neal J. Golden, Michael Kalafatis and Kenneth G. Mann (1997) Inhibitory Mechanism of the Protein C Pathway on Tissue Factor-induced Thrombin Generation.
+\newblock The Journal of Biological Chemistry 272: 7963-7994.
+
 \end{thebibliography}
 
 
@@ -1637,4 +1644,5 @@ Allen GA, Hoffman M, Roberts HR, Monroe DM (2006) Manipulation of prothrombin
 %\setcounter{figure}{0}
 %\setcounter{page}{1}
 
+\bibliography{References_v1.bib}
 \end{document}
