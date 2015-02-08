@@ -214,7 +214,7 @@ Shuler and coworkers generated many single cell kinetic models, including single
 Conversely, highly abstracted kinetic frameworks, such as the cybernetic framework, represented a paradigm shift, viewing cells as growth-optimizing strategists \citep{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}. 
 Cybernetic models have been highly successful at predicting metabolic choice behavior, e.g., diauxie behavior \citep{1986_kompala_ramkrishna_tsao_BiotechBioeng}, steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, as well as the cellular response to metabolic engineering modifications \citep{1999_varner_ramkrishna_MetaEng}. 
 Unfortunately, traditional, fully structured cybernetic models also suffer from an identifiability challenge, as both the kinetic parameters and an abstracted model of cellular objectives must be estimated simultaneously. 
-However, recent cybernetic formulations from Ramkrishna and colleagues have successfully treated this identifiability challenge through elementary mode reduction, though the techniques replace detailed biological mechanism with an optimization heuristic \cite{2009_song_ramkrishna_BiotechBioeng,Song:2011aa}. 
+However, recent cybernetic formulations from Ramkrishna and colleagues have successfully treated this identifiability challenge through elementary mode reduction, though the techniques replace detailed biological mechanism with a more approximative treatment of metabolism \cite{2009_song_ramkrishna_BiotechBioeng,Song:2011aa}. 
 
 In the post genomics world, large-scale stoichiometric reconstructions of microbial metabolism popularized by static, constraint-based modeling techniques such as flux balance analysis (FBA) have become standard tools \citep{2012_lewis_palsson_NatRevMicrobio}. 
 Since the first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, well over 100 organisms, including industrially important prokaryotes such as \textit{E. coli} \citep{Feist:2007aa} or \textit{B. subtilis} \citep{Oh:2007aa}, are now available \citep{2009_feist_palsson_NatRevMicrobio}. 
@@ -476,10 +476,9 @@ Further, they showed that they could learn new biology by iteratively refining t
 However, while regulated flux balance analysis is a powerful technique, it does not easily allow the calculation of time-resolved metabolite abundance. 
 Additionally, the Boolean rules which populate the regulatory layer are limited to ON/OFF decisions; for qualitative predictions of gene expression this is a reasonable limitation. 
 However, Boolean rules will likely be less effective at capturing dynamic allosteric regulation in a cell-free metabolic system. 
-On the other hand, the strength of cybernetic models is the integration of optimal metabolic control heuristics with traditional kinetic pathway modeling. 
-Cybernetic models are highly predictive; they have successfully predicted mutant behavior from limited wild-type data \citep{1999_varner_ramkrishna_MetaEng,Varner:2000aa,Song:2012aa}, 
-steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, strain specific metabolic function \citep{Song:2011aa} and have been used in bioprocess control applications \citep{Gadkar:2003aa}.
-However, cybernetic control heuristics are not mechanistic, instead they are the output of an optimal decision with respect to a set of hypothetical physiological objectives. 
+On the other hand, the strength of cybernetic models is the integration of optimal metabolic control strategies with traditional kinetic pathway modeling. 
+Cybernetic models are highly predictive; they have successfully predicted mutant behavior from limited wild-type data \citep{1999_varner_ramkrishna_MetaEng,Varner:2000aa,Song:2012aa}, steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, strain specific metabolic function \citep{Song:2011aa} and have been used in bioprocess control applications \citep{Gadkar:2003aa}.
+However, cybernetic control strategies are not mechanistic, instead they are the output of an optimal decision with respect to a set of hypothetical physiological objectives. 
 Thus, they are abstractions which are difficult to translate into a specific biological mechanism. 
 Our approach addresses the shortcomings of both regulatory constraint-based models and cybernetic models. 
 First, similar to cybernetic models, the core of our approach is a kinetic model. Thus, we are able to directly calculate the time evolution of metabolism, for example the dynamic abundance of network metabolites. Second, similar to regulatory flux balance analysis, our control laws describe specific mechanistic motifs, such as activation or inhibition of enzyme activity. 
@@ -489,13 +488,14 @@ Though requiring a more complex description of cellular metabolism, our approach
 
 The proposed modeling framework also differs appreciably from previously established non-mechanistic, kinetic approximations of complex biochemical network behavior. 
 Such frameworks replace parameter dense mechanistic kinetic expressions with heuristics quantifying the relationship between metabolic rate and metabolite effectors. 
+A review of approximative kinetic formats can be found in \cite{2005_heijnen_BiotechBioeng}.  
 These approaches arose in response to uncertainties associated with obtaining correct mechanistic kinetic expressions and parameters of \textit{in vivo} systems. 
 Similarly, available kinetic parameters measured \textit{in vitro} may differ in a specialized cell-free \textit{in vitro} environments. 
 Factors affecting kinetics, such as enzyme channeling, macromolecular crowding, and pH, are likely dramatically different in cell-free environments than in both \textit{in vivo} systems as well as typical \textit{in vitro} conditions used for parameter measurements. 
 Thus, a more generalized, approximate biochemical reaction network formulation may be desirable in the case of cell-free systems. 
 Our approach is similar to generalized mass action-based power law formulations of Savageau and colleagues \cite{1991_savageau_JTheorBio} and linlog kinetics of Visser \textit{et al.} \cite{2003_visser_heijnen_MetabEng} in that metabolic rates are proportional to corresponding enzyme levels modified by metabolite effectors. 
 Power law and linlog approaches suffer from several known limitations \cite{2005_heijnen_BiotechBioeng}. 
-Power law reaction rates do not capture saturation effects and become infinite for small concentrations of inhibitory effectors. 
+Power law reaction rates do not capture saturation effects and become infinite for small concentrations of inhibitory regulators. 
 Linlog kinetics also become ill-defined when effector concentrations go to zero. 
 Our framework does not suffer from such drawbacks. 
 Also, models employing linlog kinetics typically rely on an experimentally determined reference state to describe dynamics taking place after a perturbation to a steady-state. 
@@ -516,12 +516,12 @@ Our work relies on heuristic search optimization to identify kinetic models cons
 Instead of estimating a single yet highly uncertain parameter set, both approaches estimate an ensemble of parameter sets whose model behavior recapitulates experimental measurements. 
 Here, we showed that particle swarm optimization quickly identified an ensemble of model parameters, at least for proof-of-concept metabolic networks using synthetic data. 
 This suggested that we can expect reasonable model predictions, despite only partial parameter knowledge, as network size grows if we have properly designed experiments. 
+Though we expect that a model's computational complexity will scale poorly with network size, we are optimistic that the construction of large-scale, predictive models of metabolism are possible. 
+There is evidence to suggest that achieving a quantitative understanding of complex biological systems should not require complete parametric knowledge. 
 Brown and Sethna showed in a model of signal transduction that good predictions were possible despite only order of magnitude estimates of parameter values \citep{Brown:2003aa}.
-Sethna and coworkers later showed that model performance is often controlled by only a few parameter combinations, 
-a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+Sethna and coworkers later showed that model performance is often controlled by only a few parameter combinations, a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
 We have also demonstrated \textit{sloppy} behavior in a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa,Lequieu:2011aa}.
-Thus, given our previous experience with models containing hundreds of unknown parameters, we expect parameter estimation to be a manageable challenge assuming 
-we have good quality experimental data. 
+Thus, given our previous experience with models containing hundreds of unknown parameters, we expect parameter estimation to be a manageable challenge assuming we have good quality experimental data. 
 
 A second critical challenge will be the estimation of allosteric connectivity at a genome scale. 
 The regulation of glycolytic enzymes, such as phosphofructokinase I, has been studied for many years \citep{BERG_BIOCHEMISTRY,Peskov:2008aa}. 
@@ -643,7 +643,8 @@ In the combined case, each particle potentially carried a different model realiz
 We kept the update rules the same (along with the update parameters). 
 Thus, each particle competed on the basis of goodness of fit, which allowed different model structures to contribute to the overall behavior of the swarm. 
 We considered five possible model structures (A through E), where network A was the correct formulation (used to generate the synthetic data). 
-We considered a population of 100 particles, where each particle in the swarm was assigned a model structure, and a random parameter vector.
+We considered a population of 100 particles, where each particle in the swarm was assigned a model structure, and a random parameter vector. 
+The optimization simulations of Figure \ref{fig-control-search}, running on a single CPU on an Apple workstation (Apple, Cupertino, CA; OS X v10.10), required on the order of several hours for completion.  
 The PSO algorithm, model equations, and the objective function were encoded and solved in the Octave programming language (v 3.8.1; www.octave.org).
 
 \section*{\noindent Acknowledgments}\vspace{12pt}

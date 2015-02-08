@@ -253,6 +253,12 @@ Gadkar, K.G.; Doyle, 3rd, F.J.; Crowley, T.J.; Varner, J.D.
 \newblock {\em Biotechnol Prog} {\bf 2003},
 \newblock {\em 19},~1487--97.
 
+\bibitem[Heijnen(2005)]{2005_heijnen_BiotechBioeng}
+Heijnen, J.J.
+\newblock Approximative kinetic formats used in metabolic network modeling.
+\newblock {\em Biotechnol Bioeng} {\bf 2005},
+\newblock {\em 91},~534--45.
+
 \bibitem[Savageau(1991)]{1991_savageau_JTheorBio}
 Savageau, M.A.
 \newblock Biochemical systems theory: operational differences among variant
@@ -266,12 +272,6 @@ Visser, D.; Heijnen, J.J.
   using linlog kinetics.
 \newblock {\em Metab Eng} {\bf 2003},
 \newblock {\em 5},~164--76.
-
-\bibitem[Heijnen(2005)]{2005_heijnen_BiotechBioeng}
-Heijnen, J.J.
-\newblock Approximative kinetic formats used in metabolic network modeling.
-\newblock {\em Biotechnol Bioeng} {\bf 2005},
-\newblock {\em 91},~534--45.
 
 \bibitem[Hadlich \em{et~al.}(2009)Hadlich, Noack, and
   Wiechert]{2009_hadlich_wiechert_MetabEng}
