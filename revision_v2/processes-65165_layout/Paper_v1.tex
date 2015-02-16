@@ -1,0 +1,1006 @@
+%  LaTeX support: latex@mdpi.com
+%  In case you need support, please attach any log files that you could have, and specify the details of your LaTeX setup (which operating system and LaTeX version / tools you are using).
+
+%=================================================================
+
+% LaTeX Class File and Rendering Mode (choose one)
+% You will need to save the "mdpi.cls" and "mdpi.bst" files into the same folder as this template file.
+
+%=================================================================
+
+\documentclass[processes,article,accept,moreauthors,pdftex,12pt,a4paper]{mdpi} 
+
+\usepackage{url}  % Formatting web addresses  
+%\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+%\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{soul}
+
+%\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+%\usepackage{setspace}
+%\usepackage{longtable}
+%\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+%\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+%\usepackage[square,sort&compress,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+%\usepackage{lineno}
+%
+%\urlstyle{rm}
+
+
+\setcounter{page}{1}
+\lastpage{x}
+\doinum{10.3390/------}
+\pubvolume{xx}
+\pubyear{2014}
+\history{Received: xx / Accepted: xx / \\
+Published: xx}
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+%\doublespace
+
+%\usepackage{geometry}
+%\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+%\bibliographystyle{plos2009}
+
+%\makeatletter
+%\renewcommand\subsection{\@startsection
+%	{subsection}{2}{0mm}
+%	{-0.05in}
+%	{-0.5\baselineskip}
+%	{\normalfont\normalsize\bfseries}}
+%\renewcommand\subsubsection{\@startsection
+%	{subsubsection}{2}{0mm}
+%	{-0.05in}
+%	{-0.5\baselineskip}
+%	{\normalfont\normalsize\itshape}}
+%\renewcommand\section{\@startsection
+%	{subsection}{2}{0mm}
+%	{-0.2in}
+%	{0.05\baselineskip}
+%	{\normalfont\large\bfseries}}	
+%\renewcommand\paragraph{\@startsection
+%	{paragraph}{2}{0mm}
+%	{-0.05in}
+%	{-0.5\baselineskip}
+%	{\normalfont\normalsize\itshape}}
+%\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+%\setlength\bibsep{0pt}
+
+%\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+%\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Figure
+%\renewcommand{\figurename}{Figure}
+%--------------------
+% Class Options:
+%--------------------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% actuators, administrativesciences, aerospace, agriculture, agronomy, algorithms, animals, antibiotics, antibodies, antioxidants, appliedsciences, arts, atmosphere, atoms, axioms, batteries, behavioralsciences, bioengineering, biology, biomedicines, biomolecules, biosensors, brainsciences, buildings, cancers, catalysts, cells, challenges, chemosensors, children, chromatography, climate, coatings, computation, computers, cosmetics, crystals, dentistryjournal, diagnostics, diseases, diversity, econometrics, economies, education, electronics, energies, entropy, environmentalsciences, environments, epigenomes, fibers, foods, forests, futureinternet, galaxies, games, gels, genes, geosciences, healthcare, horticulturae, humanities, hydrology, informatics, information, inorganics, insects, ijerph, ijfs, ijms, ijgi, jcdd, jcm, jdb, jfb, jof, joi, jlpea, jmse, jpm, jrfm, jsan, land, laws, life, lubricants, machines, marinedrugs, materials, mathematics, medicalsciences, membranes, metabolites, metals, microarrays, micromachines, microorganisms, minerals, molbank, molecules, nanomaterials, ncrna, nutrients, pathogens, pharmaceuticals, pharmaceutics, pharmacy, photonics, plants, polymers, processes, proteomes, publications, religions, remotesensing, resources, risks, robotics, safety, sensors, sinusitis, socialsciences, societies, sports, standards, sustainability, symmetry, systems, technologies, toxics, toxins, universe, vaccines, veterinarysciences, viruses, water
+%---------
+% article
+%---------
+% The default type of manuscript is article, but could be replaced by using one of the class options: 
+% article, review, communication, commentary, bookreview, correction, addendum, editorial, changes, supfile, casereport, comment, conceptpaper, conferencereport, meetingreport, discussion, essay, letter, newbookreceived, opinion, projectreport, reply, retraction, shortnote, technicalnote, creative
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g. the logo of the journal will get visible), the headings, and the copyright information. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+% Please insert a blank line is before and after all equation and eqnarray environments to ensure proper line numbering when option submit is chosen
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+%---------
+% pdftex
+%---------
+% The option "pdftex" is for use with pdfLaTeX only. If eps figure are used, use the optioin "dvipdfm", with LaTeX and dvi2pdf only.
+
+%=================================================================
+
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+
+% Add packages and commands to include here
+% The amsmath, amsthm, amssymb, hyperref, caption, float and color packages are loaded by the MDPI class.
+%\usepackage{graphicx}
+%\usepackage{subfigure,psfig}
+
+%=================================================================
+%% Please use the following mathematics environments:
+%\theoremstyle{mdpi}
+%\newcounter{thm}
+%\setcounter{thm}{0}
+%\newcounter{ex}
+%\setcounter{ex}{0}
+%\newcounter{re}
+%\setcounter{re}{0}
+%\newtheorem{Theorem}[thm]{Theorem}
+%\newtheorem{Lemma}[thm]{Lemma}
+%\newtheorem{Characterization}[thm]{Characterization}
+%\newtheorem{Proposition}[thm]{Proposition}
+%\newtheorem{Property}[thm]{Property}
+%\newtheorem{Problem}[thm]{Problem}
+%\newtheorem{Example}[ex]{Example}
+%\newtheorem{Remark}[re]{Remark}
+%\newtheorem{Corollary}[thm]{Corollary}
+%\newtheorem{Definition}[thm]{Definition}
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+
+% Full title of the paper (Capitalized)
+\Title{Dynamic Modeling of Cell-Free Biochemical Networks using Effective Kinetic Models}
+
+% Authors (Add full first names)
+\Author{Joseph A. Wayman, Adithya Sagar and Jeffrey D. Varner {*}}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address[1]{%
+School of Chemical and Biomolecular Engineering, Cornell University, Ithaca, NY 14853, USA\\ \vspace{12pt}
+
+Running Title:~Effective models of metabolism}
+
+% Contact information of the corresponding author (Add [2] after \corres if there are more than one corresponding author.)
+\corres{E-Mail: jdv27@cornell.edu; \mbox{Tel.: +607-255-4258;} Fax: +607-255-9166.}
+
+% Abstract (Do not use inserted blank lines, i.e. \\) 
+\abstract{Cell-free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in vivo} processes.
+Many of the challenges confronting genome-scale kinetic modeling can potentially be overcome in a cell-free system. 
+For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth. 
+Thus, cell-free operation holds several significant advantages for model development, identification and validation. 
+Theoretically, genome-scale cell-free kinetic models may be possible for industrially important organisms, such as \textit{E. coli}, if a simple, tractable framework for integrating allosteric regulation with enzyme kinetics can be formulated. 
+Toward this unmet need, we present an effective biochemical network modeling framework for building dynamic cell-free metabolic models.
+The key innovation of our approach is the integration of simple effective rules encoding complex allosteric regulation with traditional kinetic pathway modeling. 
+We tested our approach by modeling the time evolution of several hypothetical cell-free metabolic networks. 
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions, captured complex allosteric patterns such as ultrasensitivity or non-competitive inhibition in the absence of mechanistic information. 
+Second, when integrated into network models, these rules captured classic regulatory patterns such as product-induced feedback inhibition. 
+Lastly, we showed, at least for the network architectures considered here, that we could simultaneously estimate kinetic parameters and allosteric connectivity from synthetic data. 
+While only an initial proof-of-concept, the framework presented here could be an important first step toward genome-scale cell-free kinetic modeling of the biosynthetic capacity of industrially important organisms.}
+
+% Keywords: add 3 to 10 keywords
+\keyword{Cell-free metabolism, Mathematical modeling}
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{}
+%\MSC{}
+%\JEL{}
+
+% If this is an expanded version of a conference paper, please cite it here: enter the full citation of your conference paper, and add $^\dagger$ in the end of the title of this article.
+%\conference{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Mathematical modeling has long contributed to our understanding of metabolism. 
+Decades before the genomics revolution, mechanistically, structured metabolic models arose from the desire to predict microbial phenotypes resulting from changes in intracellular or extracellular states \citep{1976_fredrickson_BiotechBioeng}. 
+The single cell \textit{E. coli} models of Shuler and coworkers pioneered the construction of large-scale, dynamic metabolic models that incorporated multiple, regulated catabolic and anabolic pathways constrained by experimentally determined kinetic parameters \citep{1984_domach_shuler_BiotechBioeng_01}. 
+Shuler and coworkers generated many single cell kinetic models, including single cell models of eukaryotes \citep{1989_steinmeyer_shuler_ChemEngSci,1992_wu_shuler_AnnNYAcadSci}, minimal cell architectures \citep{2004_castellanos_shuler_PNAS}, as well as DNA sequence based whole-cell models of \textit{E. coli} \citep{2008_atlas_shuler_IETSysBio}.
+Conversely, highly abstracted kinetic frameworks, such as the cybernetic framework, represented a paradigm shift, viewing cells as growth-optimizing strategists \citep{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}. 
+Cybernetic models have been highly successful at predicting metabolic choice behavior, e.g., diauxie behavior \citep{1986_kompala_ramkrishna_tsao_BiotechBioeng}, steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, as well as the cellular response to metabolic engineering modifications \citep{1999_varner_ramkrishna_MetaEng}. 
+Unfortunately, cybernetic models also suffer from an identifiability challenge, as both the kinetic parameters and an abstracted model of cellular objectives must be estimated simultaneously. 
+
+In the post genomics world, large-scale stoichiometric reconstructions of microbial metabolism popularized by static, constraint-based modeling techniques such as flux balance analysis (FBA) have become standard tools \citep{2012_lewis_palsson_NatRevMicrobio}. 
+Since the first genome-scale stoichiometric model of \textit{E. coli}, developed by Edwards and Palsson \citep{2000_edwards_palsson_PNAS}, well over 100 organisms, including industrially important prokaryotes such as \textit{E. coli} \citep{Feist:2007aa} or \textit{B. subtilis} \citep{Oh:2007aa}, are now available \citep{2009_feist_palsson_NatRevMicrobio}. 
+Stoichiometric models rely on a pseudo-steady-state assumption to reduce unidentifiable genome-scale kinetic models to an underdetermined linear algebraic system, which can be solved efficiently even for large systems.  
+Traditionally, stoichiometric models have also neglected explicit descriptions of metabolic regulation and control mechanisms, instead opting to describe the choice of pathways by prescribing an objective function on metabolism. 
+Interestingly, similar to early cybernetic models, the most common metabolic objective function has been the optimization of biomass formation \citep{2002_ibarra_edwards_palsson_Nat}, although other metabolic objectives have also been estimated \citep{2007_schuetz_sauer_MolSysBio}. 
+Recent advances in constraint-based modeling have overcome the early shortcomings of the platform, including capturing metabolic regulation and control \citep{2013_hyduke_lewis_palsson_MolBioSys}. 
+Thus, modern constraint-based approaches have proven extremely useful in the discovery of metabolic engineering strategies and represent the state of the art in metabolic modeling \citep{2013_mccloskey_palsson_feist_MolSysBio, 2012_zomorrodi_maranas_MetaEng}. However, genome-scale kinetic models of industrial important organisms such as \textit{E. coli} have yet to be constructed. 
+
+Cell-free systems offer many advantages for the study, manipulation and modeling of metabolism compared to \textit{in vivo} processes.
+Central amongst these advantages is direct access to metabolites and the microbial biosynthetic machinery without the interference of a cell wall. 
+This allows us to control as well as interrogate the chemical environment while the biosynthetic machinery is operating, potentially at a fine time resolution.
+Second, cell-free systems also allow us to study biological processes without the complications associated with cell growth.
+Cell-free protein synthesis (CFPS) systems are arguably the most prominent examples of cell-free systems used today \citep{Jewett:2008aa}. 
+However, CFPS is not new; CFPS in crude \textit{E. coli} extracts has been used since the 1960s to explore fundamentally important biological mechanisms \citep{MATTHAEI:1961aa,NIRENBERG:1961aa}. 
+Today, cell-free systems are used in a variety of applications ranging from therapeutic protein production \citep{Lu:2014aa} to synthetic biology \citep{Hodgman:2012aa}. 
+Interestingly, many of the challenges confronting genome-scale kinetic modeling can potentially be overcome in a cell-free system. 
+For example, there is no complex transcriptional regulation to consider, transient metabolic measurements are easier to obtain, and we no longer have to consider cell growth. 
+Thus, cell-free operation holds several significant advantages for model development, identification and validation.
+Theoretically, genome-scale cell-free kinetic models may be possible for industrially important organisms, such as \textit{E. coli} or \textit{B. subtilis}, if a simple, tractable framework for integrating allosteric regulation with enzyme kinetics can be formulated. 
+
+In this study, we present an effective biochemical network modeling framework for building dynamic cell-free metabolic models.
+The key innovation of our approach is the seamless integration of simple effective rules encoding complex regulation with traditional kinetic pathway modeling. 
+This integration allows the description of complex regulatory interactions, such as time-dependent allosteric regulation of enzyme activity, in the absence of specific mechanistic information. 
+The regulatory rules are easy to understand, easy to formulate and do not rely on overarching theoretical abstractions or restrictive assumptions. 
+We tested our approach by modeling the time evolution of several hypothetical cell-free metabolic networks. 
+In particular, we tested whether our effective modeling approach could describe classically expected enzyme kinetic behavior, and second whether we could simultaneously estimate kinetic parameters and regulatory connectivity, in the absence of specific mechanistic knowledge, from synthetic experimental data. 
+Toward these questions, we explored five hypothetical cell-free networks. 
+Each network shared the same enzymatic connectivity, but had different allosteric regulatory connectivity. 
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions, captured complex allosteric patterns such as ultrasensitivity or non-competitive inhibition in the absence of mechanistic information. 
+Second, when integrated into network models, these rules captured classical regulatory patterns such as product-induced feedback inhibition. 
+Lastly, we showed, at least for the network architectures considered here, that we could simultaneously estimate kinetic parameters and allosteric connectivity from synthetic data. 
+While only an initial proof-of-concept, the framework presented here could be an important first step toward genome-scale cell-free kinetic modeling of the biosynthetic capacity of industrially important organisms.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Results}\vspace{-12pt}
+
+%% Only for the Journal of Physical and Chemical Gels: Please place the Experimental Section after the Conclusions
+
+\subsection{Formulation and Properties of Effective Cell-Free Metabolic Models}
+
+We developed two proof-of-concept metabolic networks to investigate the features of our effective biochemical network modeling approach (Figure \ref{fig-networks}). 
+In both examples, substrate S was converted to the end products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, including a branch point at hypothetical metabolite M$_{2}$. 
+Several of these reactions involved cofactor dependence (AH or A), and various allosteric regulatory mechanisms modified the activity of pathway enzymes. 
+Network A included feedback inhibition of the initial pathway enzyme ($E_{1}$) by pathway end products P$_{1}$ and P$_{2}$ (Figure \ref{fig-networks}A). 
+On the other hand, network B involved feedback inhibition of $E_{1}$ by P$_{2}$ and $E_{6}$ by P$_{1}$ (Figure \ref{fig-networks}B). 
+In both networks, branch point enzymes $E_{3}$ and $E_{6}$ were subject to feed-forward activation by reduced cofactor AH. 
+Lastly, it is known experimentally that cell-free systems have a finite operational lifespan. 
+Loss of biosynthetic capability could be a function of many factors, e.g., cofactor or metabolite limitations. 
+We modeled the loss of biosynthetic capability as a non-specific first-order decay of enzyme activity. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{./figs/Figure-1-Networks.pdf}
+\caption{Proof of concept cell-free metabolic networks considered in this study. Substrate $S$ is converted to products P$_{1}$ and P$_{2}$ through a series of chemical conversions
+catalyzed by enzyme(s) $E_{j}$. The activity of the pathway enzymes is subject to both positive and negative allosteric regulation. }\label{fig-networks}
+\end{figure}
+
+Allosteric regulation of enzyme activity was modeled by combining individual regulatory \linebreak contributions to the activity of pathway enzymes into a control coefficient using an integration rule (Figure \ref{fig-control-schematic}).  
+This strategy is similar in spirit to the Constrained Fuzzy Logic (cFL) approach of Lauffenburger and coworkers which has been used to effectively model signal transduction pathways important in human health \citep{Morris:2011aa}. 
+In our formulation, Hill-like transfer functions $0 \leq f\left(\mathcal{Z}\right) \leq 1$ were used to calculate the influence of factor abundance upon target enzyme activity. 
+In this context, factors can be individual metabolite levels or some function, e.g., the product of metabolite levels. 
+However, more generally, factors can also correspond to non-modeled influences, categorial variables or other abstract quantities. 
+In the current study, we simply let $\mathcal{Z}$ correspond to the abundance of individual metabolites, however in general this can be a complex function of both modeled and unmodeled factors. 
+When an enzyme was potentially sensitive to more than one regulatory input, logical integration rules were used to select which regulatory transfer function influenced enzyme activity at any given time. 
+Thus, our test networks involved important features such as cofactor recycling, enzyme activity and metabolite dynamics, as well as multiple overlapping allosteric regulatory mechanisms.  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{./figs/Figure-2-ControlSchematic.pdf}
+\caption{Schematic of rule-based allosteric enzyme activity control laws. 
+Traditional enzyme kinetic expressions, e.g., Michaelis–Menten or multiple saturation kinetics, are multiplied by an enzyme activity control variable $0 \leq v_{j} \leq 1 $. 
+Control variables are functions of many possible regulatory factors encoded by arbitrary functions of the form $0\leq f_{j}\left(\mathcal{Z}\right)\leq 1$.
+At each simulation time step, the $v_{j}$ variables are calculated by evaluating integration rules such as the max or min of the set of factors $f_{1},\hdots$ 
+influencing the activity of enzyme $E_{j}$. }\label{fig-control-schematic}
+\end{figure}
+
+
+The rule-based regulatory strategy approximated the behavior of classical allosteric activation and inhibition mechanisms (Figure \ref{fig-kinetics-simulations}). 
+We considered the enzyme catalyzed conversion of substrate S to a product P, where the overall reaction rate was modeled as the product of a Michaelis-Menten term and an effective allosteric control variable reflecting the particular regulatory interaction. 
+We first explored feed-forward substrate activation of enzyme activity (for both positive and negative cooperativity). 
+Consistent with classical data, the rule-based strategy predicted a sigmoidal relationship between substrate abundance and reaction rate as a function of the cooperativity parameter (Figure \ref{fig-kinetics-simulations}A). 
+For cooperativity parameters less than unity, increased substrate abundance \textit{decreased} the reaction rate. 
+This was consistent with the idea that substrate binding \textit{decreased} at regulatory sites, which negatively impacted substrate binding at the active site. 
+On the other hand, as the cooperativity parameter increased past unity, the rate of conversion of substrate S to product P by enzyme $E$ approached a step function. 
+In the presence of an inhibitor, the rule-based strategy predicted non-competitive like behavior as a function of the cooperativity parameter (Figure \ref{fig-kinetics-simulations}B). 
+When the control gain parameter, $\kappa_{ij}$ in Equation~\eqref{eqn:control-factor}, was greater than unity, the inhibitory force was directly proportional to the cooperativity parameter, $\eta$ in Equation~\eqref{eqn:control-factor}. 
+Thus, as the cooperativity parameter increased, the maximum reaction rate decreased (Figure \ref{fig-kinetics-simulations}B). 
+Interestingly, our rule-based approach was unable to directly simulate competitive inhibition of enzyme activity. 
+Taken together, the rule-based strategy captured classical regulatory patterns for both enzyme activation and inhibition. 
+Thus, we are able to model complex kinetic phenomena such as ultrasensitivity, despite an effective description of reaction kinetics. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-3-EnzymeKinetics.pdf}
+\caption{Kinetics of simple transformations in the presence of activation and inhibition. 
+\textbf{A}:The conversion of substrate $S$ to product $P$ by enzyme $E$ was activated by $S$. 
+For a fixed control gain parameter $k_{control}$, the reaction rate approached a step for increasing control order $N$. 
+\textbf{B}:The conversion of substrate $S$ to product $P$ by enzyme $E$ with inhibitor $I$. 
+For a fixed control gain parameter $k_{control}$, the reaction rate approximated non-competitive inhibition for increasing control order $N$. 
+}\label{fig-kinetics-simulations}
+\end{figure}
+    
+End product yield was controlled by feedback inhibition, while product selectivity was controlled by branch point enzyme inhibition (Figure \ref{fig-onoff-simulations}). 
+A critical test of our modeling approach was to simulate networks with known behavior. 
+If we cannot reproduce the expected behavior of simple networks, then our effective modeling strategy, and particularly the rule-based approximation of allosteric regulation, will not be feasible for genome-scale cell-free problems. We considered two cases, control ON/OFF, for each network configuration. 
+Each of these cases had identical kinetic parameters and initial conditions; the \textit{only} differences between the cases were the allosteric regulation rules and the control parameters associated with these rules. 
+As expected, end product accumulation was larger for network A when the control was OFF (no feedback inhibition of $E_{1}$ by P$_{1}$ and P$_{2}$),
+as compared to the ON case (Figure~\ref{fig-onoff-simulations}A). 
+We found this behavior was robust to the choice of underlying kinetic parameters, as we observed that same qualitative response across an ensemble of randomized parameter sets (N = 100), for fixed control parameters. 
+The control ON/OFF response of network B was more subtle. 
+In the OFF case, the behavior was qualitatively similar to network A. 
+However, for the ON case, flux was diverted away from P$_{2}$ formation by feedback inhibition of $E_{6}$ activity at the M$_{2}$ branch point by P$_{1}$ (Figure \ref{fig-onoff-simulations}B). 
+Lower $E_{6}$ activity at the M$_{2}$ branch point allowed more flux toward P$_{1}$ formation, hence the yield of P$_{1}$ also increased (Figure \ref{fig-onoff-simulations}C). 
+Again, the control ON/OFF behavior of network B was robust to changes in kinetic parameters, as the same qualitative trend was conserved across an ensemble of randomized parameters (N = 100), for fixed control parameters. 
+Taken together, these simulations suggested that the rule-based allosteric control concept could robustly capture expected feedback behavior for networks with uncertain kinetic parameters. 
+
+\subsection{Estimating Parameters and Effective Allosteric Regulatory Structures}
+
+A critical challenge for any dynamic model is the estimation of kinetic parameters. 
+For metabolic processes, there is also the added challenge of identifying the regulation and control structures that manage metabolism. 
+Of course, these issues are not independent; any description of enzyme activity regulation will be a function of system state, which in turn depends upon the kinetic parameters. 
+For cell-free systems, regulated gene expression has been removed, however, enzyme activity regulation is still operational. 
+We explored this linkage by estimating model parameters from synthetic data using both network structures. 
+We generated noise corrupted synthetic measurements of the substrate S, intermediate M$_{5}$ and end product P$_1$ approximately every 20 min using
+network A. We then generated an ensemble of model parameter estimates by minimizing the difference between model simulations and the synthetic data using particle swarm optimization (PSO), starting from random initial parameter guesses. The estimation of kinetic parameters was sensitive to the choice of regulatory structure (Figure~\ref{fig-parameter-fit}). 
+PSO identified an ensemble of parameters that bracketed the mean of the synthetic measurements in less than 1000 iterations when the control structure was correct (Figure \ref{fig-parameter-fit}A,B). 
+However, with control mismatch (network B simulated with network A parameters), model simulations were not consistent with the synthetic data  (Figure \ref{fig-parameter-fit}C,D). 
+Taken together, these results suggested that we could perhaps simultaneously estimate both parameters and network control architectures, as incorrect control structures would be manifest as poor model fits.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.450\textwidth]{./figs/Figure-4-OnOffSimulations.pdf}
+\caption{ON/OFF control simulations for network A and network B for an ensemble of kinetic parameter sets versus time (N = 100). 
+For each case, N = 100 simulations were conducted using kinetic and initial conditions generated randomly from a hypothetical true parameter set. 
+The gray area represents $\pm$ one standard deviation surrounding the mean. 
+Control parameters were fixed during the ensemble calculations.
+\textbf{A}: End product P$_{1}$ abundance versus time for Network A. 
+The abundance of P$_{1}$ decreased with end product inhibition of $E_{1}$ activity (Control-ON) versus the no inhibition case (Control-OFF). 
+\textbf{B}: End product P$_{2}$ abundance versus time for Network B. Inhibition of branch point $E_{6}$ by end product P$_{1}$ decreased P$_{2}$ abundance (Control-ON) versus the
+no inhibition case (Control-OFF).
+\textbf{C}: End product P$_{1}$ abundance versus time for Network A. 
+Inhibition of branch point $E_{6}$ by end product P$_{1}$ decreased P$_{1}$ abundance (Control-ON) versus the no inhibition case (Control-OFF).
+}\label{fig-onoff-simulations}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-5-ParameterFit.pdf}
+\caption{Parameter estimation from synthetic data for the same and mismatched allosteric control logic using particle swarm optimization (PSO). 
+Synthetic experimental data was generated from a hypothetical parameter set using Network A, 
+where substrate $S$, end product P$_{1}$ and intermediate M$_5$ were sampled approximately every 20 minutes. 
+For cases $\textbf{A,B}$ 20 particles were initialized with randomized parameters and allowed to search for 300 iterations. 
+\textbf{A,B}: PSO estimated an ensemble of parameters sets (N = 20) consistent with the synthetic experimental data assuming the correct
+enzymatic and control connectivity starting from randomized initial parameters.
+\textbf{C,D}: In the presence of control mismatch (Network B control policy simulated with Network A kinetic parameters) 
+the ensemble of models did not describe the synthetic data. 
+}\label{fig-parameter-fit}
+\end{figure}
+
+
+
+We modified our particle swarm identification strategy to simultaneously search over both kinetic parameters and putative control structures. 
+In addition to our initial networks, we constructed three additional presumptive network models, each with the same enzymatic connectivity but different allosteric regulation of the pathway enzymes (Figure \ref{fig-alternative-networks}). 
+We then initialized a population of particles, each with one of the five potential regulatory programs and randomized kinetic parameters. 
+Thus, we generated an initial population of particles that had \textit{both} different kinetic parameters as well as different control structures. 
+We biased the distribution of the particle population according to our \textit{a prior} belief of the correct regulatory program. 
+To this end, we considered three different priors, a uniform distribution where each putative regulatory structure represented 20\% of the population and two mixed distributions that were either positively or negatively biased towards the correct structure (network A). 
+In both the positively biased and uniform cases the PSO clearly differentiated between the true or closely related structures and those that were materially different (Figure \ref{fig-control-search}). 
+As expected, the positively biased population (40\% of the initial particle population seeded with network A) gave the best results, where the correct structure was preferentially identified (Figure \ref{fig-control-search}A). 
+On the other hand, when given a uniform distribution, the PSO approach identified a combination of network A and network C as the most likely control structures (Figure \ref{fig-control-search}B). 
+Network A and C differ by the regulatory connection between the end product P$_2$ and enzyme $E_{1}$; in network A, end product P$_{2}$ was assumed to inhibit $E_{1}$, while in network C, end product P$_{2}$ activated $E_{1}$.  
+Lastly, when the initial population was biased towards incorrect structures (initial population seeded with 90\% incorrect structures), the particle swarm \textit{misidentified} the correct allosteric structure (Figure \ref{fig-control-search}C). 
+Interestingly, while each particle swarm identified parameter sets that minimized the simulation error, the estimated parameter values were not necessarily similar to the true parameters. 
+The angle between the estimated and true parameters was not consistently small across the swarms (identical parameters would give an angle of zero). 
+This suggested that our particle swarm approach identified a \textit{sloppy} ensemble, i.e., parameter estimates that were individually incorrect but collectively exhibited the correct model behavior.  
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure-6-AlternativeNetworks.pdf}
+\caption{Schematic of the alternative allosteric control programs used in the structural particle swarm computation. 
+Each network had the same enzymatic connectivity, initial conditions and kinetic parameters, 
+but alternative feedback control structures for the first enzyme in the pathway.}\label{fig-alternative-networks}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.47\textwidth]{./figs/Figure-7-ControlSearch.pdf}
+\caption{Combined control and kinetic parameter search using modified particle swarm optimization (PSO). 
+A population of N = 100 particles was initialized with randomized kinetic parameters and one of five possible control configurations (Network A - E).
+Simulation error was minimized for a synthetic data set 
+($S$, end product P$_{1}$ and intermediate M$_5$ sampled approximately every 20 min) generated using Network A.
+\textbf{A}: Simulation error versus parameter set angle for N = 100 particles biased toward the correct regulatory program (A,B,C,D,E) = (40\%, 10\%, 20\%, 20\% and 10\%).
+\textbf{B}: Simulation error versus parameter set angle for N = 100 uniformly distributed particles (A,B,C,D,E) = (20\%, 20\%, 20\%, 20\% and 20\%).
+\textbf{C}: Simulation error versus parameter set angle for N = 100 negatively biased particles (A,B,C,D,E) = (10\%, 40\%, 10\%, 20\% and 20\%).
+Network A (the correct structure) was preferentially identified for positively and uniform biased particle distributions, but misidentified in the presence of
+a large incorrect bias. 
+}\label{fig-control-search}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,height=0.6\textheight]{./figs/Figure-8-Flux.pdf}
+\caption{Metabolic flux and control variables as a function of network type and particle index at t = 100 min.
+The control variables governing $E_{1},E_{3}$ and $E_{6}$ activity and the scaled metabolic flux and were calculated for the positively, 
+uniformly and negatively biased particle swarms (N = 100). The particles from each swarm were sorted based upon simulation error (low to high error). 
+\textbf{A}: Model performance for the positively biased particle swarm as a function of particle index.
+\textbf{B}: Model performance for the uniformly biased particle swarm as a function of particle index.
+\textbf{C}: Model performance for the negatively biased particle swarm as a function of particle index. 
+Models with significant control mismatch showed distinct control and flux patterns versus those models with the correct or closely related control policies.
+In particular, models with the correct control policy showed stronger inhibition of $E_{1}$ activity, leading to decreased flux from S$\rightarrow$P$_{1}$.
+Conversely, models with significant mismatch had increased $E_{1}$ activity, leading to an altered flux distribution. 
+This is especially apparent in the negatively biased particle swarm. 
+}\label{fig-flux-pattern}
+\end{figure}
+
+
+
+
+We calculated control program output and scaled metabolic flux for the positively, uniformly and negatively biased particle swarms (Figure \ref{fig-flux-pattern}). 
+Network A and network C models from the positively (Figure \ref{fig-flux-pattern}A) and uniformly (Figure \ref{fig-flux-pattern}B) biased particle swarms showed similar operational patterns, despite differences in kinetic parameters and control structures.
+While models from the negatively biased population had error values similar to the correct structures in the previous swarms, they have different flux and control profiles (Figure \ref{fig-flux-pattern}C). 
+In all cases, regardless of network configuration or parameter values, the rate of enzyme decay was small compared to the other fluxes, and all networks had qualitatively similar trends for $E_{3}$ and $E_{6}$ control. 
+Moreover, consistent with the correct model structure, production of end product P$_1$ was the preferred branch for all model configurations. 
+However, there was variability in P$_{2}$ production flux across the population of models, especially for the uniform swarm when compared with the other cases. 
+High P$_{1}$ branch flux resulted in end product inhibition of $E_{1}$ in both network A and network C, however in network D and E, high P$_1$ flux induced $E_1$ activation. 
+These trends were manifested in different flux profiles, where the negatively biased population appeared more uniform across the population compared with the other swarms, and had higher $E_{1}$ specific activity. 
+Interestingly, the behavior of network A and network C highlighted an artifact of our integration rule; both a positive or negative feedback connection from P$_2$ to $E_{1}$ were ignored because the P$_{1}$ inhibition of $E_{1}$ was dominate. Thus, while theoretically distinct, network A and network C appeared operationally to the PSO algorithm to be that same network. 
+On the other hand, networks B, D and E showed distinct behavior that was not consistent with the true network. 
+These architectures exhibited either limited inhibition (network B) or activation (network D and E) of $E_{1}$ activity, resulting in significantly different metabolic flux profiles. 
+However, the PSO was able to find low error parameter solutions, despite the mismatch in the control structures (error values similar, but not better than the best network A and network C estimates). 
+Taken together, these results suggested that a uniform sampling approach could potentially yield an unbiassed estimate of both kinetic parameters and control structures. 
+However, the negatively biased particle swarm results illustrated a potential shortcoming of the approach, namely convergence to a local error minimum despite a significantly incorrect control structure. 
+This suggested that estimated model structures will need to be further evaluated, for example by generating falsifiable experimental designs which could distinguish between low error solutions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Discussion}
+
+In this study, we presented an effective kinetic modeling strategy to dynamically simulate cell-free biochemical networks. 
+Our proposed strategy integrated traditional kinetic modeling with an effective rules based approach to dynamically describe metabolic regulation and control. 
+We tested this approach by developing kinetic models of hypothetical cell-free metabolic networks. 
+In particular, we tested whether our effective modeling approach could describe classically expected behavior, and second whether we could simultaneously estimate kinetic parameters and regulatory connectivity, in the absence of specific mechanistic knowledge, from synthetic experimental data. 
+Toward these questions, we explored five hypothetical cell-free networks. 
+In each network, a substrate S was converted to the end products P$_{1}$ and P$_{2}$ through a series of enzymatically catalyzed reactions, including a branch point at a hypothetical metabolite M$_{2}$. 
+Each network also included the same cofactors and cofactor recycle architecture. 
+However, while all five networks shared the same enzymatic connectivity, each had different allosteric regulatory connectivity. 
+We found that simple effective rules, when integrated with traditional enzyme kinetic expressions, could capture complex allosteric patterns such as ultrasensitivity, or non-competitive inhibition in the absence of specific mechanistic information. 
+Moreover, when integrated into network models, these rules captured classical regulatory patterns such as product-induced feedback inhibition. 
+Lastly, we simultaneously estimated kinetic parameters and discriminated between competing regulatory structures, using synthetic data in combination with a modified particle swarm approach.
+If we considered all putative regulatory architectures to be equally likely, we were able to estimate a \textit{sloppy} ensemble of models with the correct architecture and \mbox{kinetic parameters.}
+
+The proposed modeling strategy shares features with other popular techniques, but has also has several key differences. 
+At its core, our effective modeling approach is similar to regulatory constraints based methods, and to the cybernetic modeling paradigm developed by Ramkrishna and colleagues.
+Covert, Palsson and coworkers drastically improved the predictability of constraints based approaches by integrating boolean rules into the calculation of metabolic fluxes \citep{Covert:2001aa}.
+If the regulated intracellular flux problem is coupled with time-dependent extracellular balances, these models can predict complex behavior such as diauxie growth or the switch between 
+aerobic and anaerobic metabolism. Another important features of this approach is that it scales with biological complexity. 
+For example, Covert \emph{et al.,} showed that a genome scale model of \emph{E.~coli} augmented with a boolean rule layer, 
+correctly predicted approximately 80\% of the outcomes of a high-throughput growth phenotyping experiment in \emph{E. coli}.
+Further, they showed that they could learn new biology by iteratively refining the model and its associated rules \citep{Covert:2004aa}. 
+However, while regulated flux balance analysis is a powerful technique, it does not easily allow the calculation of time-resolved metabolite abundance. 
+Additionally, the boolean rules which populate the regulatory layer are limited to ON/OFF decisions; for qualitative predictions of gene expression this is a reasonable limitation. 
+However, boolean rules will likely be less effective at capturing dynamic allosteric regulation in a cell free metabolic system. 
+On the other hand, the strength of cybernetic models is the integration of optimal metabolic control heuristics with traditional kinetic pathway modeling. 
+Cybernetic models are highly predictive; they have successfully predicted mutant behavior from limited wild-type data \citep{1999_varner_ramkrishna_MetaEng,Varner:2000aa,Song:2012aa}, 
+steady-state multiplicity \citep{2012_kim_ramkrishna_BiotechProg}, strain specific metabolic function \citep{Song:2011aa} and have been used in bioprocess control applications \citep{Gadkar:2003aa}.
+However, cybernetic control heuristics are not mechanistic, instead they are the output of an optimal decision with respect to a set of hypothetical physiological objectives. 
+Thus, they are abstractions which are difficult to translate into a specific biological mechanism. 
+Our approach addresses the shortcomings of both regulatory constraints based models and cybernetic models. 
+First, similar to cybernetic models, the core of our approach is a kinetic model. Thus, we are able to directly calculate the time evolution of metabolism, for example the dynamic abundance of 
+network metabolites. Second, similar to regulatory flux balance analysis, our control laws describe specific mechanistic motifs such a activation or inhibition of enzyme activity. 
+However, our rules are continuous, thus they potentially allow a finer grained description metabolic regulation and control mechanisms.
+Lastly, we can naturally incorporate non modeled factors and categorical factors or factor combinations into our control law formulations.
+
+There are several critical questions that should be explored following this proof of concept study.
+It is unclear how parameter identification will scale to genome scale networks, and second it is unclear how we will identify allosteric connectivity at a genome scale. 
+The enzymatic connectivity for genome scale cell free networks can easily be established by stripping away the growth and cell wall machinery from whole cell genome reconstructions.
+Then metabolic fluxes can transformed into kinetic expressions using heuristics such multiple saturation kinetics, which are then modified by our rule based control variables.  
+This leaves a large number of unknown kinetic constants that must be estimated from time-resolved metabolite measurements.
+We showed that particle swarm optimization quickly identified an ensemble of model parameters, at least for proof of concept metabolic networks using synthetic data.
+This suggested that we can expect reasonable model predictions, despite only partial parameter knowledge, as network size grows if we have properly designed experiments. 
+Brown and Sethna showed in a model of signal transduction that good predictions were possible despite only order of magnitude estimates of parameter values \citep{Brown:2003aa}.
+Sethna and coworkers later showed that model performance is often controlled by only a few parameter combinations, 
+a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+We have also demonstrated \textit{sloppy} behavior in a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa,Lequieu:2011aa}.
+Thus, given our previous experience with models with hundreds of unknown parameters, we expect parameter estimation to be a manageable challenge. 
+On the other hand, a critical challenge will be the estimation of allosteric connectivity at a genome scale. 
+The regulation of glycolytic enzymes, such as phosphofructokinase I, has been studied for many years \citep{BERG_BIOCHEMISTRY,Peskov:2008aa}. 
+The allosteric regulation of metabolic enzymes can also be established from organism specific databases, such as EcoCyc \citep{Keseler:2013aa} 
+or more general allosteric databases such as the AlloSteric Database \citep{Huang:2014aa}. 
+However, for those enzymes that have not been well studied, we will need to infer allosteric interactions from experimental data.
+In general, the reverse engineering of regulatory network structure from data is a very difficult problem.
+There are many different approaches from the reverse engineering of gene regulatory networks that perhaps could be adopted to this problem, however this remains an open question.
+
+
+
+
+\section{Materials and Methods}\vspace{-12pt}
+
+
+
+\subsection{Formulation and Solution of the Model Equations}
+
+
+We used ordinary differential equations (ODEs) to model the time evolution of metabolite ($x_{i}$) and scaled enzyme abundance ($\epsilon_{i}$) in hypothetical cell-free metabolic networks:
+\begin{eqnarray}
+	\frac{dx_{i}}{dt} & = & \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)\qquad{i=1,2,\hdots,\mathcal{M}}\\
+	\frac{d\epsilon_{i}}{dt} & = & -\lambda_{i}\epsilon_{i}\qquad{i = 1,2,\hdots,\mathcal{E}}
+\end{eqnarray}where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of metabolites and $\mathcal{E}$ denotes the number of enzymes in the model. 
+The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$. 
+Typically, reaction $j$ is a non-linear function of metabolite and enzyme abundance, as well as unknown kinetic parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$). 
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. 
+If $\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. 
+Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates metabolite $i$ is not connected with reaction $j$. 
+Lastly, $\lambda_{i}$ denotes the scaled enzyme degradation constant. 
+The system material balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$ and $\mathbf{\epsilon}\left(t_{o}\right) = \mathbf{1}$ (initially we have 100\% cell-free enzyme abundance). 
+
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory \mbox{term ($v_{j}$):}
+\begin{equation}\label{eqn:rate-factor}
+	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
+\end{equation}
+We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:
+\begin{equation}\label{eqn:rate-bar}
+	\bar{r}_{j} = k_{j}^{max}\epsilon_{i}\left(\prod_{s\in{m_{j}^{-}}}\frac{x_{s}}{K_{js} + x_{s}}\right)
+\end{equation}where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\epsilon_{i}$ denotes the scaled enzyme activity which catalyzes reaction $j$, and
+$K_{js}$ denotes the saturation constant for species $s$ in reaction $j$. 
+The product in Equation~\eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$). 
+
+The allosteric regulation term $v_{j}$ depended upon the combination of factors which influenced the activity of enzyme $i$.
+For each enzyme, we used a rule-based approach to select from competing control factors (Figure \ref{fig-control-schematic}). 
+If an enzyme was activated by $m$ metabolites, we modeled this activation as:
+\begin{equation}
+	v_{j} = \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
+\end{equation}where $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$ was a regulatory transfer function that calculated the influence of metabolite $i$ on the activity of enzyme $j$. 
+Conversely, if enzyme activity was inhibited by a $m$ metabolites, we modeling this inhibition as:
+\begin{equation}
+	v_{j} = 1 - \max\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right)
+\end{equation}Lastly, if an enzyme had both $m$ activating and $n$ inhibitory factors, we modeled the regulatory term as:
+\begin{equation}
+	v_{j} = \min\left(u_{j},d_{j}\right)
+\end{equation}where:
+\begin{eqnarray}
+	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{mj}\left(\mathcal{Z}\right)\right) \\
+	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(\mathcal{Z}\right),\hdots,f_{nj}\left(\mathcal{Z}\right)\right)
+\end{eqnarray}
+The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating and inhibitory factors for enzyme $j$. 
+If an enzyme had no allosteric factors, we set $v_{j} = 1$.
+There are many possible functional forms for $0\leq f_{ij}\left(\mathcal{Z}\right)\leq 1$. 
+However, in this study, each individual transfer function took the form:
+\begin{equation}\label{eqn:control-factor}
+	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}\mathcal{Z}_{j}^{\eta}}
+\end{equation}where $\mathcal{Z}_{j}$ denotes the abundance of the $j$ factor (e.g., metabolite abundance), and $\kappa_{ij}$ and $\eta$ are control parameters. 
+The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
+The model equations were encoded using the Octave programming language and solved using the LSODE routine in {Octave} \citep{Octave:2014}.
+
+\subsection{Estimation of Model Parameters and Structures From Synthetic Experimental Data}
+
+Model parameters were estimated by minimizing the difference between simulations and synthetic experimental data (squared residual):
+\begin{equation}\label{eqn:objective-function}
+	\min_{\mathbf{k}} \sum_{\tau=1}^{\mathcal{T}}\sum_{j=1}^{\mathcal{S}}\left(\frac{\hat{x}_{j}\left(\tau\right) - x_{j}\left(\tau,\mathbf{k}\right)}{\omega_{j}\left(\tau\right)}\right)^{2}
+\end{equation}where $\hat{x}_{j}\left(\tau\right)$ denotes the measured value of species $j$ at time $\tau$, $x_{j}\left(\tau,\mathbf{k}\right)$ denotes the simulated 
+value for species $j$ at time $\tau$, and $\omega_{j}\left(\tau\right)$ denotes the experimental measurement variance for species $j$ at time $\tau$. The outer summation is respect to
+time, while the inner summation is with respect to state. We approximated a realistic model identification scenario, assuming noisy experimental data, 
+limited sampling resolution (approximately 20 minutes per sample) and a limited number of measurable metabolites. 
+
+We minimized the model residual using particle swarm optimization (PSO) \citep{PSO}.
+PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
+A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
+error landscape experienced by each particle collectively to the swarm. Thus, PSO acts both as a local and a global search algorithm. 
+For each iteration, particles in the swarm compute their local error by evaluating the model equations using their specific parameter vector realization.
+From each of these local points, a globally best error is identified. Both the local and global error 
+are then used to update the parameter estimates of each particle using the rules:
+\begin{eqnarray}
+	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
+	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
+\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
+$\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$. The quality of parameter
+estimates was measured using two criteria, goodness of fit (model residual) and angle between the estimated parameter vector $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$:
+\begin{equation}
+	\alpha_{j} = cos^{-1}\left(\frac{\mathbf{k}_{j}\cdot{\mathbf{k^{*}}}}{\norm{\mathbf{k}_{j}}\norm{\mathbf{k^{*}}}}\right)
+\end{equation}If the candidate parameter set $\mathbf{k}_{j}$ were perfect, the residual between the model and synthetic data 
+and the angle between $\mathbf{k}_{j}$ and the true parameter set $\mathbf{k}^{*}$ would be equal to zero.
+
+We modified our PSO implementation to simultaneously search over kinetic parameters and putative model control structures.
+In the combined case, each particle potentially carried a different model realization in addition to a different kinetic parameter vector. 
+We kept the update rules the same (along with the update parameters). 
+Thus, each particle competed on the basis of goodness of fit, which allowed different model structures to contribute to the overall behavior of the swarm. 
+We considered five possible model structures (A through E), where network A was the correct formulation (used to generate the synthetic data). 
+We considered a population N = 100 particles, where each particle in the swarm was assigned a model structure, and a random parameter vector.
+The PSO algorithm, model equations, and the objective function were encoded and solved in the Octave programming {language} \citep{Octave:2014}.
+
+%\section{Conclusions}
+%
+%\hl{Main text paragraph.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{\noindent Acknowledgments}\vspace{12pt}
+
+This study was supported by an award from the National Science Foundation (MCB \#1411715) 
+and the Army Research Office (ARO \#59155-LS).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section*{\noindent Author Contributions}\vspace{12pt}
+%
+%\hl{Main text.}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{\noindent Conflicts of Interest}\vspace{12pt}
+%
+%\hl{The authors declare no conflict of interest.}
+
+%=================================================================
+% References: Variant A
+%=================================================================
+% Back Matter (References and Notes)
+%----------------------------------------------------------
+% Style and layout of the references
+\bibliographystyle{mdpi}
+
+%\bibliography{References_v1}
+
+\begin{thebibliography}{----}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Fredrickson(1976)]{1976_fredrickson_BiotechBioeng}
+Fredrickson, A.G.
+\newblock Formulation of structured growth models.
+\newblock {\em Biotechnol Bioeng} {\bf 1976},
+\newblock {\em 18},~1481--6.
+
+\bibitem[Domach \em{et~al.}(1984)Domach, Leung, Cahn, Cocks, and
+  Shuler]{1984_domach_shuler_BiotechBioeng_01}
+Domach, M.M.; Leung, S.K.; Cahn, R.E.; Cocks, G.G.; Shuler, M.L.
+\newblock Computer model for glucose-limited growth of a single cell of
+  Escherichia coli B/r-A.
+\newblock {\em Biotechnol Bioeng} {\bf 1984},
+\newblock {\em 26},~203--16.
+
+\bibitem[Steinmeyer and Shuler(1989)]{1989_steinmeyer_shuler_ChemEngSci}
+Steinmeyer, D.; Shuler, M.
+\newblock {Structured model for Saccharomyces cerevisiae.}
+\newblock {\em Chem. Eng. Sci.} {\bf 1989},
+\newblock {\em 44},~2017--2030.
+
+\bibitem[Wu \em{et~al.}(1992)Wu, Ray, and Shuler]{1992_wu_shuler_AnnNYAcadSci}
+Wu, P.; Ray, N.G.; Shuler, M.L.
+\newblock A single-cell model for CHO cells.
+\newblock {\em Ann N Y Acad Sci} {\bf 1992},
+\newblock {\em 665},~152--87.
+
+\bibitem[Castellanos \em{et~al.}(2004)Castellanos, Wilson, and
+  Shuler]{2004_castellanos_shuler_PNAS}
+Castellanos, M.; Wilson, D.B.; Shuler, M.L.
+\newblock A modular minimal cell model: purine and pyrimidine transport and
+  metabolism.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2004},
+\newblock {\em 101},~6681--6.
+
+\bibitem[Atlas \em{et~al.}(2008)Atlas, Nikolaev, Browning, and
+  Shuler]{2008_atlas_shuler_IETSysBio}
+Atlas, J.C.; Nikolaev, E.V.; Browning, S.T.; Shuler, M.L.
+\newblock Incorporating genome-wide DNA sequence information into a dynamic
+  whole-cell model of Escherichia coli: application to DNA replication.
+\newblock {\em IET Syst Biol} {\bf 2008},
+\newblock {\em 2},~369--82.
+
+\bibitem[Dhurjati \em{et~al.}(1985)Dhurjati, Ramkrishna, Flickinger, and
+  Tsao]{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}
+Dhurjati, P.; Ramkrishna, D.; Flickinger, M.C.; Tsao, G.T.
+\newblock A cybernetic view of microbial growth: modeling of cells as optimal
+  strategists.
+\newblock {\em Biotechnol Bioeng} {\bf 1985},
+\newblock {\em 27},~1--9.
+
+\bibitem[Kompala \em{et~al.}(1986)Kompala, Ramkrishna, Jansen, and
+  Tsao]{1986_kompala_ramkrishna_tsao_BiotechBioeng}
+Kompala, D.S.; Ramkrishna, D.; Jansen, N.B.; Tsao, G.T.
+\newblock Investigation of bacterial growth on mixed substrates: experimental
+  evaluation of cybernetic models.
+\newblock {\em Biotechnol Bioeng} {\bf 1986},
+\newblock {\em 28},~1044--55.
+
+\bibitem[Kim \em{et~al.}(2012)Kim, Song, Sunkara, Lali, and
+  Ramkrishna]{2012_kim_ramkrishna_BiotechProg}
+Kim, J.I.; Song, H.S.; Sunkara, S.R.; Lali, A.; Ramkrishna, D.
+\newblock Exacting predictions by cybernetic model confirmed experimentally:
+  steady state multiplicity in the chemostat.
+\newblock {\em Biotechnol Prog} {\bf 2012},
+\newblock {\em 28},~1160--6.
+
+\bibitem[Varner and Ramkrishna(1999)]{1999_varner_ramkrishna_MetaEng}
+Varner, J.; Ramkrishna, D.
+\newblock Metabolic engineering from a cybernetic perspective: aspartate family
+  of amino acids.
+\newblock {\em Metab Eng} {\bf 1999},
+\newblock {\em 1},~88--116.
+
+\bibitem[Lewis \em{et~al.}(2012)Lewis, Nagarajan, and
+  Palsson]{2012_lewis_palsson_NatRevMicrobio}
+Lewis, N.E.; Nagarajan, H.; Palsson, B.O.
+\newblock Constraining the metabolic genotype-phenotype relationship using a
+  phylogeny of in silico methods.
+\newblock {\em Nat Rev Microbiol} {\bf 2012},
+\newblock {\em 10},~291--305.
+
+\bibitem[Edwards and Palsson(2000)]{2000_edwards_palsson_PNAS}
+Edwards, J.S.; Palsson, B.O.
+\newblock The Escherichia coli MG1655 in silico metabolic genotype: its
+  definition, characteristics, and capabilities.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2000},
+\newblock {\em 97},~5528--33.
+
+\bibitem[Feist \em{et~al.}(2007)Feist, Henry, Reed, Krummenacker, Joyce, Karp,
+  Broadbelt, Hatzimanikatis, and Palsson]{Feist:2007aa}
+Feist, A.M.; Henry, C.S.; Reed, J.L.; Krummenacker, M.; Joyce, A.R.; Karp,
+  P.D.; Broadbelt, L.J.; Hatzimanikatis, V.; Palsson, B.{\O}.
+\newblock A genome-scale metabolic reconstruction for Escherichia coli K-12
+  MG1655 that accounts for 1260 ORFs and thermodynamic information.
+\newblock {\em Mol Syst Biol} {\bf 2007},
+\newblock {\em 3},~121.
+
+\bibitem[Oh \em{et~al.}(2007)Oh, Palsson, Park, Schilling, and
+  Mahadevan]{Oh:2007aa}
+Oh, Y.K.; Palsson, B.O.; Park, S.M.; Schilling, C.H.; Mahadevan, R.
+\newblock Genome-scale reconstruction of metabolic network in Bacillus subtilis
+  based on high-throughput phenotyping and gene essentiality data.
+\newblock {\em J Biol Chem} {\bf 2007},
+\newblock {\em 282},~28791--9.
+
+\bibitem[Feist \em{et~al.}(2009)Feist, Herrg{\aa}rd, Thiele, Reed, and
+  Palsson]{2009_feist_palsson_NatRevMicrobio}
+Feist, A.M.; Herrg{\aa}rd, M.J.; Thiele, I.; Reed, J.L.; Palsson, B.{\O}.
+\newblock Reconstruction of biochemical networks in microorganisms.
+\newblock {\em Nat Rev Microbiol} {\bf 2009},
+\newblock {\em 7},~129--43.
+
+\bibitem[Ibarra \em{et~al.}(2002)Ibarra, Edwards, and
+  Palsson]{2002_ibarra_edwards_palsson_Nat}
+Ibarra, R.U.; Edwards, J.S.; Palsson, B.O.
+\newblock Escherichia coli K-12 undergoes adaptive evolution to achieve in
+  silico predicted optimal growth.
+\newblock {\em Nature} {\bf 2002},
+\newblock {\em 420},~186--9.
+
+\bibitem[Schuetz \em{et~al.}(2007)Schuetz, Kuepfer, and
+  Sauer]{2007_schuetz_sauer_MolSysBio}
+Schuetz, R.; Kuepfer, L.; Sauer, U.
+\newblock Systematic evaluation of objective functions for predicting
+  intracellular fluxes in Escherichia coli.
+\newblock {\em Mol Syst Biol} {\bf 2007},
+\newblock {\em 3},~119.
+
+\bibitem[Hyduke \em{et~al.}(2013)Hyduke, Lewis, and
+  Palsson]{2013_hyduke_lewis_palsson_MolBioSys}
+Hyduke, D.R.; Lewis, N.E.; Palsson, B.{\O}.
+\newblock Analysis of omics data with genome-scale models of metabolism.
+\newblock {\em Mol Biosyst} {\bf 2013},
+\newblock {\em 9},~167--74.
+
+\bibitem[McCloskey \em{et~al.}(2013)McCloskey, Palsson, and
+  Feist]{2013_mccloskey_palsson_feist_MolSysBio}
+McCloskey, D.; Palsson, B.{\O}.; Feist, A.M.
+\newblock Basic and applied uses of genome-scale metabolic network
+  reconstructions of Escherichia coli.
+\newblock {\em Mol Syst Biol} {\bf 2013},
+\newblock {\em 9},~661.
+
+\bibitem[Zomorrodi \em{et~al.}(2012)Zomorrodi, Suthers, Ranganathan, and
+  Maranas]{2012_zomorrodi_maranas_MetaEng}
+Zomorrodi, A.R.; Suthers, P.F.; Ranganathan, S.; Maranas, C.D.
+\newblock Mathematical optimization applications in metabolic networks.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~672--86.
+
+\bibitem[Jewett \em{et~al.}(2008)Jewett, Calhoun, Voloshin, Wuu, and
+  Swartz]{Jewett:2008aa}
+Jewett, M.C.; Calhoun, K.A.; Voloshin, A.; Wuu, J.J.; Swartz, J.R.
+\newblock An integrated cell-free metabolic platform for protein production and
+  synthetic biology.
+\newblock {\em Mol Syst Biol} {\bf 2008},
+\newblock {\em 4},~220.
+
+\bibitem[MATTHAEI and NIRENBERG(1961)]{MATTHAEI:1961aa}
+MATTHAEI, J.H.; NIRENBERG, M.W.
+\newblock Characteristics and stabilization of DNAase-sensitive protein
+  synthesis in E. coli extracts.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 1961},
+\newblock {\em 47},~1580--8.
+
+\bibitem[NIRENBERG and MATTHAEI(1961)]{NIRENBERG:1961aa}
+NIRENBERG, M.W.; MATTHAEI, J.H.
+\newblock The dependence of cell-free protein synthesis in E. coli upon
+  naturally occurring or synthetic polyribonucleotides.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 1961},
+\newblock {\em 47},~1588--602.
+
+\bibitem[Lu \em{et~al.}(2014)Lu, Welsh, and Swartz]{Lu:2014aa}
+Lu, Y.; Welsh, J.P.; Swartz, J.R.
+\newblock Production and stabilization of the trimeric influenza hemagglutinin
+  stem domain for potentially broadly protective influenza vaccines.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2014},
+\newblock {\em 111},~125--30.
+
+\bibitem[Hodgman and Jewett(2012)]{Hodgman:2012aa}
+Hodgman, C.E.; Jewett, M.C.
+\newblock Cell-free synthetic biology: thinking outside the cell.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~261--9.
+
+\bibitem[Morris \em{et~al.}(2011)Morris, Saez-Rodriguez, Clarke, Sorger, and
+  Lauffenburger]{Morris:2011aa}
+Morris, M.K.; Saez-Rodriguez, J.; Clarke, D.C.; Sorger, P.K.; Lauffenburger,
+  D.A.
+\newblock Training signaling pathway maps to biochemical data with constrained
+  fuzzy logic: quantitative analysis of liver cell responses to inflammatory
+  stimuli.
+\newblock {\em PLoS Comput Biol} {\bf 2011},
+\newblock {\em 7},~e1001099.
+
+\bibitem[Covert \em{et~al.}(2001)Covert, Schilling, and Palsson]{Covert:2001aa}
+Covert, M.W.; Schilling, C.H.; Palsson, B.
+\newblock Regulation of gene expression in flux balance models of metabolism.
+\newblock {\em J Theor Biol} {\bf 2001},
+\newblock {\em 213},~73--88.
+
+\bibitem[Covert \em{et~al.}(2004)Covert, Knight, Reed, Herrgard, and
+  Palsson]{Covert:2004aa}
+Covert, M.W.; Knight, E.M.; Reed, J.L.; Herrgard, M.J.; Palsson, B.O.
+\newblock Integrating high-throughput and computational data elucidates
+  bacterial networks.
+\newblock {\em Nature} {\bf 2004},
+\newblock {\em 429},~92--6.
+
+\bibitem[Varner(2000)]{Varner:2000aa}
+Varner, J.D.
+\newblock Large-scale prediction of phenotype: concept.
+\newblock {\em Biotechnol Bioeng} {\bf 2000},
+\newblock {\em 69},~664--78.
+
+\bibitem[Song and Ramkrishna(2012)]{Song:2012aa}
+Song, H.S.; Ramkrishna, D.
+\newblock Prediction of dynamic behavior of mutant strains from limited
+  wild-type data.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~69--80.
+
+\bibitem[Song and Ramkrishna(2011)]{Song:2011aa}
+Song, H.S.; Ramkrishna, D.
+\newblock Cybernetic models based on lumped elementary modes accurately predict
+  strain-specific metabolic function.
+\newblock {\em Biotechnol Bioeng} {\bf 2011},
+\newblock {\em 108},~127--40.
+
+\bibitem[Gadkar \em{et~al.}(2003)Gadkar, Doyle, Crowley, and
+  Varner]{Gadkar:2003aa}
+Gadkar, K.G.; Doyle, 3rd, F.J.; Crowley, T.J.; Varner, J.D.
+\newblock Cybernetic model predictive control of a continuous bioreactor with
+  cell recycle.
+\newblock {\em Biotechnol Prog} {\bf 2003},
+\newblock {\em 19},~1487--97.
+
+\bibitem[Brown and Sethna(2003)]{Brown:2003aa}
+Brown, K.S.; Sethna, J.P.
+\newblock Statistical mechanical approaches to models with many poorly known
+  parameters.
+\newblock {\em Phys Rev E Stat Nonlin Soft Matter Phys} {\bf 2003},
+\newblock {\em 68},~021904.
+
+\bibitem[Machta \em{et~al.}(2013)Machta, Chachra, Transtrum, and
+  Sethna]{Machta:2013aa}
+Machta, B.B.; Chachra, R.; Transtrum, M.K.; Sethna, J.P.
+\newblock Parameter space compression underlies emergent theories and
+  predictive models.
+\newblock {\em Science} {\bf 2013},
+\newblock {\em 342},~604--7.
+
+\bibitem[Luan \em{et~al.}(2007)Luan, Zai, and Varner]{Luan:2007aa}
+Luan, D.; Zai, M.; Varner, J.D.
+\newblock Computationally derived points of fragility of a human cascade are
+  consistent with current therapeutic strategies.
+\newblock {\em PLoS Comput Biol} {\bf 2007},
+\newblock {\em 3},~e142.
+
+\bibitem[Song and Varner(2009)]{Song:2009aa}
+Song, S.O.; Varner, J.
+\newblock Modeling and analysis of the molecular basis of pain in sensory
+  neurons.
+\newblock {\em PLoS One} {\bf 2009},
+\newblock {\em 4},~e6758.
+
+\bibitem[Tasseff \em{et~al.}(2010)Tasseff, Nayak, Salim, Kaushik, Rizvi, and
+  Varner]{Tasseff:2010aa}
+Tasseff, R.; Nayak, S.; Salim, S.; Kaushik, P.; Rizvi, N.; Varner, J.D.
+\newblock Analysis of the molecular networks in androgen dependent and
+  independent prostate cancer revealed fragile and robust subsystems.
+\newblock {\em PLoS One} {\bf 2010},
+\newblock {\em 5},~e8864.
+
+\bibitem[Tasseff \em{et~al.}(2011)Tasseff, Nayak, Song, Yen, and
+  Varner]{Tasseff:2011aa}
+Tasseff, R.; Nayak, S.; Song, S.O.; Yen, A.; Varner, J.D.
+\newblock Modeling and analysis of retinoic acid induced differentiation of
+  uncommitted precursor cells.
+\newblock {\em Integr Biol (Camb)} {\bf 2011},
+\newblock {\em 3},~578--91.
+
+\bibitem[Nayak \em{et~al.}(2011)Nayak, Siddiqui, and Varner]{Nayak:2011aa}
+Nayak, S.; Siddiqui, J.K.; Varner, J.D.
+\newblock Modelling and analysis of an ensemble of eukaryotic translation
+  initiation models.
+\newblock {\em IET Syst Biol} {\bf 2011},
+\newblock {\em 5},~2.
+
+\bibitem[Lequieu \em{et~al.}(2011)Lequieu, Chakrabarti, Nayak, and
+  Varner]{Lequieu:2011aa}
+Lequieu, J.; Chakrabarti, A.; Nayak, S.; Varner, J.D.
+\newblock Computational modeling and analysis of insulin induced eukaryotic
+  translation initiation.
+\newblock {\em PLoS Comput Biol} {\bf 2011},
+\newblock {\em 7},~e1002263.
+
+\bibitem[Berg \em{et~al.}(2002)Berg, Tymoczko, and Stryer]{BERG_BIOCHEMISTRY}
+Berg, J.M.; Tymoczko, J.L.; Stryer, L.
+\newblock {\em Biochemistry}; W.H. Freeman,
+\newblock  2002.
+
+\bibitem[Peskov \em{et~al.}(2008)Peskov, Goryanin, and Demin]{Peskov:2008aa}
+Peskov, K.; Goryanin, I.; Demin, O.
+\newblock Kinetic model of phosphofructokinase-1 from Escherichia coli.
+\newblock {\em J Bioinform Comput Biol} {\bf 2008},
+\newblock {\em 6},~843--67.
+
+\bibitem[Keseler \em{et~al.}(2013)Keseler, Mackie, Peralta-Gil,
+  Santos-Zavaleta, Gama-Castro, Bonavides-Mart{\'\i}nez, Fulcher, Huerta,
+  Kothari, Krummenacker, Latendresse, Mu{\~n}iz-Rascado, Ong, Paley,
+  Schr{\"o}der, Shearer, Subhraveti, Travers, Weerasinghe, Weiss,
+  Collado-Vides, Gunsalus, Paulsen, and Karp]{Keseler:2013aa}
+Keseler, I.M.; Mackie, A.; Peralta-Gil, M.; Santos-Zavaleta, A.; Gama-Castro,
+  S.; Bonavides-Mart{\'\i}nez, C.; Fulcher, C.; Huerta, A.M.; Kothari, A.;
+  Krummenacker, M.; Latendresse, M.; Mu{\~n}iz-Rascado, L.; Ong, Q.; Paley, S.;
+  Schr{\"o}der, I.; Shearer, A.G.; Subhraveti, P.; Travers, M.; Weerasinghe,
+  D.; Weiss, V.; Collado-Vides, J.; Gunsalus, R.P.; Paulsen, I.; Karp, P.D.
+\newblock EcoCyc: fusing model organism databases with systems biology.
+\newblock {\em Nucleic Acids Res} {\bf 2013},
+\newblock {\em 41},~D605--12.
+
+\bibitem[Huang \em{et~al.}(2014)Huang, Mou, Shen, Lu, Li, Liu, Wang, Li, Geng,
+  Liu, Wu, Chen, and Zhang]{Huang:2014aa}
+Huang, Z.; Mou, L.; Shen, Q.; Lu, S.; Li, C.; Liu, X.; Wang, G.; Li, S.; Geng,
+  L.; Liu, Y.; Wu, J.; Chen, G.; Zhang, J.
+\newblock ASD v2.0: updated content and novel features focusing on allosteric
+  regulation.
+\newblock {\em Nucleic Acids Res} {\bf 2014},
+\newblock {\em 42},~D510--6.
+
+\bibitem[Kennedy and Eberhart(1995)]{PSO}
+Kennedy, J.; Eberhart, R.
+\newblock Particle swarm optimization.
+\newblock  Proceedings of the International Conference on Neural Networks,
+  1995,
+\newblock pp. 1942--1948.
+
+\end{thebibliography}
+
+
+\end{document}
+

@@ -1,0 +1,385 @@
+\begin{thebibliography}{-------}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Fredrickson(1976)]{1976_fredrickson_BiotechBioeng}
+Fredrickson, A.G.
+\newblock Formulation of structured growth models.
+\newblock {\em Biotechnol Bioeng} {\bf 1976},
+\newblock {\em 18},~1481--6.
+
+\bibitem[Domach \em{et~al.}(1984)Domach, Leung, Cahn, Cocks, and
+  Shuler]{1984_domach_shuler_BiotechBioeng_01}
+Domach, M.M.; Leung, S.K.; Cahn, R.E.; Cocks, G.G.; Shuler, M.L.
+\newblock Computer model for glucose-limited growth of a single cell of
+  Escherichia coli B/r-A.
+\newblock {\em Biotechnol Bioeng} {\bf 1984},
+\newblock {\em 26},~203--16.
+
+\bibitem[Steinmeyer and Shuler(1989)]{1989_steinmeyer_shuler_ChemEngSci}
+Steinmeyer, D.; Shuler, M.
+\newblock {Structured model for Saccharomyces cerevisiae.}
+\newblock {\em Chem. Eng. Sci.} {\bf 1989},
+\newblock {\em 44},~2017 -- 2030.
+
+\bibitem[Wu \em{et~al.}(1992)Wu, Ray, and Shuler]{1992_wu_shuler_AnnNYAcadSci}
+Wu, P.; Ray, N.G.; Shuler, M.L.
+\newblock A single-cell model for CHO cells.
+\newblock {\em Ann N Y Acad Sci} {\bf 1992},
+\newblock {\em 665},~152--87.
+
+\bibitem[Castellanos \em{et~al.}(2004)Castellanos, Wilson, and
+  Shuler]{2004_castellanos_shuler_PNAS}
+Castellanos, M.; Wilson, D.B.; Shuler, M.L.
+\newblock A modular minimal cell model: purine and pyrimidine transport and
+  metabolism.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2004},
+\newblock {\em 101},~6681--6.
+
+\bibitem[Atlas \em{et~al.}(2008)Atlas, Nikolaev, Browning, and
+  Shuler]{2008_atlas_shuler_IETSysBio}
+Atlas, J.C.; Nikolaev, E.V.; Browning, S.T.; Shuler, M.L.
+\newblock Incorporating genome-wide DNA sequence information into a dynamic
+  whole-cell model of Escherichia coli: application to DNA replication.
+\newblock {\em IET Syst Biol} {\bf 2008},
+\newblock {\em 2},~369--82.
+
+\bibitem[Dhurjati \em{et~al.}(1985)Dhurjati, Ramkrishna, Flickinger, and
+  Tsao]{1985_dhurjati_ramkrishna_tsao_BiotechBioeng}
+Dhurjati, P.; Ramkrishna, D.; Flickinger, M.C.; Tsao, G.T.
+\newblock A cybernetic view of microbial growth: modeling of cells as optimal
+  strategists.
+\newblock {\em Biotechnol Bioeng} {\bf 1985},
+\newblock {\em 27},~1--9.
+
+\bibitem[Kompala \em{et~al.}(1986)Kompala, Ramkrishna, Jansen, and
+  Tsao]{1986_kompala_ramkrishna_tsao_BiotechBioeng}
+Kompala, D.S.; Ramkrishna, D.; Jansen, N.B.; Tsao, G.T.
+\newblock Investigation of bacterial growth on mixed substrates: experimental
+  evaluation of cybernetic models.
+\newblock {\em Biotechnol Bioeng} {\bf 1986},
+\newblock {\em 28},~1044--55.
+
+\bibitem[Kim \em{et~al.}(2012)Kim, Song, Sunkara, Lali, and
+  Ramkrishna]{2012_kim_ramkrishna_BiotechProg}
+Kim, J.I.; Song, H.S.; Sunkara, S.R.; Lali, A.; Ramkrishna, D.
+\newblock Exacting predictions by cybernetic model confirmed experimentally:
+  steady state multiplicity in the chemostat.
+\newblock {\em Biotechnol Prog} {\bf 2012},
+\newblock {\em 28},~1160--6.
+
+\bibitem[Varner and Ramkrishna(1999)]{1999_varner_ramkrishna_MetaEng}
+Varner, J.; Ramkrishna, D.
+\newblock Metabolic engineering from a cybernetic perspective: aspartate family
+  of amino acids.
+\newblock {\em Metab Eng} {\bf 1999},
+\newblock {\em 1},~88--116.
+
+\bibitem[Song \em{et~al.}(2009)Song, Morgan, and
+  Ramkrishna]{2009_song_ramkrishna_BiotechBioeng}
+Song, H.S.; Morgan, J.A.; Ramkrishna, D.
+\newblock Systematic development of hybrid cybernetic models: application to
+  recombinant yeast co-consuming glucose and xylose.
+\newblock {\em Biotechnol Bioeng} {\bf 2009},
+\newblock {\em 103},~984--1002.
+
+\bibitem[Song and Ramkrishna(2011)]{Song:2011aa}
+Song, H.S.; Ramkrishna, D.
+\newblock Cybernetic models based on lumped elementary modes accurately predict
+  strain-specific metabolic function.
+\newblock {\em Biotechnol Bioeng} {\bf 2011},
+\newblock {\em 108},~127--40.
+
+\bibitem[Lewis \em{et~al.}(2012)Lewis, Nagarajan, and
+  Palsson]{2012_lewis_palsson_NatRevMicrobio}
+Lewis, N.E.; Nagarajan, H.; Palsson, B.O.
+\newblock Constraining the metabolic genotype-phenotype relationship using a
+  phylogeny of in silico methods.
+\newblock {\em Nat Rev Microbiol} {\bf 2012},
+\newblock {\em 10},~291--305.
+
+\bibitem[Edwards and Palsson(2000)]{2000_edwards_palsson_PNAS}
+Edwards, J.S.; Palsson, B.O.
+\newblock The Escherichia coli MG1655 in silico metabolic genotype: its
+  definition, characteristics, and capabilities.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2000},
+\newblock {\em 97},~5528--33.
+
+\bibitem[Feist \em{et~al.}(2007)Feist, Henry, Reed, Krummenacker, Joyce, Karp,
+  Broadbelt, Hatzimanikatis, and Palsson]{Feist:2007aa}
+Feist, A.M.; Henry, C.S.; Reed, J.L.; Krummenacker, M.; Joyce, A.R.; Karp,
+  P.D.; Broadbelt, L.J.; Hatzimanikatis, V.; Palsson, B.{\O}.
+\newblock A genome-scale metabolic reconstruction for Escherichia coli K-12
+  MG1655 that accounts for 1260 ORFs and thermodynamic information.
+\newblock {\em Mol Syst Biol} {\bf 2007},
+\newblock {\em 3},~121.
+
+\bibitem[Oh \em{et~al.}(2007)Oh, Palsson, Park, Schilling, and
+  Mahadevan]{Oh:2007aa}
+Oh, Y.K.; Palsson, B.O.; Park, S.M.; Schilling, C.H.; Mahadevan, R.
+\newblock Genome-scale reconstruction of metabolic network in Bacillus subtilis
+  based on high-throughput phenotyping and gene essentiality data.
+\newblock {\em J Biol Chem} {\bf 2007},
+\newblock {\em 282},~28791--9.
+
+\bibitem[Feist \em{et~al.}(2009)Feist, Herrg{\aa}rd, Thiele, Reed, and
+  Palsson]{2009_feist_palsson_NatRevMicrobio}
+Feist, A.M.; Herrg{\aa}rd, M.J.; Thiele, I.; Reed, J.L.; Palsson, B.{\O}.
+\newblock Reconstruction of biochemical networks in microorganisms.
+\newblock {\em Nat Rev Microbiol} {\bf 2009},
+\newblock {\em 7},~129--43.
+
+\bibitem[Ibarra \em{et~al.}(2002)Ibarra, Edwards, and
+  Palsson]{2002_ibarra_edwards_palsson_Nat}
+Ibarra, R.U.; Edwards, J.S.; Palsson, B.O.
+\newblock Escherichia coli K-12 undergoes adaptive evolution to achieve in
+  silico predicted optimal growth.
+\newblock {\em Nature} {\bf 2002},
+\newblock {\em 420},~186--9.
+
+\bibitem[Schuetz \em{et~al.}(2007)Schuetz, Kuepfer, and
+  Sauer]{2007_schuetz_sauer_MolSysBio}
+Schuetz, R.; Kuepfer, L.; Sauer, U.
+\newblock Systematic evaluation of objective functions for predicting
+  intracellular fluxes in Escherichia coli.
+\newblock {\em Mol Syst Biol} {\bf 2007},
+\newblock {\em 3},~119.
+
+\bibitem[Hyduke \em{et~al.}(2013)Hyduke, Lewis, and
+  Palsson]{2013_hyduke_lewis_palsson_MolBioSys}
+Hyduke, D.R.; Lewis, N.E.; Palsson, B.{\O}.
+\newblock Analysis of omics data with genome-scale models of metabolism.
+\newblock {\em Mol Biosyst} {\bf 2013},
+\newblock {\em 9},~167--74.
+
+\bibitem[McCloskey \em{et~al.}(2013)McCloskey, Palsson, and
+  Feist]{2013_mccloskey_palsson_feist_MolSysBio}
+McCloskey, D.; Palsson, B.{\O}.; Feist, A.M.
+\newblock Basic and applied uses of genome-scale metabolic network
+  reconstructions of Escherichia coli.
+\newblock {\em Mol Syst Biol} {\bf 2013},
+\newblock {\em 9},~661.
+
+\bibitem[Zomorrodi \em{et~al.}(2012)Zomorrodi, Suthers, Ranganathan, and
+  Maranas]{2012_zomorrodi_maranas_MetaEng}
+Zomorrodi, A.R.; Suthers, P.F.; Ranganathan, S.; Maranas, C.D.
+\newblock Mathematical optimization applications in metabolic networks.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~672--86.
+
+\bibitem[Jewett \em{et~al.}(2008)Jewett, Calhoun, Voloshin, Wuu, and
+  Swartz]{Jewett:2008aa}
+Jewett, M.C.; Calhoun, K.A.; Voloshin, A.; Wuu, J.J.; Swartz, J.R.
+\newblock An integrated cell-free metabolic platform for protein production and
+  synthetic biology.
+\newblock {\em Mol Syst Biol} {\bf 2008},
+\newblock {\em 4},~220.
+
+\bibitem[MATTHAEI and NIRENBERG(1961)]{MATTHAEI:1961aa}
+MATTHAEI, J.H.; NIRENBERG, M.W.
+\newblock Characteristics and stabilization of DNAase-sensitive protein
+  synthesis in E. coli extracts.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 1961},
+\newblock {\em 47},~1580--8.
+
+\bibitem[NIRENBERG and MATTHAEI(1961)]{NIRENBERG:1961aa}
+NIRENBERG, M.W.; MATTHAEI, J.H.
+\newblock The dependence of cell-free protein synthesis in E. coli upon
+  naturally occurring or synthetic polyribonucleotides.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 1961},
+\newblock {\em 47},~1588--602.
+
+\bibitem[Lu \em{et~al.}(2014)Lu, Welsh, and Swartz]{Lu:2014aa}
+Lu, Y.; Welsh, J.P.; Swartz, J.R.
+\newblock Production and stabilization of the trimeric influenza hemagglutinin
+  stem domain for potentially broadly protective influenza vaccines.
+\newblock {\em Proc Natl Acad Sci U S A} {\bf 2014},
+\newblock {\em 111},~125--30.
+
+\bibitem[Hodgman and Jewett(2012)]{Hodgman:2012aa}
+Hodgman, C.E.; Jewett, M.C.
+\newblock Cell-free synthetic biology: thinking outside the cell.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~261--9.
+
+\bibitem[Morris \em{et~al.}(2011)Morris, Saez-Rodriguez, Clarke, Sorger, and
+  Lauffenburger]{Morris:2011aa}
+Morris, M.K.; Saez-Rodriguez, J.; Clarke, D.C.; Sorger, P.K.; Lauffenburger,
+  D.A.
+\newblock Training signaling pathway maps to biochemical data with constrained
+  fuzzy logic: quantitative analysis of liver cell responses to inflammatory
+  stimuli.
+\newblock {\em PLoS Comput Biol} {\bf 2011},
+\newblock {\em 7},~e1001099.
+
+\bibitem[Brown and Sethna(2003)]{Brown:2003aa}
+Brown, K.S.; Sethna, J.P.
+\newblock Statistical mechanical approaches to models with many poorly known
+  parameters.
+\newblock {\em Phys Rev E Stat Nonlin Soft Matter Phys} {\bf 2003},
+\newblock {\em 68},~021904.
+
+\bibitem[Covert \em{et~al.}(2001)Covert, Schilling, and Palsson]{Covert:2001aa}
+Covert, M.W.; Schilling, C.H.; Palsson, B.
+\newblock Regulation of gene expression in flux balance models of metabolism.
+\newblock {\em J Theor Biol} {\bf 2001},
+\newblock {\em 213},~73--88.
+
+\bibitem[Covert \em{et~al.}(2004)Covert, Knight, Reed, Herrgard, and
+  Palsson]{Covert:2004aa}
+Covert, M.W.; Knight, E.M.; Reed, J.L.; Herrgard, M.J.; Palsson, B.O.
+\newblock Integrating high-throughput and computational data elucidates
+  bacterial networks.
+\newblock {\em Nature} {\bf 2004},
+\newblock {\em 429},~92--6.
+
+\bibitem[Varner(2000)]{Varner:2000aa}
+Varner, J.D.
+\newblock Large-scale prediction of phenotype: concept.
+\newblock {\em Biotechnol Bioeng} {\bf 2000},
+\newblock {\em 69},~664--78.
+
+\bibitem[Song and Ramkrishna(2012)]{Song:2012aa}
+Song, H.S.; Ramkrishna, D.
+\newblock Prediction of dynamic behavior of mutant strains from limited
+  wild-type data.
+\newblock {\em Metab Eng} {\bf 2012},
+\newblock {\em 14},~69--80.
+
+\bibitem[Gadkar \em{et~al.}(2003)Gadkar, Doyle, Crowley, and
+  Varner]{Gadkar:2003aa}
+Gadkar, K.G.; Doyle, 3rd, F.J.; Crowley, T.J.; Varner, J.D.
+\newblock Cybernetic model predictive control of a continuous bioreactor with
+  cell recycle.
+\newblock {\em Biotechnol Prog} {\bf 2003},
+\newblock {\em 19},~1487--97.
+
+\bibitem[Tran \em{et~al.}(2008)Tran, Rizk, and Liao]{Tran:2008aa}
+Tran, L.M.; Rizk, M.L.; Liao, J.C.
+\newblock Ensemble modeling of metabolic networks.
+\newblock {\em Biophys J} {\bf 2008},
+\newblock {\em 95},~5606--17.
+
+\bibitem[Luan \em{et~al.}(2007)Luan, Zai, and Varner]{Luan:2007aa}
+Luan, D.; Zai, M.; Varner, J.D.
+\newblock Computationally derived points of fragility of a human cascade are
+  consistent with current therapeutic strategies.
+\newblock {\em PLoS Comput Biol} {\bf 2007},
+\newblock {\em 3},~e142.
+
+\bibitem[Song and Varner(2009)]{Song:2009aa}
+Song, S.O.; Varner, J.
+\newblock Modeling and analysis of the molecular basis of pain in sensory
+  neurons.
+\newblock {\em PLoS One} {\bf 2009},
+\newblock {\em 4},~e6758.
+
+\bibitem[Tasseff \em{et~al.}(2010)Tasseff, Nayak, Salim, Kaushik, Rizvi, and
+  Varner]{Tasseff:2010aa}
+Tasseff, R.; Nayak, S.; Salim, S.; Kaushik, P.; Rizvi, N.; Varner, J.D.
+\newblock Analysis of the molecular networks in androgen dependent and
+  independent prostate cancer revealed fragile and robust subsystems.
+\newblock {\em PLoS One} {\bf 2010},
+\newblock {\em 5},~e8864.
+
+\bibitem[Tasseff \em{et~al.}(2011)Tasseff, Nayak, Song, Yen, and
+  Varner]{Tasseff:2011aa}
+Tasseff, R.; Nayak, S.; Song, S.O.; Yen, A.; Varner, J.D.
+\newblock Modeling and analysis of retinoic acid induced differentiation of
+  uncommitted precursor cells.
+\newblock {\em Integr Biol (Camb)} {\bf 2011},
+\newblock {\em 3},~578--91.
+
+\bibitem[Nayak \em{et~al.}(2011)Nayak, Siddiqui, and Varner]{Nayak:2011aa}
+Nayak, S.; Siddiqui, J.K.; Varner, J.D.
+\newblock Modelling and analysis of an ensemble of eukaryotic translation
+  initiation models.
+\newblock {\em IET Syst Biol} {\bf 2011},
+\newblock {\em 5},~2.
+
+\bibitem[Lequieu \em{et~al.}(2011)Lequieu, Chakrabarti, Nayak, and
+  Varner]{Lequieu:2011aa}
+Lequieu, J.; Chakrabarti, A.; Nayak, S.; Varner, J.D.
+\newblock Computational modeling and analysis of insulin induced eukaryotic
+  translation initiation.
+\newblock {\em PLoS Comput Biol} {\bf 2011},
+\newblock {\em 7},~e1002263.
+
+\bibitem[Machta \em{et~al.}(2013)Machta, Chachra, Transtrum, and
+  Sethna]{Machta:2013aa}
+Machta, B.B.; Chachra, R.; Transtrum, M.K.; Sethna, J.P.
+\newblock Parameter space compression underlies emergent theories and
+  predictive models.
+\newblock {\em Science} {\bf 2013},
+\newblock {\em 342},~604--7.
+
+\bibitem[Berg \em{et~al.}(2002)Berg, Tymoczko, and Stryer]{BERG_BIOCHEMISTRY}
+Berg, J.M.; Tymoczko, J.L.; Stryer, L.
+\newblock {\em Biochemistry}; W.H. Freeman,
+\newblock  2002.
+
+\bibitem[Peskov \em{et~al.}(2008)Peskov, Goryanin, and Demin]{Peskov:2008aa}
+Peskov, K.; Goryanin, I.; Demin, O.
+\newblock Kinetic model of phosphofructokinase-1 from Escherichia coli.
+\newblock {\em J Bioinform Comput Biol} {\bf 2008},
+\newblock {\em 6},~843--67.
+
+\bibitem[Keseler \em{et~al.}(2013)Keseler, Mackie, Peralta-Gil,
+  Santos-Zavaleta, Gama-Castro, Bonavides-Mart{\'\i}nez, Fulcher, Huerta,
+  Kothari, Krummenacker, Latendresse, Mu{\~n}iz-Rascado, Ong, Paley,
+  Schr{\"o}der, Shearer, Subhraveti, Travers, Weerasinghe, Weiss,
+  Collado-Vides, Gunsalus, Paulsen, and Karp]{Keseler:2013aa}
+Keseler, I.M.; Mackie, A.; Peralta-Gil, M.; Santos-Zavaleta, A.; Gama-Castro,
+  S.; Bonavides-Mart{\'\i}nez, C.; Fulcher, C.; Huerta, A.M.; Kothari, A.;
+  Krummenacker, M.; Latendresse, M.; Mu{\~n}iz-Rascado, L.; Ong, Q.; Paley, S.;
+  Schr{\"o}der, I.; Shearer, A.G.; Subhraveti, P.; Travers, M.; Weerasinghe,
+  D.; Weiss, V.; Collado-Vides, J.; Gunsalus, R.P.; Paulsen, I.; Karp, P.D.
+\newblock EcoCyc: fusing model organism databases with systems biology.
+\newblock {\em Nucleic Acids Res} {\bf 2013},
+\newblock {\em 41},~D605--12.
+
+\bibitem[Huang \em{et~al.}(2014)Huang, Mou, Shen, Lu, Li, Liu, Wang, Li, Geng,
+  Liu, Wu, Chen, and Zhang]{Huang:2014aa}
+Huang, Z.; Mou, L.; Shen, Q.; Lu, S.; Li, C.; Liu, X.; Wang, G.; Li, S.; Geng,
+  L.; Liu, Y.; Wu, J.; Chen, G.; Zhang, J.
+\newblock ASD v2.0: updated content and novel features focusing on allosteric
+  regulation.
+\newblock {\em Nucleic Acids Res} {\bf 2014},
+\newblock {\em 42},~D510--6.
+
+\bibitem[Link \em{et~al.}(2013)Link, Kochanowski, and Sauer]{Link:2013aa}
+Link, H.; Kochanowski, K.; Sauer, U.
+\newblock Systematic identification of allosteric protein-metabolite
+  interactions that control enzyme activity in vivo.
+\newblock {\em Nat Biotechnol} {\bf 2013},
+\newblock {\em 31},~357--61.
+
+\bibitem[Kremling \em{et~al.}(2004)Kremling, Fischer, Gadkar, Doyle, Sauter,
+  Bullinger, Allg{\"o}wer, and Gilles]{Kremling:2004aa}
+Kremling, A.; Fischer, S.; Gadkar, K.; Doyle, F.J.; Sauter, T.; Bullinger, E.;
+  Allg{\"o}wer, F.; Gilles, E.D.
+\newblock A benchmark for methods in reverse engineering and model
+  discrimination: problem formulation and solutions.
+\newblock {\em Genome Res} {\bf 2004},
+\newblock {\em 14},~1773--85.
+
+\bibitem[Gadkar \em{et~al.}(2005)Gadkar, Gunawan, and Doyle]{Gadkar:2005aa}
+Gadkar, K.G.; Gunawan, R.; Doyle, 3rd, F.J.
+\newblock Iterative approach to model identification of biological networks.
+\newblock {\em BMC Bioinformatics} {\bf 2005},
+\newblock {\em 6},~155.
+
+\bibitem[Song \em{et~al.}(2010)Song, Chakrabarti, and Varner]{Song:2010ab}
+Song, S.O.; Chakrabarti, A.; Varner, J.D.
+\newblock Ensembles of signal transduction models using Pareto Optimal Ensemble
+  Techniques (POETs).
+\newblock {\em Biotechnol J} {\bf 2010},
+\newblock {\em 5},~768--80.
+
+\bibitem[Kennedy and Eberhart(1995)]{PSO}
+Kennedy, J.; Eberhart, R.
+\newblock Particle swarm optimization.
+\newblock  Proceedings of the International Conference on Neural Networks,
+  1995,
+\newblock pp. 1942 -- 1948.
+
+\end{thebibliography}
