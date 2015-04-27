@@ -125,7 +125,9 @@ The problem of parameter estimation presents a significant challenge in the mode
 
 \section*{Introduction}
 
-Biological systems interact with one another and with the external world through highly complex biochemical networks. The advent of  \textit {omics} era has provided researchers with a deluge of data about these networks. Over the last decade, with an increase in computational power, large scale mathematical modeling of biological systems has evolved as a powerful paradigm to understand this data deluge and to effectively characterize these complex biochemical interactions.  The development of such mathematical models for biochemical networks can be broadly decomposed into two tasks a) Model construction b) Model calibration or Parameter Estimation. Model construction involves translating existing knowledge about the network (i.e. entities in the network, interactions amongst the entities, types of interactions) along with reasonable assumptions into an appropriate mathematical 
+Biological systems interact with one another and with the external world through highly complex biochemical networks. The advent of  \textit {omics} era has provided researchers with a deluge of data about these networks. Over the last decade, with an increase in computational power, large scale mathematical modeling of biological systems has evolved as a powerful paradigm to understand this data deluge and to effectively characterize these complex biochemical interactions.  
+
+The development of such mathematical models for biochemical networks can be broadly decomposed into two tasks a) Model construction b) Model calibration or Parameter Estimation. Model construction involves translating existing knowledge about the network (i.e. entities in the network, interactions amongst the entities, types of interactions) along with reasonable assumptions into an appropriate mathematical 
 framework.  Some popular mathematical formulations have been Ordinary Differential Equations (ODEs), Boolean and fuzzy logic, probabilistic graphical models etc. [REFHERE]
 
 Model calibration or parameter estimation follows the model construction step.  In this step the model is trained against experimental data to determine the model parameters that give a good fit against experimental data. Model simulation using these parameters is then done and the results are validated using hitherto unseen experimental data. If validation leads to unsatisfactory results model construction and calibration are repeated iteratively till we get satisfactory results. 
@@ -139,22 +141,28 @@ With the capacity to construct or formulate very large biological models, more o
 	\mathcal{G}_{new}(\mathbf{J})& = &\mathcal{G}(\mathbf{J})+\mathbf{r}_{normal}(\mathbf{J})\sigma(\mathbf{J})
 \end{eqnarray}
 
-The objective function in Equation 1 is minimized using appropriate optimization technique to estimate the model parameters. These problems are generally multi-modal i.e. contain multiple local optima traditional. Hence we cannot use local optimization techniques cannot be used to solve these problems. In many of these problems derivative information is absent or the objective function may be discontinuous. This hinders the use of deterministic optimization techniques that require the problem to be convex and other derivative/gradient based optimization methods. Most of these methods are computationally expensive and for optimization of large-scale ODE systems, this becomes prohibitively expensive. Heuristic optimization techniques like genetic algorithm and differential evolution offer an attractive option in finding globally optimum solution or close to global optimum solution. However most of the population-based heuristics take a large number of function evaluations and have computationally complex operations, which reduces their effectiveness in finding feasible solutions with limited computational resources and time.This study tries to overcome the drawbacks mentioned above and presents a novel heuristics based search strategy/algorithm for parameter estimation in large-scale ODE models of biochemical networks with many unknown parameters.
+The objective function from equation ---  is minimized using appropriate optimization technique to estimate the model parameters. Due to the complex dynamics of biological systems these problems are multi-modal i.e. most of them have multiple local minima or maxima. The non-linearity of the problem coupled with multi-modality is a substantial challenge and generally renders the local optimization techniques incapable of obtaining an optimal solution.   
+\textit {In many of these problems derivative information is absent or the objective function may be discontinuous. This hinders the use of deterministic optimization techniques that require the problem to be convex and other derivative/gradient based optimization methods. Most of these methods are computationally expensive and for optimization of large-scale systems, this becomes prohibitively expensive.  Heuristic approaches have been promising in this regard, however most of the population-based heuristics take a large number of function evaluations and have computationally complex operations, which reduces their effectiveness in finding feasible solutions with limited computational resources and time. Hybrid methods that couple heuristics with derivative based methods}
+
+The problem get further compounded when we have parameter vectors of very high dimensions. In this study we developed a novel meta heuristic approach that combines multi-swarm particle swarm optimization with dynamically dimensioned search (DDS)to obtain optimal or near optimal solutions to high-dimensional, non-linear biological models within a relatively few function evaluations.
+
+A bit of history on DDS
+Why coagulation model? feed back loops, parameter identifiability, tight regulation and also high dimensional
 
 
 \subsection *{Parameter Estimation Literature}
 
-\subsection *{Modeling methodologies} 
+\subsection *{Modeling methodologies Literature} 
  Shuler and co-workers constructed large-scale dynamic metabolic models of E.coli that were based ordinary differential equations (ODEs). Various aspects of E.colis cellular processes like RNA synthesis, chromosome synthesis, cellular energy expenditure etc. were modeled using coupled non-linear ordinary differential equations. Post genomic era saw the rise of flux balance analysis (FBA), a static, constraint based modeling approach for microbial metabolism. FBA assumes a pseudo steady-state and reduces genome-scale kinetic models to a set of static mass balances. These mass balances are represented using an underdetermined set of linear algebraic equations. The advantage is such a system of equations can be solved efficiently for very large systems. 
 
-The dynamics of signal transduction systems are commonly modeled using ODEs [Refs]-----. One of the advantages of using ODEs is that the dynamics of large-scale systems can be described with a great degree of mechanistic detail. Over the last half a decade we have seen the construction of increasingly large-scale ODE models of signal transduction systems. Chen et al. built a mass action model of ErbB signaling pathways with 499 ODEs and 229 parameters. Tasseff et al analyzed retinoic acid induced differentiation of uncommitted precursor cells using a dynamic ODE model with 729 proteins and protein complexes interconnected with 1356 interconnections. Luan et al captured the key aspects of coagulation using an ODE model with 193 proteins and protein complexes with 301 kinetic parameters.    Boolean logic, probabilistic modeling and fuzzy logic are other mathematical frameworks that are used for mechanistic modeling of signal transduction systems. Choi et al modeled the p53 signaling network that affects cellular response to DNA damage using Boolean logic. ------.  In Boolean modeling of signal transduction systems the network entities i.e. proteins assume a value of 0 or 1 based on their activation levels. Fuzzy logic models offer a greater detail by allowing protein activation to take on a range of discrete values between 0 and 1. Mitsos et al. used the constrained fuzzy logic approach (cFL) wherein protein activation takes real values and a transfer function (TF) is used to propagate the signal along the network. Boolean and fuzzy logic models offer a relatively simpler mathematical formulation as compared to ODE models and are not encumbered with a large number of parameters. However these models are static in nature and offer a more qualitative view of the system. In addition to these deterministic formulations, stochastic modeling is another way of representing biochemical networks. Stochastic models are primarily based on stochastic differential equations also called Langevin equations to describe the dynamics of biochemical network ----- [Refs]. Stochastic models are limited to describing dynamics of small-scale biochemical networks and are computationally very expensive to characterize even in very small biological systems. 
+The dynamics of signal transduction systems are commonly modeled using ODEs [Refs]-----. One of the advantages of using ODEs is that the dynamics of large-scale systems can be described with a great degree of mechanistic detail. Over the last half a decade we have seen the construction of increasingly large-scale ODE models of signal transduction systems. Chen et al. built a mass action model of ErbB signaling pathways with 499 ODEs and 229 parameters. Tasseff et al analyzed retinoic acid induced differentiation of uncommitted precursor cells using a dynamic ODE model with 729 proteins and protein complexes interconnected with 1356 interconnections. Luan et al captured the key aspects of coagulation using an ODE model with 193 proteins and protein complexes with 301 kinetic parameters.  
 
-
-
+  Boolean logic, probabilistic modeling and fuzzy logic are other mathematical frameworks that are used for mechanistic modeling of signal transduction systems. Choi et al modeled the p53 signaling network that affects cellular response to DNA damage using Boolean logic. ------.  In Boolean modeling of signal transduction systems the network entities i.e. proteins assume a value of 0 or 1 based on their activation levels. Fuzzy logic models offer a greater detail by allowing protein activation to take on a range of discrete values between 0 and 1. Mitsos et al. used the constrained fuzzy logic approach (cFL) wherein protein activation takes real values and a transfer function (TF) is used to propagate the signal along the network. Boolean and fuzzy logic models offer a relatively simpler mathematical formulation as compared to ODE models and are not encumbered with a large number of parameters. However these models are static in nature and offer a more qualitative view of the system. In addition to these deterministic formulations, stochastic modeling is another way of representing biochemical networks. Stochastic models are primarily based on stochastic differential equations also called Langevin equations to describe the dynamics of biochemical network ----- [Refs]. Stochastic models are limited to describing dynamics of small-scale biochemical networks and are computationally very expensive to characterize even in very small biological systems. 
 
  \clearpage
 
-\section*{Results}\vspace{-12pt}
+\section*{Results}
+\subsection{Coagulation model formulation}
 
 Coagulation is an archetype biochemical network that is highly interconnected and tightly regulated with multiple positive and negative feedback loops. The biochemistry underlying coagulation, though quite complex has been well studied [REFHERE], and reliable experimental coagulation models have been developed [REFHERE]. This makes it an ideal system for mathematical modeling and parameter estimation. Coagulation is regulated by a set of serine proteases also known as coagulation factors and blood platelets. The coagulation factors are generally in an inactive state and are known as zymogens. These zymogens are activated through certain triggers. These trigger events like injury or trauma or sepsis expose factors like collagen, tissue factor and von Willebrand factor (vWF) to blood. The exposure of these factors to blood kick-starts a series of convergent cascades that lead to conversion of zymogen prothrombinase to thrombin.   Luan et al. modeled coagulation using coupled non-linear ordinary differential equations with 148 reactions and 92 species [REFHERE]. The model was validated using 21 published datasets. The model parameters used in the simulation were drawn from various literature sources. 
 
@@ -166,24 +174,24 @@ Figure 2 shows the fit between model predictions and experimental data. The soli
 
 We compared the performance of these algorithms on commonly used test functions for global optimization. Figure-xxx shows the rate of error convergence on a 300D rastrigin function where DDSMLSPSO clearly outperforms the other approaches. In Figure-yyyy, on a 300D ackley function we see the same trend wherein  DDSMLSPSO reaches the minimum much faster than other algorithms.
 
-Villaverde and co-workers recently published a set of benchmark problems to evaluate parameter estimation methods [REFHERE]. From a computational cost perspective problems they categorized the problems as most expensive, intermediate and least expensive. We evaluated the performance of our algorithms on a problem from each category. Table zzz shows that 
+Villaverde and co-workers recently published a set of benchmark problems to evaluate parameter estimation methods [REFHERE]. From a computational cost perspective problems they categorized the problems as most expensive, intermediate and least expensive. We evaluated the performance of our algorithms on a problem from the most expensive and least expensive categories. Table 1 shows that 
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{|c c c c|} 
+\begin{tabular}{|c c c c c c c|} 
  \hline
- ModelID & B1 & B4&\\ [0.5ex] 
+ ModelID & Coagulation & B1 & B4 & Ackley300D & Rastrigin300D&\\ [0.5ex] 
  \hline
- Upper bound & ${5.pnom}$ & ${5.pnom}$ & \\  [0.5ex]
- Lower bound & ${0.2.pnom}$ & ${0.2.pnom}$ &\\ [0.5ex]
- CPU time & $38.308$ ${hours}$ & $6.2$ ${minutes}$& \\ [0.5ex]
- Function Evaluations & $4000$ & $4000$&\\ [0.5ex]
- Initial Objective Value & $1.0589.10 ^{10}$ & $1.4275.10 ^{7}$ &\\ [0.5ex] 
- Final Objective Value & $4.96.10^{5}$ & $38.9375$&\\ [0.5ex]
- Nominal Objective Value & $1.0986·10^{6}$ & $39.0676$&\\ [1ex]
+ Upper bound&$1000.pnom$& ${5.pnom}$ & ${5.pnom}$ &${30}$ &$5.12$& \\  [0.5ex]
+ Lower bound&$0.001.pnom$& ${0.2.pnom}$ & ${0.2.pnom}$&${-15}$&$-5.12$&\\ [0.5ex]
+ CPU time &$5.6$ ${hours}$ &$38.308$ ${hours}$ & $6.2$ ${minutes}$& ${2.8}$${seconds}$&${2.6}$${seconds}$& \\ [0.5ex]
+ Function Evaluations &$4000$&$4000$&$4000$&$4000$&$4000$&\\ [0.5ex]
+ Initial Objective Value & $1.0589.10 ^{10}$ & $1.4275.10 ^{7}$ &$1.8536.10 ^{7}$&$21.12$&$99.985$&\\ [0.5ex] 
+ Final Objective Value & $2.9223.10^{3}$ & $4.96.10^{5}$ & $38.9375$&$0$&$0$&\\ [0.5ex]
+ Nominal Objective Value & $4.7785·10^{6}$& $1.0986·10^{6}$ & $39.0676$&$0$&$0$&\\ [1ex]
  \hline
 \end{tabular}
-\caption{Table to test captions and labels}
+\caption{Table with optimization settings and results for coagulation and different benchmarks using DDSMLSPSO.}
 \label{table:1}
 \end{table}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  23 APR 2015 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  27 APR 2015 05:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -648,19 +648,19 @@ Overfull \hbox (7.0453pt too wide) in paragraph at lines 130--132
 hem-i-cal net-works can be broadly
  []
 
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <20.74> not available
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <17.28> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 138.
-[1]
-Overfull \hbox (28.15508pt too wide) in paragraph at lines 152--153
- \OT1/phv/b/n/12 Mod-el-ing method-olo-gies \OT1/phv/m/n/12 Shuler and co-worke
-rs con-structed large-scale dy-namic metabolic
+[1] [2]
+Overfull \hbox (4.92377pt too wide) in paragraph at lines 156--157
+\OT1/phv/m/n/12 dy-namic metabolic mod-els of E.coli that were based or-di-nary
+ dif-fer-en-tial equa-tions (ODEs).
  []
 
-[2] [3] [4] [5
+[3] [4] [5
 
 ]
 
-./Paper_v1.tex:189: Package inputenc Error: Keyboard character used is undefine
+./Paper_v1.tex:191: Package inputenc Error: Keyboard character used is undefine
 d
 (inputenc)                in inputencoding `utf8'.
 
@@ -668,11 +668,30 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.189  Nominal Objective Value & $1.0986·
-                                         10^{6}$ & $39.0676$&\\ [1ex]
+l.191  Nominal Objective Value & $4.7785·
+                                         10^{6}$& $1.0986·10^{6}$ & $39.0676...
+
 ? 
+
+./Paper_v1.tex:191: Package inputenc Error: Keyboard character used is undefine
+d
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 ...jective Value & $4.7785·10^{6}$& $1.0986·
+                                                  10^{6}$ & $39.0676$&$0$&$0...
+
+? 
+
+Overfull \hbox (76.84001pt too wide) in paragraph at lines 181--194
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 192.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 194.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -686,17 +705,17 @@ File: ./figs/Figure_2_CoagulationNetwork.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_2_CoagulationNetwork.pdf>
 Package pdftex.def Info: ./figs/Figure_2_CoagulationNetwork.pdf used on input l
-ine 243.
+ine 245.
 (pdftex.def)             Requested size: 469.75618pt x 434.31146pt.
 
 
-LaTeX Warning: Float too large for page by 15.88145pt on input line 252.
+LaTeX Warning: Float too large for page by 15.88145pt on input line 254.
 
 <./figs/Figure_1_Algorithm.pdf, id=51, 1517.67pt x 867.24pt>
 File: ./figs/Figure_1_Algorithm.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_1_Algorithm.pdf>
-Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 257.
+Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 259.
 (pdftex.def)             Requested size: 469.75496pt x 310.22122pt.
 
 <./figs/Figure_4_Sim_Train_E1_E5.pdf, id=52, 867.24pt x 607.26875pt>
@@ -704,7 +723,7 @@ File: ./figs/Figure_4_Sim_Train_E1_E5.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_4_Sim_Train_E1_E5.pdf>
 Package pdftex.def Info: ./figs/Figure_4_Sim_Train_E1_E5.pdf used on input line
- 264.
+ 266.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
 
 <./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf, id=53, 867.24pt x 607.26875pt>
@@ -712,18 +731,18 @@ File: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>
 Package pdftex.def Info: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf used on inpu
-t line 272.
+t line 274.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
 
 <./figs/Figure6_Ackley_Rast.pdf, id=54, 1734.48pt x 867.24pt>
 File: ./figs/Figure6_Ackley_Rast.pdf Graphic file (type pdf)
 
 <use ./figs/Figure6_Ackley_Rast.pdf>
-Package pdftex.def Info: ./figs/Figure6_Ackley_Rast.pdf used on input line 280.
+Package pdftex.def Info: ./figs/Figure6_Ackley_Rast.pdf used on input line 282.
 
 (pdftex.def)             Requested size: 479.14046pt x 310.22122pt.
 
-Overfull \hbox (9.38544pt too wide) in paragraph at lines 280--282
+Overfull \hbox (9.38544pt too wide) in paragraph at lines 282--284
  [][] 
  []
 
@@ -732,17 +751,17 @@ File: ./figs/Figure_7_Benchmarks_Parameters.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_7_Benchmarks_Parameters.pdf>
 Package pdftex.def Info: ./figs/Figure_7_Benchmarks_Parameters.pdf used on inpu
-t line 288.
+t line 290.
 (pdftex.def)             Requested size: 479.13385pt x 310.2146pt.
 
-Overfull \hbox (9.37883pt too wide) in paragraph at lines 288--290
+Overfull \hbox (9.37883pt too wide) in paragraph at lines 290--292
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 290.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 292.
 
-Overfull \hbox (7.69629pt too wide) in paragraph at lines 297--299
+Overfull \hbox (7.69629pt too wide) in paragraph at lines 299--301
 \OT1/phv/m/n/12 This study was sup-ported by the Na-tional Sci-ence Foun-da-tio
 n GK12 award (DGE-1045513)
  []
@@ -762,13 +781,13 @@ Package natbib Warning: Empty `thebibliography' environment on input line 16.
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5052 strings out of 493117
- 73177 string characters out of 6135433
- 153137 words of memory out of 5000000
- 8372 multiletter control sequences out of 15000+600000
+ 5053 strings out of 493117
+ 73183 string characters out of 6135433
+ 153192 words of memory out of 5000000
+ 8373 multiletter control sequences out of 15000+600000
  32614 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,38p,2037b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,38p,2037b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -782,7 +801,7 @@ texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (20 pages, 1932340 bytes).
+Output written on Paper_v1.pdf (20 pages, 1935054 bytes).
 PDF statistics:
  596 PDF objects out of 1000 (max. 8388607)
  321 compressed objects within 4 object streams
