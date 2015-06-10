@@ -1,19 +1,132 @@
 \relax 
 \bibstyle{plos2009}
-\@writefile{toc}{\contentsline {subsection}{\numberline {0.1}Coagulation model formulation}{5}}
+\citation{assmus2006dynamics,Riel:2006aa,Jaqaman:2006aa,kitano2002systems,hood2004systems}
+\citation{Aldridge:2006aa}
+\citation{banga2008optimization}
+\citation{ashyraliyev2009systems}
+\citation{moles2003parameter}
+\citation{chen2009input}
+\citation{tasseff2011modeling}
+\citation{luan2007computationally}
+\citation{mo2007genome}
+\citation{orth2011comprehensive}
+\citation{karr2012whole}
+\citation{buchel2013path2models}
+\citation{smallbone2010towards}
+\citation{beck1977parameter}
+\citation{nieman1971review}
+\citation{young1981parameter}
+\citation{beck1998inverse}
+\citation{moles2003parameter}
+\citation{banga2008optimization}
+\citation{hooke1961direct}
+\citation{nelder1965simplex}
+\citation{more1978levenberg}
+\citation{esposito2000deterministic}
+\citation{horst2013global}
+\citation{kirkpatrick1983optimization}
+\citation{storn1997differential}
+\citation{sun2012parameter}
+\citation{mendes1998non}
+\citation{modchang2008mathematical}
+\citation{tsai2005evolutionary}
+\citation{wang2001hybrid}
+\citation{noman2007inferring}
+\citation{tashkova2011parameter}
+\citation{villaverde2012cooperative}
+\citation{rodriguez2006novel}
+\citation{egea2007scatter}
+\citation{villaverde2015biopredyn}
+\citation{fan2015parameter}
+\citation{gutenkunst2007universally}
+\citation{song2010ensembles,luan2010ensembles}
+\citation{sagar2015dynamic}
+\citation{tolson2007dynamically}
+\citation{peer2003using,zhan2009adaptive,li2007fast}
+\citation{zhao2008dynamic,liang2005dynamic}
+\citation{mann2003dynamics,mann2003all,mann2003thrombin,vogler2009contact,diamond2013systems,fogelson2005coagulation,anand2003model}
+\citation{hockin2002model,chatterjee2010systems,mann2006models,luan2007computationally}
+\citation{luan2007computationally}
+\citation{hockin2002model}
+\citation{villaverde2015biopredyn}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Table with optimization settings and results for coagulation and different benchmarks using DDSMLSPSO.\relax }}{7}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{table:1}{{1}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of the extrinsic and intrinsic coagulation cascade.Upstream coagulation factors are activated by materials exposed following vessel injury chief among these tissue factor (TF) [Ref] Tissue factor and activated factor VIIa (FVIIa) form a complex that activates factor X (fX) and IX (fIX). FXa activates downstream factors including factor VIII (fVIII) and fIX. Factor V (fV) is primarily activated by thrombin (FIIa). In addition, we included a secondary fV activation route involving FXa. FXa and FVa form a complex (prothrombinase) on activated platelets that converts prothrombin (fII) to FIIa. FIXa and FVIIIa can also form a complex (tenase) on activated platelets which catalyzes FXa formation. Localized platelets are activated by external signals such as adenosine diphosphate (ADP) and thromboxane A2 (TXA2) or thrombin through protease-activated receptors (PARs)[Ref] Thrombin also activates upstream coagulation factors, forming a strong positive feedback ensuring rapid activation. Tissue factor pathway inhibitor (TFPI) downregulates FXa formation and activity by sequestering free FXa and TF-FVIIa in a FXa-dependent manner. Antithrombin III (ATIII) neutralizes all proteases, making it perhaps the most powerful control element in the cascade. Thrombin itself plays an inadvertent role in its own inhibition by binding the surface protein thrombomodulin (TM), expressed on normal vasculature[Ref] The IIa-TM complex catalyzes the conversion of protein C (PC) to activated protein C (APC), which attenuates the coagulation response by the proteolytic cleavage of fV/FVa and fVIII/FVIIIa [Ref] \relax }}{12}}
-\newlabel{fig-flux-pattern}{{1}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Multi Swarm Particle Swarm Optimization with Dynamically Dimensioned Search. \textbf  {A}: Each particle represents an N dimensional parameter vector. Particles are randomly initialized and grouped into various sub-swarms. The magnitude and direction of the movement a particle is influenced by the position of the best particle in its swarm and also by its own experience. After a certain number of function evaluations the particles are mixed and randomly assigned to different swarms. At the end of the evaluations assigned to swarm search, the global best particle amongst all sub-swarms is chosen as the candidate parameter vector for Dynamically Dimensioned Search \textbf  {B}: The candidate vector does a greedy search in a dynamic neighborhood. This done by dynamically adjusting the number of parameter dimensions that are perturbed in each evaluation step. The number of dimensions that are perturbed generally decreases as the number of iterations increase. This preserves the optimality of the solution as the number of evaluations increases. \relax }}{13}}
-\newlabel{fig-algorithm}{{2}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Model fits on experimental data using DDSMLSPSO. The model parameters were estimated using DDSMLSPSO. Solid black lines indicate the simulated mean thrombin concentration using parameter vectors from $N$= 25 trials. The grey shaded region represents the 99\% confidence estimate of the mean simulated thrombin concentration. The experimental data is reproduced from the synthetic plasma assays of Mann and co-workers [REFHERE]. Thrombin generation is initiated by adding Factor VIIa-TF (5nM - Red and 5pM - Green) to synthetic plasma containing 200 $\mu $mol/L of phospholipid vesicles (PCPS) and a mixture of coagulation factors (II,V,VII,VIII,IX,X and XI) at their mean plasma concentrations. \relax }}{14}}
-\newlabel{fig-train}{{3}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Model predictions on unseen experimental data using parameters obtained from DDSMLSPSO. The parameter estimates that were obtained using DDSMLSPSO were tested against data that was not used in the model training. Solid black lines indicate the simulated mean thrombin concentration using parameter vectors from $N$= 25 trials. The grey shaded region represents the 99\% confidence estimate of the mean simulated thrombin concentration. The experimental data is reproduced from the synthetic plasma assays of Mann and co-workers [REFHERE]. Thrombin generation is initiated by adding Factor VIIa-TF (500pM - Blue, 50pM - Pink and 10pM - Orange respectively) to synthetic plasma containing 200 $\mu $mol/L of phospholipid vesicles (PCPS) and a mixture of coagulation factors (II,V,VII,VIII,IX,X and XI) at their mean plasma concentrations. \relax }}{15}}
-\newlabel{fig-validation}{{4}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Error convergence rates on a 300 dimensional Rastrigin function and Ackley function. Ackley and Rastrigin are commonly used test functions for global optimization. DDSMLSPSO finds the minimum $ {0} $ much faster than other approaches in both cases within 4000 function evaluations \textbf  {A} On a 300-D Rastrigin, DDSMLPSO, DDS and SA perform the best followed by PSO and DE \textbf  {B} On a 300-D Ackley, DDSMLSPSO clearly outperforms the rest of the algorithms. \relax }}{16}}
-\newlabel{fig-Rast}{{5}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Difference between optimal and nominal parameter vector values on benchmark problems [REFHERE]. \textbf  {(A)} Problem B1: Genome wide kinetic model of E.coli \textit  {S.cerevisiae} with 1759 unknown parameters. \textbf  {(B)} Problem B4: Metabolic model of Chinese Hamster Ovary Cells (CHO) cells with 117 parameters. \relax }}{17}}
-\newlabel{fig-benchmark}{{6}{17}}
-\bibdata{References_v1}
+\citation{zhao2008dynamic}
+\citation{villaverde2015biopredyn}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of the extrinsic and intrinsic coagulation cascade. Inactive zymogens upstream (grey) are activated by exposure to tissue factor (TF) following vessel injury. Tissue factor and activated factor VIIa (FVIIa) form a complex that activates factor X (fX) and IX (fIX). FXa activates downstream factors including factor VIII (fVIII) and fIX. Factor V (fV) is primarily activated by thrombin (FIIa). In addition, we included a secondary fV activation route involving FXa. FXa and FVa form a complex (prothrombinase) on activated platelets that converts prothrombin (fII) to FIIa. FIXa and FVIIIa can also form a complex (tenase) on activated platelets which catalyzes FXa formation. Thrombin also activates upstream coagulation factors, forming a strong positive feedback ensuring rapid activation. Tissue factor pathway inhibitor (TFPI) downregulates FXa formation and activity by sequestering free FXa and TF-FVIIa in a FXa-dependent manner. Antithrombin III (ATIII) inhibits all proteases. Thrombin inhibits itself binding the surface protein thrombomodulin (TM) . The IIa-TM complex catalyzes the conversion of protein C (PC) to activated protein C (APC), which attenuates the coagulation response by the proteolytic cleavage of fV/FVa and fVIII/FVIIIa \relax }}{15}}
+\newlabel{fig-network}{{1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Multi Swarm Particle Swarm Optimization with Dynamically Dimensioned Search. \textbf  {A}: Each particle represents an N dimensional parameter vector. Particles are randomly initialized and grouped into different sub-swarms. Within each swarm the magnitude and direction of the movement a particle is influenced by the position of the best particle and also by its own experience. After every $\mathbf  {g}$ number of function evaluations the particles are mixed and randomly assigned to different swarms. At the end of the evaluations (\mathcal  {FR}) assigned to swarm search, the global best particle (orange color) amongst all sub-swarms is chosen as the candidate parameter vector for Dynamically Dimensioned Search \textbf  {B}: The candidate vector does a greedy search in a dynamic neighborhood. The search neighborhood is dynamically adjusted by varying the number of dimensions that are perturbed (in black) in each evaluation step. The probability that a dimension is perturbed decreases as the number of function evaluations increase. Thus as the evaluations increase the optimality of the solution is preserved. \relax }}{16}}
+\newlabel{fig-algorithm}{{2}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Error convergence rates of the 5 different algorithms on the coagulation model. The objective error is the mean over $N$= 25 trials. DDSMLSPSO and DDS have the steepest drop in error during first 2000 function evaluations. Thereafter the error drop in DDS remains nearly constant whereas DDSMLSPSO drops further from around 2000 to 4000 function evaluations. At the end of 4000 function evaluations DDSMLSPSO attains the lowest error. \relax }}{17}}
+\newlabel{fig-train}{{3}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Model fits on experimental data using DDSMLSPSO. The model parameters were estimated using DDSMLSPSO. Solid black lines indicate the simulated mean thrombin concentration using parameter vectors from $N$= 25 trials. The grey shaded region represents the 99\% confidence estimate of the mean simulated thrombin concentration. The experimental data is reproduced from the synthetic plasma assays of Mann and co-workers. Thrombin generation is initiated by adding Factor VIIa-TF (5nM - Red and 5pM - Green) to synthetic plasma containing 200 $\mu $mol/L of phospholipid vesicles (PCPS) and a mixture of coagulation factors (II,V,VII,VIII,IX,X and XI) at their mean plasma concentrations. \relax }}{18}}
+\newlabel{fig-train}{{4}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Model predictions on unseen experimental data using parameters obtained from DDSMLSPSO. The parameter estimates that were obtained using DDSMLSPSO were tested against data that was not used in the model training. Solid black lines indicate the simulated mean thrombin concentration using parameter vectors from $N$= 25 trials. The grey shaded region represents the 99\% confidence estimate of the mean simulated thrombin concentration. The experimental data is reproduced from the synthetic plasma assays of Mann and co-workers. Thrombin generation is initiated by adding Factor VIIa-TF (500pM - Blue, 50pM - Pink and 10pM - Orange respectively) to synthetic plasma containing 200 $\mu $mol/L of phospholipid vesicles (PCPS) and a mixture of coagulation factors (II,V,VII,VIII,IX,X and XI) at their mean plasma concentrations. \relax }}{19}}
+\newlabel{fig-validation}{{5}{19}}
+\bibdata{References_v2}
+\bibcite{assmus2006dynamics}{{2}{}{{}}{{}}}
+\bibcite{Riel:2006aa}{{3}{}{{}}{{}}}
+\bibcite{Jaqaman:2006aa}{{4}{}{{}}{{}}}
+\bibcite{kitano2002systems}{{5}{}{{}}{{}}}
+\bibcite{hood2004systems}{{6}{}{{}}{{}}}
+\bibcite{Aldridge:2006aa}{{7}{}{{}}{{}}}
+\bibcite{banga2008optimization}{{8}{}{{}}{{}}}
+\bibcite{ashyraliyev2009systems}{{9}{}{{}}{{}}}
+\bibcite{moles2003parameter}{{10}{}{{}}{{}}}
+\bibcite{chen2009input}{{11}{}{{}}{{}}}
+\bibcite{tasseff2011modeling}{{12}{}{{}}{{}}}
+\bibcite{luan2007computationally}{{13}{}{{}}{{}}}
+\bibcite{mo2007genome}{{14}{}{{}}{{}}}
+\bibcite{orth2011comprehensive}{{15}{}{{}}{{}}}
+\bibcite{karr2012whole}{{16}{}{{}}{{}}}
+\bibcite{buchel2013path2models}{{17}{}{{}}{{}}}
+\bibcite{smallbone2010towards}{{18}{}{{}}{{}}}
+\bibcite{beck1977parameter}{{19}{}{{}}{{}}}
+\bibcite{nieman1971review}{{20}{}{{}}{{}}}
+\bibcite{young1981parameter}{{21}{}{{}}{{}}}
+\bibcite{beck1998inverse}{{22}{}{{}}{{}}}
+\bibcite{hooke1961direct}{{23}{}{{}}{{}}}
+\bibcite{nelder1965simplex}{{24}{}{{}}{{}}}
+\bibcite{more1978levenberg}{{25}{}{{}}{{}}}
+\bibcite{esposito2000deterministic}{{26}{}{{}}{{}}}
+\bibcite{horst2013global}{{27}{}{{}}{{}}}
+\bibcite{kirkpatrick1983optimization}{{28}{}{{}}{{}}}
+\bibcite{storn1997differential}{{29}{}{{}}{{}}}
+\bibcite{sun2012parameter}{{30}{}{{}}{{}}}
+\bibcite{mendes1998non}{{31}{}{{}}{{}}}
+\bibcite{modchang2008mathematical}{{32}{}{{}}{{}}}
+\bibcite{tsai2005evolutionary}{{33}{}{{}}{{}}}
+\bibcite{wang2001hybrid}{{34}{}{{}}{{}}}
+\bibcite{noman2007inferring}{{35}{}{{}}{{}}}
+\bibcite{tashkova2011parameter}{{36}{}{{}}{{}}}
+\bibcite{villaverde2012cooperative}{{37}{}{{}}{{}}}
+\bibcite{rodriguez2006novel}{{38}{}{{}}{{}}}
+\bibcite{egea2007scatter}{{39}{}{{}}{{}}}
+\bibcite{villaverde2015biopredyn}{{40}{}{{}}{{}}}
+\bibcite{fan2015parameter}{{41}{}{{}}{{}}}
+\bibcite{gutenkunst2007universally}{{42}{}{{}}{{}}}
+\bibcite{song2010ensembles}{{43}{}{{}}{{}}}
+\bibcite{luan2010ensembles}{{44}{}{{}}{{}}}
+\bibcite{sagar2015dynamic}{{45}{}{{}}{{}}}
+\bibcite{tolson2007dynamically}{{46}{}{{}}{{}}}
+\bibcite{peer2003using}{{47}{}{{}}{{}}}
+\bibcite{zhan2009adaptive}{{48}{}{{}}{{}}}
+\bibcite{li2007fast}{{49}{}{{}}{{}}}
+\bibcite{zhao2008dynamic}{{50}{}{{}}{{}}}
+\bibcite{liang2005dynamic}{{51}{}{{}}{{}}}
+\bibcite{mann2003dynamics}{{52}{}{{}}{{}}}
+\bibcite{mann2003all}{{53}{}{{}}{{}}}
+\bibcite{mann2003thrombin}{{54}{}{{}}{{}}}
+\bibcite{vogler2009contact}{{55}{}{{}}{{}}}
+\bibcite{diamond2013systems}{{56}{}{{}}{{}}}
+\bibcite{fogelson2005coagulation}{{57}{}{{}}{{}}}
+\bibcite{anand2003model}{{58}{}{{}}{{}}}
+\bibcite{hockin2002model}{{59}{}{{}}{{}}}
+\bibcite{chatterjee2010systems}{{60}{}{{}}{{}}}
+\bibcite{mann2006models}{{61}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{lof}{\contentsline {figure}{\numberline {S6}{\ignorespaces Error convergence on 300 dimensional Ackley function and Rastrigin function. \textbf  {(A)} Error convergence of 5 different metaheuristics on 300 dimensional Ackley function \textbf  {(B)} Error convergence of 5 different metaheuristics on 300 dimensional Rastrigin function \relax }}{S-1}}
+\newlabel{fig-testfunctions}{{S6}{S-1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {S7}{\ignorespaces Difference between optimal and nominal parameter vector values on benchmark problems. \textbf  {(A)} Problem B1: Genome wide kinetic model of E.coli \textit  {S.cerevisiae} with 1759 unknown parameters. \textbf  {(B)} Problem B4: Metabolic model of Chinese Hamster Ovary Cells (CHO) cells with 117 parameters. \relax }}{S-2}}
+\newlabel{fig-benchmark}{{S7}{S-2}}
