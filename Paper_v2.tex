@@ -115,7 +115,7 @@ and Jeffrey D. Varner$^{*}$}}
 \section*{Abstract}
 Prostate cancer is the most common cancer in men and the second leading cause of cancer related death in the United States. 
 Androgens, such as testosterone, are required for prostate cancer growth. 
-Androgen ablation in combination with radiation or chemotherapy remains the primary non-surgical treatment for androgen-dependent prostate cancer. 
+Androgen ablation in combination with radiation or chemotherapy remains the primary non-surgical treatment for androgen dependent prostate cancer. 
 However, androgen ablation typically fails to permanently arrest cancer progression, often resulting in castration resistant prostate cancer (CRPC). 
 CRPC is closely related to metastasis and decreased survival. 
 In this study, we developed and analyzed a population of mathematical models describing growth factor and hormone signal integration in androgen dependent, intermediate and resistant prostate cancer cells. 
@@ -147,7 +147,7 @@ These results suggest targeting the PI3K and MAPK pathways in addition to anti-a
 
 Prostate cancer (PCa) is the most commonly diagnosed cancer and the second leading cause of cancer-related death in men in the United States \cite{Siegel2013}. 
 Initially, PCa cells depend upon the activation of cytosolic androgen receptors (AR) by androgen hormones, such as testosterone, for survival and growth. 
-Androgen ablation in combination with radiation or chemotherapy remains the primary non-surgical treatment for androgen-dependent prostate cancer (ADPC) \cite{Huggins1967}. 
+Androgen ablation in combination with radiation or chemotherapy remains the primary non-surgical treatment for androgen dependent prostate cancer (ADPC) \cite{Huggins1967}. 
 However, androgen ablation typically fails to permanently arrest cancer progression as malfunctioning cells eventually lose androgen sensitivity and proliferate without hormone. 
 The loss of androgen sensitivity results in castration resistant prostate cancer (CRPC), a phenotype closely linked with metastasis and greatly reduced survival \cite{Harris2009}.
 Currently, there are six approved treatments that demonstrate a survival advantage in patients with metastatic CRPC, each of these target diverse aspects of the disease \cite{Sartor2013}.
@@ -637,6 +637,20 @@ A value of $\alpha\left(i,j,t_{o},t_{f}\right)>1$, indicates increased marker ab
 If $\alpha\left(i,j,t_{o},t_{f}\right)\sim{1}$ the $j$th perturbation does not influence the abundance of marker $i$.
 Robustness coefficients were calculated (starting from steady-state) from $t_{o} = 0$ hr to $t_{f} = 72$ hr following the addition of 10nM DHT at $t_{o}$.
 Robustness coefficients were calculated for the same N = 500 models selected for sensitivity analysis. 
+
+\subsection*{Experimental Validation.}
+
+\subsection*{Cell culture and treatments}
+Androgen dependent LNCaP prostate cancer cells were a gift from Dr. Brian Kirby (Cornell University), and the Castrate Resistant C4-2 prostate cancer cell line was purchased from MD Anderson Cancer Center, University of Texas. Cell lines were maintained in RPMI 1640 media (Life Technologies, Inc., Grand Island, NY) with 10\% fetal calf serum (FBS; Hyclone) and 1x antibiotic/antimycotic (Sigma, St. Louis, MO) in a 5\% CO$_2$ humidified atmosphere at 37$^{\circ}$C. The AR inhibitor MDV3100 (enzalutamide) and the Raf inhibitor sorafenib were purchased from SantaCruz Biotechnology (Santa Cruz, CA). The PI3K inhibitor LY294002 was purchased from Cell Signaling Technologies (Danvers, MA, USA). All stock solutions were diluted in DMSO (Sigma, St. Louis, MO). 
+
+\subsection*{Protein Extraction and Western Blot}
+
+LNCaP and C4-2 cells were seeded in 60 mm dishes at a density of 4 x 10$^{5}$. After 96 and 72 hrs, for LNCaP and C4-2 cells respectively, the media was replaced with fresh media and drug treatments were added. After 24 hours, cells were washed twice in PBS buffer, scraped in 250 $\mu$L ice-cold lysis buffer (Pierce, Rockford, IL) supplemented with protease and phosphatase inhibitors (Sigma, St. Louis, MO), and lysed for 30 min on ice. Lysates were centrifuged at 13,000 rpm for 30 min at 4$^{\circ}$C. After quantification of total protein by BCA assay, equal amounts of total protein lysates (25 $\mu$g) were resolved by SDS-PAGE and transferred onto PVDF membranes. Membranes were blocked in 5\% fat free milk and then probed with antibodies. The primary antibodies used for western blot analysis were pAKT Ser473, AKT, pS6 Ser240/244 , pERK Thr202/Tyr204, ERK, AR, and GAPDH were from Cell Signaling Technologies (Danvers, MA, USA). For detection, enhanced chemiluminescence ECL reagent (GE Healthcare, Pittsburgh, PA) was used and signals were visualized using the ChemiDoc XRS system (Bio-Rad). 
+
+\subsection*{MTT Assay}
+
+LNCaP and C4-2 cells were seeded at a density of 1x10$^{4}$ cells per well in 96 well plates. After 48 hrs the media was refreshed and drug treatments added. Cell growth at 24, 48, and 72 hrs was determined using a 3-(4,5-dimethyl thiazol-2-yl)-2,5-diphenyl tetrazolium bromide (MTT) assay. At the specified time point 10 $\mu$ MTT reagent (stock of 5 mg/mL in PBS) was added to each well and the cells were further incubated for 4 hrs. At 4 hrs, the media was removed and 50 $\mu$L of dissolving reagent DMSO was added to each well. After an additional 10 min incubation, the absorbance was measured at 540 nm on a microplate reader. Each reading was adjusted by subtracting the absorbance value for the blank (media only) and the results were then scaled to the DMSO-treated (control) case. 
+
 
 \section*{Acknowledgements}
 This study was supported by award number U54CA143876 from the National Cancer Institute.
