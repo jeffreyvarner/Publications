@@ -114,16 +114,16 @@ Smallbone K, Simeonidis E, Swainston N, Mendes P (2010) Towards a genome-scale
 \newblock BMC systems biology 4: 6.
 \bibAnnoteFile{smallbone2010towards}
 
-\bibitem{beck1977parameter}
-Beck JV, Arnold KJ (1977) Parameter estimation in engineering and science.
-\newblock James Beck.
-\bibAnnoteFile{beck1977parameter}
-
 \bibitem{nieman1971review}
 Nieman R, Fisher D, Seborg D (1971) A review of process identification and
   parameter estimation techniques†.
 \newblock International Journal of Control 13: 209--264.
 \bibAnnoteFile{nieman1971review}
+
+\bibitem{beck1977parameter}
+Beck JV, Arnold KJ (1977) Parameter estimation in engineering and science.
+\newblock James Beck.
+\bibAnnoteFile{beck1977parameter}
 
 \bibitem{young1981parameter}
 Young P (1981) Parameter estimation for continuous-time models---a survey.
