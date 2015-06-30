@@ -64,56 +64,6 @@ Moles CG, Mendes P, Banga JR (2003) Parameter estimation in biochemical
 \newblock Genome research 13: 2467--2474.
 \bibAnnoteFile{moles2003parameter}
 
-\bibitem{chen2009input}
-Chen WW, Schoeberl B, Jasper PJ, Niepel M, Nielsen UB, et~al. (2009)
-  Input--output behavior of erbb signaling pathways as revealed by a mass
-  action model trained against dynamic data.
-\newblock Molecular systems biology 5.
-\bibAnnoteFile{chen2009input}
-
-\bibitem{tasseff2011modeling}
-Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
-  retinoic acid induced differentiation of uncommitted precursor cells.
-\newblock Integrative Biology 3: 578--591.
-\bibAnnoteFile{tasseff2011modeling}
-
-\bibitem{luan2007computationally}
-Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
-  a human cascade are consistent with current therapeutic strategies.
-\newblock PLoS computational biology 3: e142.
-\bibAnnoteFile{luan2007computationally}
-
-\bibitem{mo2007genome}
-Mo ML, Jamshidi N, Palsson B{\O} (2007) A genome-scale, constraint-based
-  approach to systems biology of human metabolism.
-\newblock Mol BioSyst 3: 598--603.
-\bibAnnoteFile{mo2007genome}
-
-\bibitem{orth2011comprehensive}
-Orth JD, Conrad TM, Na J, Lerman JA, Nam H, et~al. (2011) A comprehensive
-  genome-scale reconstruction of escherichia coli metabolism---2011.
-\newblock Molecular systems biology 7.
-\bibAnnoteFile{orth2011comprehensive}
-
-\bibitem{karr2012whole}
-Karr JR, Sanghvi JC, Macklin DN, Gutschow MV, Jacobs JM, et~al. (2012) A
-  whole-cell computational model predicts phenotype from genotype.
-\newblock Cell 150: 389--401.
-\bibAnnoteFile{karr2012whole}
-
-\bibitem{buchel2013path2models}
-B{\"u}chel F, Rodriguez N, Swainston N, Wrzodek C, Czauderna T, et~al. (2013)
-  Path2models: large-scale generation of computational models from biochemical
-  pathway maps.
-\newblock BMC systems biology 7: 116.
-\bibAnnoteFile{buchel2013path2models}
-
-\bibitem{smallbone2010towards}
-Smallbone K, Simeonidis E, Swainston N, Mendes P (2010) Towards a genome-scale
-  kinetic model of cellular metabolism.
-\newblock BMC systems biology 4: 6.
-\bibAnnoteFile{smallbone2010towards}
-
 \bibitem{nieman1971review}
 Nieman R, Fisher D, Seborg D (1971) A review of process identification and
   parameter estimation techniques†.
@@ -285,40 +235,6 @@ Tolson BA, Shoemaker CA (2007) Dynamically dimensioned search algorithm for
 \newblock Water Resources Research 43.
 \bibAnnoteFile{tolson2007dynamically}
 
-\bibitem{peer2003using}
-Peer E, Van~den Bergh F, Engelbrecht A (2003) Using neighbourhoods with the
-  guaranteed convergence pso.
-\newblock In: Swarm Intelligence Symposium, 2003. SIS'03. Proceedings of the
-  2003 IEEE. IEEE, pp. 235--242.
-\bibAnnoteFile{peer2003using}
-
-\bibitem{zhan2009adaptive}
-Zhan ZH, Zhang J, Li Y, Chung HSH (2009) Adaptive particle swarm optimization.
-\newblock Systems, Man, and Cybernetics, Part B: Cybernetics, IEEE Transactions
-  on 39: 1362--1381.
-\bibAnnoteFile{zhan2009adaptive}
-
-\bibitem{li2007fast}
-Li C, Liu Y, Zhou A, Kang L, Wang H (2007) A fast particle swarm optimization
-  algorithm with cauchy mutation and natural selection strategy.
-\newblock In: Advances in computation and intelligence, Springer. pp. 334--343.
-\bibAnnoteFile{li2007fast}
-
-\bibitem{zhao2008dynamic}
-Zhao SZ, Liang JJ, Suganthan PN, Tasgetiren MF (2008) Dynamic multi-swarm
-  particle swarm optimizer with local search for large scale global
-  optimization.
-\newblock In: Evolutionary Computation, 2008. CEC 2008.(IEEE World Congress on
-  Computational Intelligence). IEEE Congress on. IEEE, pp. 3845--3852.
-\bibAnnoteFile{zhao2008dynamic}
-
-\bibitem{liang2005dynamic}
-Liang JJ, Suganthan PN (2005) Dynamic multi-swarm particle swarm optimizer with
-  local search.
-\newblock In: Evolutionary Computation, 2005. The 2005 IEEE Congress on. Ieee,
-  volume~1, pp. 522--528.
-\bibAnnoteFile{liang2005dynamic}
-
 \bibitem{mann2003dynamics}
 Mann KG, Butenas S, Brummel K (2003) The dynamics of thrombin formation.
 \newblock Arteriosclerosis, thrombosis, and vascular biology 23: 17--25.
@@ -375,5 +291,19 @@ Mann KG, Brummel-Ziedins K, Orfeo T, Butenas S (2006) Models of blood
   coagulation.
 \newblock Blood Cells, Molecules, and Diseases 36: 108--117.
 \bibAnnoteFile{mann2006models}
+
+\bibitem{luan2007computationally}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS computational biology 3: e142.
+\bibAnnoteFile{luan2007computationally}
+
+\bibitem{zhao2008dynamic}
+Zhao SZ, Liang JJ, Suganthan PN, Tasgetiren MF (2008) Dynamic multi-swarm
+  particle swarm optimizer with local search for large scale global
+  optimization.
+\newblock In: Evolutionary Computation, 2008. CEC 2008.(IEEE World Congress on
+  Computational Intelligence). IEEE Congress on. IEEE, pp. 3845--3852.
+\bibAnnoteFile{zhao2008dynamic}
 
 \end{thebibliography}
