@@ -1,4 +1,4 @@
-\begin{thebibliography}{103}
+\begin{thebibliography}{106}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Abramoff~M(2004)}]{Abramoff2004}
@@ -49,6 +49,14 @@ Cai C, Portnoy DC, Wang H, Jiang X, Chen S, Balk SP (2009) Androgen receptor
 Cardillo MR, Monti S, Di~Silverio F, Gentile V, Sciarra F, Toscano V (2003)
   Insulin-like growth factor (IGF)-I, IGF-II and IGF type I receptor (IGFR-I)
   expression in prostatic cancer. {\it Anticancer Res\/} {\bf 23}: 3825--35
+
+\bibitem[{Carver {\it et~al\/}(2011)Carver, Chapinski, Wongvipat, Hieronymus,
+  Chen, Chandarlapaty, Arora, Le, Koutcher, Scher, Scardino, Rosen \&
+  Sawyers}]{Carver2011}
+Carver BS, Chapinski C, Wongvipat J, Hieronymus H, Chen Y, Chandarlapaty S,
+  Arora VK, Le C, Koutcher J, Scher H, Scardino PT, Rosen N, Sawyers CL (2011)
+  Reciprocal feedback regulation of PI3K and androgen receptor signaling in
+  PTEN-deficient prostate cancer. {\it Cancer Cell\/} {\bf 19}: 575--86
 
 \bibitem[{Chen {\it et~al\/}(2011)Chen, Mooso, Jathal, Madhav, Johnson, van
   Spyk, Mikhailova, Zierenberg-Ripoll, Xue, Vinall, deVere White \&
@@ -141,6 +149,12 @@ Gadkar KG, Doyle 3rd FJ, Crowley TJ, Varner JD (2003) Cybernetic model
 \bibitem[{Gioeli and Paschal(2012)Gioeli \& Paschal}]{Gioeli2012}
 Gioeli D, Paschal BM (2012) Post-translational modification of the androgen
   receptor. {\it Mol Cell Endocrinol\/} {\bf 352}: 70--8
+
+\bibitem[{Grad {\it et~al\/}(1999)Grad, Dai, Wu \& Burnstein}]{Grad1999}
+Grad JM, Dai JL, Wu S, Burnstein KL (1999) Multiple androgen response elements
+  and a Myc consensus site in the androgen receptor (AR) coding region are
+  involved in androgen-mediated up-regulation of AR messenger RNA. {\it Mol
+  Endocrinol\/} {\bf 13}: 1896--911
 
 \bibitem[{Graff {\it et~al\/}(2009)Graff, Konicek, Lynch, Dumstorf, Dowless,
   McNulty, Parsons, Brail, Colligan, Koop, Hurst, Deddens, Neubauer, Stancato,
@@ -538,6 +552,13 @@ Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, Varner JD (2010) Analysis of
 Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
   retinoic acid induced differentiation of uncommitted precursor cells. {\it
   Integr Biol Camb\/} {\bf 3}: 578--91
+
+\bibitem[{Thalmann {\it et~al\/}(1994)Thalmann, Anezinis, Chang, Zhau, Kim,
+  Hopwood, Pathak, von Eschenbach \& Chung}]{Thalmann1994}
+Thalmann GN, Anezinis PE, Chang SM, Zhau HE, Kim EE, Hopwood VL, Pathak S, von
+  Eschenbach AC, Chung LW (1994) Androgen-independent cancer progression and
+  bone metastasis in the LNCaP model of human prostate cancer. {\it Cancer
+  Res\/} {\bf 54}: 2577--81
 
 \bibitem[{Veeramani {\it et~al\/}(2005{\natexlab{a}})Veeramani, Igawa, Yuan,
   Lin, Lee, Lin, Johansson \& Lin}]{Veeramani2005Onc}

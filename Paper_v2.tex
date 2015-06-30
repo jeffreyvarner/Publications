@@ -89,7 +89,7 @@
 \begin{titlepage}
 {\par\centering\textbf{\Large Modeling and Analysis of Hormone and Mitogenic Signal Integration in Prostate Cancer}}
 \vspace{0.05in}
-{\par \centering \large{ Katharine V. Rogers, Joseph A. Wayman, Ryan Tasseff, Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yallamraju, Gongcheng Lu, Matthew P. DeLisa, 
+{\par \centering \large{ Katharine V. Rogers, Joseph A. Wayman, Ryan Tasseff, Caitlin Gee, Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yallamraju, Gongcheng Lu, Matthew P. DeLisa, 
 and Jeffrey D. Varner$^{*}$}}
 \vspace{0.10in}
 {\par \centering \large{School of Chemical and Biomolecular Engineering}}
@@ -125,7 +125,7 @@ The model was validated by comparing simulations with an additional 29 data sets
 Additionally, data from four drug trials was also used to evaluate the model’s performance.
 Sensitivity analysis, conducted over an ensemble of prostate signaling models, suggested that in an androgen free environment general translation and transcription was more sensitive in androgen dependent cells, while in androgen independent cells the PI3K and MAPK pathway species were more sensitive. 
 In a constant DHT environment sensitive species were conserved between the cell lines. 
-These results suggest targeting the PI3K and MAPK pathways in addition to anti-androgen therapies as a treatment for AIPC.
+These results suggest targeting the PI3K and MAPK pathways in addition to anti-androgen therapies as a treatment for CRPC.
 
 \vspace{0.5in}
 {\noindent \textbf{Keywords:}~Prostate cancer, signal transduction, mathematical modeling}
@@ -360,6 +360,20 @@ Next, we looked at the effect of enzalutamide on a CR cell in both a non-androge
 More sensitive species in a non-androgen environment included dimerized HER2, ERK, and PAcP. 
 Species which were more robust in the non-androgen environment included, AR activated by DHT, AKT, p70, and AR bound to HSP.
 The results of our sensitivity analysis indicate that instead of inhibiting solely the AR pathway (enzalutamide), a combination therapy targeting the PI3K or MAPK pathways in addition to AR may be more effective.
+
+\subsection*{Experimental results confirm the need for dual therapies in prostate cancer.} 
+
+The results from our sensitivity analysis indicate that instead of inhibiting solely the AR pathway (enzalutamide), a combination therapy is necessary. 
+To test this hypothesis we used the well characterized ADPC cell line LNCaP as well a LNCaP derived CRPC cell line C4-2 \cite{Thalmann1994}. 
+Three inhibitors were used: the AR inhibitor MDV3100 (enzalutamide), the Raf kinase inhibitor sorafenib, and the PI3K inhibitor LY294002. 
+In both cell lines, inhibition of either the AR or MAPK pathway appears to promote activation of the PI3K pathway, as seen by the increase in pAKT (S473) (Fig. \ref{fg:Experiment}A). 
+The addition of the PI3K inhibitor, LY294002, alone or in combination diminishes PI3K activity. 
+The inhibition of PI3K alone, led to an increase in AR expression in both LNCaP and C4-2 cell lines. 
+Since, AR transcriptionally upregulates its own expression \cite{Lin2003}\cite{Grad1999}, this may indicate an increase in AR activity. 
+The ribosomal protein pS6 was completely inhibited only in the presence of the PI3K inhibitor LY294002. 
+Cell viability results show a large decrease in cell viability at 72 hrs in the dual inhibition cases as well as the triple inhibition case for both LNCaP and C4-2 cell lines (Fig. \ref{fg:Experiment}B). I
+n both cell lines, MDV3100 (10 $\mu$M), has only a modest effect on cell viability versus control (DMSO). 
+(Fig. \ref{fg:Experiment}C) shows cell viability of both cell lines in varying concentrations of inhibitors at 24 hrs. 
   
   
 \subsection*{Robustness analysis identified key regulators of prostate cancer.} 
@@ -401,6 +415,7 @@ Parameters in region 3 have high association of TOR.
 Interestingly, the drug sorafenib, a multi-kinase inhibitor that has activity against Raf, showed no measurable PSA decline in prostate cancer patients in clinical trials \cite{Dahut2008}. 
 The robustness analysis showed that network perturbation can result in unexpected responses due to cell-to-cell heterogeneity in gene expression. 
 These outlying cell types could be critical for understanding when designing drug targets and combination therapies.
+
  
 \section*{Discussion}
 In this study, we developed a population of mathematical models describing growth factor and hormone signal integration in androgen dependent, intermediate and resistant prostate cancer cells. 
@@ -473,7 +488,10 @@ Our model does show a decrease in cell cycle proteins in the PI3K knock-out as w
 This result seems to be consistent with the decreased cell growth in the PI3K knock-out case which is not dependent on cell death, as c-PARP levels are low. 
 The decrease in cell cycle proteins is due to a decrease in general translation, including free eIF4E levels and activated 40S ribosome subunit. 
 The decrease in p70 (S6) activation due to inhibition of PI3K is shown in both the model and in the Carver \textit{et al.} study (Supplementary Figure), indicating this result is due to the PI3K pathway. 
-It would be interesting to repeat the experiment looking at cell cycle proteins and also performing the experiment in CR LNCaP cells, instead of AD cells.  
+Our results confirm the Carver \textit{et al.} study in that a dual inhibition of AR and PI3K signaling led to a more prominent decrease in cell viability then each of the inhibitors alone. 
+We extended the study to look at the addition of a third inhibitor, sorafenib, that inhibits Raf kinase in the MAPK pathway.  
+
+%It would be interesting to repeat the experiment looking at cell cycle proteins and also performing the experiment in CR LNCaP cells, instead of AD cells.  
 
 %and  in the CR CWR-R1 prostate cell line.
 %a steroid receptor coactivator family member along with other important AR coregulators such as 
@@ -649,13 +667,13 @@ LNCaP and C4-2 cells were seeded in 60 mm dishes at a density of 4 x 10$^{5}$. A
 
 \subsection*{MTT Assay}
 
-LNCaP and C4-2 cells were seeded at a density of 1x10$^{4}$ cells per well in 96 well plates. After 48 hrs the media was refreshed and drug treatments added. Cell growth at 24, 48, and 72 hrs was determined using a 3-(4,5-dimethyl thiazol-2-yl)-2,5-diphenyl tetrazolium bromide (MTT) assay. At the specified time point 10 $\mu$ MTT reagent (stock of 5 mg/mL in PBS) was added to each well and the cells were further incubated for 4 hrs. At 4 hrs, the media was removed and 50 $\mu$L of dissolving reagent DMSO was added to each well. After an additional 10 min incubation, the absorbance was measured at 540 nm on a microplate reader. Each reading was adjusted by subtracting the absorbance value for the blank (media only) and the results were then scaled to the DMSO-treated (control) case. 
+LNCaP and C4-2 cells were seeded at a density of 1x10$^{4}$ cells per well in 96 well plates. After 48 hrs the media was refreshed and drug treatments added. Cell growth at 24, 48, and 72 hrs was determined using a 3-(4,5-dimethyl thiazol-2-yl)-2,5-diphenyl tetrazolium bromide (MTT) assay. At the specified time point 10 $\mu$L MTT reagent (stock of 5 mg/mL in PBS) was added to each well and the cells were further incubated for 4 hrs. At 4 hrs, the media was removed and 50 $\mu$L of dissolving reagent DMSO was added to each well. After an additional 10 min incubation, the absorbance was measured at 540 nm on a microplate reader. Each reading was adjusted by subtracting the absorbance value for the blank (media only) and the results were then scaled to the DMSO-treated (control) case. 
 
 
 \section*{Acknowledgements}
 This study was supported by award number U54CA143876 from the National Cancer Institute.
 The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Cancer Institute or the National Institutes of Health.
-This study was also supported by the National Science Foundation GK12 award number DGE-1045513.
+The authors acknowledge the financial support of the National Science Foundation, award no. DGE-1045513,for a GK12 training grant entitled "Grass Roots: Advancing Education in Renewable Energy and Cleaner Fuels through collaborative graduate fellow/teacher/grade-school student interactions."
 
 \clearpage
 %\bibliographystyle{plain}
@@ -717,6 +735,14 @@ This study was also supported by the National Science Foundation GK12 award numb
 
 \clearpage
 
+\begin{figure}\centering
+\includegraphics[width=1.0\textwidth]{./figs/Figure7_ExperimentalResults.pdf}
+\caption{Experimental results for multiple drug combinations on two prostate cancer cell lines, LNCaP and C4-2. A. Western blot analysis of AR, pS6, AKT, pAKT and ERK in LNCaP and C4-2 cell lines treated for 24 hrs with DMSO (control), sorafenib (5 $\mu$M), LY294002 (40 $\mu$M), and MDV3100 (10 $\mu$M) alone or in combination (at least 3 repeats). B. Cells (LNCaP and C4-2) were treated for 24, 48 and 72 hrs with sorafenib (5 $\mu$M), LY294002 (40 $\mu$M), and MDV3100 (10 $\mu$M) and cell viability was measured using MTT Assay. Values were normalized to DMSO (control). C. Cell viability results for LNCaP and C4-2 cells at varying concentration of sorafenib, LY294002, and MDV3100 after 24 hrs of treatment. Values were normalized to DMSO (control). Error bars represent standard error (at least 3 repeats with triplicates performed in each experiment).}
+\label{fg:Experiment}
+\end{figure}
+
+\clearpage
+
 % Supplemental figures -
 % Set the S- 
 \renewcommand\thefigure{S\arabic{figure}}
@@ -767,15 +793,27 @@ where $\mathcal{N}(0,\nu)$ is a normally distributed random number with zero mea
 \clearpage
 
 \begin{figure}\centering
-%\includegraphics[width = 7in]{Supp_Figure_Sensitivity.pdf}
-\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A}$ Sensitivity ranking of network species in CR cells in the absence and presence of DHT. $\bf{B.}$ Sensitivity ranking of network species in CR cells in the presence and absence of enzalutamide in the absence of a DHT stimulus. $\bf{C.,D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of sorafenib and lapatinib, respectively, with a DHT stimulus.}
+\includegraphics[width=1.0\textwidth]{./figs/Fig_6_PI3K_AR_KO_3_Cases_old_new.pdf}
+\caption{Robustness analysis of a population of CR prostate models with PI3K (blue), AR (green), and PI3K and AR (orange) knock-outs (N = 500). A log fold change of greater then zero implies that the concentration of the protein increased with the knock-out, while a log fold change of less then zero indicates that the concentration of protein decreased. A log of fold change equal to 0, shows no response due to the knock-out. A.,B.,C. Log robustness of cyclin E, PSA, and p70p versus Cyclin D for the three knock-out cases. A CR LNCaP cell was assumed for all knock-out cases.}
+\label{fg:Supp_Dual_Knockout}
+\end{figure}
+
+\begin{figure}\centering
+\includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_Sensitivity.pdf}
+\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A}$ Sensitivity ranking of network species in CR cells in the absence and presence of DHT. $\bf{B.}$ Sensitivity ranking of network species in CR cells in the presence of enzalutamide in the presence and absence of a DHT stimulus. $\bf{C.,D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of sorafenib and lapatinib, respectively, with a DHT stimulus.}
 \label{fg:Supp_Sensitivity}
 \end{figure}
 
 \begin{figure}\centering
-%\includegraphics[width = 7in]{Supp_Figure_Robustness.pdf}
+\includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_Robustness.pdf}
 \caption{Robustness analysis of protein markers. Expression level of key proteins was altered by a factor of 2, 0.1, or 0 (knock-in, knock-down, or knock-out) and robustness coefficients were calculated for five key protein markers. Simulations shown were from CR cells, with indicated perturbation. Mean of 500 ensemble members is shown. }
 \label{fg:Supp_Robustness}
+\end{figure}
+
+\begin{figure}\centering
+\includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_KO_new.pdf}
+\caption{Dual knock-out of AR and PI3K leads to decreased expression of activated p70. A., B, C. Robustness coefficient of activated p70 (S6) in the PI3K knock-out, AR knock-out, and dual knock-out cases, respectively. The control was the basil CR LNCaP wild type case. Error bars denote plus and minus one standard error above the mean with N = 500.  Experimental data is from Carver, et al \cite{Carver2011}.  }
+\label{fg:Supp_KO}
 \end{figure}
 
 %\end{comment}
