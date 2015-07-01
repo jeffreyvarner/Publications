@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 JUN 2015 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUL 2015 07:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,14 +814,20 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 117.
- [1] [1] [2] [3]
-Overfull \hbox (7.80919pt too wide) in paragraph at lines 159--161
+ [1] [1] [2]
+Overfull \hbox (23.8593pt too wide) in paragraph at lines 159--163
+[]\OT1/phv/m/n/12 In this study, we de-vel-oped dy-nam-i-cally di-men-sioned pa
+r-ti-cle swarm op-ti-miza-tion (DdPSO),
+ []
+
+[3]
+Overfull \hbox (7.80919pt too wide) in paragraph at lines 175--177
 \OT1/phv/m/n/12 specified num-ber of func-tion eval-u-a-tions. We ran-domly ini
 -tial-ized a swarm of $\OMS/cmsy/m/n/12 K$\OT1/phv/m/n/12 -dimensional
  []
 
 
-Overfull \hbox (16.7659pt too wide) in paragraph at lines 159--161
+Overfull \hbox (16.7659pt too wide) in paragraph at lines 175--177
 \OT1/phv/m/n/12 par-ti-cles (rep-re-sented as $\OML/cmm/m/it/12 x[]$\OT1/phv/m/
 n/12 ), wherein each of these par-ti-cles cor-re-sponds to a $\OMS/cmsy/m/n/12 
 K$\OT1/phv/m/n/12 -dimensional
@@ -841,14 +847,14 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 ) [14] [15]
 [16]) [17]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 227.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 243.
  [18
 
 ] <./figs/Figure_1_Algorithm.pdf, id=76, 1517.67pt x 867.24pt>
 File: ./figs/Figure_1_Algorithm.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_1_Algorithm.pdf>
-Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 252.
+Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 268.
 (pdftex.def)             Requested size: 469.75496pt x 310.22122pt.
  [19
 
@@ -858,7 +864,7 @@ File: ./figs/Figure_2_CoagulationNetwork.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_2_CoagulationNetwork.pdf>
 Package pdftex.def Info: ./figs/Figure_2_CoagulationNetwork.pdf used on input l
-ine 261.
+ine 277.
 (pdftex.def)             Requested size: 469.75618pt x 434.31146pt.
 
 
@@ -870,7 +876,7 @@ File: ./figs/Figure_3_Errors_convergence.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_3_Errors_convergence.pdf>
 Package pdftex.def Info: ./figs/Figure_3_Errors_convergence.pdf used on input l
-ine 269.
+ine 285.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [21
 
@@ -881,7 +887,7 @@ File: ./figs/Figure_4_Sim_Train_E1_E5.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_4_Sim_Train_E1_E5.pdf>
 Package pdftex.def Info: ./figs/Figure_4_Sim_Train_E1_E5.pdf used on input line
- 278.
+ 294.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [22
 
@@ -891,7 +897,7 @@ File: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>
 Package pdftex.def Info: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf used on inpu
-t line 287.
+t line 303.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [23
 
@@ -900,11 +906,11 @@ t line 287.
 File: ./figs/Figure_6_Ackley_Rast.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_6_Ackley_Rast.pdf>
-Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 318
+Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 334
 .
 (pdftex.def)             Requested size: 479.14046pt x 310.22122pt.
 
-Overfull \hbox (9.38544pt too wide) in paragraph at lines 318--320
+Overfull \hbox (9.38544pt too wide) in paragraph at lines 334--336
  [][] 
  []
 
@@ -913,15 +919,15 @@ File: ./figs/Figure_7_Benchmarks_Parameters.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_7_Benchmarks_Parameters.pdf>
 Package pdftex.def Info: ./figs/Figure_7_Benchmarks_Parameters.pdf used on inpu
-t line 327.
+t line 343.
 (pdftex.def)             Requested size: 479.13385pt x 310.2146pt.
 
-Overfull \hbox (9.37883pt too wide) in paragraph at lines 327--329
+Overfull \hbox (9.37883pt too wide) in paragraph at lines 343--345
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 329.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 345.
 [1
 
  <./figs/Figure_6_Ackley_Rast.pdf>] [2 <./figs/Figure_7_Benchmarks_Parameters.p
@@ -955,7 +961,7 @@ l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v1.pdf (27 pages, 2006131 bytes).
+Output written on Paper_v1.pdf (27 pages, 2005908 bytes).
 PDF statistics:
  636 PDF objects out of 1000 (max. 8388607)
  349 compressed objects within 4 object streams
