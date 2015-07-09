@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  30 JUN 2015 16:42
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  9 JUL 2015 14:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -657,27 +657,27 @@ File: ./figs/Fig_1_LNCAPModel.pdf Graphic file (type pdf)
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 691.
  [41 <./figs/Fig_1_LNCAPModel.pdf>]
-<./figs/Fig_3_ColorPlot.pdf, id=375, 1074.68506pt x 521.95pt>
+<./figs/Fig_3_ColorPlot.pdf, id=375, 1074.68506pt x 508.56699pt>
 File: ./figs/Fig_3_ColorPlot.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_3_ColorPlot.pdf> [42 <./figs/Fig_3_ColorPlot.pdf>]
-<./figs/Fig_2_Training.pdf, id=472, 1204.5pt x 702.625pt>
+<./figs/Fig_2_Training.pdf, id=469, 1204.5pt x 702.625pt>
 File: ./figs/Fig_2_Training.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_2_Training.pdf> [43 <./figs/Fig_2_Training.pdf>]
-<./figs/Fig_4_Validation.pdf, id=568, 1204.5pt x 702.625pt>
+<./figs/Fig_4_Validation.pdf, id=565, 1204.5pt x 702.625pt>
 File: ./figs/Fig_4_Validation.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_4_Validation.pdf> [44 <./figs/Fig_4_Validation.pdf>]
-<./figs/Fig_5_Sensitivity.pdf, id=850, 1084.05pt x 853.1875pt>
+<./figs/Fig_5_Sensitivity.pdf, id=847, 1084.05pt x 853.1875pt>
 File: ./figs/Fig_5_Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_5_Sensitivity.pdf> [45 <./figs/Fig_5_Sensitivity.pdf>]
-<./figs/Figure6_RAF_K0_C81.pdf, id=927, 519.9425pt x 426.09187pt>
+<./figs/Figure6_RAF_K0_C81.pdf, id=924, 519.9425pt x 426.09187pt>
 File: ./figs/Figure6_RAF_K0_C81.pdf Graphic file (type pdf)
 
 <use ./figs/Figure6_RAF_K0_C81.pdf> [46 <./figs/Figure6_RAF_K0_C81.pdf>]
-<./figs/Figure7_ExperimentalResults.pdf, id=956, 1452.9683pt x 882.35849pt>
+<./figs/Figure7_ExperimentalResults.pdf, id=953, 1452.9683pt x 882.35849pt>
 File: ./figs/Figure7_ExperimentalResults.pdf Graphic file (type pdf)
 
 <use ./figs/Figure7_ExperimentalResults.pdf> [47 <./figs/Figure7_ExperimentalRe
@@ -697,30 +697,31 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (./Prostate_Pred_Table.tex [5
 
 ]) [6]
-<./figs/Fig_6_PI3K_AR_KO_3_Cases_old_new.pdf, id=2728, 1053.9375pt x 638.385pt>
-File: ./figs/Fig_6_PI3K_AR_KO_3_Cases_old_new.pdf Graphic file (type pdf)
-<use ./figs/Fig_6_PI3K_AR_KO_3_Cases_old_new.pdf>
-<./figs/Supp_Figure_Sensitivity.pdf, id=2729, 1084.05pt x 853.1875pt>
+<./figs/Fig_6_PI3K_AR_KO_3_Cases.pdf, id=2725, 1053.9375pt x 638.385pt>
+File: ./figs/Fig_6_PI3K_AR_KO_3_Cases.pdf Graphic file (type pdf)
+
+<use ./figs/Fig_6_PI3K_AR_KO_3_Cases.pdf>
+<./figs/Supp_Figure_Sensitivity.pdf, id=2726, 1084.05pt x 853.1875pt>
 File: ./figs/Supp_Figure_Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Supp_Figure_Sensitivity.pdf>
-<./figs/Supp_Figure_Robustness.pdf, id=2730, 931.33743pt x 755.82375pt>
+<./figs/Supp_Figure_Robustness.pdf, id=2727, 931.33743pt x 755.82375pt>
 File: ./figs/Supp_Figure_Robustness.pdf Graphic file (type pdf)
 
 <use ./figs/Supp_Figure_Robustness.pdf>
-<./figs/Supp_Figure_KO_new.pdf, id=2731, 473.26813pt x 233.87375pt>
+<./figs/Supp_Figure_KO_new.pdf, id=2728, 473.26813pt x 233.87375pt>
 File: ./figs/Supp_Figure_KO_new.pdf Graphic file (type pdf)
 
-<use ./figs/Supp_Figure_KO_new.pdf> [7 <./figs/Fig_6_PI3K_AR_KO_3_Cases_old_new
-.pdf>] [8 <./figs/Supp_Figure_Sensitivity.pdf>] [9 <./figs/Supp_Figure_Robustne
-ss.pdf>] [10 <./figs/Supp_Figure_KO_new.pdf>] (./Paper_v2.aux) )
+<use ./figs/Supp_Figure_KO_new.pdf> [7 <./figs/Fig_6_PI3K_AR_KO_3_Cases.pdf>]
+[8 <./figs/Supp_Figure_Sensitivity.pdf>] [9 <./figs/Supp_Figure_Robustness.pdf>
+] [10 <./figs/Supp_Figure_KO_new.pdf>] (./Paper_v2.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  5096 strings out of 493747
- 74512 string characters out of 3143546
+ 74472 string characters out of 3143546
  150145 words of memory out of 3000000
  8241 multiletter control sequences out of 15000+200000
  32235 words of font info for 74 fonts, out of 3000000 for 9000
@@ -742,10 +743,10 @@ ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2010/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2010/
 texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (59 pages, 37905692 bytes).
+Output written on Paper_v2.pdf (59 pages, 37740803 bytes).
 PDF statistics:
- 2990 PDF objects out of 3580 (max. 8388607)
- 432 compressed objects within 5 object streams
+ 2987 PDF objects out of 3580 (max. 8388607)
+ 434 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
