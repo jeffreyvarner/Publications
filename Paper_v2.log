@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  15 JUL 2015 15:22
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  22 JUL 2015 14:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -660,7 +660,7 @@ File: ./figs/Fig_1_LNCAPModel.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_1_LNCAPModel.pdf>
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 694.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 695.
  [40 <./figs/Fig_1_LNCAPModel.pdf>]
 <./figs/Fig_3_ColorPlot.pdf, id=371, 1074.68506pt x 508.56699pt>
 File: ./figs/Fig_3_ColorPlot.pdf Graphic file (type pdf)
@@ -711,34 +711,38 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 <./figs/Supplementary_CV_Subset_Total.pdf, id=2783, 544.702pt x 418.56375pt>
 File: ./figs/Supplementary_CV_Subset_Total.pdf Graphic file (type pdf)
 
-<use ./figs/Supplementary_CV_Subset_Total.pdf>
-<./figs/Supp_Figure_NewModelvsOldModel.pdf, id=2784, 777.90625pt x 482.30188pt>
+<use ./figs/Supplementary_CV_Subset_Total.pdf> [7 <./figs/Supplementary_CV_Subs
+et_Total.pdf>]
+<./figs/Supp_Figure_NewModelvsOldModel.pdf, id=2809, 777.90625pt x 482.30188pt>
 File: ./figs/Supp_Figure_NewModelvsOldModel.pdf Graphic file (type pdf)
-<use ./figs/Supp_Figure_NewModelvsOldModel.pdf>
-<./figs/Supp_Figure_Sensitivity.pdf, id=2785, 1084.05pt x 853.1875pt>
+<use ./figs/Supp_Figure_NewModelvsOldModel.pdf> [8 <./figs/Supp_Figure_NewModel
+vsOldModel.pdf>]
+<./figs/Supp_Figure_Sensitivity.pdf, id=3073, 1084.05pt x 853.1875pt>
 File: ./figs/Supp_Figure_Sensitivity.pdf Graphic file (type pdf)
 
-<use ./figs/Supp_Figure_Sensitivity.pdf>
-<./figs/Supp_Figure_Robustness.pdf, id=2786, 931.33743pt x 755.82375pt>
+<use ./figs/Supp_Figure_Sensitivity.pdf> [9 <./figs/Supp_Figure_Sensitivity.pdf
+>] <./figs/Supp_Figure_Robustness.pdf, id=3157, 931.33743pt x 755.82375pt>
 File: ./figs/Supp_Figure_Robustness.pdf Graphic file (type pdf)
 
-<use ./figs/Supp_Figure_Robustness.pdf>
-<./figs/Supp_Figure_KO_new.pdf, id=2787, 473.26813pt x 233.87375pt>
+<use ./figs/Supp_Figure_Robustness.pdf> [10 <./figs/Supp_Figure_Robustness.pdf>
+] <./figs/Supp_Figure_KO_new.pdf, id=3193, 473.26813pt x 233.87375pt>
 File: ./figs/Supp_Figure_KO_new.pdf Graphic file (type pdf)
 
-<use ./figs/Supp_Figure_KO_new.pdf> [7 <./figs/Supplementary_CV_Subset_Total.pd
-f>] [8 <./figs/Supp_Figure_NewModelvsOldModel.pdf>] [9 <./figs/Supp_Figure_Sens
-itivity.pdf>] [10 <./figs/Supp_Figure_Robustness.pdf>] [11 <./figs/Supp_Figure_
-KO_new.pdf>] (./Paper_v2.aux) )
+<use ./figs/Supp_Figure_KO_new.pdf> [11 <./figs/Supp_Figure_KO_new.pdf>]
+<./figs/Supp_Figure_TripleKOCase.pdf, id=3223, 1053.9375pt x 236.885pt>
+File: ./figs/Supp_Figure_TripleKOCase.pdf Graphic file (type pdf)
+
+<use ./figs/Supp_Figure_TripleKOCase.pdf> [12 <./figs/Supp_Figure_TripleKOCase.
+pdf>] (./Paper_v2.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5109 strings out of 493747
- 74940 string characters out of 3143546
- 151166 words of memory out of 3000000
- 8251 multiletter control sequences out of 15000+200000
+ 5115 strings out of 493747
+ 75141 string characters out of 3143546
+ 151178 words of memory out of 3000000
+ 8256 multiletter control sequences out of 15000+200000
  32235 words of font info for 74 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  41i,9n,39p,1135b,1124s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -758,10 +762,10 @@ ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2010/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2010/
 texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (60 pages, 41450381 bytes).
+Output written on Paper_v2.pdf (61 pages, 41953058 bytes).
 PDF statistics:
- 3274 PDF objects out of 3580 (max. 8388607)
- 475 compressed objects within 5 object streams
+ 3323 PDF objects out of 3580 (max. 8388607)
+ 492 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

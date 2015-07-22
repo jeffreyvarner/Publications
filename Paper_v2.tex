@@ -308,7 +308,7 @@ However, Chen \textit{et al.} suggested that HER2-EGFR heterodimerization could 
 We tested this hypothesis by developing a new model that included HER2 and EGFR heterodimerization. 
 We set the rate constants governing the assembly of HER2/EGFR heterodimers equal to EGFR homodimer assembly; all other parameters were unchanged.
 This was a reasonable first approximation, as the affinity of HER2/EGFR heterodimerization and EGRF homodimerization is thought to be similar \cite{Hendriks2003}. 
-With the inclusion of HER2-EGFR heterodimerization, we qualitatively fit the EGF-induced HER2 activation case and improved our training for experiments that involved an EGF stimulus, e.g., cyclin D mRNA and protein abundance following an EGF stimulus in C-33 cells (Fig \ref{fg:ColorPlot}A and C, white pixels).   
+With the inclusion of HER2-EGFR heterodimerization, we qualitatively fit the EGF-induced HER2 activation case and improved our training for experiments that involved an EGF stimulus, e.g., cyclin D mRNA and protein abundance following an EGF stimulus in C-33 cells (Fig. \ref{fg:ColorPlot}A and C, white pixels and Fig. \ref{fg:Exps_NewModelvsOldModel}).   
 
 %in diverse environments (i.e., DHT, no DHT, drug) 
 %Stimuli included the presence or absence of DHT, presence of therapeutics, and also EGF. 
@@ -324,7 +324,7 @@ The top 2\% of sensitive species, regardless of androgen dependence, involved co
 In particular, activated Ras, Raf, phosphorylated MEK, as well as PIP3 localized AKT, phosphorylated AKT, and PI3K were sensitive in both AD and CR cells. 
 Species involving PAcP and p16INK4 were more sensitive in AD cells, which was expected since the expression of these two proteins were the only parameters changed between AD and CR cells. 
 Other species such as E2F, cyclin E, and DHT-activated AR were also more sensitive in AD cells. 
-On the other hand, HER2-Grb2-Gab activation of PI3K and AKT inhibition of RAF were more sensitive in CR cells.
+On the other hand, HER2-Grb2-Gab activation of PI3K and AKT inhibition of Raf were more sensitive in CR cells.
 
 The importance of signaling components varied with androgen dependence in the absence of DHT (Fig. \ref{fg:Sensitivity}A). 
 There were 609 statistically significant shifts in species sensitivity (318 more and 291 less sensitive) between CR and AD cells in a non-androgen environment. 
@@ -482,16 +482,17 @@ Each inhibitor on it’s own had a much smaller effect on total cell number. The
 The group hypothesized that AKT inhibition leads to increased AR signaling activity through increased protein concentrations of HER3. 
 On the other hand AR inhibition leads to increased AKT activity due to the down regulation of PHLPP, a protein phosphatase that regulates AKT. 
 For the simplicity of this model, the HER3 pathway and also cell death were not included in the model. 
-Dual knock-out studies of PI3K and AR in our model show only a slight additive effect on cell cycle proteins through the dual knock-out (Fig. \ref{fg:Dual_Knockout}).
-The pathways in our model appear to be uncoupled and therefore little synergy is shown in the dual knock-out case. 
+Dual knock-out studies of PI3K and AR in our model show only a slight additive effect on cell cycle proteins through the dual knock-out compared to solely inhibiting PI3K (Fig. \ref{fg:Dual_Knockout}).
+The triple case, with PI3K, AR, and RAF knock-outs, also only showed a slight additive effect (Fig. \ref{fg:Triple_KO}).
+%The pathways in our model appear to be uncoupled and therefore little synergy is shown in the dual knock-out case. 
 This could indicate that the combined decrease in cell population due to the dual inhibition of PI3K and AR is entirely due to cell death. 
 The Carver \textit{et al.} study did not consider cell cycle proteins or cell growth. 
-Our model does show a decrease in cell cycle proteins in the PI3K knock-out as well as in the dual knock-out case. 
-This result seems to be consistent with the decreased cell growth in the PI3K knock-out case which is not dependent on cell death, as c-PARP levels are low. 
+Our model does show a decrease in cell cycle proteins in the PI3K knock-out as well as in the PI3K and AR dual knock-out case (Fig. \ref{fg:Dual_Knockout}). 
+This result seems to be consistent with the decreased cell count in the PI3K knock-out case which is not dependent on cell death, as c-PARP levels are low. 
 The decrease in cell cycle proteins in the model is due to a decrease in general translation, including free eIF4E levels and activated 40S ribosome subunit. 
 The decrease in p70 (S6) activation due to inhibition of PI3K is shown in both the model and in the Carver \textit{et al.} study , indicating this result is due to the PI3K pathway (Fig. \ref{fg:Supp_KO}). 
 Our experimental results confirm the Carver \textit{et al.} study in that a dual inhibition of AR and PI3K signaling led to a more prominent decrease in cell viability then each of the inhibitors alone in LNCaP cells. 
-We extended the study to look at the addition of a third inhibitor, sorafenib, that inhibits Raf kinase in the MAPK pathway and an additional cell line, C4-2, which was CR.  In both cell lines, there was not a significant decrease in cell viability between the three dual inhibitor cases and the triple inhibition case at 74 hours. 
+We extended the study to look at the addition of a third inhibitor, sorafenib, that inhibits Raf kinase in the MAPK pathway and an additional cell line, C4-2, which was CR.  In both cell lines, there was not a significant decrease in cell viability between the three dual inhibitor cases and the triple inhibition case at 74 hours, indicating that a dual inhibition (PI3K/AR, AR/MAPK, or PI3K/MAPK) may be a sufficient treatment. 
 
 %It would be interesting to repeat the experiment looking at cell cycle proteins and also performing the experiment in CR LNCaP cells, instead of AD cells.  
 
@@ -708,7 +709,7 @@ We would like to thank Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yall
 
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Fig_2_Training.pdf}
-\caption{Ensemble performance against selected training objectives (N = 5000). A, B. Time course data for PSA concentration due to a stimulus of 10 nM DHT in LNCaP C33 cells and LNCaP C81 cells, respectively (O2, O3). C. PSA levels in the presence and absence of a HER2 inhibitor (LNCaP C81 cells, O7). D. PAcP mRNA levels at 72 hours in the presence and absence of DHT (LNCaP C51 cells, O14). E. Steady-state cyclin D levels in LNCaP C33 vs. C81 (O17). F. p21Cip1 levels at 48 hrs in the presence and absence of DHT (LNCaP C33, O25). G. Steady-state AKT phosphorylation levels in LNCaP C33 vs. C51 (O30). H. AR levels at 24 hours in the presence and absence of DHT (LNCaP C51, O31). I. AR mRNA levels in the presence and absence of E2F over expression (LNCaP C33, O34).}
+\caption{Ensemble performance against selected training objectives (N = 5000). A, B. Time course data for PSA concentration due to a stimulus of 10 nM DHT in LNCaP C33 cells and LNCaP C81 cells, respectively (O2, O3). C. PSA levels in the presence and absence of a HER2 inhibitor (LNCaP C81 cells, O7). D. PAcP mRNA levels at 72 hours in the presence and absence of DHT (LNCaP C51 cells, O14). E. Steady-state cyclin D levels in LNCaP C33 vs. C81 (O17). F. p21Cip1 levels at 48 hrs in the presence and absence of DHT (LNCaP C33, O25). G. Steady-state AKT phosphorylation levels in LNCaP C33 vs. C51 (O30). H. AR levels at 24 hours in the presence and absence of DHT (LNCaP C51, O31). I. AR mRNA levels in the presence and absence of E2F over expression (LNCaP C33, O34). Error bars denote plus and minus one standard deviation above the mean}
 \label{fg:Training}
 \end{figure}
 
@@ -716,7 +717,7 @@ We would like to thank Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yall
 
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Fig_4_Validation.pdf}
-\caption{Blind model predictions for the ensemble (N = 5000). The model ensemble’s predictive ability was assessed by comparing simulation versus experimental data not used for training. A. Time course data for HER phosphorylation due to a stimulus of 10 nM DHT (LNCaP C33, P1). B. ERK phosphorylation levels in the presence and absence of a PAcP inhibitor (LNCaP C33 cells, P3). C. AR levels at 24 hrs in varying levels of DHT (LNCaP C33, P17). D. Shc phosphorylation levels at 24 hrs in the presence and absence of DHT (LNCaP C33, P22). E. Time course data for HER phosphorylation due to a stimulus of 1.6 nM EGF (LNCaP C33, P7). F. AR levels in varying levels of EGF (LNCaP C33, P14). G, H, I. Fold change in PSA concentration due to drug stimulus: enzalutamide, lapatinib, and sorafenib.}
+\caption{Blind model predictions for the ensemble (N = 5000). The model ensemble’s predictive ability was assessed by comparing simulation versus experimental data not used for training. A. Time course data for HER2 phosphorylation due to a stimulus of 10 nM DHT (LNCaP C33, P1). B. ERK phosphorylation levels in the presence and absence of a PAcP inhibitor (LNCaP C33 cells, P3). C. AR levels at 24 hrs in varying levels of DHT (LNCaP C33, P17). D. Shc phosphorylation levels at 24 hrs in the presence and absence of DHT (LNCaP C33, P22). E. Time course data for HER2 phosphorylation due to a stimulus of 1.6 nM EGF (LNCaP C33, P7). F. AR levels in varying levels of EGF (LNCaP C33, P14). G, H, I. Fold change in PSA concentration due to drug stimulus: enzalutamide, lapatinib, and sorafenib. Error bars denote plus and minus one standard deviation above the mean.}
 \label{fg:Validation}
 \end{figure}
 
@@ -724,7 +725,7 @@ We would like to thank Timothy Chu, Kyriakos Tsahalis, Spencer Davis, Rohit Yall
 
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Fig_5_Sensitivity.pdf}
-\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A,B.}$ Sensitivity ranking of network species in AD versus CR cells in the absence (presence) of DHT. $\bf{C.}$ Sensitivity ranking of network species in AD cells in the absence and presence of DHT. $\bf{D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of enzalutamide with a DHT stimulus.}
+\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A,B.}$ Sensitivity ranking of network species in AD versus CR cells in the absence (presence) of DHT. $\bf{C.}$ Sensitivity ranking of network species in AD cells in the absence and presence of DHT. $\bf{D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of enzalutamide with a DHT stimulus. Error bars denote standard error with N = 500}
 \label{fg:Sensitivity}
 \end{figure}
 
@@ -810,18 +811,24 @@ where $\mathcal{N}(0,\nu)$ is a normally distributed random number with zero mea
 \label{fg:Supp_CV}
 \end{figure}
 
+\clearpage
+
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_NewModelvsOldModel}
-\caption{Blind model predictions for the ensemble with the original and updated model (EGFR and HER2 heterodimer). A,B. Time course data for HER phosphorylation due to a stimulus of 1.6 nM EGF (LNCaP C33, P7) for the old and new model, respectively. Dark grey shows only parameters improved by the updated model (N=2870) while light grey show all parameter sets (N=5000). C,D. Shc phosphorylation levels at 16 hrs in the presence and absence of 1.6 nM EGF (LNCaP C33, P29) for the old and new model, respectively. Light grey denotes experimental data, mid grey denotes simulation results for all parameters (N=5000), and black denotes only parameters improved by the updated model (N=3142).}
+\caption{Blind model predictions for the ensemble with the original and updated model (EGFR and HER2 heterodimer). A,B. Time course data for HER2 phosphorylation due to a stimulus of 1.6 nM EGF (LNCaP C33, P7) for the old and new model, respectively. Dark grey shows only parameters improved by the updated model (N=2870) while light grey show all parameter sets (N=5000). C,D. Shc phosphorylation levels at 16 hrs in the presence and absence of 1.6 nM EGF (LNCaP C33, P29) for the old and new model, respectively. Light grey denotes experimental data, mid grey denotes simulation results for all parameters (N=5000), and black denotes only parameters improved by the updated model (N=3142). Error bars denote plus and minus one standard deviation above the mean.}
 \label{fg:Exps_NewModelvsOldModel}
 \end{figure}
+
+\clearpage
 
 
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_Sensitivity.pdf}
-\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A}$ Sensitivity ranking of network species in CR cells in the absence and presence of DHT. $\bf{B.}$ Sensitivity ranking of network species in CR cells in the presence of enzalutamide in the presence and absence of a DHT stimulus. $\bf{C.,D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of sorafenib and lapatinib, respectively, with a DHT stimulus.}
+\caption{Sensitivity analysis of a population of prostate models (N = 500). Species with a low sensitivity are considered robust, while species with a high sensitivity ranking are considered fragile. $\bf{A}$ Sensitivity ranking of network species in CR cells in the absence and presence of DHT. $\bf{B.}$ Sensitivity ranking of network species in CR cells in the presence of enzalutamide in the presence and absence of a DHT stimulus. $\bf{C.,D.}$ Sensitivity ranking of network species in CR cells in the presence and absence of sorafenib and lapatinib, respectively, with a DHT stimulus. Error bars denote standard error with N = 500.}
 \label{fg:Supp_Sensitivity}
 \end{figure}
+
+\clearpage
 
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_Robustness.pdf}
@@ -829,11 +836,23 @@ where $\mathcal{N}(0,\nu)$ is a normally distributed random number with zero mea
 \label{fg:Supp_Robustness}
 \end{figure}
 
+\clearpage
+
 \begin{figure}\centering
 \includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_KO_new.pdf}
 \caption{Dual knock-out of AR and PI3K leads to decreased expression of activated p70. A., B, C. Robustness coefficient of activated p70 (S6) in the PI3K knock-out, AR knock-out, and dual knock-out cases, respectively. The control was the basil CR LNCaP wild type case. Error bars denote plus and minus one standard error above the mean with N = 500.  Experimental data is from Carver, et al \cite{Carver2011}.  }
 \label{fg:Supp_KO}
 \end{figure}
+
+\clearpage
+
+\begin{figure}\centering
+\includegraphics[width=1.0\textwidth]{./figs/Supp_Figure_TripleKOCase.pdf}
+\caption{Robustness analysis of a population of CR prostate models with PI3K. AR, and Raf (maroon) knock-outs (N = 500). A log fold change of greater then zero implies that the concentration of the protein increased with the knock-out, while a log fold change of less then zero indicates that the concentration of protein decreased. A log of fold change equal to 0, shows no response due to the knock-out. A.,B.,C. Log robustness of cyclin E, PSA, and p70p versus Cyclin D for the three knock-out cases. A CR LNCaP cell was assumed for all knock-out cases.}
+\label{fg:Triple_KO}
+\end{figure}
+
+\clearpage
 
 %\end{comment}
 
