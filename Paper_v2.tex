@@ -28,6 +28,7 @@
 \usepackage{lineno}
 %\usepackage{chicago}
 \usepackage{textcomp}
+\usepackage{multirow}
 
 %\usepackage[space]{cite}
 \urlstyle{rm}
@@ -247,6 +248,26 @@ This study was supported by an award from the Army Research Office (ARO \#59155-
 \bibliography{References_v2}
 
 \clearpage
+
+\begin{table}[h]
+\centering
+\caption{Error Analysis.}
+\label{table:Error-Analysis}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+Simulation&Concentration& Standard Error & R-Squared Value \\
+\hline
+\multirow{3}{4em}{FVIIa-TF level} & 5nM & 0.0367 & 0.7680\\ 
+& 500pM & 0.0636 & 0.8939\\
+& 50pM & 0.1204 & 0.8384\\ 
+& 10pM & 0.0813 & 0.9492\\
+& 5pM & 0.0574 & 0.9794\\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
 
 \begin{table}[h]
 \centering
