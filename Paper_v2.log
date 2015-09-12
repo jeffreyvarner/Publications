@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  31 AUG 2015 04:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  31 AUG 2015 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -820,116 +820,101 @@ Overfull \hbox (23.8593pt too wide) in paragraph at lines 161--165
 r-ti-cle swarm op-ti-miza-tion (DdPSO),
  []
 
-[3]
-Overfull \hbox (7.80919pt too wide) in paragraph at lines 177--179
-\OT1/phv/m/n/12 specified num-ber of func-tion eval-u-a-tions. We ran-domly ini
--tial-ized a swarm of $\OMS/cmsy/m/n/12 K$\OT1/phv/m/n/12 -dimensional
- []
+[3] [4
 
+] [5] [6] [7] [8] [9
 
-Overfull \hbox (16.7659pt too wide) in paragraph at lines 177--179
-\OT1/phv/m/n/12 par-ti-cles (rep-re-sented as $\OML/cmm/m/it/12 x[]$\OT1/phv/m/
-n/12 ), wherein each of these par-ti-cles cor-re-sponds to a $\OMS/cmsy/m/n/12 
-K$\OT1/phv/m/n/12 -dimensional
- []
-
-[4
-
-] [5] [6] [7
-
-] [8] [9] [10
-
-] [11] [12] [13] (./Paper_v2.bbl [14
+] [10] [11] [12] (./Paper_v2.bbl [13
 
 ]
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 69.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
-) [15] [16]
-[17]) [18]
+) [14] [15]
+[16]) [17]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 248.
- [19
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 253.
+ [18
 
-] <./figs/Figure_1_Algorithm.pdf, id=79, 1517.67pt x 867.24pt>
+] <./figs/Figure_1_Algorithm.pdf, id=77, 1517.67pt x 867.24pt>
 File: ./figs/Figure_1_Algorithm.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_1_Algorithm.pdf>
-Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 273.
+Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 278.
 (pdftex.def)             Requested size: 469.75496pt x 310.22122pt.
- [20
+ [19
 
  <./figs/Figure_1_Algorithm.pdf>]
-<./figs/Figure_2_CoagulationNetwork.pdf, id=375, 1003.75pt x 794.97pt>
+<./figs/Figure_2_CoagulationNetwork.pdf, id=373, 1003.75pt x 794.97pt>
 File: ./figs/Figure_2_CoagulationNetwork.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_2_CoagulationNetwork.pdf>
 Package pdftex.def Info: ./figs/Figure_2_CoagulationNetwork.pdf used on input l
-ine 282.
+ine 287.
 (pdftex.def)             Requested size: 469.75618pt x 434.31146pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./figs/Figure_2_CoagulationNetwork.pdf>]
-<./figs/Figure_3_Errors_convergence.pdf, id=458, 867.24pt x 607.26875pt>
+[20 <./figs/Figure_2_CoagulationNetwork.pdf>]
+<./figs/Figure_3_Errors_convergence.pdf, id=456, 867.24pt x 607.26875pt>
 File: ./figs/Figure_3_Errors_convergence.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_3_Errors_convergence.pdf>
 Package pdftex.def Info: ./figs/Figure_3_Errors_convergence.pdf used on input l
-ine 290.
+ine 295.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
- [22
+ [21
 
 
  <./figs/Figure_3_Errors_convergence.pdf>]
-<./figs/Figure_4_Sim_Train_E1_E5.pdf, id=480, 867.24pt x 607.26875pt>
+<./figs/Figure_4_Sim_Train_E1_E5.pdf, id=478, 867.24pt x 607.26875pt>
 File: ./figs/Figure_4_Sim_Train_E1_E5.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_4_Sim_Train_E1_E5.pdf>
 Package pdftex.def Info: ./figs/Figure_4_Sim_Train_E1_E5.pdf used on input line
- 299.
+ 304.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
- [23
+ [22
 
  <./figs/Figure_4_Sim_Train_E1_E5.pdf>]
-<./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf, id=499, 867.24pt x 607.26875pt>
+<./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf, id=496, 867.24pt x 607.26875pt>
 File: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>
 Package pdftex.def Info: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf used on inpu
-t line 308.
+t line 313.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
- [24
+ [23
 
  <./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>]
-<./figs/Figure_6_Ackley_Rast.pdf, id=517, 1734.48pt x 867.24pt>
+<./figs/Figure_6_Ackley_Rast.pdf, id=515, 1734.48pt x 867.24pt>
 File: ./figs/Figure_6_Ackley_Rast.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_6_Ackley_Rast.pdf>
-Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 339
+Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 344
 .
 (pdftex.def)             Requested size: 479.14046pt x 310.22122pt.
 
-Overfull \hbox (9.38544pt too wide) in paragraph at lines 339--341
+Overfull \hbox (9.38544pt too wide) in paragraph at lines 344--346
  [][] 
  []
 
-<./figs/Figure_7_Benchmarks_Parameters.pdf, id=518, 2168.1pt x 1084.05pt>
+<./figs/Figure_7_Benchmarks_Parameters.pdf, id=516, 2168.1pt x 1084.05pt>
 File: ./figs/Figure_7_Benchmarks_Parameters.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_7_Benchmarks_Parameters.pdf>
 Package pdftex.def Info: ./figs/Figure_7_Benchmarks_Parameters.pdf used on inpu
-t line 348.
+t line 353.
 (pdftex.def)             Requested size: 479.13385pt x 310.2146pt.
 
-Overfull \hbox (9.37883pt too wide) in paragraph at lines 348--350
+Overfull \hbox (9.37883pt too wide) in paragraph at lines 353--355
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 350.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 355.
 [1
 
  <./figs/Figure_6_Ackley_Rast.pdf>] [2 <./figs/Figure_7_Benchmarks_Parameters.p
@@ -943,30 +928,31 @@ LaTeX Warning: There were multiply-defined labels.
 ### semi simple group (level 1) entered at line 44 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5801 strings out of 493117
- 86035 string characters out of 6135433
- 147841 words of memory out of 5000000
- 9058 multiletter control sequences out of 15000+600000
- 32855 words of font info for 75 fonts, out of 8000000 for 9000
+ 5802 strings out of 493117
+ 86048 string characters out of 6135433
+ 148841 words of memory out of 5000000
+ 9059 multiletter control sequences out of 15000+600000
+ 33461 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,38p,2445b,1036s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,38p,2446b,1036s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (28 pages, 2006635 bytes).
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Paper_v2.pdf (27 pages, 2014469 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
+ 640 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
