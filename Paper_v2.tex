@@ -31,6 +31,8 @@
 \usepackage{multirow}
 \usepackage{amsmath}
 \DeclareMathOperator*{\argmin}{\arg\!\min}
+
+\usepackage{algorithm2e}
 %\usepackage[space]{cite}
 \urlstyle{rm}
 
@@ -206,15 +208,23 @@ parameters ($\mathcal{K}\times{1}$). In our algorithm the parameter $\theta_{1,j
 \begin{eqnarray}
 	\mathbf \theta_{1,j}&=&((\mathbf{N}-{j})*(\mathbf{w}_{max}-\mathbf{w}_{min}))/(\mathbf{N}-{1}) + \mathbf{w}_{min}
 \end{eqnarray}
-where $\mathbf{N}$ represents the total number of function evaluations, $\mathbf{w}_{max}$ and $\mathbf{w}_{min}$ are the maximum and minimum inertia weights respectively. While updating the particle, we made sure all dimensions of the solution represented by the particle were within bounds using a reflection boundary condition. 
+where $\mathbf{N}$ represents the total number of function evaluations, $\mathbf{w}_{max}$ and $\mathbf{w}_{min}$ are the maximum and minimum inertia weights respectively. While updating the particle, we made sure all dimensions of the solution represented by the particle were within bounds using a set of reflection boundary conditions. 
 
-\[
-    {x}_{i,j}^{new}= 
-\begin{cases}
-    {x}_{i,j}^{old}+(x_{i}^{min} - {x}_{i,j}^{old}),&\text{if} \ x_{i,j}^{old} < x_{i}^{min}\\
-    		0,              & \text{if}
-\end{cases}
-\]
+\begin{algorithm}
+\If{$x_{i,j}^{old} < x_{i}^{min}$}{  	
+  ${x}_{i,j}^{new}={x}_{i,j}^{old}+(x_{i}^{min} - {x}_{i,j}^{old})$
+  \If{${x}_{i,j}^{new}>x_{i}^{max}$}{
+    ${x}_{i,j}^{new}=x_{i}^{max}$
+  }
+}
+\If{$x_{i,j}^{old} > x_{i}^{max}$}{  	
+  ${x}_{i,j}^{new}={x}_{i,j}^{old}+({x}_{i,j}^{old}-x_{i}^{max})$
+  \If{${x}_{i,j}^{new}<x_{i}^{min}$}{
+    ${x}_{i,j}^{new}=x_{i}^{min}$
+  }
+}
+
+\end{algorithm}
 
 After every $\mathbf{g}$  function evaluations, the particles within all sub-swarms were mixed and then randomly redistributed to a new sub-swarm. The particles were then again updated according Eq.1. This process continued till $\mathcal{FR}*\mathbf{N}$ number of functions evaluations, where $\mathcal{FR}$ represents the fraction of evaluations with the multi-swarms. At the end of these function evaluations, we froze all the solutions represented by various particles and chose the particle with best solution among $\mathcal{GL}_{1} \cdots \mathcal{GL}_{NS}$ as the initial candidate vector $\mathcal{G}$ for the remaining $({1}-\mathcal{FR})*\mathbf{N}$ number of function evaluations.
 
@@ -230,7 +240,7 @@ where $\mathbf{R}$ is the scalar perturbation size parameter, $\mathcal{MAX}$ an
 \begin{eqnarray}
 	\mathcal{P}_{j}&=&{1}-\log(j/ (\beta({1}-\mathcal{FR})*\mathbf{N}))
 \end{eqnarray}
-where $\beta$ is the perturbation frequency probability modulator. Thus the number of dimensions of the candidate vector that are updated or perturbed decreases with the as the number of function evaluations increase. These updates are greedy in nature, so $\mathcal{G}_{new}$ becomes the new solution vector only if it is better than the old one $\mathcal{G}$.
+where $\beta$ is the perturbation frequency probability modulator. Thus the number of dimensions of the candidate vector that are updated or perturbed decreases with the as the number of function evaluations increase. These updates are greedy in nature, so $\mathcal{G}_{new}$ becomes the new solution vector only if it is better than the old one $\mathcal{G}$. 
 
 
 \subsection*{Performance of DdPSO on benchmark problems.}

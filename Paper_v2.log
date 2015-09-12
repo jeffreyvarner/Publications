@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 SEP 2015 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 SEP 2015 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -719,48 +719,98 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen154
 )
-(./Paper_v2.aux
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count120
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip59
+\skiplinenumber=\skip60
+\skiprule=\skip61
+\skiphlne=\skip62
+\skiptext=\skip63
+\skiplength=\skip64
+\algomargin=\skip65
+\skipalgocfslide=\skip66
+\algowidth=\dimen155
+\inoutsize=\dimen156
+\inoutindent=\dimen157
+\interspacetitleruled=\dimen158
+\interspacealgoruled=\dimen159
+\interspacetitleboxruled=\dimen160
+\algocf@inoutbox=\box57
+\algocf@inputbox=\box58
+\AlCapSkip=\skip67
+\AlCapHSkip=\skip68
+\algoskipindent=\skip69
+\algocf@nlbox=\box59
+\algocf@hangingbox=\box60
+\algocf@untilbox=\box61
+\algocf@skipuntil=\skip70
+\algocf@capbox=\box62
+\algoheightruledefault=\skip71
+\algoheightrule=\skip72
+\algotitleheightruledefault=\skip73
+\algotitleheightrule=\skip74
+\c@algocfline=\count121
+\c@algocfproc=\count122
+\c@algocf=\count123
+\algocf@algoframe=\box63
+\algocf@algobox=\box64
+) (./Paper_v2.aux
 
 LaTeX Warning: Label `fig-train' multiply defined.
 
 )
 \openout1 = `Paper_v2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 94.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 92.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 94.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen155
-\scratchbox=\box57
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\scratchcounter=\count124
+\scratchdimen=\dimen161
+\scratchbox=\box65
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen156
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen162
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks26
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -776,49 +826,49 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 126.
 )
-\CenteringLeftskip=\skip59
-\RaggedLeftLeftskip=\skip60
-\RaggedRightLeftskip=\skip61
-\CenteringRightskip=\skip62
-\RaggedLeftRightskip=\skip63
-\RaggedRightRightskip=\skip64
-\CenteringParfillskip=\skip65
-\RaggedLeftParfillskip=\skip66
-\RaggedRightParfillskip=\skip67
-\JustifyingParfillskip=\skip68
-\CenteringParindent=\skip69
-\RaggedLeftParindent=\skip70
-\RaggedRightParindent=\skip71
-\JustifyingParindent=\skip72
+\CenteringLeftskip=\skip75
+\RaggedLeftLeftskip=\skip76
+\RaggedRightLeftskip=\skip77
+\CenteringRightskip=\skip78
+\RaggedLeftRightskip=\skip79
+\RaggedRightRightskip=\skip80
+\CenteringParfillskip=\skip81
+\RaggedLeftParfillskip=\skip82
+\RaggedRightParfillskip=\skip83
+\JustifyingParfillskip=\skip84
+\CenteringParindent=\skip85
+\RaggedLeftParindent=\skip86
+\RaggedRightParindent=\skip87
+\JustifyingParindent=\skip88
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
 
-Overfull \hbox (50.22925pt too wide) in paragraph at lines 94--96
+Overfull \hbox (50.22925pt too wide) in paragraph at lines 96--98
 []\OT1/phv/b/n/17.28 Dynamically di-men-sioned par-ti-cle swarm op-ti-miza-tion
  (DdPSO):
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 96.
+LaTeX Font Info:    Try loading font information for U+msa on input line 98.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 96.
+LaTeX Font Info:    Try loading font information for U+msb on input line 98.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 104.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 106.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 119.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 121.
  [1] [1] [2]
-Overfull \hbox (23.8593pt too wide) in paragraph at lines 163--167
+Overfull \hbox (23.8593pt too wide) in paragraph at lines 165--169
 []\OT1/phv/m/n/12 In this study, we de-vel-oped dy-nam-i-cally di-men-sioned pa
 r-ti-cle swarm op-ti-miza-tion (DdPSO),
  []
@@ -835,14 +885,14 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 ) [15] [16]
 [17]) [18]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 276.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 286.
  [19
 
 ] <./figs/Figure_1_Algorithm.pdf, id=81, 1517.67pt x 867.24pt>
 File: ./figs/Figure_1_Algorithm.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_1_Algorithm.pdf>
-Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 321.
+Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 331.
 (pdftex.def)             Requested size: 469.75496pt x 310.22122pt.
  [20
 
@@ -852,7 +902,7 @@ File: ./figs/Figure_2_CoagulationNetwork.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_2_CoagulationNetwork.pdf>
 Package pdftex.def Info: ./figs/Figure_2_CoagulationNetwork.pdf used on input l
-ine 330.
+ine 340.
 (pdftex.def)             Requested size: 469.75618pt x 434.31146pt.
 
 
@@ -864,7 +914,7 @@ File: ./figs/Figure_3_Errors_convergence.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_3_Errors_convergence.pdf>
 Package pdftex.def Info: ./figs/Figure_3_Errors_convergence.pdf used on input l
-ine 338.
+ine 348.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [22
 
@@ -875,7 +925,7 @@ File: ./figs/Figure_4_Sim_Train_E1_E5.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_4_Sim_Train_E1_E5.pdf>
 Package pdftex.def Info: ./figs/Figure_4_Sim_Train_E1_E5.pdf used on input line
- 347.
+ 357.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [23
 
@@ -885,7 +935,7 @@ File: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>
 Package pdftex.def Info: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf used on inpu
-t line 356.
+t line 366.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [24
 
@@ -894,11 +944,11 @@ t line 356.
 File: ./figs/Figure_6_Ackley_Rast.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_6_Ackley_Rast.pdf>
-Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 387
+Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 397
 .
 (pdftex.def)             Requested size: 479.14046pt x 310.22122pt.
 
-Overfull \hbox (9.38544pt too wide) in paragraph at lines 387--389
+Overfull \hbox (9.38544pt too wide) in paragraph at lines 397--399
  [][] 
  []
 
@@ -907,15 +957,15 @@ File: ./figs/Figure_7_Benchmarks_Parameters.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_7_Benchmarks_Parameters.pdf>
 Package pdftex.def Info: ./figs/Figure_7_Benchmarks_Parameters.pdf used on inpu
-t line 396.
+t line 406.
 (pdftex.def)             Requested size: 479.13385pt x 310.2146pt.
 
-Overfull \hbox (9.37883pt too wide) in paragraph at lines 396--398
+Overfull \hbox (9.37883pt too wide) in paragraph at lines 406--408
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 398.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 408.
 [1
 
  <./figs/Figure_6_Ackley_Rast.pdf>] [2 <./figs/Figure_7_Benchmarks_Parameters.p
@@ -926,16 +976,16 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 46 (\begingroup)
+### semi simple group (level 1) entered at line 48 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5821 strings out of 493117
- 86433 string characters out of 6135433
- 150077 words of memory out of 5000000
- 9073 multiletter control sequences out of 15000+600000
+ 7177 strings out of 493117
+ 105668 string characters out of 6135433
+ 191839 words of memory out of 5000000
+ 10419 multiletter control sequences out of 15000+600000
  34615 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,38p,2446b,1039s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,14n,38p,2446b,1053s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -951,7 +1001,7 @@ xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (28 pages, 2028782 bytes).
+Output written on Paper_v2.pdf (28 pages, 2028602 bytes).
 PDF statistics:
  647 PDF objects out of 1000 (max. 8388607)
  357 compressed objects within 4 object streams
