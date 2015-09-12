@@ -29,7 +29,8 @@
 %\usepackage{chicago}
 \usepackage{textcomp}
 \usepackage{multirow}
-
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
 %\usepackage[space]{cite}
 \urlstyle{rm}
 
@@ -170,7 +171,28 @@ lastly on a model of the human coagulation cascade. DdPSO outperformed common me
 %this algorithm (25 trials with 4000 function evaluations in each trial) on a biochemical network of coagulation (148 parameters and 92 species) and compared it's performance against other meta-heuristics  The new algorithm outperforms all the other meta-heuristics on the coagulation model. The parameter vectors obtained using this approach fit the experimental data well and also make accurate enough predictions on unseen experimental data. We also performed this comparison on  and found the same behavior. Further we used two recently published benchmark problems, a genome wide kinetic model with 1759 parameters and a metabolic model of Chinese Hamster Ovary cells with 117 parameters to evaluate the performance of our approach. We  surprisingly performed well on these benchmarks and obtained the nominal parameter vector with just 4000 function evaluations in both cases.
 %took into cognizance the fact that it may not be necessary to obtain the exact solution for high dimensional biological systems and that good enough solutions can be quickly obtained without expending a lot of objective function evaluations. Hence our current approach uses the power of population based heuristics along with DDS to obtain near optimal or good solutions. Though in theory we can combine any meta-heuristic with DDS, for the current purpose we used Particle Swarm Optimization (PSO). PSO unlike Genetic Algorithm (GA) or Differential Evolution (DE) does not have complex operations like cross over, mutation or recombination. It is simple to use and does not have a lot of parameters associated with other heuristics. However PSO is known to rapidly converge to a local optimum and thus several variants \cite{peer2003using,zhan2009adaptive,li2007fast} have been developed of which Multi swarm particle swarm optimization approaches (MLSPSO) \cite{zhao2008dynamic,liang2005dynamic} are one of the effective ones. We used MLSPSO to preclude bad regions of search and thereafter search within these regions using DDS.
 
-\clearpage
+\section*{Problem Formulation}
+
+The problem of parameter estimation in dynamic biological systems consists of finding an optimal parameter vector that results in the best fit between the model predictions and observed experimental data.The cost function or objective that measures the goodness of fit is generally the Euclidean norm which is minimized under certain constraints. This can be mathematically expressed as follows.
+
+\begin{equation}\label{eq:static_opt}
+\begin{aligned}
+& \text{minimize}
+& & K(\mathbf{p})=(\sum_{i=1}^N g_i(t_i,\mathbf{x,p,u})-y_i)^2) \\
+& \text{subject to}
+&&\dot{x}=f(t,\mathbf{x(t,\mathbf{p}),p,u(\mathbf{t})})\\
+&&&x(t_0) = x_0\\
+&&&c(t,\mathbf{x,p,u}) \geqslant 0 \\
+&&& \mathbf{p}^L \leqslant \mathbf{p} \leqslant \mathbf{p}^U\\
+\end{aligned}
+\end{equation}
+
+where t is time, x is the state variable with an initial state x\_0 u is the input vector \, p is the parameter vector and f is the system of equations (like differential equations or set of algebraic constraints), c in the set of linear and non-linear constraints, g is the set of observables and p\textsuperscript{L} and p\textsuperscript{U} are the lower and upper bounds. Thus the problem eventually is to find {p}\textsuperscript{*} where 
+
+\begin{equation}\label{eq:static_opt_2}
+\mathbf{p^{*}}= \arg\min_{p} K(\mathbf{p})
+\end{equation}
+
 \section*{Results}
 \subsection*{Dynamically dimensioned particle swarm optimization (DdPSO).}
 DdPSO is a novel meta-heuristic that combines multi-swarm based particle swarm methods with dynamically dimensioned search (Fig.\ref{fig-algorithm}).
@@ -256,7 +278,7 @@ This study was supported by an award from the Army Research Office (ARO \#59155-
 \begin{center}
 \begin{tabular}{ |c|c|c|c| } 
 \hline
-Simulation&Concentration& Standard Error & R-Squared Value \\
+Simulation&Concentration& Normalized Standard Error & R-Squared Value \\
 \hline
 \multirow{3}{4em}{FVIIa-TF level} & 5nM & 0.0367 & 0.7680\\ 
 & 500pM & 0.0636 & 0.8939\\
