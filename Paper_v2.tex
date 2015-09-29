@@ -657,12 +657,25 @@ Here $t_o$ and $t_f$ denote the initial and final simulation time respectively, 
 A value of $\alpha\left(i,j,t_{o},t_{f}\right)>1$, indicates increased marker abundance, while $\alpha\left(i,j,t_{o},t_{f}\right)<1$ indicates decreased marker abundance following perturbation $j$. 
 If $\alpha\left(i,j,t_{o},t_{f}\right)\sim{1}$ the $j$th perturbation does not influence the abundance of marker $i$.
 Robustness coefficients were calculated (starting from steady-state) from $t_{o} = 0$ hr to $t_{f} = 72$ hr following the addition of 10nM DHT at $t_{o}$.
+For scaled log fold change we used the following equation:
+
+\begin{equation}
+\alpha_{scaled}\left(i,j\right)=
+\begin{cases}
+	\frac{\log_{10}(\alpha(i,j))}{\max \log_{10}(\alpha(i))},             & \text{if } \log_{10}(\alpha(i,j))\geq 0\\
+    	-\frac{\log_{10}(\alpha(i,j))}{\min \log_{10}(\alpha(i))},              & \text{if } \log_{10}(\alpha(i,j))< 0
+\end{cases}	
+\
+\end{equation}
+A value of $\alpha_{scaled}\left(i,j\right)>0$, indicates increased marker abundance, while $\alpha_{scaled}\left(i,j\right)<0$ indicates decreased marker abundance following perturbation $j$. 
+If $\alpha_{scaled}\left(i,j\right)\sim{0}$ the $j$th perturbation does not influence the abundance of marker $i$.
+A value of $\alpha_{scaled}\left(i,j\right)=1$, indicates max increase of marker abundance, while $\alpha_{scaled}\left(i,j\right)=-1$ indicates the max decrease of marker abundance. 
 Robustness coefficients were calculated for the same N = 500 models selected for sensitivity analysis. 
 
 \subsection*{Experimental Validation.}
 
 \subsection*{Cell culture and treatments}
-Androgen dependent LNCaP prostate cancer cells were a gift from Dr. Brian Kirby (Cornell University), and the castration resistant C4-2 prostate cancer cell line was purchased from MD Anderson Cancer Center, University of Texas. Cell lines were maintained in RPMI 1640 media (Life Technologies, Inc., Grand Island, NY) with 10\% fetal calf serum (FBS; Hyclone) and 1x antibiotic/antimycotic (Sigma, St. Louis, MO) in a 5\% CO$_2$ humidified atmosphere at 37$^{\circ}$C. The AR inhibitor MDV3100 (enzalutamide) and the Raf inhibitor sorafenib were purchased from SantaCruz Biotechnology (Santa Cruz, CA). The PI3K inhibitor LY294002 was purchased from Cell Signaling Technologies (Danvers, MA, USA). All stock solutions were diluted in DMSO (Sigma, St. Louis, MO). 
+Androgen dependent LNCaP prostate cancer cells were a gift from Dr. Brian Kirby (Cornell University), and the castration resistant C4-2 prostate cancer cell line was purchased from MD Anderson Cancer Center, University of Texas. Cell lines were maintained in RPMI 1640 media (Life Technologies, Inc., Grand Island, NY) with 10\% fetal calf serum (FBS; Hyclone) and 1x antibiotic/antimycotic (Sigma, St. Louis, MO) in a 5\% CO$_2$ humidified atmosphere at 37$^{\circ}$C. The AR inhibitor MDV3100 (enzalutamide) and the Raf inhibitor sorafenib were purchased from SantaCruz Biotechnology (Santa Cruz, CA). The PI3K inhibitor LY294002 was purchased from Cell Signaling Technologies (Danvers, MA, USA). All stock solutions were diluted in DMSO and stored at -20$^{\circ}$C (Sigma, St. Louis, MO).  Stock solution concentrations for western blotting experiments were 10 mM Sorafenib, 50 mM LY294002, and 10 mM MDV3100. For the cell viability assays, stock solution concentrations were 0.5 mM Sorafenib, 4 mM LY294002, and 1 mM MDV3100.
 
 \subsection*{Protein Extraction and Western Blot}
 
