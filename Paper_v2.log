@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 SEP 2015 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 OCT 2015 14:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -650,83 +650,78 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 [1] [1] [2] [3] [4] [5
 
-] [6] [7] [8] [9] [10] [11] [12]
-Overfull \hbox (0.17407pt too wide) in paragraph at lines 423--432
+] [6] [7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (0.17407pt too wide) in paragraph at lines 433--442
 \OT1/phv/m/n/12 pres-sion and ac-ti-va-tion through an-dro-gen bind-ing as well
  as a ligand-independent, MAPK-
  []
 
-[13] [14]
+[14] [15] [16] [17] [18] [19] [20
 
-LaTeX Warning: Reference `fg:Triple_KO' on page 15 undefined on input line 486.
+] [21] [22] [23] [24] [25] [26] [27]
+(./Paper_v2.bbl [28
 
-
-[15] [16] [17] [18] [19
-
-] [20] [21] [22] [23] [24] [25] [26] (./Paper_v2.bbl
-[27
-
-] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]) [39]
-<./figs/Fig_1_LNCAPModel.pdf, id=146, 825.0825pt x 643.40375pt>
+] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39])
+[40] <./figs/Fig_1_LNCAPModel.pdf, id=149, 825.0825pt x 643.40375pt>
 File: ./figs/Fig_1_LNCAPModel.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_1_LNCAPModel.pdf>
-Package pdftex.def Info: ./figs/Fig_1_LNCAPModel.pdf used on input line 706.
+Package pdftex.def Info: ./figs/Fig_1_LNCAPModel.pdf used on input line 716.
 (pdftex.def)             Requested size: 469.75502pt x 366.3218pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 708.
- [40 <./figs/Fig_1_LNCAPModel.pdf>]
-<./figs/Fig_3_ColorPlot.pdf, id=372, 1074.68506pt x 508.56699pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 718.
+ [41 <./figs/Fig_1_LNCAPModel.pdf>]
+<./figs/Fig_3_ColorPlot.pdf, id=376, 1074.68506pt x 508.56699pt>
 File: ./figs/Fig_3_ColorPlot.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_3_ColorPlot.pdf>
-Package pdftex.def Info: ./figs/Fig_3_ColorPlot.pdf used on input line 715.
+Package pdftex.def Info: ./figs/Fig_3_ColorPlot.pdf used on input line 725.
 (pdftex.def)             Requested size: 469.75502pt x 222.30351pt.
- [41 <./figs/Fig_3_ColorPlot.pdf>]
-<./figs/Fig_2_Training.pdf, id=467, 1204.5pt x 702.625pt>
+ [42 <./figs/Fig_3_ColorPlot.pdf>]
+<./figs/Fig_2_Training.pdf, id=470, 1204.5pt x 702.625pt>
 File: ./figs/Fig_2_Training.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_2_Training.pdf>
-Package pdftex.def Info: ./figs/Fig_2_Training.pdf used on input line 724.
+Package pdftex.def Info: ./figs/Fig_2_Training.pdf used on input line 734.
 (pdftex.def)             Requested size: 469.75502pt x 274.02264pt.
- [42 <./figs/Fig_2_Training.pdf>]
-<./figs/Fig_4_Validation.pdf, id=563, 1204.5pt x 702.625pt>
+ [43 <./figs/Fig_2_Training.pdf>]
+<./figs/Fig_4_Validation.pdf, id=566, 1204.5pt x 702.625pt>
 File: ./figs/Fig_4_Validation.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_4_Validation.pdf>
-Package pdftex.def Info: ./figs/Fig_4_Validation.pdf used on input line 732.
+Package pdftex.def Info: ./figs/Fig_4_Validation.pdf used on input line 742.
 (pdftex.def)             Requested size: 469.75502pt x 274.02264pt.
- [43 <./figs/Fig_4_Validation.pdf>]
-<./figs/Fig_5_Sensitivity.pdf, id=845, 1084.05pt x 853.1875pt>
+ [44 <./figs/Fig_4_Validation.pdf>]
+<./figs/Fig_5_Sensitivity.pdf, id=848, 1084.05pt x 853.1875pt>
 File: ./figs/Fig_5_Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Fig_5_Sensitivity.pdf>
-Package pdftex.def Info: ./figs/Fig_5_Sensitivity.pdf used on input line 740.
+Package pdftex.def Info: ./figs/Fig_5_Sensitivity.pdf used on input line 750.
 (pdftex.def)             Requested size: 469.75502pt x 369.71454pt.
- [44 <./figs/Fig_5_Sensitivity.pdf>]
-<./figs/Figure6_RAF_K0_C81.pdf, id=922, 554.07pt x 428.26598pt>
+ [45 <./figs/Fig_5_Sensitivity.pdf>]
+<./figs/Figure6_RAF_K0_C81.pdf, id=925, 554.07pt x 428.26598pt>
 File: ./figs/Figure6_RAF_K0_C81.pdf Graphic file (type pdf)
 
 <use ./figs/Figure6_RAF_K0_C81.pdf>
-Package pdftex.def Info: ./figs/Figure6_RAF_K0_C81.pdf used on input line 748.
+Package pdftex.def Info: ./figs/Figure6_RAF_K0_C81.pdf used on input line 758.
 (pdftex.def)             Requested size: 469.75502pt x 363.0933pt.
- [45 <./figs/Figure6_RAF_K0_C81.pdf>]
-<./figs/Figure7_ExperimentalResults.pdf, id=952, 1452.9683pt x 882.35849pt>
-File: ./figs/Figure7_ExperimentalResults.pdf Graphic file (type pdf)
-
-<use ./figs/Figure7_ExperimentalResults.pdf>
-Package pdftex.def Info: ./figs/Figure7_ExperimentalResults.pdf used on input l
-ine 756.
-(pdftex.def)             Requested size: 469.75502pt x 285.26865pt.
- [46 <./figs/Figure7_ExperimentalResults.pdf>]
-<./figs/Fig_8_BoxPlot_KnockOut_Cases_new.pdf, id=2742, 1076.58215pt x 860.61827
-pt>
-File: ./figs/Fig_8_BoxPlot_KnockOut_Cases_new.pdf Graphic file (type pdf)
- <use ./figs/Fig_8_BoxPlot_KnockOut_Cases_new.pdf>
-Package pdftex.def Info: ./figs/Fig_8_BoxPlot_KnockOut_Cases_new.pdf used on in
-put line 764.
+ [46 <./figs/Figure6_RAF_K0_C81.pdf>]
+<./figs/Fig_7_BoxPlot_KnockOut_Cases_new.pdf, id=955, 1076.58215pt x 860.61827p
+t>
+File: ./figs/Fig_7_BoxPlot_KnockOut_Cases_new.pdf Graphic file (type pdf)
+ <use ./figs/Fig_7_BoxPlot_KnockOut_Cases_new.pdf>
+Package pdftex.def Info: ./figs/Fig_7_BoxPlot_KnockOut_Cases_new.pdf used on in
+put line 766.
 (pdftex.def)             Requested size: 469.75502pt x 375.52153pt.
- [47 <./figs/Fig_8_BoxPlot_KnockOut_Cases_new.pdf>] [1
+ [47 <./figs/Fig_7_BoxPlot_KnockOut_Cases_new.pdf>]
+<./figs/Figure8_ExperimentalResults.pdf, id=996, 1452.9683pt x 882.35849pt>
+File: ./figs/Figure8_ExperimentalResults.pdf Graphic file (type pdf)
+
+<use ./figs/Figure8_ExperimentalResults.pdf>
+Package pdftex.def Info: ./figs/Figure8_ExperimentalResults.pdf used on input l
+ine 775.
+(pdftex.def)             Requested size: 469.75502pt x 285.26865pt.
+ [48 <./figs/Figure8_ExperimentalResults.pdf>] [1
 
 
 
@@ -743,61 +738,57 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (./Prostate_Pred_Table.tex [5
 
 ]) [6]
-<./figs/Supplementary_CV_Subset_Total.pdf, id=2802, 544.702pt x 418.56375pt>
+<./figs/Supplementary_CV_Subset_Total.pdf, id=2805, 544.702pt x 418.56375pt>
 File: ./figs/Supplementary_CV_Subset_Total.pdf Graphic file (type pdf)
 
 <use ./figs/Supplementary_CV_Subset_Total.pdf>
 Package pdftex.def Info: ./figs/Supplementary_CV_Subset_Total.pdf used on input
- line 822.
+ line 832.
 (pdftex.def)             Requested size: 469.75502pt x 360.97968pt.
  [7 <./figs/Supplementary_CV_Subset_Total.pdf>]
-<./figs/Supp_Figure_NewModelvsOldModel.pdf, id=2828, 777.90625pt x 482.30188pt>
+<./figs/Supp_Figure_NewModelvsOldModel.pdf, id=2831, 777.90625pt x 482.30188pt>
 File: ./figs/Supp_Figure_NewModelvsOldModel.pdf Graphic file (type pdf)
 <use ./figs/Supp_Figure_NewModelvsOldModel.pdf>
 Package pdftex.def Info: ./figs/Supp_Figure_NewModelvsOldModel.pdf used on inpu
-t line 830.
+t line 840.
 (pdftex.def)             Requested size: 469.75502pt x 291.25262pt.
  [8 <./figs/Supp_Figure_NewModelvsOldModel.pdf>]
-<./figs/Supp_Figure_Sensitivity.pdf, id=3092, 1084.05pt x 853.1875pt>
+<./figs/Supp_Figure_Sensitivity.pdf, id=3095, 1084.05pt x 853.1875pt>
 File: ./figs/Supp_Figure_Sensitivity.pdf Graphic file (type pdf)
 
 <use ./figs/Supp_Figure_Sensitivity.pdf>
 Package pdftex.def Info: ./figs/Supp_Figure_Sensitivity.pdf used on input line 
-839.
+849.
 (pdftex.def)             Requested size: 469.75502pt x 369.71454pt.
  [9 <./figs/Supp_Figure_Sensitivity.pdf>] <./figs/Supp_Figure_Robustness.pdf, i
-d=3176, 931.33743pt x 755.82375pt>
+d=3179, 931.33743pt x 755.82375pt>
 File: ./figs/Supp_Figure_Robustness.pdf Graphic file (type pdf)
 
 <use ./figs/Supp_Figure_Robustness.pdf>
 Package pdftex.def Info: ./figs/Supp_Figure_Robustness.pdf used on input line 8
-47.
+57.
 (pdftex.def)             Requested size: 469.75502pt x 381.23242pt.
  [10 <./figs/Supp_Figure_Robustness.pdf>] <./figs/Supp_Figure_KO_new.pdf, id=32
-12, 473.26813pt x 233.87375pt>
+15, 473.26813pt x 233.87375pt>
 File: ./figs/Supp_Figure_KO_new.pdf Graphic file (type pdf)
 
 <use ./figs/Supp_Figure_KO_new.pdf>
-Package pdftex.def Info: ./figs/Supp_Figure_KO_new.pdf used on input line 855.
+Package pdftex.def Info: ./figs/Supp_Figure_KO_new.pdf used on input line 865.
 (pdftex.def)             Requested size: 469.75502pt x 232.14594pt.
  [11 <./figs/Supp_Figure_KO_new.pdf>]
-(./Paper_v2.aux)
-
-LaTeX Warning: There were undefined references.
-
- )
+(./Paper_v2.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5431 strings out of 493089
- 80597 string characters out of 6134842
- 158144 words of memory out of 5000000
- 8760 multiletter control sequences out of 15000+600000
+ 5430 strings out of 493089
+ 80583 string characters out of 6134842
+ 157144 words of memory out of 5000000
+ 8759 multiletter control sequences out of 15000+600000
  32235 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,41p,1149b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,41p,1149b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -815,10 +806,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (60 pages, 41792590 bytes).
+Output written on Paper_v2.pdf (61 pages, 41794113 bytes).
 PDF statistics:
- 3296 PDF objects out of 3580 (max. 8388607)
- 478 compressed objects within 5 object streams
+ 3300 PDF objects out of 3580 (max. 8388607)
+ 481 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
