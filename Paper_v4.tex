@@ -246,14 +246,12 @@ The coagulation factors are generally in an inactive state and are known as zymo
 
 To train the model parameters, we used data sets from TF-VIIa initiated coagulation with no anticoagulants. The objective function was a weighted linear combination of two different error functions that used data sets representing coagulation initiated with different concentrations of TF-VIIa (5pM, 5nM) \cite{hockin2002model}. This choice of using a linear combination of two different error functions was motivated by poor validation results while using a single error function.  We restricted the number of function evaluations to 4000 for each algorithm and performed 25 trials of this experiment. DOPS exhibits a much faster rate of error convergence and has a much lower final error as compared to the other algorithms (Figure 3). 
  
- Within the first 1000 function evaluations  of DOPS there is a very rapid drop in error. Approximately between 500 -1000 function evaluations a switch to dynamically dimensioned search phase happens (this switch varies from trial to trial since the switch is based on the error from the swarm phase). Overall at the end of 4000 function evaluations DOPS minimizes the error (final objective error is 90456.9) to a much greater extent than any of the other algorithms. Using the parameters obtained at the end of 4000 function evaluations we examined the 'fits' between models predictions and experimental data (Figure 4). The solid lines represent the mean value of prediction over 25 trials and the shaded region represents the 99\% confidence interval. Subsequently we compared the model predictions against completely 'unseen' or untrained experimental where coagulation was initiated with 500pM,50pM,10pM concentrations of TF-VIIa respectively (Figure 5).
-
+ Within the first 1000 function evaluations  of DOPS there is a very rapid drop in error. Approximately between 500-1000 function evaluations a switch to dynamically dimensioned search phase happens (this switch varies from trial to trial since the switch is based on the error from the swarm phase). Overall at the end of 4000 function evaluations DOPS minimizes the error (final objective error is 5.5916e+04) to a much greater extent than any of the other algorithms. Using the parameters obtained at the end of 4000 function evaluations we examined the 'fits' between models predictions and experimental data (Figure 4). The solid lines represent the mean value of prediction over 25 trials and the shaded region represents the 99\% confidence interval. Subsequently we compared the model predictions against completely 'unseen' or untrained experimental where coagulation was initiated with 500pM,50pM,10pM concentrations of TF-VIIa respectively (Figure 5).
 
 \subsection*{Performance of DOPS on benchmark problems and test functions.}
-Villaverde and co-workers recently published a set of benchmark biochemical problems to evaluate parameter estimation methods \cite{villaverde2015biopredyn}. From a computational cost perspective problems they categorized the problems as most expensive, intermediate and least expensive. We evaluated the performance of our algorithms on a problem from the most expensive and least expensive categories. The first problem is a genome wide kinetic model of \textit{Saccharomyces cerevisiae} with 1759 parameters (henceforth referred to as problem B1).  The second problem (henceforth referred to as problem B4) is a metabolic model of Chinese Hamster Ovary (CHO) with 35 metabolites, 32 reactions and 117 parameters. In both cases pseudo time series data was generated. For problem B1, the time series data consisted of 44 observables and for problem B4 the data corresponded to 13 different metabolites. We fixed the number of function evaluations at 4000 for DOPS and trained both the models against the pseudo experimental data. We recaptured the 'nominal' parameters (Figure S7 A and B)  in both cases within 4000 evaluations. The final objective function value (Table 1) is an order smaller for B1 possibly due to overfitting. In Table 1 we summarize the results obtained on the coagulation model and the benchmark problems.
+Villaverde and co-workers recently published a set of benchmark biochemical problems to evaluate parameter estimation methods \cite{villaverde2015biopredyn}. From a computational cost perspective problems they categorized the problems as most expensive, intermediate and least expensive. We evaluated the performance of our algorithms on a problem from the most expensive and least expensive categories. The first problem (most expensive) is a genome wide kinetic model of \textit{Saccharomyces cerevisiae} with 261 reactions, 262 variables and 1759 parameters (henceforth referred to as problem B1). The reactions were modeled using modular rate law and generalized form of Michaelis-Menten kinetics.   The second problem (henceforth referred to as problem B4, least expensive) is a metabolic model of Chinese Hamster Ovary (CHO) with 35 metabolites, 32 reactions and 117 parameters. In both cases pseudo time series data was generated by the authors.  For problem B1, the time series data consisted of 44 observables and for problem B4 the data corresponded to 13 different metabolites. For a detailed description about the model architectures please refer to the work of Villaverde et al. \cite{villaverde2015biopredyn}
 
-We compared the performance of DdPSO with algorithms on commonly used test functions for global optimization, as well as benchmark biochemical problems from literature (Table \ref{table:benchmark-problems}). We used a 300 dimensional Rastrigin function and 300 dimensional Ackley function. Both Ackley and Rastrigin have multiple local minima and maxima and attain a global minimum value of 0. We tested the performance of the 5 different heuristic approaches on these two functions. In each experiment we again fixed the number of function evaluations at 4000 and ran 25 experiments. In both cases (Figure S6 A and B) we see that the error convergence rate for DDSMLSPSO is much faster as compared to the other four s and it finds the global minimum of 0 in both cases.
-
+We fixed the number of function evaluations at 4000 for DOPS and trained both the models against the pseudo experimental data. In both cases we found good fits  (Figures 6 and Figures 7) to the problems within 4000 evaluations. We recaptured the 'nominal' parameters' in both cases within 4000 evaluations (Figure 8). The final objective function value (Table 1) is an order smaller than nominal error for B1 possibly due to overfitting against the noise.  Thereafter we compared the performance of DOPS with algorithms on commonly used test functions for global optimization. We used a 300 dimensional Rastrigin function and 300 dimensional Ackley function. Both Ackley and Rastrigin have multiple local minima and maxima and attain a global minimum value of 0. We tested the performance of the 4 different heuristic approaches on these two functions. In each experiment we again fixed the number of function evaluations at 4000 and ran 25 experiments. In both cases (Figure 9) we see that the error convergence rate for DOPS is much faster as compared to the other three heuristics and it finds the global minimum of 0 in both cases. In Table 1 (Table \ref{table:benchmark-problems}) we summarize the results obtained on the coagulation model, the benchmark problems and the test functions for the best trial. 
 
 
 \clearpage
@@ -263,7 +261,7 @@ Meta-heuristic approaches are generally effective in finding close to optimum so
 
 We utilized this capacity of multi swarms to generate diverse candidate solutions which can be used as initial solutions for a DDS like search. Thus the solution vectors obtained at the end of multi swarm search phase have a better propensity to not get stuck in bad regions in DDS phase as opposed to starting with a totally random initial solution. Given a fixed number of function evaluations, we have been able to show that we were able to obtain better solutions for the coagulation model and the test functions faster that other commonly known meta-heuristics and also DDS alone.  Choosing the number of function evaluations is largely a function of cost and complexity of the objective function. Traditionally the stopping condition for a parameter optimization problem can be the number of function evaluations, percentage of initial error achieved or an absolute error threshold. However in case of complex, expensive functions where we desire a value within a certain period of time, the number of evaluations are used as a stopping criterion. In our current study we used a value of 4000 which we based upon the time taken (approximately 8-10 seconds) for a single objective function evaluation in the coagulation case. We used the same value of 4000 for benchmarks published by Villaverde and co-workers \cite{villaverde2015biopredyn}. Quite surprisingly we took a couple of orders lesser number of function evaluations (1e3) to obtain the optimal parameter vector as compared to the enhanced Scatter Search (eSS) with a local optimizer, which took around the order of 1e5 number of evaluations.  The amount of CPU time taken (on an Intel Xeon processor 2.4 GHz) is lesser as compared to eSS on a similar architecture.
 
-A surprisingly remarkable aspect about our algorithm has been that we did not 'pre optimize' any parameters of the algorithm to suit a specific problem. In the swarm phase this includes the number of particles, number of sub-swarms, acceleration constants or the number of generations after which the particles are redistributed and the neighborhood perturbation parameter in DDS phase. We used the same parameters for all the problems. The same rule was applied to the rest of the meta-heuristics barring Simulated Annealing. For SA, we optimized the cooling schedule for the coagulation model. Thus, in this approach any overhead that usually comes with additional function evaluations to optimize parameters was avoided. The only parameter that we adjusted was the fraction of evaluations within swarm search. For the coagulation model it was set to be 0.4 and for the benchmarks it is at 0.6. This parameter was set based on empirical observations rather than any definitive analysis. When the error convergence rates stagnated in the swarm phase we switched to DDS phase. A further improvement to our approach could  be to incorporate a meta intelligent way of switching in and switching out of both the phases.
+A surprisingly remarkable aspect about our algorithm has been that we did not 'pre optimize' any parameters of the algorithm to suit a specific problem. In the swarm phase this includes the number of particles, number of sub-swarms, acceleration constants or the number of generations after which the particles are redistributed and the neighborhood perturbation parameter in DDS phase. We used the same parameters for all the problems. The same rule was applied to the rest of the meta-heuristics barring Simulated Annealing. For SA, we optimized the cooling schedule for the coagulation model. Thus, in this approach any overhead that usually comes with additional function evaluations to pre optimize parameters was avoided. 
 
 The performance of our approach seems impressive given that it performed well on different complex systems with no specific conditioning being required. We comfortably outperformed common meta-heuristics and were also able to find minima of high dimensional global optimization test functions. Thus this approach may be well suited to large scale global optimization. In addition, surprisingly, we were able to obtain optimal parameter vectors for two different large scale systems biology models with a couple of orders fewer number of function evaluations as compared a hybrid approach. However it is quite possible that highly optimized versions of common meta heuristics may outperform us on these systems. This aspect is currently beyond the scope of this study. Our approach can also be combined with local derivative based searches to improve upon the accuracy of the solutions.
 
@@ -303,28 +301,28 @@ Simulation&Concentration& Normalized Standard Error & R-Squared Value \\
 \end{table}
 
 
-\begin{table}[h]
-\centering
-\caption{Table with optimization settings and results for coagulation and different benchmarks using DdPSO.}
-\label{table:benchmark-problems}
-\resizebox{\columnwidth}{!}{
-\begin{tabular}{|cccccc|}
-\hline
-                        & Coagulation           & \multicolumn{4}{l}{Benchmarks}\\
- \hline
-                        & Experimental Data Set & B1       &B2    & B4   &B5       & Ackley 300D & Rastrigin 300D \\
- \hline
-Lower Bound             & 0.001.pnom            & 5.pnom    &10.pnom   & 5.pnom  &varying    & 30          & 5.12           \\
-Upper Bound             & 1000.pnom             & 0.2.pnom    &0.1.pnom & 0.2.pnom  &varying  & -15         & -5.12          \\
-CPU Time                & 10.0835 hours         & 65.26 hours &17.9 minutes & 6.2 minutes &32.686 minutes& 2.8 seconds & 2.6 seconds    \\
-Function Evaluations    & 4000                  & 4000              &4000& 4000        & 4000      &4000  & 4000           \\
-Initial Objective Value & 1.11837e+07           & 1.3824e+07 &3.8848e+03  & 1.8536e+07 &1.4288e+04  & 21.12       & 99.985         \\
-Final Objective Value   & 90456.9               & 3.5348e+04     &324.4182 & 38.9375    &3.4495e+03  & 0           & 0              \\
-Nominal Objective Value & 4.7785e+06            & 1.0986e+06   &- & 39.0676    &4.2737e+03 & 0           & 0      \\
-\hline
-\end{tabular}
-}
-\end{table}
+%\begin{table}[h]
+%\centering
+%\caption{Table with optimization settings and results for coagulation and different benchmarks using DdPSO.}
+%\label{table:benchmark-problems}
+%\resizebox{\columnwidth}{!}{
+%\begin{tabular}{|cccccc|}
+%\hline
+%                        & Coagulation           & \multicolumn{4}{l}{Benchmarks}\\
+% \hline
+%                        & Experimental Data Set & B1       &B2    & B4   &B5       & Ackley 300D & Rastrigin 300D \\
+% \hline
+%Lower Bound             & 0.001.pnom            & 5.pnom    &10.pnom   & 5.pnom  &varying    & 30          & 5.12           \\
+%Upper Bound             & 1000.pnom             & 0.2.pnom    &0.1.pnom & 0.2.pnom  &varying  & -15         & -5.12          \\
+%CPU Time                & 10.0835 hours         & 65.26 hours &17.9 minutes & 6.2 minutes &32.686 minutes& 2.8 seconds & 2.6 seconds    \\
+%Function Evaluations    & 4000                  & 4000              &4000& 4000        & 4000      &4000  & 4000           \\
+%Initial Objective Value & 1.11837e+07           & 1.3824e+07 &3.8848e+03  & 1.8536e+07 &1.4288e+04  & 21.12       & 99.985         \\
+%Final Objective Value   & 90456.9               & 3.5348e+04     &324.4182 & 38.9375    &3.4495e+03  & 0           & 0              \\
+%Nominal Objective Value & 4.7785e+06            & 1.0986e+06   &- & 39.0676    &4.2737e+03 & 0           & 0      \\
+%\hline
+%\end{tabular}
+%}
+%\end{table}
 
 \clearpage
 

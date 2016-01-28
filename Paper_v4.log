@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 JAN 2016 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 JAN 2016 12:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -770,7 +770,11 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count123
 \algocf@algoframe=\box63
 \algocf@algobox=\box64
-) (./Paper_v4.aux)
+) (./Paper_v4.aux
+
+LaTeX Warning: Label `fig-train' multiply defined.
+
+)
 \openout1 = `Paper_v4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
@@ -792,7 +796,8 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 94.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 94.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -863,255 +868,10 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 121.
- [1]
+ [1] [1] [2] [3]
+[4] [5] [6] [7] [8] [9] [10] [11
 
-Package natbib Warning: Citation `assmus2006dynamics' on page 1 undefined on in
-put line 144.
-
-
-Package natbib Warning: Citation `Riel:2006aa' on page 1 undefined on input lin
-e 144.
-
-
-Package natbib Warning: Citation `Jaqaman:2006aa' on page 1 undefined on input 
-line 144.
-
-
-Package natbib Warning: Citation `kitano2002systems' on page 1 undefined on inp
-ut line 144.
-
-
-Package natbib Warning: Citation `hood2004systems' on page 1 undefined on input
- line 144.
-
-
-Package natbib Warning: Citation `Aldridge:2006aa' on page 1 undefined on input
- line 145.
-
-
-Package natbib Warning: Citation `banga2008optimization' on page 1 undefined on
- input line 145.
-
-
-Package natbib Warning: Citation `ashyraliyev2009systems' on page 1 undefined o
-n input line 145.
-
-
-Package natbib Warning: Citation `moles2003parameter' on page 1 undefined on in
-put line 146.
-
-
-Package natbib Warning: Citation `nieman1971review' on page 1 undefined on inpu
-t line 149.
-
-
-Package natbib Warning: Citation `beck1977parameter' on page 1 undefined on inp
-ut line 149.
-
-
-Package natbib Warning: Citation `young1981parameter' on page 1 undefined on in
-put line 149.
-
-
-Package natbib Warning: Citation `beck1998inverse' on page 1 undefined on input
- line 149.
-
-
-Package natbib Warning: Citation `moles2003parameter' on page 1 undefined on in
-put line 151.
-
-
-Package natbib Warning: Citation `banga2008optimization' on page 1 undefined on
- input line 151.
-
-
-Package natbib Warning: Citation `hooke1961direct' on page 1 undefined on input
- line 151.
-
-
-Package natbib Warning: Citation `nelder1965simplex' on page 1 undefined on inp
-ut line 151.
-
-
-Package natbib Warning: Citation `more1978levenberg' on page 1 undefined on inp
-ut line 151.
-
-
-Package natbib Warning: Citation `esposito2000deterministic' on page 1 undefine
-d on input line 151.
-
-
-Package natbib Warning: Citation `horst2013global' on page 1 undefined on input
- line 151.
-
-[1]
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 2 undefi
-ned on input line 153.
-
-
-Package natbib Warning: Citation `storn1997differential' on page 2 undefined on
- input line 153.
-
-
-Package natbib Warning: Citation `sun2012parameter' on page 2 undefined on inpu
-t line 153.
-
-
-Package natbib Warning: Citation `mendes1998non' on page 2 undefined on input l
-ine 153.
-
-
-Package natbib Warning: Citation `modchang2008mathematical' on page 2 undefined
- on input line 153.
-
-
-Package natbib Warning: Citation `tsai2005evolutionary' on page 2 undefined on 
-input line 153.
-
-
-Package natbib Warning: Citation `wang2001hybrid' on page 2 undefined on input 
-line 153.
-
-
-Package natbib Warning: Citation `noman2007inferring' on page 2 undefined on in
-put line 153.
-
-
-Package natbib Warning: Citation `tashkova2011parameter' on page 2 undefined on
- input line 153.
-
-
-Package natbib Warning: Citation `villaverde2012cooperative' on page 2 undefine
-d on input line 153.
-
-
-Package natbib Warning: Citation `rodriguez2006novel' on page 2 undefined on in
-put line 153.
-
-
-Package natbib Warning: Citation `egea2007scatter' on page 2 undefined on input
- line 153.
-
-
-Package natbib Warning: Citation `villaverde2015biopredyn' on page 2 undefined 
-on input line 153.
-
-
-Package natbib Warning: Citation `fan2015parameter' on page 2 undefined on inpu
-t line 153.
-
-
-Package natbib Warning: Citation `gutenkunst2007universally' on page 2 undefine
-d on input line 155.
-
-
-Package natbib Warning: Citation `song2010ensembles' on page 2 undefined on inp
-ut line 155.
-
-
-Package natbib Warning: Citation `luan2010ensembles' on page 2 undefined on inp
-ut line 155.
-
-
-Package natbib Warning: Citation `sagar2015dynamic' on page 2 undefined on inpu
-t line 155.
-
-
-Package natbib Warning: Citation `tolson2007dynamically' on page 2 undefined on
- input line 155.
-
-[2]
-
-Package natbib Warning: Citation `villaverde2015biopredyn' on page 3 undefined 
-on input line 157.
-
-[3]
-
-LaTeX Warning: Reference `fig-algorithm' on page 4 undefined on input line 189.
-
-
-[4] [5] [6]
-
-LaTeX Warning: Reference `fig-coagulation-network' on page 7 undefined on input
- line 242.
-
-
-Package natbib Warning: Citation `mann2003dynamics' on page 7 undefined on inpu
-t line 242.
-
-
-Package natbib Warning: Citation `mann2003all' on page 7 undefined on input lin
-e 242.
-
-
-Package natbib Warning: Citation `mann2003thrombin' on page 7 undefined on inpu
-t line 242.
-
-
-Package natbib Warning: Citation `vogler2009contact' on page 7 undefined on inp
-ut line 242.
-
-
-Package natbib Warning: Citation `diamond2013systems' on page 7 undefined on in
-put line 242.
-
-
-Package natbib Warning: Citation `fogelson2005coagulation' on page 7 undefined 
-on input line 242.
-
-
-Package natbib Warning: Citation `anand2003model' on page 7 undefined on input 
-line 242.
-
-
-Package natbib Warning: Citation `hockin2002model' on page 7 undefined on input
- line 242.
-
-
-Package natbib Warning: Citation `chatterjee2010systems' on page 7 undefined on
- input line 242.
-
-
-Package natbib Warning: Citation `mann2006models' on page 7 undefined on input 
-line 242.
-
-
-Package natbib Warning: Citation `luan2007computationally' on page 7 undefined 
-on input line 242.
-
-[7]
-
-Package natbib Warning: Citation `luan2007computationally' on page 8 undefined 
-on input line 245.
-
-
-Package natbib Warning: Citation `hockin2002model' on page 8 undefined on input
- line 247.
-
-[8]
-
-Package natbib Warning: Citation `villaverde2015biopredyn' on page 9 undefined 
-on input line 253.
-
-[9]
-
-LaTeX Warning: Reference `table:benchmark-problems' on page 10 undefined on inp
-ut line 255.
-
-[10]
-
-Package natbib Warning: Citation `zhao2008dynamic' on page 11 undefined on inpu
-t line 262.
-
-[11
-
-]
-
-Package natbib Warning: Citation `villaverde2015biopredyn' on page 12 undefined
- on input line 264.
-
-[12] [13] [14] (./Paper_v4.bbl [15
+] [12] [13] [14] (./Paper_v4.bbl [15
 
 ]
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 69.
@@ -1121,28 +881,28 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 ) [16] [17]
 [18]) [19]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 288.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 287.
 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
 
-./Paper_v4.tex:326: Package inputenc Error: Keyboard character used is undefine
+./Paper_v4.tex:325: Package inputenc Error: Keyboard character used is undefine
 d
 (inputenc)                in inputencoding `utf8'.
 
@@ -1150,37 +910,37 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
-./Paper_v4.tex:326: Extra alignment tab has been changed to \cr.
+./Paper_v4.tex:325: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
-l.326 }
+l.325 }
        
 ? 
 [20
@@ -1189,7 +949,7 @@ l.326 }
 File: ./figs/Figure_1_Algorithm.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_1_Algorithm.pdf>
-Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 333.
+Package pdftex.def Info: ./figs/Figure_1_Algorithm.pdf used on input line 332.
 (pdftex.def)             Requested size: 469.75496pt x 310.22122pt.
  [21
 
@@ -1199,7 +959,7 @@ File: ./figs/Figure_2_CoagulationNetwork.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_2_CoagulationNetwork.pdf>
 Package pdftex.def Info: ./figs/Figure_2_CoagulationNetwork.pdf used on input l
-ine 342.
+ine 341.
 (pdftex.def)             Requested size: 469.75618pt x 434.31146pt.
 
 
@@ -1211,7 +971,7 @@ File: ./figs/Figure_3_Errors_convergence.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_3_Errors_convergence.pdf>
 Package pdftex.def Info: ./figs/Figure_3_Errors_convergence.pdf used on input l
-ine 350.
+ine 349.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [23
 
@@ -1222,7 +982,7 @@ File: ./figs/Figure_4_Sim_Train_E1_E5.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_4_Sim_Train_E1_E5.pdf>
 Package pdftex.def Info: ./figs/Figure_4_Sim_Train_E1_E5.pdf used on input line
- 359.
+ 358.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [24
 
@@ -1232,7 +992,7 @@ File: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf>
 Package pdftex.def Info: ./figs/Figure_5_Sim_Validate_E2_E4_E6.pdf used on inpu
-t line 368.
+t line 367.
 (pdftex.def)             Requested size: 469.75827pt x 310.22188pt.
  [25
 
@@ -1241,11 +1001,11 @@ t line 368.
 File: ./figs/Figure_6_Ackley_Rast.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_6_Ackley_Rast.pdf>
-Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 399
+Package pdftex.def Info: ./figs/Figure_6_Ackley_Rast.pdf used on input line 398
 .
 (pdftex.def)             Requested size: 479.14046pt x 310.22122pt.
 
-Overfull \hbox (9.38544pt too wide) in paragraph at lines 399--401
+Overfull \hbox (9.38544pt too wide) in paragraph at lines 398--400
  [][] 
  []
 
@@ -1254,32 +1014,21 @@ File: ./figs/Figure_7_Benchmarks_Parameters.pdf Graphic file (type pdf)
 
 <use ./figs/Figure_7_Benchmarks_Parameters.pdf>
 Package pdftex.def Info: ./figs/Figure_7_Benchmarks_Parameters.pdf used on inpu
-t line 408.
+t line 407.
 (pdftex.def)             Requested size: 479.13385pt x 310.2146pt.
 
-Overfull \hbox (9.37883pt too wide) in paragraph at lines 408--410
+Overfull \hbox (9.37883pt too wide) in paragraph at lines 407--409
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 410.
-
-Package natbib Warning: There were undefined citations.
-
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 409.
 [1
 
  <./figs/Figure_6_Ackley_Rast.pdf>] [2 <./figs/Figure_7_Benchmarks_Parameters.p
-df>] (./Paper_v4.aux
+df>] (./Paper_v4.aux)
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred inside a group at level 1)
@@ -1289,11 +1038,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  7181 strings out of 493089
  105771 string characters out of 6134842
- 194264 words of memory out of 5000000
+ 195148 words of memory out of 5000000
  10445 multiletter control sequences out of 15000+600000
  34615 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,14n,38p,2446b,1051s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,14n,38p,2446b,1052s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1309,7 +1058,7 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v4.pdf (29 pages, 2030987 bytes).
+Output written on Paper_v4.pdf (29 pages, 2030248 bytes).
 PDF statistics:
  650 PDF objects out of 1000 (max. 8388607)
  359 compressed objects within 4 object streams
